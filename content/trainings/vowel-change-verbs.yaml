@@ -1,0 +1,213 @@
+# Training: irregular verbs with a vowel change in the present tense (A1).
+# e → i (sprechen), e → ie (lesen), a → ä (fahren). Only du and er/sie/es change.
+# Original content. English and German texts are written side by side: { en: "...", de: "..." }.
+kind: lesson
+id: vowel-change-verbs
+title: { en: "Verbs with vowel change", de: "Verben mit Vokalwechsel" }
+level: A1
+skill: grammar
+minutes: 20
+status: draft
+description:
+  en: "Verbs like sprechen, lesen and fahren change their vowel in du and er/sie/es: du sprichst, er liest, sie fährt."
+  de: "Verben wie „sprechen“, „lesen“ und „fahren“ ändern den Vokal bei du und er/sie/es: du sprichst, er liest, sie fährt."
+canDo:
+  - { en: "I can use the du and er/sie/es forms of common verbs with a vowel change.", de: "Ich kann die du- und er/sie/es-Formen von häufigen Verben mit Vokalwechsel benutzen." }
+  - { en: "I know the three changes: e → i, e → ie and a → ä.", de: "Ich kenne die drei Wechsel: e → i, e → ie und a → ä." }
+  - { en: "I know that ich, wir and ihr do not change.", de: "Ich weiß: Bei ich, wir und ihr gibt es keinen Wechsel." }
+
+verbs:
+  - { inf: essen, stem: ess, alt: iss, altAt: [1, 2], endings: [e, t, t, en, t, en] }
+  - { inf: lesen, stem: les, alt: lies, altAt: [1, 2], endings: [e, t, t, en, t, en] }
+  - { inf: sehen, stem: seh, alt: sieh, altAt: [1, 2], endings: [e, st, t, en, t, en] }
+  - { inf: sprechen, stem: sprech, alt: sprich, altAt: [1, 2], endings: [e, st, t, en, t, en] }
+  - { inf: geben, stem: geb, alt: gib, altAt: [1, 2], endings: [e, st, t, en, t, en] }
+  - { inf: nehmen, stem: nehm, alt: nimm, altAt: [1, 2], endings: [e, st, t, en, t, en] }
+  - { inf: helfen, stem: helf, alt: hilf, altAt: [1, 2], endings: [e, st, t, en, t, en] }
+  - { inf: fahren, stem: fahr, alt: fähr, altAt: [1, 2], endings: [e, st, t, en, t, en] }
+  - { inf: schlafen, stem: schlaf, alt: schläf, altAt: [1, 2], endings: [e, st, t, en, t, en] }
+  - { inf: laufen, stem: lauf, alt: läuf, altAt: [1, 2], endings: [e, st, t, en, t, en] }
+
+understand:
+  - type: dialogue
+    title: { en: "Listen to the verbs", de: "Achte auf die Verben" }
+    lines:
+      - { who: Mia, say: "Was <v>isst</v> du gern?" }
+      - { who: Ben, say: "Ich <v>esse</v> gern Pizza. Meine Schwester <v>isst</v> gern Reis. <v>Liest</v> du gern?" }
+      - { who: Mia, say: "Ja, ich <v>lese</v> viel. Mein Bruder <v>liest</v> nie, aber er <v>fährt</v> gern Rad." }
+
+  - type: text
+    title: { en: "Some verbs change their vowel", de: "Einige Verben ändern den Vokal" }
+    body:
+      - en: "Some common verbs change the vowel of the stem. This only happens with <st>du</st> and <st>er/sie/es</st>. All the other forms are normal."
+        de: "Einige häufige Verben ändern den Vokal im Stamm. Das gibt es nur bei <st>du</st> und <st>er/sie/es</st>. Alle anderen Formen sind normal."
+      - { en: "ich <st>spreche</st> – du <st>sprichst</st> – er <st>spricht</st> – wir <st>sprechen</st> – ihr <st>sprecht</st>", de: "ich <st>spreche</st> – du <st>sprichst</st> – er <st>spricht</st> – wir <st>sprechen</st> – ihr <st>sprecht</st>" }
+
+  - type: conjugation
+    title: { en: "The verb workshop", de: "Die Verb-Werkstatt" }
+    intro: { en: "Tap a verb. The purple part is the changed stem.", de: "Tippe ein Verb an. Der lila Teil ist der veränderte Stamm." }
+    verbs: [sprechen, essen, geben, nehmen, helfen, lesen, sehen, fahren, schlafen, laufen]
+    irregularNote:
+      en: "Only du and er/sie/es change. ich, wir, ihr and sie/Sie are regular."
+      de: "Nur du und er/sie/es ändern sich. ich, wir, ihr und sie/Sie sind regelmäßig."
+
+  - type: rule
+    title: { en: "Three kinds of change", de: "Drei Arten von Wechsel" }
+    body:
+      - { en: "e → i: sprechen – du sprichst · essen – du isst · geben – du gibst · nehmen – du nimmst · helfen – du hilfst", de: "e → i: sprechen – du sprichst · essen – du isst · geben – du gibst · nehmen – du nimmst · helfen – du hilfst" }
+      - { en: "e → ie: lesen – du liest · sehen – du siehst", de: "e → ie: lesen – du liest · sehen – du siehst" }
+      - { en: "a → ä: fahren – du fährst · schlafen – du schläfst · laufen – du läufst", de: "a → ä: fahren – du fährst · schlafen – du schläfst · laufen – du läufst" }
+
+  - type: rule
+    title: { en: "Watch out!", de: "Achtung!" }
+    body:
+      - { en: "<x>Du sprechst.</x> ✗ Du <v>sprichst</v>. ✓", de: "<x>Du sprechst.</x> ✗ Du <v>sprichst</v>. ✓" }
+      - { en: "<x>Er fahrt.</x> ✗ Er <v>fährt</v>. ✓", de: "<x>Er fahrt.</x> ✗ Er <v>fährt</v>. ✓" }
+      - { en: "ihr does not change: ihr sprecht, ihr fahrt, ihr lest. <x>ihr fährt</x> ✗", de: "Bei ihr gibt es keinen Wechsel: ihr sprecht, ihr fahrt, ihr lest. <x>ihr fährt</x> ✗" }
+      - { en: "Learn every verb together with its du-form: sprechen – du sprichst.", de: "Lerne jedes Verb mit der du-Form: sprechen – du sprichst." }
+
+practice:
+  - id: build
+    title: { en: "Word parts", de: "Bausteine" }
+    count: 10
+    instruction: { en: "Build the verb form.", de: "Baue die Verbform." }
+    items:
+      - type: forms-build
+        verbs: [sprechen, essen, geben, nehmen, helfen]
+        concepts: [irregular.e-i, irregular.no-change-others]
+        hint: { en: "du and er/sie/es use the changed stem: e → i.", de: "du und er/sie/es haben den veränderten Stamm: e → i." }
+      - type: forms-build
+        verbs: [lesen, sehen]
+        concepts: [irregular.e-ie, irregular.no-change-others]
+        hint: { en: "du and er/sie/es use the changed stem: e → ie.", de: "du und er/sie/es haben den veränderten Stamm: e → ie." }
+      - type: forms-build
+        verbs: [fahren, schlafen, laufen]
+        concepts: [irregular.a-ae, irregular.no-change-others]
+        hint: { en: "du and er/sie/es use the changed stem: a → ä.", de: "du und er/sie/es haben den veränderten Stamm: a → ä." }
+
+  - id: pick
+    title: { en: "Which form?", de: "Welche Form?" }
+    count: 10
+    instruction: { en: "Which form is right? Tap it.", de: "Welche Form ist richtig? Tippe sie an." }
+    items:
+      - type: forms-pick
+        verbs: [sprechen, essen, geben, nehmen, helfen]
+        concepts: [irregular.e-i]
+        explanation: { en: "du and er/sie/es: e → i. The other forms have no change.", de: "du und er/sie/es: e → i. Die anderen Formen haben keinen Wechsel." }
+      - type: forms-pick
+        verbs: [lesen, sehen]
+        concepts: [irregular.e-ie]
+        explanation: { en: "du and er/sie/es: e → ie. The other forms have no change.", de: "du und er/sie/es: e → ie. Die anderen Formen haben keinen Wechsel." }
+      - type: forms-pick
+        verbs: [fahren, schlafen, laufen]
+        concepts: [irregular.a-ae]
+        explanation: { en: "du and er/sie/es: a → ä. The other forms have no change.", de: "du und er/sie/es: a → ä. Die anderen Formen haben keinen Wechsel." }
+
+  - id: sentences
+    title: { en: "In sentences", de: "Im Satz" }
+    count: 10
+    instruction: { en: "Choose the right form for the sentence.", de: "Wähle die richtige Form für den Satz." }
+    explanation: { en: "Look at the subject: only du and er/sie/es change the vowel.", de: "Schau auf das Subjekt: Nur bei du und er/sie/es ändert sich der Vokal." }
+    items:
+      - { type: pick-form, verb: essen, person: 0, sentence: "Ich ___ jeden Tag Obst.", concepts: [irregular.e-i, irregular.no-change-others] }
+      - { type: pick-form, verb: nehmen, person: 1, sentence: "Du ___ viel Wasser.", concepts: [irregular.e-i] }
+      - { type: pick-form, verb: lesen, person: 2, sentence: "Mein Bruder ___ gern Krimis.", concepts: [irregular.e-ie] }
+      - { type: pick-form, verb: fahren, person: 3, sentence: "Wir ___ am Wochenende nach Köln.", concepts: [irregular.a-ae, irregular.no-change-others] }
+      - { type: pick-form, verb: sprechen, person: 4, sentence: "Ihr ___ sehr gut Deutsch.", concepts: [irregular.e-i, irregular.no-change-others] }
+      - { type: pick-form, verb: laufen, person: 5, sentence: "Die Kinder ___ im Park.", concepts: [irregular.a-ae, irregular.no-change-others] }
+      - { type: pick-form, verb: helfen, person: 2, sentence: "Anna ___ gern.", concepts: [irregular.e-i] }
+      - { type: pick-form, verb: sehen, person: 1, sentence: "Du ___ einen Film.", concepts: [irregular.e-ie] }
+      - { type: pick-form, verb: geben, person: 2, sentence: "Mia ___ Ben ein Buch.", concepts: [irregular.e-i] }
+      - { type: pick-form, verb: schlafen, person: 2, sentence: "Mein Hund ___ sehr lange.", concepts: [irregular.a-ae] }
+      - { type: pick-form, verb: laufen, person: 1, sentence: "Du ___ sehr schnell.", concepts: [irregular.a-ae] }
+      - { type: pick-form, verb: lesen, person: 3, sentence: "Wir ___ jeden Abend ein Buch.", concepts: [irregular.e-ie, irregular.no-change-others] }
+      - { type: pick-form, verb: sprechen, person: 2, sentence: "Er ___ nur Deutsch mit mir.", concepts: [irregular.e-i] }
+      - { type: pick-form, verb: essen, person: 1, sentence: "Was ___ du zum Frühstück?", concepts: [irregular.e-i] }
+      - { type: pick-form, verb: nehmen, person: 4, sentence: "Ihr ___ heute den Zug.", concepts: [irregular.e-i, irregular.no-change-others] }
+      - { type: pick-form, verb: fahren, person: 2, sentence: "Er ___ jeden Tag mit dem Bus.", concepts: [irregular.a-ae] }
+
+  - id: match
+    title: { en: "Match", de: "Paare" }
+    shuffle: false
+    items:
+      - type: pairs
+        concepts: [irregular.e-i, irregular.e-ie, irregular.a-ae]
+        instruction: { en: "Tap a verb, then its vowel change.", de: "Tippe ein Verb an, dann den Vokalwechsel." }
+        pairs: [[sprechen, "e → i"], [lesen, "e → ie"], [fahren, "a → ä"], [essen, "e → i"], [sehen, "e → ie"], [schlafen, "a → ä"]]
+      - type: pairs
+        concepts: [irregular.e-i, irregular.e-ie, irregular.a-ae]
+        instruction: { en: "Match the verb with its du-form.", de: "Welche du-Form passt zum Verb?" }
+        pairs: [[sprechen, sprichst], [lesen, liest], [fahren, fährst], [nehmen, nimmst], [sehen, siehst]]
+      - type: pairs
+        concepts: [irregular.e-i, irregular.e-ie, irregular.a-ae]
+        instruction: { en: "Match the verb with its er/sie/es-form.", de: "Welche er/sie/es-Form passt zum Verb?" }
+        pairs: [[essen, isst], [geben, gibt], [helfen, hilft], [laufen, läuft], [schlafen, schläft]]
+
+  - id: correct
+    title: { en: "Which is right?", de: "Was ist richtig?" }
+    count: 8
+    concepts: [irregular.e-i, irregular.e-ie, irregular.a-ae]
+    instruction: { en: "Tap the correct sentence.", de: "Tippe den richtigen Satz an." }
+    items:
+      - type: pick
+        options: ["Du sprichst gut Deutsch.", "Du sprechst gut Deutsch.", "Du sprecht gut Deutsch."]
+        answer: "Du sprichst gut Deutsch."
+        explanation: { en: "du → sprichst (e → i).", de: "du → sprichst (e → i)." }
+      - type: pick
+        options: ["Er fährt nach Berlin.", "Er fahrt nach Berlin.", "Er fahrst nach Berlin."]
+        answer: "Er fährt nach Berlin."
+        explanation: { en: "er → fährt (a → ä).", de: "er → fährt (a → ä)." }
+      - type: pick
+        options: ["Sie liest ein Buch.", "Sie lesst ein Buch.", "Sie lest ein Buch."]
+        answer: "Sie liest ein Buch."
+        explanation: { en: "sie (she) → liest (e → ie).", de: "sie (eine Frau) → liest (e → ie)." }
+      - type: pick
+        options: ["Ich esse Pizza.", "Ich isse Pizza.", "Ich isst Pizza."]
+        answer: "Ich esse Pizza."
+        explanation: { en: "ich has no vowel change.", de: "Bei ich gibt es keinen Wechsel." }
+      - type: pick
+        options: ["Du nimmst den Bus.", "Du nehmst den Bus.", "Du nimmt den Bus."]
+        answer: "Du nimmst den Bus."
+        explanation: { en: "du → nimmst (e → i, and the m doubles).", de: "du → nimmst (e → i, und das m wird doppelt)." }
+      - type: pick
+        options: ["Ihr fahrt nach Hause.", "Ihr fährt nach Hause.", "Ihr fährst nach Hause."]
+        answer: "Ihr fahrt nach Hause."
+        explanation: { en: "ihr has no vowel change.", de: "Bei ihr gibt es keinen Wechsel." }
+      - type: pick
+        options: ["Er schläft lange.", "Er schlaft lange.", "Er schläfst lange."]
+        answer: "Er schläft lange."
+        explanation: { en: "er → schläft (a → ä).", de: "er → schläft (a → ä)." }
+      - type: pick
+        options: ["Wir sehen einen Film.", "Wir sieht einen Film.", "Wir siehen einen Film."]
+        answer: "Wir sehen einen Film."
+        explanation: { en: "wir has no vowel change.", de: "Bei wir gibt es keinen Wechsel." }
+
+  - id: puzzle
+    title: { en: "Sentence puzzle", de: "Satzpuzzle" }
+    count: 6
+    concepts: [syntax.verb-position-2, irregular.e-i, irregular.e-ie, irregular.a-ae]
+    instruction: { en: "Put the words in the right order. Start with the subject.", de: "Bringe die Wörter in die richtige Reihenfolge. Beginne mit dem Subjekt." }
+    explanation: { en: "The subject is first and the verb is in position 2.", de: "Das Subjekt steht vorne. Das Verb steht auf Position 2." }
+    items:
+      - { type: sentence-order, words: "ich esse gern Pizza", accept: ["ich esse gern Pizza"] }
+      - { type: sentence-order, words: "du liest ein Buch", accept: ["du liest ein Buch"] }
+      - { type: sentence-order, words: "er fährt nach Berlin", accept: ["er fährt nach Berlin"] }
+      - { type: sentence-order, words: "Anna spricht gut Deutsch", accept: ["Anna spricht gut Deutsch"] }
+      - { type: sentence-order, words: "wir sehen einen Film", accept: ["wir sehen einen Film"] }
+      - { type: sentence-order, words: "ihr nehmt den Bus", accept: ["ihr nehmt den Bus"] }
+      - { type: sentence-order, words: "mein Hund schläft sehr lange", accept: ["mein Hund schläft sehr lange"] }
+
+  - id: write
+    title: { en: "Writing", de: "Schreiben" }
+    concepts: [writing.simple-sentences, irregular.e-i, irregular.e-ie, irregular.a-ae]
+    instruction: { en: "Write 4 or more sentences. Use the words.", de: "Schreibe 4 Sätze oder mehr. Benutze die Wörter." }
+    items:
+      - type: free-writing
+        task: { en: "Write about your week: What do you eat, read and see? Where do you go? Write about another person too.", de: "Schreibe über deine Woche: Was isst du, liest du und siehst du? Wohin fährst du? Schreibe auch über eine andere Person." }
+        words: [esse, lese, sehe, fahre, spreche, schlafe]
+        minSentences: 4
+        checklist:
+          - { en: "For er/sie/es I used the changed stem (liest, fährt, spricht).", de: "Bei er/sie/es habe ich den veränderten Stamm benutzt (liest, fährt, spricht)." }
+          - { en: "For ich and wir I did not change the vowel.", de: "Bei ich und wir habe ich den Vokal nicht geändert." }
+          - { en: "Every sentence starts with a capital letter and ends with a full stop.", de: "Jeder Satz beginnt mit einem großen Buchstaben und endet mit einem Punkt." }
+        model: "Ich esse gern Reis und ich lese viel. Mein Bruder isst gern Pizza. Er liest nicht gern, aber er sieht gern Filme. Meine Mutter spricht drei Sprachen."

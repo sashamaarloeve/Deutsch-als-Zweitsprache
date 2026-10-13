@@ -1,0 +1,262 @@
+# Training: sentence structure for A1 – the verb in position 2, W-questions, yes/no questions.
+# Original content. English and German texts are written side by side: { en: "...", de: "..." }.
+kind: lesson
+id: sentence-structure-a1
+title: { en: "Sentence structure", de: "Satzbau" }
+level: A1
+skill: grammar
+minutes: 20
+status: draft
+description:
+  en: "Where does the verb go? Learn position 2 in statements, and how to build W-questions and yes/no questions."
+  de: "Wohin kommt das Verb? Lerne Position 2 im Aussagesatz und wie du W-Fragen und Ja/Nein-Fragen baust."
+canDo:
+  - { en: "I can build a statement with the verb in position 2.", de: "Ich kann einen Aussagesatz mit dem Verb auf Position 2 bauen." }
+  - { en: "I can start a statement with a time word and keep the verb in position 2.", de: "Ich kann einen Satz mit einem Zeitwort beginnen. Das Verb bleibt auf Position 2." }
+  - { en: "I can ask W-questions and yes/no questions.", de: "Ich kann W-Fragen und Ja/Nein-Fragen stellen." }
+
+verbs:
+  - { inf: spielen, stem: spiel, endings: [e, st, t, en, t, en] }
+  - { inf: lernen, stem: lern, endings: [e, st, t, en, t, en] }
+  - { inf: kochen, stem: koch, endings: [e, st, t, en, t, en] }
+  - { inf: machen, stem: mach, endings: [e, st, t, en, t, en] }
+  - { inf: hören, stem: hör, endings: [e, st, t, en, t, en] }
+  - { inf: kaufen, stem: kauf, endings: [e, st, t, en, t, en] }
+  - { inf: wohnen, stem: wohn, endings: [e, st, t, en, t, en] }
+
+understand:
+  - type: text
+    title: { en: "The most important rule", de: "Die wichtigste Regel" }
+    body:
+      - en: "In a German statement the verb is always in <v>position 2</v>."
+        de: "Im deutschen Aussagesatz steht das Verb immer auf <v>Position 2</v>."
+      - { en: "<p>Ich</p> <v>wohne</v> in Berlin.", de: "<p>Ich</p> <v>wohne</v> in Berlin." }
+      - { en: "<p>Anna</p> <v>lernt</v> Deutsch.", de: "<p>Anna</p> <v>lernt</v> Deutsch." }
+      - { en: "<p>Meine Schwester</p> <v>kocht</v> Suppe.", de: "<p>Meine Schwester</p> <v>kocht</v> Suppe." }
+      - en: "Position 1 can be one word or a group of words (meine Schwester, mein Bruder und ich). The verb is still in position 2."
+        de: "Auf Position 1 steht ein Wort oder eine Wortgruppe („meine Schwester“, „mein Bruder und ich“). Das Verb ist trotzdem auf Position 2."
+
+  - type: sentence-lab
+    title: { en: "The sentence lab", de: "Das Satz-Labor" }
+    intro:
+      en: "Build a sentence and watch the boxes. The verb always stays in its box. The box behind the verb is the Mittelfeld (middle field): the subject goes there when position 1 is something else."
+      de: "Baue einen Satz und schau auf die Felder. Das Verb bleibt immer in seinem Feld. Das Feld hinter dem Verb heißt Mittelfeld. Dort steht das Subjekt, wenn auf Position 1 etwas anderes steht."
+    boxLabels:
+      - { en: "Position 1", de: "Position 1" }
+      - { en: "Verb", de: "Verb" }
+      - { en: "Mittelfeld", de: "Mittelfeld" }
+      - { en: "Rest", de: "Rest" }
+    verbs:
+      - { inf: spielen, comp: Fußball, wq: Was }
+      - { inf: lernen, comp: Deutsch, wq: Was }
+      - { inf: kochen, comp: Suppe, wq: Was }
+      - { inf: machen, comp: Hausaufgaben, wq: Was }
+      - { inf: hören, comp: Musik, wq: Was }
+      - { inf: wohnen, comp: in Berlin, wq: Wo }
+    starts: [heute, morgen, jetzt]
+    modes:
+      - id: statement
+        label: { en: "Statement", de: "Aussagesatz" }
+        boxes: [[S], [V], [], [O]]
+        end: "."
+        rule:
+          en: "Position 1 is the subject. The <v>verb</v> is in position 2."
+          de: "Auf Position 1 steht das Subjekt. Das <v>Verb</v> steht auf Position 2."
+      - id: time-first
+        label: { en: "Time word first", de: "Zeitwort zuerst" }
+        boxes: [[T], [V], [S], [O]]
+        end: "."
+        rule:
+          en: "Another word can be in position 1. The <v>verb</v> stays in position 2. The subject now comes after the verb, into the Mittelfeld."
+          de: "Auf Position 1 kann auch ein anderes Wort stehen. Das <v>Verb</v> bleibt auf Position 2. Das Subjekt steht jetzt nach dem Verb, im Mittelfeld."
+      - id: w-question
+        label: { en: "W-question", de: "W-Frage" }
+        boxes: [[Q], [V], [S], []]
+        end: "?"
+        rule:
+          en: "In a W-question the question word is in position 1. The <v>verb</v> is in position 2. The subject is in the Mittelfeld."
+          de: "In der W-Frage steht das Fragewort auf Position 1. Das <v>Verb</v> steht auf Position 2. Das Subjekt steht im Mittelfeld."
+      - id: yes-no
+        label: { en: "Yes/no question", de: "Ja/Nein-Frage" }
+        boxes: [[], [V], [S], [O]]
+        end: "?"
+        rule:
+          en: "In a yes/no question position 1 is empty. The <v>verb</v> comes first. The subject is in the Mittelfeld."
+          de: "In der Ja/Nein-Frage ist Position 1 leer. Das <v>Verb</v> steht ganz vorne. Das Subjekt steht im Mittelfeld."
+
+  - type: rule
+    title: { en: "What can be in position 1?", de: "Was steht auf Position 1?" }
+    body:
+      - { en: "the subject: <p>Ich</p> <v>spiele</v> Fußball.", de: "das Subjekt: <p>Ich</p> <v>spiele</v> Fußball." }
+      - { en: "a time word: <p>Heute</p> <v>spiele</v> ich Fußball.", de: "ein Zeitwort: <p>Heute</p> <v>spiele</v> ich Fußball." }
+      - { en: "a place: <p>In Berlin</p> <v>wohne</v> ich.", de: "ein Ort: <p>In Berlin</p> <v>wohne</v> ich." }
+      - en: "The verb stays in position 2. The subject moves behind the verb, into the Mittelfeld. <x>Heute ich spiele Fußball.</x> ✗  <p>Heute</p> <v>spiele</v> ich Fußball. ✓"
+        de: "Das Verb bleibt auf Position 2. Das Subjekt steht hinter dem Verb, im Mittelfeld. <x>Heute ich spiele Fußball.</x> ✗  <p>Heute</p> <v>spiele</v> ich Fußball. ✓"
+
+  - type: rule
+    title: { en: "Questions", de: "Fragen" }
+    body:
+      - { en: "W-questions start with a question word. The <v>verb</v> is in position 2:", de: "W-Fragen beginnen mit einem Fragewort. Das <v>Verb</v> steht auf Position 2:" }
+      - { en: "<p>Wo</p> <v>wohnst</v> du?", de: "<p>Wo</p> <v>wohnst</v> du?" }
+      - { en: "<p>Was</p> <v>machst</v> du?", de: "<p>Was</p> <v>machst</v> du?" }
+      - { en: "<p>Wie</p> <v>heißt</v> du?", de: "<p>Wie</p> <v>heißt</v> du?" }
+      - { en: "<p>Woher</p> <v>kommst</v> du?", de: "<p>Woher</p> <v>kommst</v> du?" }
+      - { en: "Yes/no questions start with the <v>verb</v>:", de: "Ja/Nein-Fragen beginnen mit dem <v>Verb</v>:" }
+      - { en: "<v>Wohnst</v> du in Berlin?", de: "<v>Wohnst</v> du in Berlin?" }
+      - { en: "– Ja, ich wohne in Berlin", de: "– Ja, ich wohne in Berlin" }
+      - { en: "– Nein, ich wohne in Köln", de: "– Nein, ich wohne in Köln" }
+
+practice:
+  - id: boxes
+    title: { en: "Boxes", de: "Felder" }
+    count: 8
+    boxes:
+      - { en: "Position 1", de: "Position 1" }
+      - { en: "Verb", de: "Verb" }
+      - { en: "Mittelfeld", de: "Mittelfeld" }
+      - { en: "Rest", de: "Rest" }
+    concepts: [syntax.verb-position-2]
+    instruction: { en: "Put the words into the boxes. The verb goes into the verb box.", de: "Lege die Wörter in die Felder. Das Verb kommt in das Verb-Feld." }
+    explanation: { en: "The verb is in position 2 in a statement and in a W-question. In a yes/no question it is in position 1.", de: "Im Aussagesatz und in der W-Frage steht das Verb auf Position 2. In der Ja/Nein-Frage steht es auf Position 1." }
+    items:
+      - type: boxes
+        chunks: [ich, wohne, in Berlin]
+        solutions:
+          - [[ich], [wohne], [], [in Berlin]]
+          - [[in Berlin], [wohne], [ich], []]
+      - type: boxes
+        chunks: [Anna, lernt, Deutsch]
+        solutions:
+          - [[Anna], [lernt], [], [Deutsch]]
+          - [[Deutsch], [lernt], [Anna], []]
+      - type: boxes
+        instruction: { en: "Put the words into the boxes. Start with “heute”.", de: "Lege die Wörter in die Felder. Beginne mit „heute“." }
+        chunks: [heute, spiele, ich, Fußball]
+        solutions:
+          - [[heute], [spiele], [ich], [Fußball]]
+      - type: boxes
+        chunks: [wir, kochen, Suppe]
+        solutions:
+          - [[wir], [kochen], [], [Suppe]]
+          - [[Suppe], [kochen], [wir], []]
+      - type: boxes
+        instruction: { en: "Put the words into the boxes. Start with “morgen”.", de: "Lege die Wörter in die Felder. Beginne mit „morgen“." }
+        chunks: [morgen, kaufe, ich, Brot]
+        solutions:
+          - [[morgen], [kaufe], [ich], [Brot]]
+      - type: boxes
+        end: "?"
+        instruction: { en: "Put the words into the boxes. It is a yes/no question.", de: "Lege die Wörter in die Felder. Es ist eine Ja/Nein-Frage." }
+        chunks: [spielst, du, Fußball]
+        solutions:
+          - [[], [spielst], [du], [Fußball]]
+      - type: boxes
+        end: "?"
+        instruction: { en: "Put the words into the boxes. It is a W-question.", de: "Lege die Wörter in die Felder. Es ist eine W-Frage." }
+        chunks: [wo, wohnst, du]
+        solutions:
+          - [[wo], [wohnst], [du], []]
+      - type: boxes
+        end: "?"
+        instruction: { en: "Put the words into the boxes. It is a W-question.", de: "Lege die Wörter in die Felder. Es ist eine W-Frage." }
+        chunks: [was, machst, du, heute]
+        solutions:
+          - [[was], [machst], [du], [heute]]
+      - type: boxes
+        chunks: [Mia, trinkt, Tee]
+        solutions:
+          - [[Mia], [trinkt], [], [Tee]]
+          - [[Tee], [trinkt], [Mia], []]
+      - type: boxes
+        instruction: { en: "Put the words into the boxes. Start with “am Wochenende”.", de: "Lege die Wörter in die Felder. Beginne mit „am Wochenende“." }
+        chunks: [am Wochenende, besuche, ich, meine Oma]
+        solutions:
+          - [[am Wochenende], [besuche], [ich], [meine Oma]]
+
+  - id: puzzle
+    title: { en: "Sentence puzzle", de: "Satzpuzzle" }
+    count: 8
+    concepts: [syntax.verb-position-2]
+    explanation: { en: "The verb is in position 2 in a statement and in a W-question. In a yes/no question it comes first.", de: "Im Aussagesatz und in der W-Frage steht das Verb auf Position 2. In der Ja/Nein-Frage steht es ganz vorne." }
+    items:
+      - { type: sentence-order, instruction: { en: "Put the words in the right order. Start with the subject.", de: "Bringe die Wörter in die richtige Reihenfolge. Beginne mit dem Subjekt." }, words: "ich wohne in Köln", accept: ["ich wohne in Köln"], concepts: [syntax.verb-position-2] }
+      - { type: sentence-order, instruction: { en: "Put the words in the right order. Start with the subject.", de: "Bringe die Wörter in die richtige Reihenfolge. Beginne mit dem Subjekt." }, words: "meine Schwester kocht Suppe", accept: ["meine Schwester kocht Suppe"], concepts: [syntax.verb-position-2] }
+      - { type: sentence-order, instruction: { en: "Put the words in the right order. Start with the subject.", de: "Bringe die Wörter in die richtige Reihenfolge. Beginne mit dem Subjekt." }, words: "mein Bruder spielt Gitarre", accept: ["mein Bruder spielt Gitarre"], concepts: [syntax.verb-position-2] }
+      - { type: sentence-order, instruction: { en: "Put the words in the right order. Start with “heute”.", de: "Bringe die Wörter in die richtige Reihenfolge. Beginne mit „heute“." }, words: "heute kaufe ich Brot", accept: ["heute kaufe ich Brot"], concepts: [syntax.inversion] }
+      - { type: sentence-order, instruction: { en: "Put the words in the right order. Start with “jetzt”.", de: "Bringe die Wörter in die richtige Reihenfolge. Beginne mit „jetzt“." }, words: "jetzt lerne ich Deutsch", accept: ["jetzt lerne ich Deutsch"], concepts: [syntax.inversion] }
+      - { type: sentence-order, instruction: { en: "Put the words in the right order. It is a W-question.", de: "Bringe die Wörter in die richtige Reihenfolge. Es ist eine W-Frage." }, words: "wie heißt du", accept: ["wie heißt du"], end: "?", concepts: [syntax.w-question] }
+      - { type: sentence-order, instruction: { en: "Put the words in the right order. It is a W-question.", de: "Bringe die Wörter in die richtige Reihenfolge. Es ist eine W-Frage." }, words: "was machst du heute", accept: ["was machst du heute"], end: "?", concepts: [syntax.w-question] }
+      - { type: sentence-order, instruction: { en: "Put the words in the right order. It is a yes/no question.", de: "Bringe die Wörter in die richtige Reihenfolge. Es ist eine Ja/Nein-Frage." }, words: "kochst du gern", accept: ["kochst du gern"], end: "?", concepts: [syntax.yes-no-question] }
+      - { type: sentence-order, instruction: { en: "Put the words in the right order. It is a yes/no question.", de: "Bringe die Wörter in die richtige Reihenfolge. Es ist eine Ja/Nein-Frage." }, words: "hörst du Musik", accept: ["hörst du Musik"], end: "?", concepts: [syntax.yes-no-question] }
+
+  - id: which
+    title: { en: "Which is right?", de: "Was ist richtig?" }
+    count: 8
+    concepts: [syntax.verb-position-2]
+    instruction: { en: "Tap the correct sentence.", de: "Tippe den richtigen Satz an." }
+    items:
+      - type: pick
+        options: ["Heute spiele ich Fußball.", "Heute ich spiele Fußball.", "Ich heute spiele Fußball."]
+        answer: "Heute spiele ich Fußball."
+        explanation: { en: "The verb is in position 2, even if a time word is first.", de: "Das Verb steht auf Position 2, auch wenn ein Zeitwort vorne steht." }
+      - type: pick
+        options: ["Wo wohnst du?", "Wo du wohnst?", "Wohnst wo du?"]
+        answer: "Wo wohnst du?"
+        explanation: { en: "Question word first, then the verb.", de: "Zuerst das Fragewort, dann das Verb." }
+      - type: pick
+        options: ["Spielst du Fußball?", "Du Fußball spielst?", "Fußball du spielst?"]
+        answer: "Spielst du Fußball?"
+        explanation: { en: "A yes/no question starts with the verb.", de: "Eine Ja/Nein-Frage beginnt mit dem Verb." }
+      - type: pick
+        options: ["Ich wohne in Berlin.", "Ich in Berlin wohne.", "In Berlin ich wohne."]
+        answer: "Ich wohne in Berlin."
+        explanation: { en: "Subject first, verb in position 2.", de: "Zuerst das Subjekt, das Verb auf Position 2." }
+      - type: pick
+        options: ["Was machst du am Wochenende?", "Was du machst am Wochenende?", "Machst was du am Wochenende?"]
+        answer: "Was machst du am Wochenende?"
+        explanation: { en: "W-question: question word, then the verb.", de: "W-Frage: Fragewort, dann das Verb." }
+      - type: pick
+        options: ["Morgen kaufe ich Brot.", "Morgen ich kaufe Brot.", "Ich morgen kaufe Brot."]
+        answer: "Morgen kaufe ich Brot."
+        explanation: { en: "The verb is in position 2. The subject comes after it.", de: "Das Verb steht auf Position 2. Das Subjekt kommt danach." }
+      - type: pick
+        options: ["Anna lernt jeden Tag Deutsch.", "Anna jeden Tag lernt Deutsch.", "Jeden Tag Anna lernt Deutsch."]
+        answer: "Anna lernt jeden Tag Deutsch."
+        explanation: { en: "Subject first, verb right after it.", de: "Zuerst das Subjekt, direkt danach das Verb." }
+      - type: pick
+        options: ["Wie heißt du?", "Wie du heißt?", "Heißt wie du?"]
+        answer: "Wie heißt du?"
+        explanation: { en: "Question word first, then the verb.", de: "Zuerst das Fragewort, dann das Verb." }
+
+  - id: questions
+    title: { en: "Questions", de: "Fragen" }
+    shuffle: false
+    items:
+      - type: pairs
+        concepts: [syntax.w-question]
+        instruction: { en: "Tap the beginning of a question, then its ending.", de: "Tippe den Anfang einer Frage an, dann das Ende." }
+        pairs: [[Wo, wohnst du?], [Was, machst du?], [Wie, heißt du?], [Woher, kommst du?]]
+      - type: pairs
+        concepts: [syntax.w-question, syntax.yes-no-question]
+        instruction: { en: "Tap a question, then its answer.", de: "Tippe eine Frage an, dann die Antwort." }
+        pairs:
+          - [Wie heißt du?, Ich heiße Ana.]
+          - [Wo wohnst du?, Ich wohne in Wien.]
+          - [Was kochst du?, Ich koche Suppe.]
+          - [Spielst du Fußball?, "Ja, ich spiele gern Fußball."]
+          - [Wo arbeitest du?, Ich arbeite in einer Bank.]
+
+  - id: write
+    title: { en: "Writing", de: "Schreiben" }
+    concepts: [writing.simple-sentences, syntax.verb-position-2]
+    instruction: { en: "Write 5 or more sentences. Use the words.", de: "Schreibe 5 Sätze oder mehr. Benutze die Wörter." }
+    items:
+      - type: free-writing
+        task: { en: "Write about a normal day. Start some sentences with a time word.", de: "Schreibe über einen normalen Tag. Beginne einige Sätze mit einem Zeitwort." }
+        words: [heute, jetzt, dann, am Abend]
+        minSentences: 5
+        checklist:
+          - { en: "The verb is in position 2 in every statement.", de: "In jedem Aussagesatz steht das Verb auf Position 2." }
+          - { en: "If a sentence starts with a time word, the subject comes after the verb.", de: "Wenn ein Satz mit einem Zeitwort beginnt, steht das Subjekt nach dem Verb." }
+          - { en: "Every sentence starts with a capital letter and ends with a full stop.", de: "Jeder Satz beginnt mit einem großen Buchstaben und endet mit einem Punkt." }
+        model: "Heute lerne ich Deutsch. Dann koche ich Suppe. Am Abend spielt mein Bruder Gitarre. Wir hören Musik und wir sind müde. Morgen arbeite ich in Wien."

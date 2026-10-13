@@ -1,0 +1,315 @@
+# Training: modal verbs in the present tense (A1): können, müssen, wollen, möchten, dürfen, sollen.
+# Original content. English and German texts are written side by side: { en: "...", de: "..." }.
+kind: lesson
+id: modal-verbs-present
+title: { en: "Modal verbs", de: "Modalverben" }
+level: A1
+skill: grammar
+minutes: 20
+status: draft
+description:
+  en: "können, müssen, wollen, möchten, dürfen, sollen: the forms, what they mean, and the bracket: modal verb in position 2, infinitive at the end."
+  de: "„können“, „müssen“, „wollen“, „möchten“, „dürfen“, „sollen“: die Formen, die Bedeutung und die Klammer: Modalverb auf Position 2, Infinitiv am Ende."
+canDo:
+  - { en: "I can use the present-tense forms of können, müssen, wollen, möchten, dürfen and sollen.", de: "Ich kann die Präsensformen von „können“, „müssen“, „wollen“, „möchten“, „dürfen“ und „sollen“ benutzen." }
+  - { en: "I can say what I can, must, want, may and should do.", de: "Ich kann sagen, was ich kann, muss, will, darf und soll." }
+  - { en: "I can build a sentence with a modal verb: the infinitive goes to the end.", de: "Ich kann einen Satz mit Modalverb bauen: Der Infinitiv steht am Ende." }
+
+verbs:
+  - { inf: können, forms: [kann, kannst, kann, können, könnt, können] }
+  - { inf: müssen, forms: [muss, musst, muss, müssen, müsst, müssen] }
+  - { inf: wollen, forms: [will, willst, will, wollen, wollt, wollen] }
+  - { inf: möchten, forms: [möchte, möchtest, möchte, möchten, möchtet, möchten] }
+  - { inf: dürfen, forms: [darf, darfst, darf, dürfen, dürft, dürfen] }
+  - { inf: sollen, forms: [soll, sollst, soll, sollen, sollt, sollen] }
+
+understand:
+  - type: dialogue
+    title: { en: "Listen to the two verbs", de: "Achte auf die zwei Verben" }
+    lines:
+      - { who: Mia, say: "<v>Kannst</v> du Gitarre <s>spielen</s>?" }
+      - { who: Ben, say: "Ja, ich <v>kann</v> ein bisschen <s>spielen</s>. Ich <v>möchte</v> in einer Band <s>spielen</s>." }
+      - { who: Mia, say: "Toll! Heute <v>muss</v> ich leider <s>arbeiten</s>. Aber morgen <v>kann</v> ich <s>kommen</s>." }
+
+  - type: text
+    title: { en: "Modal verbs help another verb", de: "Modalverben helfen einem anderen Verb" }
+    body:
+      - en: "The modal verb is conjugated and stands in position 2. The other verb stays in the infinitive and goes to the end of the sentence."
+        de: "Das Modalverb ändert sich und steht auf Position 2. Das andere Verb bleibt im Infinitiv. Es steht am Satzende."
+      - { en: "<p>Ich</p> <v>kann</v> heute Fußball <s>spielen</s>.", de: "<p>Ich</p> <v>kann</v> heute Fußball <s>spielen</s>." }
+      - en: "The two verb parts make a bracket. The Mittelfeld is the part between them."
+        de: "Die zwei Verbteile bilden eine Klammer. Dazwischen steht das Mittelfeld."
+
+  - type: conjugation
+    title: { en: "The forms", de: "Die Formen" }
+    verbs: [können, müssen, wollen, möchten, dürfen, sollen]
+    irregularNote:
+      en: "Look at ich and er/sie/es: they have the same form (ich kann, er kann). Never add -t: <x>er kannt</x>."
+      de: "Schau auf ich und er/sie/es: Sie haben dieselbe Form (ich kann, er kann). Kein -t: <x>er kannt</x>."
+
+  - type: bracket-lab
+    title: { en: "The bracket lab", de: "Das Klammer-Labor" }
+    intro:
+      en: "Build a sentence. The modal verb is in position 2 and the infinitive is at the end."
+      de: "Baue einen Satz. Das Modalverb steht auf Position 2. Der Infinitiv steht am Ende."
+    boxLabels:
+      - { en: "Position 1", de: "Position 1" }
+      - { en: "Verb", de: "Verb" }
+      - { en: "Mittelfeld", de: "Mittelfeld" }
+      - { en: "End", de: "Ende" }
+    partLabels: [{ en: "modal verb", de: "Modalverb" }, { en: "infinitive", de: "Infinitiv" }]
+    leadLabel: { en: "Modal verb", de: "Modalverb" }
+    actionLabel: { en: "Verb", de: "Verb" }
+    leads: [können, müssen, wollen, möchten, dürfen, sollen]
+    actions:
+      - { inf: spielen, comp: Fußball }
+      - { inf: kochen, comp: Suppe }
+      - { inf: lernen, comp: Deutsch }
+      - { inf: kaufen, comp: Brot }
+      - { inf: hören, comp: Musik }
+    starts: [heute, morgen, jetzt]
+    modes:
+      - id: statement
+        label: { en: "Statement", de: "Aussagesatz" }
+        boxes: [[S], [V], [O], [Z]]
+        end: "."
+        rule:
+          en: "The <v>modal verb</v> is in position 2. The <s>infinitive</s> is at the end. Between them is the Mittelfeld."
+          de: "Das <v>Modalverb</v> steht auf Position 2. Der <s>Infinitiv</s> steht am Ende. Dazwischen steht das Mittelfeld."
+      - id: time-first
+        label: { en: "Time word first", de: "Zeitwort zuerst" }
+        boxes: [[T], [V], [S, O], [Z]]
+        end: "."
+        rule:
+          en: "The <v>modal verb</v> is still in position 2. The subject now stands in the Mittelfeld. The <s>infinitive</s> stays at the end."
+          de: "Das <v>Modalverb</v> bleibt auf Position 2. Das Subjekt steht jetzt im Mittelfeld. Der <s>Infinitiv</s> bleibt am Ende."
+      - id: yes-no
+        label: { en: "Yes/no question", de: "Ja/Nein-Frage" }
+        boxes: [[], [V], [S, O], [Z]]
+        end: "?"
+        rule:
+          en: "In a yes/no question the <v>modal verb</v> comes first. The <s>infinitive</s> is still at the end."
+          de: "In der Ja/Nein-Frage steht das <v>Modalverb</v> vorne. Der <s>Infinitiv</s> bleibt am Ende."
+
+  - type: rule
+    title: { en: "What the modal verbs mean", de: "Was die Modalverben bedeuten" }
+    body:
+      - { en: "können – ability or possibility: Ich <v>kann</v> <s>schwimmen</s>.", de: "können – Fähigkeit oder Möglichkeit: Ich <v>kann</v> <s>schwimmen</s>." }
+      - { en: "müssen – you have to: Ich <v>muss</v> heute <s>arbeiten</s>.", de: "müssen – Pflicht: Ich <v>muss</v> heute <s>arbeiten</s>." }
+      - { en: "wollen – a strong wish or a plan: Ich <v>will</v> Deutsch <s>lernen</s>.", de: "wollen – starker Wunsch oder Plan: Ich <v>will</v> Deutsch <s>lernen</s>." }
+      - { en: "möchten – a polite wish: Ich <v>möchte</v> einen Tee <s>trinken</s>.", de: "möchten – höflicher Wunsch: Ich <v>möchte</v> einen Tee <s>trinken</s>." }
+      - { en: "dürfen – permission: Hier <v>darf</v> man nicht <s>parken</s>.", de: "dürfen – Erlaubnis: Hier <v>darf</v> man nicht <s>parken</s>." }
+      - { en: "sollen – someone else wants it, or advice: Du <v>sollst</v> mehr Wasser <s>trinken</s>.", de: "sollen – eine andere Person will es, oder ein Rat: Du <v>sollst</v> mehr Wasser <s>trinken</s>." }
+
+  - type: rule
+    title: { en: "Watch out!", de: "Achtung!" }
+    body:
+      - en: "No “zu” after a modal verb: <x>Ich kann zu schwimmen.</x> ✗ Ich <v>kann</v> <s>schwimmen</s>. ✓"
+        de: "Kein „zu“ nach dem Modalverb: <x>Ich kann zu schwimmen.</x> ✗ Ich <v>kann</v> <s>schwimmen</s>. ✓"
+      - en: "The infinitive is at the end, not behind the modal verb: <x>Ich kann spielen Fußball.</x> ✗ Ich <v>kann</v> Fußball <s>spielen</s>. ✓"
+        de: "Der Infinitiv steht am Ende, nicht hinter dem Modalverb: <x>Ich kann spielen Fußball.</x> ✗ Ich <v>kann</v> Fußball <s>spielen</s>. ✓"
+
+practice:
+  - id: forms
+    title: { en: "Forms", de: "Formen" }
+    count: 10
+    concepts: [modal.forms]
+    instruction: { en: "Which form is right? Tap it.", de: "Welche Form ist richtig? Tippe sie an." }
+    items:
+      - type: forms-pick
+        verbs: [können, müssen, wollen, möchten, dürfen, sollen]
+        explanation: { en: "Modal verbs are irregular: ich and er/sie/es have the same form, and there is no -t.", de: "Modalverben sind unregelmäßig: ich und er/sie/es haben dieselbe Form, ohne -t." }
+
+  - id: match
+    title: { en: "Match", de: "Paare" }
+    shuffle: false
+    concepts: [modal.forms]
+    instruction: { en: "Tap a pronoun, then its verb form.", de: "Tippe ein Pronomen an, dann die passende Form." }
+    items:
+      - { type: pairs, pairs: [[ich, kann], [du, kannst], [wir, können], [ihr, könnt]] }
+      - { type: pairs, pairs: [[ich, muss], [du, musst], [wir, müssen], [ihr, müsst]] }
+      - { type: pairs, pairs: [[ich, will], [du, willst], [wir, wollen], [ihr, wollt]] }
+      - { type: pairs, pairs: [[ich, darf], [du, darfst], [wir, dürfen], [ihr, dürft]] }
+      - { type: pairs, pairs: [[ich, soll], [du, sollst], [wir, sollen], [ihr, sollt]] }
+      - type: pairs
+        instruction: { en: "The modal verbs are mixed. Tap a pronoun, then its form.", de: "Die Modalverben sind gemischt. Tippe ein Pronomen an, dann die Form." }
+        pairs: [[ich, kann], [du, musst], [wir, wollen], [ihr, dürft], [er/sie/es, möchte]]
+
+  - id: sentences
+    title: { en: "In sentences", de: "Im Satz" }
+    count: 10
+    concepts: [modal.forms, modal.bracket]
+    instruction: { en: "Choose the right form of the modal verb.", de: "Wähle die richtige Form vom Modalverb." }
+    explanation: { en: "Look at the subject. The infinitive at the end stays the same.", de: "Schau auf das Subjekt. Der Infinitiv am Ende bleibt gleich." }
+    items:
+      - { type: pick-form, verb: können, person: 0, sentence: "Ich ___ gut schwimmen." }
+      - { type: pick-form, verb: dürfen, person: 1, sentence: "Du ___ heute lange schlafen." }
+      - { type: pick-form, verb: müssen, person: 3, sentence: "Wir ___ jetzt nach Hause gehen." }
+      - { type: pick-form, verb: dürfen, person: 4, sentence: "Ihr ___ hier nicht rauchen." }
+      - { type: pick-form, verb: wollen, person: 2, sentence: "Mein Bruder ___ Gitarre lernen." }
+      - { type: pick-form, verb: möchten, person: 0, sentence: "Ich ___ bitte einen Kaffee trinken." }
+      - { type: pick-form, verb: wollen, person: 1, sentence: "Was ___ du heute machen?" }
+      - { type: pick-form, verb: können, person: 2, sentence: "Anna ___ sehr gut Klavier spielen." }
+      - { type: pick-form, verb: müssen, person: 5, sentence: "Die Kinder ___ um acht ins Bett gehen." }
+      - { type: pick-form, verb: wollen, person: 3, sentence: "Wir ___ morgen ins Kino gehen." }
+      - { type: pick-form, verb: müssen, person: 1, sentence: "Du ___ heute nicht arbeiten." }
+      - { type: pick-form, verb: sollen, person: 1, sentence: "Du ___ mehr Wasser trinken." }
+      - { type: pick-form, verb: sollen, person: 0, sentence: "Ich ___ um acht Uhr nach Hause kommen." }
+
+  - id: meaning
+    title: { en: "Meaning", de: "Bedeutung" }
+    shuffle: false
+    concepts: [modal.meaning]
+    items:
+      - type: pairs
+        instruction: { en: "Tap a modal verb, then its meaning.", de: "Tippe ein Modalverb an, dann die Bedeutung." }
+        pairs:
+          - [können, { en: "ability, possibility", de: "Fähigkeit, Möglichkeit" }]
+          - [müssen, { en: "you have to", de: "Pflicht" }]
+          - [wollen, { en: "strong wish, plan", de: "starker Wunsch, Plan" }]
+          - [möchten, { en: "polite wish", de: "höflicher Wunsch" }]
+          - [dürfen, { en: "permission", de: "Erlaubnis" }]
+          - [sollen, { en: "advice, duty from someone else", de: "Rat, Auftrag von jemand anderem" }]
+      - type: pairs
+        instruction: { en: "Tap a sentence, then what it expresses.", de: "Tippe einen Satz an, dann die Bedeutung." }
+        pairs:
+          - ["Ich kann Gitarre spielen.", { en: "ability", de: "Fähigkeit" }]
+          - ["Ich muss heute arbeiten.", { en: "duty", de: "Pflicht" }]
+          - ["Ich will nach Berlin fahren.", { en: "plan", de: "Plan" }]
+          - ["Ich möchte einen Tee.", { en: "polite wish", de: "höflicher Wunsch" }]
+          - ["Hier darf man nicht parken.", { en: "no permission", de: "keine Erlaubnis" }]
+          - ["Du sollst mehr schlafen.", { en: "advice", de: "Rat" }]
+
+  - id: correct
+    title: { en: "Which is right?", de: "Was ist richtig?" }
+    count: 8
+    concepts: [modal.bracket]
+    instruction: { en: "Tap the correct sentence.", de: "Tippe den richtigen Satz an." }
+    items:
+      - type: pick
+        options: ["Ich kann Fußball spielen.", "Ich kann spielen Fußball.", "Ich spielen kann Fußball."]
+        answer: "Ich kann Fußball spielen."
+        explanation: { en: "The modal verb is in position 2, the infinitive is at the end.", de: "Das Modalverb steht auf Position 2, der Infinitiv am Ende." }
+      - type: pick
+        options: ["Kannst du schwimmen?", "Kannst schwimmen du?", "Du schwimmen kannst?"]
+        answer: "Kannst du schwimmen?"
+        explanation: { en: "In a yes/no question the modal verb is first, the infinitive is last.", de: "In der Ja/Nein-Frage steht das Modalverb vorne und der Infinitiv hinten." }
+      - type: pick
+        options: ["Heute muss ich arbeiten.", "Heute ich muss arbeiten.", "Heute muss arbeiten ich."]
+        answer: "Heute muss ich arbeiten."
+        explanation: { en: "The modal verb stays in position 2 after a time word.", de: "Das Modalverb bleibt nach dem Zeitwort auf Position 2." }
+      - type: pick
+        options: ["Ich will Deutsch lernen.", "Ich will zu lernen Deutsch.", "Ich will Deutsch zu lernen."]
+        answer: "Ich will Deutsch lernen."
+        explanation: { en: "No “zu” after a modal verb.", de: "Nach dem Modalverb steht kein „zu“." }
+      - type: pick
+        options: ["Er kann gut kochen.", "Er kannt gut kochen.", "Er können gut kochen."]
+        answer: "Er kann gut kochen."
+        explanation: { en: "er → kann (no -t).", de: "er → kann (ohne -t)." }
+      - type: pick
+        options: ["Wir möchten morgen ins Kino gehen.", "Wir möchten morgen gehen ins Kino.", "Wir gehen möchten morgen ins Kino."]
+        answer: "Wir möchten morgen ins Kino gehen."
+        explanation: { en: "The infinitive goes to the very end.", de: "Der Infinitiv steht ganz am Ende." }
+      - type: pick
+        options: ["Ihr dürft hier nicht parken.", "Ihr dürfen hier nicht parken.", "Ihr dürft hier nicht zu parken."]
+        answer: "Ihr dürft hier nicht parken."
+        explanation: { en: "ihr → dürft, and no “zu”.", de: "ihr → dürft, und kein „zu“." }
+      - type: pick
+        options: ["Du sollst mehr Wasser trinken.", "Du sollst mehr Wasser zu trinken.", "Du sollst trinken mehr Wasser."]
+        answer: "Du sollst mehr Wasser trinken."
+        explanation: { en: "sollen is a modal verb too: du → sollst, the infinitive is at the end.", de: "„sollen“ ist auch ein Modalverb: du → sollst, der Infinitiv steht am Ende." }
+
+  - id: boxes
+    title: { en: "Boxes", de: "Felder" }
+    count: 8
+    concepts: [modal.bracket]
+    markLast: true
+    boxes:
+      - { en: "Position 1", de: "Position 1" }
+      - { en: "Verb", de: "Verb" }
+      - { en: "Mittelfeld", de: "Mittelfeld" }
+      - { en: "End", de: "Ende" }
+    instruction: { en: "Put the words into the boxes. The modal verb goes into the verb box, the infinitive into the last box.", de: "Lege die Wörter in die Felder. Das Modalverb kommt in das Verb-Feld, der Infinitiv in das letzte Feld." }
+    explanation: { en: "The modal verb is in position 2 (or first in a yes/no question). The infinitive is at the end.", de: "Das Modalverb steht auf Position 2 (in der Ja/Nein-Frage vorne). Der Infinitiv steht am Ende." }
+    items:
+      - type: boxes
+        chunks: [ich, kann, gut, schwimmen]
+        solutions:
+          - [[ich], [kann], [gut], [schwimmen]]
+      - type: boxes
+        chunks: [ich, muss, heute, arbeiten]
+        solutions:
+          - [[ich], [muss], [heute], [arbeiten]]
+          - [[heute], [muss], [ich], [arbeiten]]
+      - type: boxes
+        chunks: [wir, wollen, Pizza, essen]
+        solutions:
+          - [[wir], [wollen], [Pizza], [essen]]
+          - [[Pizza], [wollen], [wir], [essen]]
+      - type: boxes
+        end: "?"
+        instruction: { en: "Put the words into the boxes. It is a yes/no question.", de: "Lege die Wörter in die Felder. Es ist eine Ja/Nein-Frage." }
+        chunks: [kannst, du, Gitarre, spielen]
+        solutions:
+          - [[], [kannst], [du, Gitarre], [spielen]]
+      - type: boxes
+        end: "?"
+        instruction: { en: "Put the words into the boxes. It is a yes/no question.", de: "Lege die Wörter in die Felder. Es ist eine Ja/Nein-Frage." }
+        chunks: [darf, ich, hier, parken]
+        solutions:
+          - [[], [darf], [ich, hier], [parken]]
+      - type: boxes
+        instruction: { en: "Put the words into the boxes. Start with “morgen”.", de: "Lege die Wörter in die Felder. Beginne mit „morgen“." }
+        chunks: [morgen, möchte, ich, Brot, kaufen]
+        solutions:
+          - [[morgen], [möchte], [ich, Brot], [kaufen]]
+      - type: boxes
+        end: "?"
+        instruction: { en: "Put the words into the boxes. It is a W-question.", de: "Lege die Wörter in die Felder. Es ist eine W-Frage." }
+        chunks: [was, willst, du, trinken]
+        solutions:
+          - [[was], [willst], [du], [trinken]]
+      - type: boxes
+        chunks: [Anna, kann, sehr gut, singen]
+        solutions:
+          - [[Anna], [kann], [sehr gut], [singen]]
+      - type: boxes
+        chunks: [du, sollst, mehr, schlafen]
+        solutions:
+          - [[du], [sollst], [mehr], [schlafen]]
+          - [[mehr], [sollst], [du], [schlafen]]
+      - type: boxes
+        chunks: [du, musst, jetzt, lernen]
+        solutions:
+          - [[du], [musst], [jetzt], [lernen]]
+          - [[jetzt], [musst], [du], [lernen]]
+
+  - id: puzzle
+    title: { en: "Sentence puzzle", de: "Satzpuzzle" }
+    count: 6
+    concepts: [modal.bracket]
+    instruction: { en: "Put the words in the right order. Start with the subject.", de: "Bringe die Wörter in die richtige Reihenfolge. Beginne mit dem Subjekt." }
+    explanation: { en: "Subject first, modal verb in position 2, infinitive at the end.", de: "Zuerst das Subjekt, das Modalverb auf Position 2, der Infinitiv am Ende." }
+    items:
+      - { type: sentence-order, words: "ich kann gut kochen", accept: ["ich kann gut kochen"] }
+      - { type: sentence-order, words: "wir müssen jetzt gehen", accept: ["wir müssen jetzt gehen"] }
+      - { type: sentence-order, words: "du darfst hier parken", accept: ["du darfst hier parken"] }
+      - { type: sentence-order, words: "Anna will Deutsch lernen", accept: ["Anna will Deutsch lernen"] }
+      - { type: sentence-order, words: "mein Vater kann Gitarre spielen", accept: ["mein Vater kann Gitarre spielen"] }
+      - { type: sentence-order, words: "ihr möchtet einen Kaffee trinken", accept: ["ihr möchtet einen Kaffee trinken"] }
+      - { type: sentence-order, words: "du sollst mehr Wasser trinken", accept: ["du sollst mehr Wasser trinken"] }
+
+  - id: write
+    title: { en: "Writing", de: "Schreiben" }
+    concepts: [writing.simple-sentences, modal.bracket]
+    instruction: { en: "Write 4 or more sentences. Use the words.", de: "Schreibe 4 Sätze oder mehr. Benutze die Wörter." }
+    items:
+      - type: free-writing
+        task: { en: "Write about what you can, must and want to do.", de: "Schreibe: Was kannst du? Was musst du? Was möchtest du?" }
+        words: [ich kann, ich muss, ich will, ich möchte, hier darf man, ich soll]
+        minSentences: 4
+        checklist:
+          - { en: "The modal verb is in position 2 and the infinitive is at the end.", de: "Das Modalverb steht auf Position 2 und der Infinitiv steht am Ende." }
+          - { en: "I did not use “zu” after the modal verb.", de: "Ich habe nach dem Modalverb kein „zu“ benutzt." }
+          - { en: "Every sentence starts with a capital letter and ends with a full stop.", de: "Jeder Satz beginnt mit einem großen Buchstaben und endet mit einem Punkt." }
+        model: "Ich kann gut kochen und ich kann ein bisschen Gitarre spielen. Heute muss ich arbeiten. Morgen möchte ich ins Kino gehen. Ich will besser Deutsch sprechen."

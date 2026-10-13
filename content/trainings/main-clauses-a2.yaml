@@ -1,0 +1,208 @@
+# Training: main clauses with longer sentences (A2): Dativ and Akkusativ objects, time, place, and the verb bracket.
+# Original content. English and German texts are written side by side: { en: "...", de: "..." }.
+kind: lesson
+id: main-clauses-a2
+title: { en: "Main clauses: longer sentences", de: "Hauptsätze: längere Sätze" }
+level: A2
+skill: grammar
+minutes: 30
+status: draft
+description:
+  en: "Longer statements with a Dativ and an Akkusativ object, time and place, and a verb bracket (modal verb, Perfekt, separable verb). Learn the usual order in the Mittelfeld."
+  de: "Längere Aussagesätze mit Dativ- und Akkusativobjekt, Zeit und Ort und mit Verbklammer (Modalverb, Perfekt, trennbares Verb). Du lernst die normale Reihenfolge im Mittelfeld."
+canDo:
+  - { en: "I can build longer sentences with a Dativ and an Akkusativ object.", de: "Ich kann längere Sätze mit Dativ- und Akkusativobjekt bauen." }
+  - { en: "I can put time, objects and place in a good order.", de: "Ich kann Zeit, Objekte und Ort in eine gute Reihenfolge bringen." }
+  - { en: "I can use the verb bracket: verb in position 2, second verb part at the end.", de: "Ich kann die Verbklammer benutzen: Verb auf Position 2, zweiter Verbteil am Ende." }
+
+understand:
+  - type: dialogue
+    title: { en: "Listen: longer sentences", de: "Hör zu: längere Sätze" }
+    lines:
+      - { who: Mia, say: "Ich <v>habe</v> gestern meiner Oma ein Buch <s>geschenkt</s>." }
+      - { who: Ben, say: "Cool! Ich <v>muss</v> morgen meinem Bruder bei den Hausaufgaben <s>helfen</s>." }
+      - { who: Mia, say: "<p>Heute</p> <v>rufe</v> ich meine Freundin <s>an</s>. Sie <v>zeigt</v> mir ihre neue Wohnung." }
+      - { who: Ben, say: "Schön! Ich <v>gebe</v> dir die Adresse vom Café." }
+
+  - type: text
+    title: { en: "More parts, same rules", de: "Mehr Teile, dieselben Regeln" }
+    body:
+      - en: "In a longer sentence the verb is still in position 2. If there is a second verb part (a modal verb + infinitive, the Perfekt, a separable verb), it goes to the end."
+        de: "Auch in einem längeren Satz steht das Verb auf Position 2. Wenn es einen zweiten Verbteil gibt (Modalverb + Infinitiv, Perfekt, trennbares Verb), steht er am Ende."
+      - { en: "<p>Ich</p> <v>habe</v> gestern meiner Oma ein Buch <s>geschenkt</s>.", de: "<p>Ich</p> <v>habe</v> gestern meiner Oma ein Buch <s>geschenkt</s>." }
+      - { en: "The parts between the verb and the end are the Mittelfeld:", de: "Die Teile zwischen dem Verb und dem Ende sind das Mittelfeld:" }
+      - { en: "gestern (time)", de: "gestern (Zeit)" }
+      - { en: "meiner Oma (Dativ object)", de: "meiner Oma (Dativobjekt)" }
+      - { en: "ein Buch (Akkusativ object)", de: "ein Buch (Akkusativobjekt)" }
+
+  - type: parts-lab
+    title: { en: "The parts lab", de: "Das Satzteile-Labor" }
+    intro:
+      en: "Choose a sentence and a part for position 1. The <v>verb</v> stays in position 2. A second verb part stays at the end."
+      de: "Wähle einen Satz und einen Teil für Position 1. Das <v>Verb</v> bleibt auf Position 2. Ein zweiter Verbteil bleibt am Ende."
+    roles:
+      S: { en: "who (subject)", de: "wer (Subjekt)" }
+      V: { en: "verb", de: "Verb" }
+      T: { en: "when (time)", de: "wann (Zeit)" }
+      D: { en: "to whom (Dativ)", de: "wem (Dativ)" }
+      A: { en: "what/whom (Akkusativ)", de: "was/wen (Akkusativ)" }
+      L: { en: "where (place)", de: "wo (Ort)" }
+      E: { en: "verb end", de: "Verbende" }
+    sentences:
+      - { parts: [{ t: ich, r: S }, { t: gebe, r: V }, { t: heute, r: T }, { t: dem Kind, r: D }, { t: einen Apfel, r: A }], starts: [S, T, D, A] }
+      - { parts: [{ t: Anna, r: S }, { t: schenkt, r: V }, { t: zum Geburtstag, r: T }, { t: ihrer Oma, r: D }, { t: eine Blume, r: A }], starts: [S, T, D, A] }
+      - { parts: [{ t: wir, r: S }, { t: haben, r: V }, { t: gestern, r: T }, { t: dem Gast, r: D }, { t: die Stadt, r: A }, { t: gezeigt, r: E }], starts: [S, T, D, A] }
+      - { parts: [{ t: ich, r: S }, { t: muss, r: V }, { t: morgen, r: T }, { t: meiner Mutter, r: D }, { t: im Garten, r: L }, { t: helfen, r: E }], starts: [S, T, D, L] }
+      - { parts: [{ t: Ben, r: S }, { t: ruft, r: V }, { t: heute, r: T }, { t: seine Freundin, r: A }, { t: an, r: E }], starts: [S, T, A] }
+
+  - type: detective
+    title: { en: "Sentence detective", de: "Satz-Detektiv" }
+    intro:
+      en: "Tap a part. You see the question that finds it and its role."
+      de: "Tippe einen Teil an. Du siehst die Frage, die ihn findet, und seine Rolle."
+    roles:
+      S: { en: "who (subject)", de: "wer (Subjekt)" }
+      V: { en: "verb (position 2)", de: "Verb (Position 2)" }
+      T: { en: "when (time)", de: "wann (Zeit)" }
+      D: { en: "Dativ object", de: "Dativobjekt" }
+      A: { en: "Akkusativ object", de: "Akkusativobjekt" }
+      E: { en: "verb end", de: "Verbende" }
+    sentences:
+      - parts: [{ t: Wir, r: S, q: "Wer hat gezeigt?" }, { t: haben, r: V, q: "Welches Verb steht auf Position 2?" }, { t: gestern, r: T, q: "Wann haben wir die Stadt gezeigt?" }, { t: dem Gast, r: D, q: "Wem haben wir die Stadt gezeigt?" }, { t: die Stadt, r: A, q: "Was haben wir gezeigt?" }, { t: gezeigt, r: E, q: "Welcher Verbteil steht am Ende?" }]
+
+  - type: rule
+    title: { en: "The usual order in the Mittelfeld", de: "Die normale Reihenfolge im Mittelfeld" }
+    body:
+      - { en: "subject – time – Dativ – Akkusativ – place", de: "Subjekt – Zeit – Dativ – Akkusativ – Ort" }
+      - { en: "Ich schenke <en>heute</en> <st>meiner Oma</st> eine Blume.", de: "Ich schenke <en>heute</en> <st>meiner Oma</st> eine Blume." }
+      - { en: "Other orders are possible to stress something. At A2, use the usual order.", de: "Andere Reihenfolgen sind möglich, um etwas zu betonen. Auf A2 benutzt du die normale Reihenfolge." }
+
+  - type: rule
+    title: { en: "What can be in position 1?", de: "Was kann auf Position 1 stehen?" }
+    body:
+      - { en: "Any one part: <p>Ich</p> <v>gebe</v> heute dem Kind einen Apfel.", de: "Jeder einzelne Teil: <p>Ich</p> <v>gebe</v> heute dem Kind einen Apfel." }
+      - { en: "<p>Heute</p> <v>gebe</v> ich dem Kind einen Apfel.", de: "<p>Heute</p> <v>gebe</v> ich dem Kind einen Apfel." }
+      - { en: "<p>Dem Kind</p> <v>gebe</v> ich heute einen Apfel.", de: "<p>Dem Kind</p> <v>gebe</v> ich heute einen Apfel." }
+      - { en: "The verb stays in position 2 and the subject follows the verb.", de: "Das Verb bleibt auf Position 2 und das Subjekt folgt dem Verb." }
+
+  - type: rule
+    title: { en: "Watch out!", de: "Achtung!" }
+    body:
+      - { en: "<x>Ich habe gestern gezeigt dem Gast die Stadt.</x> ✗ Ich habe gestern dem Gast die Stadt <s>gezeigt</s>. ✓", de: "<x>Ich habe gestern gezeigt dem Gast die Stadt.</x> ✗ Ich habe gestern dem Gast die Stadt <s>gezeigt</s>. ✓" }
+      - { en: "<x>Gestern ich habe dem Gast die Stadt gezeigt.</x> ✗ <p>Gestern</p> <v>habe</v> ich dem Gast die Stadt <s>gezeigt</s>. ✓", de: "<x>Gestern ich habe dem Gast die Stadt gezeigt.</x> ✗ <p>Gestern</p> <v>habe</v> ich dem Gast die Stadt <s>gezeigt</s>. ✓" }
+      - { en: "<x>Ich gebe den Kind einen Apfel.</x> ✗ Ich gebe <das>dem</das> Kind <der>einen</der> Apfel. ✓", de: "<x>Ich gebe den Kind einen Apfel.</x> ✗ Ich gebe <das>dem</das> Kind <der>einen</der> Apfel. ✓" }
+
+practice:
+  - id: which
+    title: { en: "Which part?", de: "Welcher Teil?" }
+    count: 8
+    shuffle: true
+    concepts: [syntax.parts, case.dat-before-akk]
+    items:
+      - { type: pick, instruction: { en: "Which part is the Dativ object? Ask: wem?", de: "Welcher Teil ist das Dativobjekt? Frage: Wem?" }, prompt: "Ich gebe heute dem Kind einen Apfel.", options: ["Ich", "gebe", "heute", "dem Kind", "einen Apfel"], answer: "dem Kind", explanation: { en: "Wem gebe ich einen Apfel? – dem Kind.", de: "Wem gebe ich einen Apfel? – dem Kind." } }
+      - { type: pick, instruction: { en: "Which part is the Akkusativ object? Ask: was?", de: "Welcher Teil ist das Akkusativobjekt? Frage: Was?" }, prompt: "Ich gebe heute dem Kind einen Apfel.", options: ["Ich", "gebe", "heute", "dem Kind", "einen Apfel"], answer: "einen Apfel", explanation: { en: "Was gebe ich? – einen Apfel.", de: "Was gebe ich? – einen Apfel." } }
+      - { type: pick, instruction: { en: "Which part says when? Ask: wann?", de: "Welcher Teil sagt wann? Frage: Wann?" }, prompt: "Anna schenkt zum Geburtstag ihrer Oma eine Blume.", options: ["Anna", "zum Geburtstag", "ihrer Oma", "eine Blume"], answer: "zum Geburtstag", explanation: { en: "Wann schenkt Anna eine Blume? – zum Geburtstag.", de: "Wann schenkt Anna eine Blume? – zum Geburtstag." } }
+      - { type: pick, instruction: { en: "Which part is at the end of the verb bracket?", de: "Welcher Teil steht am Ende der Verbklammer?" }, prompt: "Wir haben gestern dem Gast die Stadt gezeigt.", options: ["haben", "gestern", "die Stadt", "gezeigt"], answer: "gezeigt", explanation: { en: "The Partizip II goes to the end.", de: "Das Partizip II steht am Ende." } }
+      - { type: pick, instruction: { en: "Which part is the Dativ object? Ask: wem?", de: "Welcher Teil ist das Dativobjekt? Frage: Wem?" }, prompt: "Ich muss morgen meiner Mutter im Garten helfen.", options: ["morgen", "meiner Mutter", "im Garten", "helfen"], answer: "meiner Mutter", explanation: { en: "Wem muss ich helfen? – meiner Mutter.", de: "Wem muss ich helfen? – meiner Mutter." } }
+      - { type: pick, instruction: { en: "Which part says where? Ask: wo?", de: "Welcher Teil sagt wo? Frage: Wo?" }, prompt: "Ich muss morgen meiner Mutter im Garten helfen.", options: ["morgen", "meiner Mutter", "im Garten", "helfen"], answer: "im Garten", explanation: { en: "Wo helfe ich? – im Garten.", de: "Wo helfe ich? – im Garten." } }
+      - { type: pick, instruction: { en: "Which part is the Akkusativ object? Ask: wen?", de: "Welcher Teil ist das Akkusativobjekt? Frage: Wen?" }, prompt: "Ben ruft heute seine Freundin an.", options: ["Ben", "heute", "seine Freundin", "an"], answer: "seine Freundin", explanation: { en: "Wen ruft Ben an? – seine Freundin.", de: "Wen ruft Ben an? – seine Freundin." } }
+      - { type: pick, instruction: { en: "Which part is the second verb part (end)?", de: "Welcher Teil ist der zweite Verbteil (Ende)?" }, prompt: "Ben ruft heute seine Freundin an.", options: ["ruft", "heute", "seine Freundin", "an"], answer: "an", explanation: { en: "The prefix of a separable verb goes to the end.", de: "Die Vorsilbe eines trennbaren Verbs steht am Ende." } }
+
+  - id: boxes
+    title: { en: "Boxes", de: "Felder" }
+    count: 8
+    boxes:
+      - { en: "Position 1", de: "Position 1" }
+      - { en: "Verb", de: "Verb" }
+      - { en: "Mittelfeld", de: "Mittelfeld" }
+      - { en: "End", de: "Ende" }
+    roleLabels:
+      S: { en: "who", de: "wer" }
+      V: { en: "verb", de: "Verb" }
+      T: { en: "when", de: "wann" }
+      D: { en: "to whom", de: "wem" }
+      A: { en: "what/whom", de: "was/wen" }
+      L: { en: "where", de: "wo" }
+      E: { en: "end", de: "Ende" }
+    concepts: [syntax.klammer-with-objects, syntax.mittelfeld-order]
+    instruction: { en: "Put the parts into the boxes. Many solutions are possible: any part can be first (not the end).", de: "Lege die Teile in die Felder. Es gibt mehrere Lösungen: Jeder Teil kann zuerst stehen (außer dem Ende)." }
+    explanation: { en: "Verb in position 2. The Mittelfeld: subject, time, Dativ, Akkusativ, place. A second verb part goes to the end.", de: "Verb auf Position 2. Mittelfeld: Subjekt, Zeit, Dativ, Akkusativ, Ort. Ein zweiter Verbteil steht am Ende." }
+    markLast: true
+    items:
+      - { type: parts-boxes, parts: "ich/S gebe/V heute/T dem_Kind/D einen_Apfel/A" }
+      - { type: parts-boxes, parts: "Anna/S schenkt/V zum_Geburtstag/T ihrer_Oma/D eine_Blume/A" }
+      - { type: parts-boxes, parts: "wir/S haben/V gestern/T dem_Gast/D die_Stadt/A gezeigt/E" }
+      - { type: parts-boxes, parts: "ich/S muss/V morgen/T meiner_Mutter/D im_Garten/L helfen/E" }
+      - { type: parts-boxes, parts: "Ben/S ruft/V heute/T seine_Freundin/A an/E" }
+      - { type: parts-boxes, parts: "sie/S hat/V gestern/T ihrem_Bruder/D ein_Foto/A geschickt/E" }
+      - { type: parts-boxes, parts: "wir/S wollen/V am_Samstag/T unserer_Lehrerin/D Blumen/A kaufen/E" }
+      - { type: parts-boxes, parts: "du/S kannst/V mir/D heute/T helfen/E", starts: [S, T, D] }
+
+  - id: puzzle
+    title: { en: "Sentence puzzle", de: "Satzpuzzle" }
+    count: 6
+    concepts: [syntax.klammer-with-objects, syntax.mittelfeld-order, case.dat-before-akk]
+    instruction: { en: "Put the parts in the usual order. Start with the subject.", de: "Bringe die Teile in die normale Reihenfolge. Beginne mit dem Subjekt." }
+    explanation: { en: "Subject, verb, time, Dativ, Akkusativ, place, and the second verb part at the end.", de: "Subjekt, Verb, Zeit, Dativ, Akkusativ, Ort und der zweite Verbteil am Ende." }
+    items:
+      - { type: parts-order, parts: "ich/S gebe/V heute/T dem_Kind/D einen_Apfel/A" }
+      - { type: parts-order, parts: "Anna/S schenkt/V zum_Geburtstag/T ihrer_Oma/D eine_Blume/A" }
+      - { type: parts-order, parts: "wir/S haben/V gestern/T dem_Gast/D die_Stadt/A gezeigt/E" }
+      - { type: parts-order, parts: "ich/S muss/V morgen/T meiner_Mutter/D im_Garten/L helfen/E" }
+      - { type: parts-order, parts: "Ben/S ruft/V heute/T seine_Freundin/A an/E" }
+      - { type: parts-order, parts: "sie/S hat/V gestern/T ihrem_Bruder/D ein_Foto/A geschickt/E" }
+      - { type: parts-order, parts: "gestern/T haben/V wir/S dem_Gast/D die_Stadt/A gezeigt/E", start: T, instruction: { en: "Put the parts in the right order. Start with “gestern”.", de: "Bringe die Teile in die richtige Reihenfolge. Beginne mit „gestern“." }, explanation: { en: "Position 1 is “gestern”, so the subject follows the verb.", de: "Auf Position 1 steht „gestern“, deshalb folgt das Subjekt dem Verb." } }
+
+  - id: correct
+    title: { en: "Which is right?", de: "Was ist richtig?" }
+    count: 8
+    concepts: [syntax.klammer-with-objects, case.dat-before-akk, syntax.inversion]
+    instruction: { en: "Tap the correct sentence.", de: "Tippe den richtigen Satz an." }
+    items:
+      - type: pick
+        options: ["Ich gebe dem Kind einen Apfel.", "Ich gebe den Kind einen Apfel.", "Ich gebe dem Kind ein Apfel."]
+        answer: "Ich gebe dem Kind einen Apfel."
+        explanation: { en: "Dativ: dem Kind. Akkusativ masculine: einen Apfel.", de: "Dativ: dem Kind. Akkusativ maskulin: einen Apfel." }
+      - type: pick
+        options: ["Wir haben gestern dem Gast die Stadt gezeigt.", "Wir haben gestern gezeigt dem Gast die Stadt.", "Wir haben gestern dem Gast die Stadt zeigt."]
+        answer: "Wir haben gestern dem Gast die Stadt gezeigt."
+        explanation: { en: "The Partizip II is at the end of the sentence.", de: "Das Partizip II steht am Satzende." }
+      - type: pick
+        options: ["Gestern haben wir dem Gast die Stadt gezeigt.", "Gestern wir haben dem Gast die Stadt gezeigt.", "Gestern haben dem Gast die Stadt gezeigt wir."]
+        answer: "Gestern haben wir dem Gast die Stadt gezeigt."
+        explanation: { en: "Position 1 is “gestern”: verb, then subject, and the Partizip II at the end.", de: "Auf Position 1 steht „gestern“: Verb, dann Subjekt, und das Partizip II am Ende." }
+      - type: pick
+        options: ["Ich muss morgen meiner Mutter helfen.", "Ich muss helfen morgen meiner Mutter.", "Ich helfen muss morgen meiner Mutter."]
+        answer: "Ich muss morgen meiner Mutter helfen."
+        explanation: { en: "Modal verb in position 2, infinitive at the end.", de: "Das Modalverb steht auf Position 2, der Infinitiv am Ende." }
+      - type: pick
+        options: ["Ben ruft heute seine Freundin an.", "Ben anruft heute seine Freundin.", "Ben ruft an heute seine Freundin."]
+        answer: "Ben ruft heute seine Freundin an."
+        explanation: { en: "The prefix “an” goes to the end.", de: "Die Vorsilbe „an“ steht am Ende." }
+      - type: pick
+        options: ["Anna schenkt ihrer Oma eine Blume.", "Anna schenkt ihre Oma eine Blume.", "Anna schenkt ihrer Oma einen Blume."]
+        answer: "Anna schenkt ihrer Oma eine Blume."
+        explanation: { en: "Feminine Dativ: ihrer Oma. Blume is feminine: eine Blume.", de: "Feminin im Dativ: ihrer Oma. „Blume“ ist feminin: eine Blume." }
+      - type: pick
+        options: ["Dem Kind gebe ich einen Apfel.", "Dem Kind ich gebe einen Apfel.", "Dem Kind gebe einen Apfel ich."]
+        answer: "Dem Kind gebe ich einen Apfel."
+        explanation: { en: "The Dativ object is in position 1: verb second, then the subject.", de: "Das Dativobjekt steht auf Position 1: Verb an zweiter Stelle, dann das Subjekt." }
+      - type: pick
+        options: ["Ich schicke meinem Bruder ein Foto.", "Ich schicke mein Bruder ein Foto.", "Ich schicke meinem Bruder einen Foto."]
+        answer: "Ich schicke meinem Bruder ein Foto."
+        explanation: { en: "Dativ: meinem Bruder. Foto is neuter: ein Foto.", de: "Dativ: meinem Bruder. „Foto“ ist Neutrum: ein Foto." }
+
+  - id: write
+    title: { en: "Writing", de: "Schreiben" }
+    concepts: [writing.simple-sentences, syntax.klammer-with-objects]
+    instruction: { en: "Write 4 or more longer sentences. Use the words.", de: "Schreibe 4 längere Sätze oder mehr. Benutze die Wörter." }
+    items:
+      - type: free-writing
+        task: { en: "Write about presents and plans: What do you give to friends and family? What did you do yesterday? What must you do tomorrow?", de: "Schreibe über Geschenke und Pläne: Was gibst du Freunden und deiner Familie? Was hast du gestern gemacht? Was musst du morgen machen?" }
+        words: [ich schenke, ich habe, ich muss, gestern, morgen, meiner, meinem]
+        minSentences: 4
+        checklist:
+          - { en: "The verb is in position 2. A second verb part is at the end.", de: "Das Verb steht auf Position 2. Ein zweiter Verbteil steht am Ende." }
+          - { en: "The Dativ object comes before the Akkusativ object.", de: "Das Dativobjekt steht vor dem Akkusativobjekt." }
+          - { en: "I used at least one time word.", de: "Ich habe mindestens ein Zeitwort benutzt." }
+        model: "Gestern habe ich meiner Schwester ein Buch geschenkt. Morgen muss ich meinem Bruder im Garten helfen. Am Samstag rufe ich meine Oma an. Ich gebe ihr eine Blume."

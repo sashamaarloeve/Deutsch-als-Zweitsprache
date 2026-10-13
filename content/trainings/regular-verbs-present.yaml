@@ -1,0 +1,167 @@
+# Training: regular verbs in the present tense (A1).
+# Original content. English and German texts are written side by side: { en: "...", de: "..." }.
+kind: lesson
+id: regular-verbs-present
+title: { en: "Regular verbs", de: "Regelmäßige Verben" }
+level: A1
+skill: grammar
+minutes: 20
+status: draft
+description:
+  en: "Build the present tense of regular verbs: stem plus ending. Includes verbs like arbeiten, tanzen and heißen."
+  de: "So bildest du das Präsens von regelmäßigen Verben: Stamm plus Endung. Auch Verben wie „arbeiten“, „tanzen“ und „heißen“."
+canDo:
+  - { en: "I can build the present-tense form of a regular verb.", de: "Ich kann das Präsens von einem regelmäßigen Verb bilden." }
+  - { en: "I can use the right ending for ich, du, er/sie/es, wir, ihr and sie/Sie.", de: "Ich kann die richtige Endung für ich, du, er/sie/es, wir, ihr und sie/Sie benutzen." }
+  - { en: "I can use verbs with a special stem, like arbeiten, tanzen and heißen.", de: "Ich kann Verben mit besonderem Stamm benutzen, zum Beispiel „arbeiten“, „tanzen“ und „heißen“." }
+
+verbs:
+  - { inf: spielen, stem: spiel, endings: [e, st, t, en, t, en] }
+  - { inf: lernen, stem: lern, endings: [e, st, t, en, t, en] }
+  - { inf: machen, stem: mach, endings: [e, st, t, en, t, en] }
+  - { inf: wohnen, stem: wohn, endings: [e, st, t, en, t, en] }
+  - { inf: kochen, stem: koch, endings: [e, st, t, en, t, en] }
+  - { inf: kaufen, stem: kauf, endings: [e, st, t, en, t, en] }
+  - { inf: hören, stem: hör, endings: [e, st, t, en, t, en] }
+  - { inf: besuchen, stem: besuch, endings: [e, st, t, en, t, en] }
+  - { inf: tanzen, stem: tanz, endings: [e, t, t, en, t, en] }
+  - { inf: heißen, stem: heiß, endings: [e, t, t, en, t, en] }
+  - { inf: arbeiten, stem: arbeit, endings: [e, est, et, en, et, en] }
+  - { inf: finden, stem: find, endings: [e, est, et, en, et, en] }
+
+understand:
+  - type: dialogue
+    title: { en: "Listen to the verbs", de: "Achte auf die Verben" }
+    lines:
+      - { who: Mia, say: "Hallo! Wie <v>heißt</v> du?" }
+      - { who: Ben, say: "Ich <v>heiße</v> Ben. Und du?" }
+      - { who: Mia, say: "Ich <v>heiße</v> Mia. Ich <v>wohne</v> in Köln. Wo <v>wohnst</v> du?" }
+      - { who: Ben, say: "Ich <v>wohne</v> in Hamburg. Ich <v>arbeite</v> hier. Und du? <v>Arbeitest</v> du auch?" }
+
+  - type: text
+    title: { en: "Verb = stem + ending", de: "Verb = Stamm + Endung" }
+    body:
+      - en: "The infinitive is the form in the dictionary: <st>spiel</st><en>en</en>. Take away <en>-en</en> and you get the stem: <st>spiel</st>."
+        de: "Der Infinitiv steht im Wörterbuch: <st>spiel</st><en>en</en>. Streiche <en>-en</en>. Dann hast du den Stamm: <st>spiel</st>."
+      - en: "Add the ending for the person: ich <st>spiel</st><en>e</en>, du <st>spiel</st><en>st</en>, er/sie/es <st>spiel</st><en>t</en>, wir <st>spiel</st><en>en</en>, ihr <st>spiel</st><en>t</en>, sie/Sie <st>spiel</st><en>en</en>."
+        de: "Füge die Endung für die Person an: ich <st>spiel</st><en>e</en>, du <st>spiel</st><en>st</en>, er/sie/es <st>spiel</st><en>t</en>, wir <st>spiel</st><en>en</en>, ihr <st>spiel</st><en>t</en>, sie/Sie <st>spiel</st><en>en</en>."
+
+  - type: conjugation
+    title: { en: "The verb workshop", de: "Die Verb-Werkstatt" }
+    intro: { en: "Tap a verb and look at the stem and the ending.", de: "Tippe ein Verb an. Schau auf den Stamm und die Endung." }
+    verbs: [spielen, lernen, machen, wohnen, kochen, kaufen, hören, besuchen, tanzen, heißen, arbeiten, finden]
+
+  - type: rule
+    title: { en: "Two pairs look the same", de: "Zwei Paare sind gleich" }
+    body:
+      - { en: "er/sie/es and ihr both end in <en>-t</en>: er <st>spiel</st><en>t</en>, ihr <st>spiel</st><en>t</en>.", de: "er/sie/es und ihr haben beide <en>-t</en>: er <st>spiel</st><en>t</en>, ihr <st>spiel</st><en>t</en>." }
+      - { en: "wir and sie/Sie look like the infinitive: wir <st>spiel</st><en>en</en>, sie <st>spiel</st><en>en</en>.", de: "wir und sie/Sie sehen aus wie der Infinitiv: wir <st>spiel</st><en>en</en>, sie <st>spiel</st><en>en</en>." }
+
+  - type: rule
+    title: { en: "Special stems", de: "Besondere Stämme" }
+    body:
+      - en: "The stem ends in -t or -d (arbeiten, finden): you need an extra e. du <st>arbeit</st><en>est</en>, er <st>arbeit</st><en>et</en>, ihr <st>arbeit</st><en>et</en>."
+        de: "Der Stamm endet auf -t oder -d („arbeiten“, „finden“): Du brauchst ein extra e. du <st>arbeit</st><en>est</en>, er <st>arbeit</st><en>et</en>, ihr <st>arbeit</st><en>et</en>."
+      - en: "The stem ends in -s, -ß or -z (heißen, tanzen): du only has -t. du <st>tanz</st><en>t</en>, du <st>heiß</st><en>t</en>."
+        de: "Der Stamm endet auf -s, -ß oder -z („heißen“, „tanzen“): Bei du gibt es nur -t. du <st>tanz</st><en>t</en>, du <st>heiß</st><en>t</en>."
+
+practice:
+  - id: build
+    title: { en: "Word parts", de: "Bausteine" }
+    count: 10
+    instruction: { en: "Build the verb form.", de: "Baue die Verbform." }
+    items:
+      - type: forms-build
+        verbs: [spielen, lernen, machen, wohnen, kochen, kaufen, hören, besuchen]
+        concepts: [present.regular-endings]
+        hint: { en: "Regular verb: stem + ending.", de: "Regelmäßiges Verb: Stamm + Endung." }
+      - type: forms-build
+        verbs: [tanzen, heißen, arbeiten, finden]
+        concepts: [present.regular-special-stems]
+        hint: { en: "Check the end of the stem: -t/-d needs an extra e (du arbeitest). -s/-ß/-z: du only has -t (du tanzt).", de: "Schau auf das Ende vom Stamm: -t/-d braucht ein extra e (du arbeitest). -s/-ß/-z: Bei du gibt es nur -t (du tanzt)." }
+
+  - id: pick
+    title: { en: "Which form?", de: "Welche Form?" }
+    count: 10
+    instruction: { en: "Which form is right? Tap it.", de: "Welche Form ist richtig? Tippe sie an." }
+    items:
+      - type: forms-pick
+        verbs: [spielen, lernen, machen, wohnen, kochen, kaufen, hören, besuchen]
+        concepts: [present.regular-endings]
+        explanation: { en: "Stem + the ending for the person.", de: "Stamm + die Endung für die Person." }
+      - type: forms-pick
+        verbs: [tanzen, heißen, arbeiten, finden]
+        concepts: [present.regular-special-stems]
+        explanation: { en: "Look at the end of the stem: -t/-d → extra e. -s/-ß/-z → du only has -t.", de: "Schau auf das Ende vom Stamm: -t/-d → extra e. -s/-ß/-z → bei du nur -t." }
+
+  - id: sentences
+    title: { en: "In sentences", de: "Im Satz" }
+    count: 10
+    instruction: { en: "Choose the right form for the sentence.", de: "Wähle die richtige Form für den Satz." }
+    explanation: { en: "Look at the subject. It tells you which ending you need.", de: "Schau auf das Subjekt. Es zeigt die richtige Endung." }
+    items:
+      - { type: pick-form, verb: wohnen, person: 0, sentence: "Ich ___ in Berlin.", concepts: [present.regular-endings] }
+      - { type: pick-form, verb: spielen, person: 1, sentence: "Du ___ gern Fußball.", concepts: [present.regular-endings] }
+      - { type: pick-form, verb: lernen, person: 2, sentence: "Mia ___ Deutsch.", concepts: [present.regular-endings] }
+      - { type: pick-form, verb: kochen, person: 3, sentence: "Wir ___ Suppe.", concepts: [present.regular-endings] }
+      - { type: pick-form, verb: hören, person: 4, sentence: "Ihr ___ viel Musik.", concepts: [present.regular-endings] }
+      - { type: pick-form, verb: arbeiten, person: 5, sentence: "Meine Eltern ___ in einer Bank.", concepts: [present.regular-special-stems] }
+      - { type: pick-form, verb: tanzen, person: 1, sentence: "Du ___ sehr gut.", concepts: [present.regular-special-stems] }
+      - { type: pick-form, verb: heißen, person: 0, sentence: "Ich ___ Anna.", concepts: [present.regular-special-stems] }
+      - { type: pick-form, verb: heißen, person: 1, sentence: "Wie ___ du?", concepts: [present.regular-special-stems] }
+      - { type: pick-form, verb: arbeiten, person: 2, sentence: "Er ___ in einem Supermarkt.", concepts: [present.regular-special-stems] }
+      - { type: pick-form, verb: kaufen, person: 3, sentence: "Wir ___ Brot und Milch.", concepts: [present.regular-endings] }
+      - { type: pick-form, verb: machen, person: 4, sentence: "Was ___ ihr am Wochenende?", concepts: [present.regular-endings] }
+      - { type: pick-form, verb: finden, person: 1, sentence: "Wie ___ du das Buch?", concepts: [present.regular-special-stems] }
+      - { type: pick-form, verb: besuchen, person: 2, sentence: "Lena ___ ihre Oma.", concepts: [present.regular-endings] }
+      - { type: pick-form, verb: kaufen, person: 1, sentence: "Du ___ ein Eis.", concepts: [present.regular-endings] }
+
+  - id: match
+    title: { en: "Match", de: "Paare" }
+    shuffle: false
+    items:
+      - type: pairs
+        concepts: [present.regular-endings]
+        instruction: { en: "Tap a pronoun, then the form of “spielen”.", de: "Tippe ein Pronomen an, dann die Form von „spielen“." }
+        pairs: [[ich, spiele], [du, spielst], [er/sie/es, spielt], [wir, spielen]]
+      - type: pairs
+        concepts: [present.regular-special-stems]
+        instruction: { en: "Tap a pronoun, then the form of “arbeiten”.", de: "Tippe ein Pronomen an, dann die Form von „arbeiten“." }
+        pairs: [[ich, arbeite], [du, arbeitest], [er/sie/es, arbeitet], [wir, arbeiten]]
+      - type: pairs
+        concepts: [present.regular-endings, present.regular-special-stems]
+        instruction: { en: "Match the verb with its du-form.", de: "Welche du-Form passt zum Verb?" }
+        pairs: [[spielen, spielst], [lernen, lernst], [arbeiten, arbeitest], [tanzen, tanzt], [wohnen, wohnst]]
+      - type: pairs
+        concepts: [present.regular-endings, present.regular-special-stems]
+        instruction: { en: "Match the verb with its er/sie/es-form.", de: "Welche er/sie/es-Form passt zum Verb?" }
+        pairs: [[spielen, spielt], [kochen, kocht], [arbeiten, arbeitet], [finden, findet], [hören, hört]]
+
+  - id: puzzle
+    title: { en: "Sentence puzzle", de: "Satzpuzzle" }
+    count: 6
+    concepts: [syntax.verb-position-2]
+    instruction: { en: "Put the words in the right order. Start with the subject.", de: "Bringe die Wörter in die richtige Reihenfolge. Beginne mit dem Subjekt." }
+    explanation: { en: "The subject is first and the verb is in position 2.", de: "Das Subjekt steht vorne. Das Verb steht auf Position 2." }
+    items:
+      - { type: sentence-order, words: "ich wohne in Köln", accept: ["ich wohne in Köln"] }
+      - { type: sentence-order, words: "Anna lernt Deutsch", accept: ["Anna lernt Deutsch"] }
+      - { type: sentence-order, words: "meine Schwester kocht Suppe", accept: ["meine Schwester kocht Suppe"] }
+      - { type: sentence-order, words: "mein Bruder spielt Gitarre", accept: ["mein Bruder spielt Gitarre"] }
+      - { type: sentence-order, words: "die Kinder machen Hausaufgaben", accept: ["die Kinder machen Hausaufgaben"] }
+      - { type: sentence-order, words: "du arbeitest in Wien", accept: ["du arbeitest in Wien"] }
+
+  - id: write
+    title: { en: "Writing", de: "Schreiben" }
+    concepts: [writing.simple-sentences, present.regular-endings]
+    instruction: { en: "Write 4 or more sentences. Use the words.", de: "Schreibe 4 Sätze oder mehr. Benutze die Wörter." }
+    items:
+      - type: free-writing
+        task: { en: "Write about yourself: Where do you live? What do you like to do?", de: "Schreibe über dich: Wo wohnst du? Was machst du gern?" }
+        words: [wohne, spiele, lerne, höre, koche, tanze, arbeite, gern]
+        minSentences: 4
+        checklist:
+          - { en: "Every verb has the right ending for its subject (ich … e, du … st, er/sie … t).", de: "Jedes Verb hat die richtige Endung für sein Subjekt (ich … e, du … st, er/sie … t)." }
+          - { en: "Every sentence starts with a capital letter and ends with a full stop.", de: "Jeder Satz beginnt mit einem großen Buchstaben und endet mit einem Punkt." }
+          - { en: "I wrote about one other person too (er or sie).", de: "Ich habe auch über eine andere Person geschrieben (er oder sie)." }
+        model: "Ich wohne in Wien und ich lerne Deutsch. Ich höre gern Musik und ich tanze gern. Mein Bruder arbeitet in einer Bank. Er spielt gern Gitarre."

@@ -1,0 +1,234 @@
+# Overview: the four German cases. No CEFR level (A0 = overview), a map before the dedicated case trainings.
+# Original content. English and German texts are written side by side: { en: "...", de: "..." }.
+kind: lesson
+id: cases-overview
+title: { en: "Cases: overview", de: "Fälle: Übersicht" }
+level: A0
+skill: grammar
+minutes: 20
+status: draft
+description:
+  en: "A map of the four cases (Nominativ, Akkusativ, Dativ, Genitiv): what they do, how the articles change, which verbs and prepositions need which case."
+  de: "Eine Landkarte der vier Fälle (Nominativ, Akkusativ, Dativ, Genitiv): Was sie tun, wie sich die Artikel ändern und welche Verben und Präpositionen welchen Fall brauchen."
+canDo:
+  - { en: "I know that German has four cases and that the verb or preposition decides the case.", de: "Ich weiß, dass es im Deutschen vier Fälle gibt und dass das Verb oder die Präposition den Fall bestimmt." }
+  - { en: "I can read the article table.", de: "Ich kann die Artikeltabelle lesen." }
+  - { en: "I know typical verbs and prepositions for the Akkusativ and the Dativ.", de: "Ich kenne typische Verben und Präpositionen für Akkusativ und Dativ." }
+
+articles:
+  definite:
+    label: { en: "the", de: "der, die, das" }
+    nom: [der, die, das, die]
+    akk: [den, die, das, die]
+    dat: [dem, der, dem, den]
+    gen: [des, der, des, der]
+  indefinite:
+    label: { en: "a", de: "ein, eine" }
+    nom: [ein, eine, ein, ""]
+    akk: [einen, eine, ein, ""]
+    dat: [einem, einer, einem, ""]
+    gen: [eines, einer, eines, ""]
+
+understand:
+  - type: text
+    title: { en: "What are cases?", de: "Was sind Fälle?" }
+    body:
+      - en: "In German, the form of the article changes when the noun has a different job in the sentence. The job is called the case. There are four cases: Nominativ, Akkusativ, Dativ and Genitiv."
+        de: "Im Deutschen ändert sich die Form vom Artikel, wenn das Nomen im Satz eine andere Aufgabe hat. Die Aufgabe heißt Fall. Es gibt vier Fälle: Nominativ, Akkusativ, Dativ und Genitiv."
+      - { en: "<p>Der Mann</p> <v>gibt</v> <das>dem</das> Kind <der>einen</der> Ball.", de: "<p>Der Mann</p> <v>gibt</v> <das>dem</das> Kind <der>einen</der> Ball." }
+      - en: "der Mann is the subject (Nominativ). dem Kind is an object in the Dativ. einen Ball is an object in the Akkusativ."
+        de: "„der Mann“ ist das Subjekt (Nominativ). „dem Kind“ ist ein Objekt im Dativ. „einen Ball“ ist ein Objekt im Akkusativ."
+
+  - type: rule
+    title: { en: "The four cases", de: "Die vier Fälle" }
+    body:
+      - { en: "The highlighted words show the case.", de: "Die markierten Wörter zeigen den Fall." }
+      - { en: "Nominativ = the subject (who does it?). <c>Der Mann</c> sieht den Hund. → “der Mann” is the Nominativ.", de: "Nominativ = das Subjekt (Wer macht es?). <c>Der Mann</c> sieht den Hund. → „der Mann“ ist der Nominativ." }
+      - { en: "Akkusativ = an object. Ich sehe <c>den Mann</c>. → “den Mann” is the Akkusativ. “Ich” is the subject (Nominativ).", de: "Akkusativ = ein Objekt. Ich sehe <c>den Mann</c>. → „den Mann“ ist der Akkusativ. „Ich“ ist das Subjekt (Nominativ)." }
+      - { en: "Dativ = an object, often a person. Ich helfe <c>dem Mann</c>. → “dem Mann” is the Dativ.", de: "Dativ = ein Objekt, oft eine Person. Ich helfe <c>dem Mann</c>. → „dem Mann“ ist der Dativ." }
+      - { en: "Genitiv = belonging. Das ist das Auto <c>des Mannes</c>. → “des Mannes” is the Genitiv. Mostly in writing. You learn it later.", de: "Genitiv = Zugehörigkeit. Das ist das Auto <c>des Mannes</c>. → „des Mannes“ ist der Genitiv. Meistens in geschriebenen Texten. Das lernst du später." }
+      - { en: "Tip: the questions wer? – wen? – wem? – wessen? can help, but it is more important to learn each verb with its case.", de: "Tipp: Die Fragen Wer? – Wen? – Wem? – Wessen? können helfen. Wichtiger ist aber: Lerne jedes Verb mit seinem Fall." }
+
+  - type: article-table
+    title: { en: "The articles: der, die, das", de: "Die Artikel: der, die, das" }
+    intro:
+      en: "Look at the table. The colour shows the gender of the noun. Highlighted forms are different from the Nominativ."
+      de: "Schau auf die Tabelle. Die Farbe zeigt das Genus vom Nomen. Markierte Formen sind anders als im Nominativ."
+    kinds: [definite]
+    cases:
+      - { id: nom, label: { en: Nominativ, de: Nominativ } }
+      - { id: akk, label: { en: Akkusativ, de: Akkusativ } }
+      - { id: dat, label: { en: Dativ, de: Dativ } }
+      - { id: gen, label: { en: Genitiv, de: Genitiv } }
+    note:
+      en: |-
+        Akkusativ: only the masculine changes (der → <der>den</der>).
+        Dativ: everything changes.
+        Genitiv: <der>des</der> and <das>des</das> (+ -s on the noun), <die>der</die> for feminine and plural.
+      de: |-
+        Akkusativ: Nur das Maskulinum ändert sich (der → <der>den</der>).
+        Dativ: Alles ändert sich.
+        Genitiv: <der>des</der> und <das>des</das> (+ -s am Nomen), <die>der</die> für Feminin und Plural.
+
+  - type: article-table
+    title: { en: "The articles: ein, eine", de: "Die Artikel: ein, eine" }
+    kinds: [indefinite]
+    cases:
+      - { id: nom, label: { en: Nominativ, de: Nominativ } }
+      - { id: akk, label: { en: Akkusativ, de: Akkusativ } }
+      - { id: dat, label: { en: Dativ, de: Dativ } }
+      - { id: gen, label: { en: Genitiv, de: Genitiv } }
+    note:
+      en: "mein, dein, kein … work like ein, and they also have a plural."
+      de: "„mein“, „dein“, „kein“ … funktionieren wie „ein“ und haben auch einen Plural."
+
+  - type: table
+    title: { en: "Pronouns", de: "Pronomen" }
+    intro:
+      en: "The personal pronouns also change with the case."
+      de: "Auch die Personalpronomen ändern sich mit dem Fall."
+    head: [Nominativ, Akkusativ, Dativ]
+    rows:
+      - [ich, mich, mir]
+      - [du, dich, dir]
+      - [er, ihn, ihm]
+      - [sie (she), sie, ihr]
+      - [es, es, ihm]
+      - [wir, uns, uns]
+      - [ihr, euch, euch]
+      - [sie (they), sie, ihnen]
+
+  - type: rule
+    title: { en: "The verb decides", de: "Das Verb bestimmt" }
+    body:
+      - { en: "These are examples. There are many more verbs. Learn a new verb together with its case.", de: "Das sind Beispiele. Es gibt viele weitere Verben. Lerne ein neues Verb zusammen mit seinem Fall." }
+      - { en: "Verbs with an Akkusativ object, for example: sehen, haben, kaufen, brauchen, suchen, lesen", de: "Verben mit Akkusativobjekt, zum Beispiel: sehen, haben, kaufen, brauchen, suchen, lesen" }
+      - { en: "Ich sehe <c>den Hund</c>.", de: "Ich sehe <c>den Hund</c>." }
+      - { en: "Wir kaufen <c>einen Tisch</c>.", de: "Wir kaufen <c>einen Tisch</c>." }
+      - { en: "Sie liest <c>ein Buch</c>.", de: "Sie liest <c>ein Buch</c>." }
+      - { en: "Verbs with a Dativ object, for example: helfen, danken, gefallen, gehören, schmecken, antworten", de: "Verben mit Dativobjekt, zum Beispiel: helfen, danken, gefallen, gehören, schmecken, antworten" }
+      - { en: "Ich helfe <c>dem Kind</c>.", de: "Ich helfe <c>dem Kind</c>." }
+      - { en: "Das Auto gehört <c>meiner Mutter</c>.", de: "Das Auto gehört <c>meiner Mutter</c>." }
+      - { en: "Der Film gefällt <c>mir</c>.", de: "Der Film gefällt <c>mir</c>." }
+      - { en: "Verbs with a Dativ and an Akkusativ object, for example: geben, schenken, zeigen, schicken", de: "Verben mit Dativ- und Akkusativobjekt, zum Beispiel: geben, schenken, zeigen, schicken" }
+      - { en: "Ich gebe <c>dem Kind</c> <c>einen Ball</c>.", de: "Ich gebe <c>dem Kind</c> <c>einen Ball</c>." }
+      - { en: "Sie schenkt <c>ihrer Oma</c> <c>eine Blume</c>.", de: "Sie schenkt <c>ihrer Oma</c> <c>eine Blume</c>." }
+      - { en: "Wir zeigen <c>dem Gast</c> <c>die Stadt</c>.", de: "Wir zeigen <c>dem Gast</c> <c>die Stadt</c>." }
+
+  - type: rule
+    title: { en: "The preposition decides", de: "Die Präposition bestimmt" }
+    body:
+      - { en: "These are examples. Learn a new preposition together with its case.", de: "Das sind Beispiele. Lerne eine neue Präposition zusammen mit ihrem Fall." }
+      - { en: "Always Akkusativ, for example: für, ohne, gegen, durch, um", de: "Immer Akkusativ, zum Beispiel: für, ohne, gegen, durch, um" }
+      - { en: "Das Geschenk ist für <c>den Mann</c>.", de: "Das Geschenk ist für <c>den Mann</c>." }
+      - { en: "Wir gehen durch <c>den Park</c>.", de: "Wir gehen durch <c>den Park</c>." }
+      - { en: "Sie kommt ohne <c>ihren Bruder</c>.", de: "Sie kommt ohne <c>ihren Bruder</c>." }
+      - { en: "Always Dativ, for example: mit, bei, von, zu, aus, nach, seit", de: "Immer Dativ, zum Beispiel: mit, bei, von, zu, aus, nach, seit" }
+      - { en: "Ich fahre mit <c>dem Bus</c>.", de: "Ich fahre mit <c>dem Bus</c>." }
+      - { en: "Sie wohnt bei <c>ihrer Oma</c>.", de: "Sie wohnt bei <c>ihrer Oma</c>." }
+      - { en: "Er kommt aus <c>dem Haus</c>.", de: "Er kommt aus <c>dem Haus</c>." }
+      - { en: "Some prepositions (in, an, auf …) can take both. You learn them later.", de: "Einige Präpositionen (in, an, auf …) können beides. Die lernst du später." }
+
+  - type: text
+    title: { en: "Where to go next", de: "Wie geht es weiter?" }
+    body:
+      - { en: "The training Akkusativ (A1) shows the Akkusativ step by step. The training Dativ (A2) does the same for the Dativ.", de: "Das Training „Akkusativ“ (A1) zeigt den Akkusativ Schritt für Schritt. Das Training „Dativ“ (A2) macht dasselbe für den Dativ." }
+
+practice:
+  - id: which
+    title: { en: "Which case?", de: "Welcher Fall?" }
+    count: 8
+    shuffle: true
+    concepts: [case.overview]
+    items:
+      - { type: pick, instruction: { en: "Which case is “der Mann”?", de: "Welcher Fall ist „der Mann“?" }, prompt: "Der Mann schläft.", options: [Nominativ, Akkusativ, Dativ], answer: Nominativ, explanation: { en: "The subject is in the Nominativ.", de: "Das Subjekt steht im Nominativ." } }
+      - { type: pick, instruction: { en: "Which case is “den Hund”?", de: "Welcher Fall ist „den Hund“?" }, prompt: "Ich sehe den Hund.", options: [Nominativ, Akkusativ, Dativ], answer: Akkusativ, explanation: { en: "sehen needs an Akkusativ object.", de: "„sehen“ braucht ein Akkusativobjekt." } }
+      - { type: pick, instruction: { en: "Which case is “dem Mann”?", de: "Welcher Fall ist „dem Mann“?" }, prompt: "Ich helfe dem Mann.", options: [Nominativ, Akkusativ, Dativ], answer: Dativ, explanation: { en: "helfen needs a Dativ object.", de: "„helfen“ braucht ein Dativobjekt." } }
+      - { type: pick, instruction: { en: "Which case is “einen Ball”?", de: "Welcher Fall ist „einen Ball“?" }, prompt: "Ich gebe dem Kind einen Ball.", options: [Nominativ, Akkusativ, Dativ], answer: Akkusativ, explanation: { en: "geben has an Akkusativ object (the thing).", de: "„geben“ hat ein Akkusativobjekt (die Sache)." } }
+      - { type: pick, instruction: { en: "Which case is “dem Kind”?", de: "Welcher Fall ist „dem Kind“?" }, prompt: "Ich gebe dem Kind einen Ball.", options: [Nominativ, Akkusativ, Dativ], answer: Dativ, explanation: { en: "geben has a Dativ object (the person).", de: "„geben“ hat ein Dativobjekt (die Person)." } }
+      - { type: pick, instruction: { en: "Which case is “die Frau”?", de: "Welcher Fall ist „die Frau“?" }, prompt: "Die Frau liest ein Buch.", options: [Nominativ, Akkusativ, Dativ], answer: Nominativ, explanation: { en: "The subject is in the Nominativ.", de: "Das Subjekt steht im Nominativ." } }
+      - { type: pick, instruction: { en: "Which case is “mit dem Bus”?", de: "Welcher Fall ist „dem Bus“?" }, prompt: "Wir fahren mit dem Bus.", options: [Nominativ, Akkusativ, Dativ], answer: Dativ, explanation: { en: "mit always needs the Dativ.", de: "„mit“ braucht immer den Dativ." } }
+      - { type: pick, instruction: { en: "Which case is “für den Mann”?", de: "Welcher Fall ist „den Mann“?" }, prompt: "Das Geschenk ist für den Mann.", options: [Nominativ, Akkusativ, Dativ], answer: Akkusativ, explanation: { en: "für always needs the Akkusativ.", de: "„für“ braucht immer den Akkusativ." } }
+      - { type: pick, instruction: { en: "Which case is “meiner Mutter”?", de: "Welcher Fall ist „meiner Mutter“?" }, prompt: "Das Auto gehört meiner Mutter.", options: [Nominativ, Akkusativ, Dativ], answer: Dativ, explanation: { en: "gehören needs a Dativ object.", de: "„gehören“ braucht ein Dativobjekt." } }
+
+  - id: verbs
+    title: { en: "Verbs", de: "Verben" }
+    count: 8
+    shuffle: true
+    concepts: [case.verbs-decide]
+    items:
+      - { type: pick, instruction: { en: "Which case does the verb need?", de: "Welchen Fall braucht das Verb?" }, prompt: "sehen", options: [Akkusativ, Dativ, Dativ + Akkusativ], answer: Akkusativ, explanation: { en: "Ich sehe den Mann.", de: "Ich sehe den Mann." } }
+      - { type: pick, instruction: { en: "Which case does the verb need?", de: "Welchen Fall braucht das Verb?" }, prompt: "helfen", options: [Akkusativ, Dativ, Dativ + Akkusativ], answer: Dativ, explanation: { en: "Ich helfe dem Mann.", de: "Ich helfe dem Mann." } }
+      - { type: pick, instruction: { en: "Which case does the verb need?", de: "Welchen Fall braucht das Verb?" }, prompt: "kaufen", options: [Akkusativ, Dativ, Dativ + Akkusativ], answer: Akkusativ, explanation: { en: "Ich kaufe einen Tisch.", de: "Ich kaufe einen Tisch." } }
+      - { type: pick, instruction: { en: "Which case does the verb need?", de: "Welchen Fall braucht das Verb?" }, prompt: "danken", options: [Akkusativ, Dativ, Dativ + Akkusativ], answer: Dativ, explanation: { en: "Ich danke dir.", de: "Ich danke dir." } }
+      - { type: pick, instruction: { en: "Which case does the verb need?", de: "Welchen Fall braucht das Verb?" }, prompt: "gehören", options: [Akkusativ, Dativ, Dativ + Akkusativ], answer: Dativ, explanation: { en: "Das Buch gehört mir.", de: "Das Buch gehört mir." } }
+      - { type: pick, instruction: { en: "Which case does the verb need?", de: "Welchen Fall braucht das Verb?" }, prompt: "brauchen", options: [Akkusativ, Dativ, Dativ + Akkusativ], answer: Akkusativ, explanation: { en: "Ich brauche einen Stift.", de: "Ich brauche einen Stift." } }
+      - { type: pick, instruction: { en: "Which case does the verb need?", de: "Welchen Fall braucht das Verb?" }, prompt: "geben", options: [Akkusativ, Dativ, Dativ + Akkusativ], answer: Dativ + Akkusativ, explanation: { en: "Ich gebe dem Kind einen Ball.", de: "Ich gebe dem Kind einen Ball." } }
+      - { type: pick, instruction: { en: "Which case does the verb need?", de: "Welchen Fall braucht das Verb?" }, prompt: "gefallen", options: [Akkusativ, Dativ, Dativ + Akkusativ], answer: Dativ, explanation: { en: "Der Film gefällt mir.", de: "Der Film gefällt mir." } }
+      - { type: pick, instruction: { en: "Which case does the verb need?", de: "Welchen Fall braucht das Verb?" }, prompt: "schenken", options: [Akkusativ, Dativ, Dativ + Akkusativ], answer: Dativ + Akkusativ, explanation: { en: "Ich schenke meiner Oma eine Blume.", de: "Ich schenke meiner Oma eine Blume." } }
+
+  - id: prepositions
+    title: { en: "Prepositions", de: "Präpositionen" }
+    count: 8
+    shuffle: true
+    concepts: [case.prepositions-overview]
+    items:
+      - { type: pick, instruction: { en: "Which case does the preposition need?", de: "Welchen Fall braucht die Präposition?" }, prompt: "für", options: [Akkusativ, Dativ], answer: Akkusativ, explanation: { en: "für den Mann", de: "für den Mann" } }
+      - { type: pick, instruction: { en: "Which case does the preposition need?", de: "Welchen Fall braucht die Präposition?" }, prompt: "mit", options: [Akkusativ, Dativ], answer: Dativ, explanation: { en: "mit dem Mann", de: "mit dem Mann" } }
+      - { type: pick, instruction: { en: "Which case does the preposition need?", de: "Welchen Fall braucht die Präposition?" }, prompt: "ohne", options: [Akkusativ, Dativ], answer: Akkusativ, explanation: { en: "ohne den Hund", de: "ohne den Hund" } }
+      - { type: pick, instruction: { en: "Which case does the preposition need?", de: "Welchen Fall braucht die Präposition?" }, prompt: "bei", options: [Akkusativ, Dativ], answer: Dativ, explanation: { en: "bei der Oma", de: "bei der Oma" } }
+      - { type: pick, instruction: { en: "Which case does the preposition need?", de: "Welchen Fall braucht die Präposition?" }, prompt: "durch", options: [Akkusativ, Dativ], answer: Akkusativ, explanation: { en: "durch den Park", de: "durch den Park" } }
+      - { type: pick, instruction: { en: "Which case does the preposition need?", de: "Welchen Fall braucht die Präposition?" }, prompt: "von", options: [Akkusativ, Dativ], answer: Dativ, explanation: { en: "von dem Lehrer", de: "von dem Lehrer" } }
+      - { type: pick, instruction: { en: "Which case does the preposition need?", de: "Welchen Fall braucht die Präposition?" }, prompt: "gegen", options: [Akkusativ, Dativ], answer: Akkusativ, explanation: { en: "gegen die Wand", de: "gegen die Wand" } }
+      - { type: pick, instruction: { en: "Which case does the preposition need?", de: "Welchen Fall braucht die Präposition?" }, prompt: "nach", options: [Akkusativ, Dativ], answer: Dativ, explanation: { en: "nach dem Essen", de: "nach dem Essen" } }
+      - { type: pick, instruction: { en: "Which case does the preposition need?", de: "Welchen Fall braucht die Präposition?" }, prompt: "um", options: [Akkusativ, Dativ], answer: Akkusativ, explanation: { en: "um den Tisch", de: "um den Tisch" } }
+      - { type: pick, instruction: { en: "Which case does the preposition need?", de: "Welchen Fall braucht die Präposition?" }, prompt: "aus", options: [Akkusativ, Dativ], answer: Dativ, explanation: { en: "aus dem Haus", de: "aus dem Haus" } }
+
+  - id: articles
+    title: { en: "Articles", de: "Artikel" }
+    count: 8
+    concepts: [case.overview]
+    instruction: { en: "Which form is right? The article of the noun is shown in its colour.", de: "Welche Form ist richtig? Der Artikel vom Nomen steht in seiner Farbe." }
+    explanation: { en: "Akkusativ: only masculine changes. Dativ: all change.", de: "Akkusativ: Nur Maskulin ändert sich. Dativ: Alles ändert sich." }
+    items:
+      - type: article-pick
+        kind: definite
+        case: akk
+        items:
+          - { g: m, noun: Hund, frame: "Ich sehe ___ Hund." }
+          - { g: m, noun: Tisch, frame: "Wir kaufen ___ Tisch." }
+          - { g: f, noun: Katze, frame: "Ich sehe ___ Katze." }
+      - type: article-pick
+        kind: definite
+        case: dat
+        items:
+          - { g: m, noun: Mann, frame: "Ich helfe ___ Mann." }
+          - { g: f, noun: Frau, frame: "Ich helfe ___ Frau." }
+          - { g: n, noun: Kind, frame: "Ich danke ___ Kind." }
+      - type: article-pick
+        kind: indefinite
+        case: akk
+        items:
+          - { g: m, noun: Apfel, frame: "Ich esse ___ Apfel." }
+          - { g: n, noun: Buch, frame: "Ich lese ___ Buch." }
+      - type: article-pick
+        kind: indefinite
+        case: dat
+        items:
+          - { g: f, noun: Freundin, frame: "Ich schreibe ___ Freundin." }
+          - { g: m, noun: Freund, frame: "Ich schreibe ___ Freund." }
+
+  - id: pronouns
+    title: { en: "Pronouns", de: "Pronomen" }
+    count: 6
+    shuffle: true
+    concepts: [case.pronouns-overview]
+    instruction: { en: "Which pronoun is right?", de: "Welches Pronomen ist richtig?" }
+    explanation: { en: "Akkusativ: mich, dich, ihn … Dativ: mir, dir, ihm …", de: "Akkusativ: mich, dich, ihn … Dativ: mir, dir, ihm …" }
+    items:
+      - { type: pick, sentence: "Ben ist hier. Ich sehe ___.", options: [ihn, ihm, er], answer: ihn }
+      - { type: pick, sentence: "Ben ist hier. Ich helfe ___.", options: [ihm, ihn, er], answer: ihm }
+      - { type: pick, sentence: "Du bist hier. Ich sehe ___.", options: [dich, dir, du], answer: dich }
+      - { type: pick, sentence: "Du bist hier. Ich danke ___.", options: [dir, dich, du], answer: dir }
+      - { type: pick, sentence: "Ich bin hier. Du siehst ___.", options: [mich, mir, ich], answer: mich }
+      - { type: pick, sentence: "Ich bin hier. Das Buch gehört ___.", options: [mir, mich, ich], answer: mir }

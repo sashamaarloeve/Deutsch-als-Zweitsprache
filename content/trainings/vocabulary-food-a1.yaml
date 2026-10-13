@@ -1,0 +1,144 @@
+# Vocabulary training, level A1: vocabulary-food-a1. Original word selection and sentences (own work, no word lists copied).
+# Each word has an article (nouns), plural, a meaning (English / simple German) and an example with the word marked <c>…</c>.
+kind: lesson
+id: vocabulary-food-a1
+title:
+  en: Food and drink
+  de: Essen und Trinken
+level: A1
+skill: vocabulary
+minutes: 20
+status: draft
+description:
+  en: '20 words for food, drink and eating, with article, plural and an example sentence. Practice: match, write, sentences, odd one out.'
+  de: '20 Wörter für Essen, Trinken und Kochen, mit Artikel, Plural und einem Beispielsatz. Übungen: zuordnen, schreiben, Sätze, was passt nicht?'
+canDo:
+- en: I can name common food and drinks.
+  de: Ich kann häufiges Essen und Getränke benennen.
+- en: I can say what I eat and drink.
+  de: Ich kann sagen, was ich esse und trinke.
+words:
+- {id: brot, art: das, word: Brot, pl: Brote, meaning: {en: bread, de: Man macht es aus Mehl. Man isst es oft am Morgen und am Abend}, ex: Zum Frühstück esse ich <c>Brot</c> mit Käse.}
+- {id: broetchen, art: das, word: Brötchen, pl: Brötchen, meaning: {en: bread roll, de: Ein kleines Brot für das Frühstück}, ex: Ich kaufe zwei <c>Brötchen</c>.}
+- {id: kaese, art: der, word: Käse, noPlural: true, meaning: {en: cheese, de: 'Gelb oder weiß, aus Milch gemacht'}, ex: Der <c>Käse</c> schmeckt gut.}
+- {id: ei, art: das, word: Ei, pl: Eier, meaning: {en: egg, de: Das legt ein Huhn}, ex: Ich esse ein <c>Ei</c> zum Frühstück.}
+- {id: apfel, art: der, word: Apfel, pl: Äpfel, meaning: {en: apple, de: 'Eine runde Frucht, rot oder grün'}, ex: Der <c>Apfel</c> ist rot.}
+- {id: banane, art: die, word: Banane, pl: Bananen, meaning: {en: banana, de: 'Eine gelbe, lange Frucht'}, ex: Die <c>Banane</c> ist gelb.}
+- {id: orange, art: die, word: Orange, pl: Orangen, meaning: {en: orange, de: 'Eine runde, orange Frucht'}, ex: Ich esse eine <c>Orange</c>.}
+- {id: kartoffel, art: die, word: Kartoffel, pl: Kartoffeln, meaning: {en: potato, de: Man kocht sie. Sie ist braun und wächst in der Erde}, ex: Wir kochen <c>Kartoffeln</c>.}
+- {id: fisch, art: der, word: Fisch, pl: Fische, meaning: {en: fish, de: 'Ein Tier im Wasser, das man auch essen kann'}, ex: Heute gibt es <c>Fisch</c>.}
+- {id: fleisch, art: das, word: Fleisch, noPlural: true, meaning: {en: meat, de: 'Das essen viele Menschen von Kuh, Schwein oder Huhn'}, ex: Er isst kein <c>Fleisch</c>.}
+- {id: suppe, art: die, word: Suppe, pl: Suppen, meaning: {en: soup, de: 'Warmes, flüssiges Essen. Man isst es mit einem Löffel'}, ex: Die <c>Suppe</c> ist heiß.}
+- {id: kuchen, art: der, word: Kuchen, pl: Kuchen, meaning: {en: cake, de: 'Süß, aus Mehl und Zucker, zum Beispiel zum Geburtstag'}, ex: Zum Geburtstag gibt es <c>Kuchen</c>.}
+- {id: wasser, art: das, word: Wasser, noPlural: true, meaning: {en: water, de: Man trinkt es. Es hat keine Farbe}, ex: Ich trinke ein Glas <c>Wasser</c>.}
+- {id: kaffee, art: der, word: Kaffee, noPlural: true, meaning: {en: coffee, de: 'Ein heißes, braunes Getränk. Viele trinken es am Morgen'}, ex: Mein Vater trinkt jeden Morgen <c>Kaffee</c>.}
+- {id: milch, art: die, word: Milch, noPlural: true, meaning: {en: milk, de: Ein weißes Getränk von der Kuh}, ex: Die Kinder trinken <c>Milch</c>.}
+- {id: saft, art: der, word: Saft, pl: Säfte, meaning: {en: juice, de: 'Ein Getränk aus Früchten, zum Beispiel aus Äpfeln'}, ex: Ich möchte einen <c>Saft</c>.}
+- {id: essen, word: essen, meaning: {en: to eat, de: Man nimmt Essen in den Mund}, ex: Wir <c>essen</c> um zwölf Uhr.}
+- {id: trinken, word: trinken, meaning: {en: to drink, de: Man nimmt Wasser oder Saft in den Mund}, ex: Sie <c>trinkt</c> gern Tee.}
+- {id: kochen, word: kochen, meaning: {en: to cook, de: 'Man macht Essen warm, zum Beispiel auf dem Herd'}, ex: Mein Bruder <c>kocht</c> heute.}
+- {id: lecker, word: lecker, meaning: {en: tasty, de: Das Essen schmeckt sehr gut}, ex: Die Suppe ist <c>lecker</c>.}
+understand:
+- type: word-list
+  title:
+    en: Food
+    de: Essen
+  words: [brot, broetchen, kaese, ei, apfel, banane, orange, kartoffel, fisch, fleisch, suppe, kuchen]
+- type: word-list
+  title:
+    en: Drinks
+    de: Getränke
+  words: [wasser, kaffee, milch, saft]
+- type: word-list
+  title:
+    en: Verbs and a useful word
+    de: Verben und ein nützliches Wort
+  words: [essen, trinken, kochen, lecker]
+- type: rule
+  title:
+    en: Useful sentences
+    de: Nützliche Sätze
+  body:
+  - en: Ich esse gern <c>Suppe</c>.
+    de: Ich esse gern <c>Suppe</c>.
+  - en: Ich trinke <c>Wasser</c>, aber keinen <c>Kaffee</c>.
+    de: Ich trinke <c>Wasser</c>, aber keinen <c>Kaffee</c>.
+  - en: Was möchtest du essen? – Ich möchte einen Apfel.
+    de: Was möchtest du essen? – Ich möchte einen Apfel.
+  - en: Das schmeckt lecker!
+    de: Das schmeckt lecker!
+- type: rule
+  title:
+    en: Learn nouns with article and plural
+    de: Nomen mit Artikel und Plural lernen
+  body:
+  - en: 'Learn every noun together with its article and its plural. The article colour helps: <der>der</der> blue, <die>die</die> red, <das>das</das> green, plural orange.'
+    de: 'Lerne jedes Nomen zusammen mit Artikel und Plural. Die Farben helfen: <der>der</der> blau, <die>die</die> rot, <das>das</das> grün, Plural orange.'
+  - en: 'Some words have no plural: das Wasser, die Milch, der Käse.'
+    de: 'Einige Wörter haben keinen Plural: das Wasser, die Milch, der Käse.'
+practice:
+- id: cards
+  title:
+    en: Flashcards
+    de: Lernkarten
+  kind: cards
+- id: pairs
+  title:
+    en: Match
+    de: Zuordnen
+  shuffle: false
+  concepts:
+  - vocab.food
+  - vocab.noun-article
+  instruction:
+    en: Tap a German word, then its meaning.
+    de: Tippe ein deutsches Wort an, dann die Bedeutung.
+  items:
+  - {type: words-pairs, ids: [brot, broetchen, kaese, ei, apfel, banane, orange, kartoffel, fisch, fleisch, suppe, kuchen, wasser, kaffee, milch, saft, essen, trinken, kochen, lecker], size: 5}
+- id: memory
+  title:
+    en: Memory
+    de: Memory
+  kind: memory
+- id: write
+  title:
+    en: Write the word
+    de: Das Wort schreiben
+  shuffle: true
+  count: 8
+  concepts:
+  - vocab.food
+  - vocab.noun-article
+  instruction:
+    en: 'Write the German word. For nouns, write the article too (for example: die Mutter).'
+    de: 'Schreibe das deutsche Wort. Bei Nomen schreibe auch den Artikel (zum Beispiel: die Mutter).'
+  items:
+  - {type: words-write, ids: [brot, broetchen, kaese, ei, apfel, banane, orange, kartoffel, fisch, fleisch, suppe, kuchen, wasser, kaffee, milch, saft, essen, trinken, kochen, lecker]}
+- id: sentences
+  title:
+    en: In sentences
+    de: In Sätzen
+  shuffle: true
+  concepts:
+  - vocab.food
+  items:
+  - {type: pick, instruction: {en: 'Which word fits the sentence?', de: 'Welches Wort passt in den Satz?'}, sentence: 'Eine Frucht, rund, rot oder grün: Das ist ein ___.', options: [Apfel, Fisch, Ei, Käse], answer: Apfel, explanation: {en: 'A round fruit, red or green: an apple.', de: 'Eine runde Frucht, rot oder grün: ein Apfel.'}}
+  - {type: pick, instruction: {en: 'Which word fits the sentence?', de: 'Welches Wort passt in den Satz?'}, sentence: Das Huhn legt ein ___., options: [Ei, Apfel, Brot, Fisch], answer: Ei, explanation: {en: A hen lays an egg., de: Ein Huhn legt ein Ei.}}
+  - {type: pick, instruction: {en: 'Which word fits the sentence?', de: 'Welches Wort passt in den Satz?'}, sentence: Zum Geburtstag gibt es süßen ___., options: [Kuchen, Fisch, Fleisch, Käse], answer: Kuchen, explanation: {en: Sweet cake for a birthday., de: Zum Geburtstag gibt es süßen Kuchen.}}
+  - {type: pick, instruction: {en: 'Which word fits the sentence?', de: 'Welches Wort passt in den Satz?'}, sentence: Am Morgen trinkt er heißen ___., options: [Kaffee, Saft, Käse, Kuchen], answer: Kaffee, explanation: {en: Hot coffee in the morning., de: Am Morgen trinkt man heißen Kaffee.}}
+  - {type: pick, instruction: {en: 'Which word fits the sentence?', de: 'Welches Wort passt in den Satz?'}, sentence: Wir kochen eine ___ mit Kartoffeln., options: [Suppe, Banane, Milch, Kuchen], answer: Suppe, explanation: {en: You cook a soup., de: Man kocht eine Suppe.}}
+  - {type: pick, instruction: {en: 'Which word fits the sentence?', de: 'Welches Wort passt in den Satz?'}, sentence: 'Wie schmeckt das Essen? – Es ist sehr ___!', options: [lecker, Käse, kochen, trinken], answer: lecker, explanation: {en: Tasty describes the food., de: '„lecker“ sagt, wie das Essen schmeckt.'}}
+  - {type: pick, instruction: {en: 'Which word fits the sentence?', de: 'Welches Wort passt in den Satz?'}, sentence: Kinder ___ gern Milch., options: [trinken, essen, lecker, Brötchen], answer: trinken, explanation: {en: You drink milk., de: Milch trinkt man.}}
+  - {type: pick, instruction: {en: 'Which word fits the sentence?', de: 'Welches Wort passt in den Satz?'}, sentence: 'Ich ___ jeden Tag Obst: Äpfel und Bananen.', options: [esse, trinke, schlafe, laufe], answer: esse, explanation: {en: You eat fruit., de: 'Obst isst man: ich esse.'}}
+- id: odd
+  title:
+    en: Odd one out
+    de: Was passt nicht?
+  shuffle: true
+  concepts:
+  - vocab.food
+  items:
+  - {type: pick, instruction: {en: 'Which word is not a drink?', de: 'Welches Wort ist kein Getränk?'}, prompt: '', options: [das Wasser, die Milch, das Brot, der Saft], answer: das Brot, explanation: {en: Bread is food., de: Brot ist Essen.}}
+  - {type: pick, instruction: {en: 'Which word is not a fruit?', de: 'Welches Wort ist keine Frucht?'}, prompt: '', options: [der Apfel, die Banane, die Orange, der Fisch], answer: der Fisch, explanation: {en: Fish is not a fruit., de: Fisch ist keine Frucht.}}
+  - {type: pick, instruction: {en: 'Which word is a verb?', de: 'Welches Wort ist ein Verb?'}, prompt: '', options: [das Brot, essen, die Suppe, der Käse], answer: essen, explanation: {en: 'essen is a verb: to eat.', de: „essen“ ist ein Verb.}}
+  - {type: pick, instruction: {en: 'Which word is not food?', de: 'Welches Wort ist kein Essen?'}, prompt: '', options: [der Kuchen, das Brötchen, das Wasser, der Käse], answer: das Wasser, explanation: {en: Water is a drink., de: Wasser ist ein Getränk.}}

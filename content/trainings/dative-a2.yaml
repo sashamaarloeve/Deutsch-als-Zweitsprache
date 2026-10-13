@@ -1,0 +1,464 @@
+# Training: the Dativ (A2). Articles, wem?, pronouns, verbs and prepositions with Dativ, Dativ before Akkusativ.
+# Articles are shown in their gender colour: der blue, die red, das green, plural orange.
+# Original content. English and German texts are written side by side: { en: "...", de: "..." }.
+kind: lesson
+id: dative-a2
+title: { en: "Dativ", de: "Dativ" }
+level: A2
+skill: grammar
+minutes: 30
+status: draft
+description:
+  en: "Some verbs need a Dativ object: Ich helfe dem Mann. Articles, pronouns (mir, dir, ihm …), verbs and prepositions with the Dativ, and Dativ before Akkusativ: Ich gebe dem Kind einen Apfel."
+  de: "Manche Verben brauchen ein Dativobjekt: Ich helfe dem Mann. Mit Artikeln, Pronomen (mir, dir, ihm …), Verben und Präpositionen mit Dativ und Dativ vor Akkusativ: Ich gebe dem Kind einen Apfel."
+canDo:
+  - { en: "I can recognise a Dativ object and the verbs that need one.", de: "Ich kann ein Dativobjekt und die Verben dazu erkennen." }
+  - { en: "I can use dem, der, den, einem, einer, meinem, meiner.", de: "Ich kann „dem“, „der“, „den“, „einem“, „einer“, „meinem“, „meiner“ benutzen." }
+  - { en: "I can use the pronouns mir, dir, ihm, ihr, uns, euch, ihnen.", de: "Ich kann die Pronomen „mir“, „dir“, „ihm“, „ihr“, „uns“, „euch“, „ihnen“ benutzen." }
+  - { en: "I can use common verbs and prepositions with the Dativ.", de: "Ich kann häufige Verben und Präpositionen mit Dativ benutzen." }
+
+articles:
+  definite:
+    label: { en: "the", de: "der, die, das" }
+    nom: [der, die, das, die]
+    akk: [den, die, das, die]
+    dat: [dem, der, dem, den]
+  indefinite:
+    label: { en: "a", de: "ein, eine" }
+    nom: [ein, eine, ein, ""]
+    akk: [einen, eine, ein, ""]
+    dat: [einem, einer, einem, ""]
+  possessive:
+    label: { en: "my", de: "mein, meine" }
+    nom: [mein, meine, mein, meine]
+    akk: [meinen, meine, mein, meine]
+    dat: [meinem, meiner, meinem, meinen]
+  negative:
+    label: { en: "no", de: "kein, keine" }
+    nom: [kein, keine, kein, keine]
+    akk: [keinen, keine, kein, keine]
+    dat: [keinem, keiner, keinem, keinen]
+
+understand:
+  - type: dialogue
+    title: { en: "Listen: who gets what?", de: "Hör zu: Wer bekommt was?" }
+    lines:
+      - { who: Mia, say: "Ich <v>schenke</v> <das>dem</das> Kind <das>ein</das> Buch. <v>Hilfst</v> du mir?" }
+      - { who: Ben, say: "Ja, gern. <v>Gefällt</v> das Buch <das>dem</das> Kind?" }
+      - { who: Mia, say: "Ich glaube, es <v>gefällt</v> <das>ihm</das>. Ich <v>danke</v> dir!" }
+      - { who: Ben, say: "Kein Problem. Ich <v>gebe</v> <die>der</die> Frau an der Kasse das Geld." }
+
+  - type: text
+    title: { en: "Objects and cases", de: "Objekte und Fälle" }
+    body:
+      - en: "Objects in a sentence can be in the Akkusativ, in the Dativ or (rarely) in the Genitiv. The verb decides which case it needs. Then the article can look different."
+        de: "Objekte im Satz können im Akkusativ, im Dativ oder (selten) im Genitiv stehen. Das Verb bestimmt, welchen Fall es braucht. Dann sieht der Artikel anders aus."
+      - { en: "<p>Ich</p> <v>helfe</v> <das>dem</das> Mann.", de: "<p>Ich</p> <v>helfe</v> <das>dem</das> Mann." }
+      - en: "Here the verb helfen needs a Dativ object: der Mann becomes dem Mann. Tip: a Dativ object is often a person, and you can find it with the question wem? (Wem helfe ich? – dem Mann). But the most important thing is to learn the verb together with its case."
+        de: "Hier braucht das Verb „helfen“ ein Dativobjekt: Aus „der Mann“ wird „dem Mann“. Tipp: Ein Dativobjekt ist oft eine Person, und du findest es mit der Frage „Wem?“ (Wem helfe ich? – dem Mann). Wichtiger ist aber: Lerne das Verb zusammen mit seinem Fall."
+
+  - type: parts-lab
+    title: { en: "Same roles, other order", de: "Dieselben Rollen, andere Reihenfolge" }
+    intro:
+      en: "Choose a sentence and a part for position 1. The order changes, the roles stay the same. The article shows the role."
+      de: "Wähle einen Satz und einen Teil für Position 1. Die Reihenfolge ändert sich, die Rollen bleiben gleich. Der Artikel zeigt die Rolle."
+    roles:
+      S: { en: "who does it (subject, Nominativ)", de: "wer macht es (Subjekt, Nominativ)" }
+      V: { en: "verb", de: "Verb" }
+      T: { en: "time", de: "Zeit" }
+      D: { en: "Dativ object", de: "Dativobjekt" }
+      A: { en: "Akkusativ object", de: "Akkusativobjekt" }
+    sentences:
+      - { parts: [{ t: der Lehrer, r: S }, { t: hilft, r: V }, { t: dem Schüler, r: D }], starts: [S, D] }
+      - { parts: [{ t: ich, r: S }, { t: schenke, r: V }, { t: meiner Freundin, r: D }, { t: einen Pulli, r: A }], starts: [S, D, A] }
+
+  - type: detective
+    title: { en: "Sentence detective", de: "Satz-Detektiv" }
+    intro:
+      en: "Tap a part. You see the question that finds it and its role."
+      de: "Tippe einen Teil an. Du siehst die Frage, die ihn findet, und seine Rolle."
+    roles:
+      S: { en: "subject (Nominativ)", de: "Subjekt (Nominativ)" }
+      V: { en: "verb (position 2)", de: "Verb (Position 2)" }
+      T: { en: "time", de: "Zeit" }
+      D: { en: "Dativ object", de: "Dativobjekt" }
+      A: { en: "Akkusativ object", de: "Akkusativobjekt" }
+    sentences:
+      - parts: [{ t: Heute, r: T, q: "Wann schenkt Ben seiner Oma eine Blume?" }, { t: schenkt, r: V, q: "Was macht Ben?" }, { t: Ben, r: S, q: "Wer schenkt?" }, { t: seiner Oma, r: D, q: "Wem schenkt Ben eine Blume?" }, { t: eine Blume, r: A, q: "Was schenkt Ben seiner Oma?" }]
+
+  - type: article-table
+    title: { en: "The articles: der, die, das", de: "Die Artikel: der, die, das" }
+    intro:
+      en: "Look at the table. The colour shows the gender of the noun. In the Dativ, every gender gets a new form."
+      de: "Schau auf die Tabelle. Die Farbe zeigt das Genus vom Nomen. Im Dativ bekommt jedes Genus eine neue Form."
+    kinds: [definite]
+    cases:
+      - { id: nom, label: { en: Nominativ, de: Nominativ } }
+      - { id: dat, label: { en: Dativ, de: Dativ } }
+    note:
+      en: "der → <der>dem</der>, die → <die>der</die>, das → <das>dem</das>, die (plural) → <pl>den</pl> + noun with -n."
+      de: "der → <der>dem</der>, die → <die>der</die>, das → <das>dem</das>, die (Plural) → <pl>den</pl> + Nomen mit -n."
+
+  - type: article-table
+    title: { en: "ein, eine", de: "ein, eine" }
+    kinds: [indefinite]
+    cases:
+      - { id: nom, label: { en: Nominativ, de: Nominativ } }
+      - { id: dat, label: { en: Dativ, de: Dativ } }
+    note:
+      en: "ein → <der>einem</der>, eine → <die>einer</die>, ein → <das>einem</das>. There is no plural of “ein”."
+      de: "ein → <der>einem</der>, eine → <die>einer</die>, ein → <das>einem</das>. „ein“ hat keinen Plural."
+
+  - type: article-table
+    title: { en: "mein, meine", de: "mein, meine" }
+    kinds: [possessive]
+    cases:
+      - { id: nom, label: { en: Nominativ, de: Nominativ } }
+      - { id: dat, label: { en: Dativ, de: Dativ } }
+    note:
+      en: "mein → <der>meinem</der>, meine → <die>meiner</die>, mein → <das>meinem</das>, meine (plural) → <pl>meinen</pl>. dein, sein, ihr … work in the same way."
+      de: "mein → <der>meinem</der>, meine → <die>meiner</die>, mein → <das>meinem</das>, meine (Plural) → <pl>meinen</pl>. „dein“, „sein“, „ihr“ … funktionieren genauso."
+
+  - type: article-table
+    title: { en: "kein, keine", de: "kein, keine" }
+    kinds: [negative]
+    cases:
+      - { id: nom, label: { en: Nominativ, de: Nominativ } }
+      - { id: dat, label: { en: Dativ, de: Dativ } }
+    note:
+      en: "kein → <der>keinem</der>, keine → <die>keiner</die>, kein → <das>keinem</das>, keine (plural) → <pl>keinen</pl>."
+      de: "kein → <der>keinem</der>, keine → <die>keiner</die>, kein → <das>keinem</das>, keine (Plural) → <pl>keinen</pl>."
+
+  - type: case-lab
+    title: { en: "The case lab", de: "Das Fall-Labor" }
+    intro:
+      en: "Choose an article, a case and a noun. The article that changes is highlighted."
+      de: "Wähle einen Artikel, einen Fall und ein Nomen. Der Artikel, der sich ändert, ist markiert."
+    kinds: [definite, indefinite, possessive, negative]
+    cases:
+      - id: nom
+        label: { en: Nominativ, de: Nominativ }
+        frame: ["___ ist hier.", "___ sind hier."]
+        rule: { en: "Nominativ: wer? or was? – the subject.", de: "Nominativ: Wer? oder Was? – das Subjekt." }
+      - id: dat
+        label: { en: Dativ, de: Dativ }
+        frame: "Ich helfe ___."
+        rule: { en: "Dativ: every gender gets a new form. Plural nouns get -n.", de: "Dativ: Jedes Genus bekommt eine neue Form. Plural-Nomen bekommen -n." }
+    nouns:
+      - { g: m, noun: Mann }
+      - { g: m, noun: Freund }
+      - { g: f, noun: Frau }
+      - { g: f, noun: Lehrerin }
+      - { g: n, noun: Kind }
+      - { g: n, noun: Baby }
+      - { g: pl, noun: Kinder, dat: Kindern }
+      - { g: pl, noun: Freunde, dat: Freunden }
+
+  - type: rule
+    title: { en: "Plural nouns in the Dativ", de: "Plural-Nomen im Dativ" }
+    body:
+      - { en: "In the Dativ plural, the noun gets -n: <pl>die Kinder</pl> → Ich helfe <pl>den</pl> Kinder<en>n</en>.", de: "Im Dativ Plural bekommt das Nomen -n: <pl>die Kinder</pl> → Ich helfe <pl>den</pl> Kinder<en>n</en>." }
+      - { en: "No extra -n if the plural already ends in -n or -s: mit <pl>den</pl> Frauen, mit <pl>den</pl> Autos.", de: "Kein zusätzliches -n, wenn der Plural schon auf -n oder -s endet: mit <pl>den</pl> Frauen, mit <pl>den</pl> Autos." }
+
+  - type: rule
+    title: { en: "Pronouns in the Dativ", de: "Pronomen im Dativ" }
+    body:
+      - { en: "ich → mir · du → dir · er → ihm · sie → ihr · es → ihm · wir → uns · ihr → euch · sie → ihnen · Sie → Ihnen", de: "ich → mir · du → dir · er → ihm · sie → ihr · es → ihm · wir → uns · ihr → euch · sie → ihnen · Sie → Ihnen" }
+      - { en: "Ich helfe <das>dem</das> Mann. → Ich helfe <der>ihm</der>.", de: "Ich helfe <das>dem</das> Mann. → Ich helfe <der>ihm</der>." }
+      - { en: "Ich helfe <die>der</die> Frau. → Ich helfe <die>ihr</die>.", de: "Ich helfe <die>der</die> Frau. → Ich helfe <die>ihr</die>." }
+      - { en: "Der Film gefällt <v>mir</v>. Das Buch gehört <v>dir</v>.", de: "Der Film gefällt <v>mir</v>. Das Buch gehört <v>dir</v>." }
+
+  - type: rule
+    title: { en: "Verbs with only a Dativ object", de: "Verben nur mit Dativobjekt" }
+    body:
+      - { en: "helfen: Ich <v>helfe</v> <das>dem</das> Kind.", de: "helfen: Ich <v>helfe</v> <das>dem</das> Kind." }
+      - { en: "danken, antworten, gratulieren: Wir <v>danken</v> <die>der</die> Lehrerin.", de: "danken, antworten, gratulieren: Wir <v>danken</v> <die>der</die> Lehrerin." }
+      - { en: "gefallen, schmecken, gehören: Das Essen <v>schmeckt</v> <der>dem</der> Gast.", de: "gefallen, schmecken, gehören: Das Essen <v>schmeckt</v> <der>dem</der> Gast." }
+      - { en: "You have to learn these verbs together with the Dativ.", de: "Diese Verben lernst du am besten zusammen mit dem Dativ." }
+
+  - type: rule
+    title: { en: "Verbs with Dativ and Akkusativ", de: "Verben mit Dativ und Akkusativ" }
+    body:
+      - { en: "geben, schenken, zeigen, schicken, bringen, erklären", de: "geben, schenken, zeigen, schicken, bringen, erklären" }
+      - { en: "<p>Ich</p> <v>schenke</v> <die>der</die> Oma <die>eine</die> Blume.", de: "<p>Ich</p> <v>schenke</v> <die>der</die> Oma <die>eine</die> Blume." }
+      - { en: "Usually the person (Dativ) comes before the thing (Akkusativ).", de: "Meistens steht die Person (Dativ) vor der Sache (Akkusativ)." }
+
+  - type: rule
+    title: { en: "Prepositions with the Dativ", de: "Präpositionen mit Dativ" }
+    body:
+      - { en: "mit, bei, nach, von, zu, aus, seit are always followed by the Dativ.", de: "Nach „mit“, „bei“, „nach“, „von“, „zu“, „aus“, „seit“ steht immer der Dativ." }
+      - { en: "Ich fahre <v>mit</v> <das>dem</das> Bus. Sie wohnt <v>bei</v> <die>der</die> Oma.", de: "Ich fahre <v>mit</v> <das>dem</das> Bus. Sie wohnt <v>bei</v> <die>der</die> Oma." }
+      - { en: "zu + dem = zum, zu + der = zur: Ich gehe zum Arzt. Ich gehe zur Schule.", de: "zu + dem = zum, zu + der = zur: Ich gehe zum Arzt. Ich gehe zur Schule." }
+      - { en: "bei + dem = beim, von + dem = vom: Ich bin beim Arzt. Das Buch ist vom Lehrer.", de: "bei + dem = beim, von + dem = vom: Ich bin beim Arzt. Das Buch ist vom Lehrer." }
+
+  - type: rule
+    title: { en: "Watch out!", de: "Achtung!" }
+    body:
+      - { en: "<x>Ich helfe den Mann.</x> ✗ Ich helfe <das>dem</das> Mann. ✓", de: "<x>Ich helfe den Mann.</x> ✗ Ich helfe <das>dem</das> Mann. ✓" }
+      - { en: "<x>Ich gebe einen Apfel dem Kind.</x> is not wrong, but the usual order is: Ich gebe <das>dem</das> Kind <der>einen</der> Apfel.", de: "Ich gebe einen Apfel dem Kind ist nicht falsch, aber normal ist: Ich gebe <das>dem</das> Kind <der>einen</der> Apfel." }
+      - { en: "<x>Ich fahre mit den Bus.</x> ✗ Ich fahre mit <das>dem</das> Bus. ✓", de: "<x>Ich fahre mit den Bus.</x> ✗ Ich fahre mit <das>dem</das> Bus. ✓" }
+
+practice:
+  - id: definite
+    title: { en: "dem, der, den", de: "dem, der, den" }
+    count: 8
+    concepts: [case.dat-articles, case.question-wem]
+    instruction: { en: "Which form is right? The article of the noun is shown in its colour.", de: "Welche Form ist richtig? Der Artikel vom Nomen steht in seiner Farbe." }
+    explanation: { en: "Dativ: der → dem, die → der, das → dem, plural → den.", de: "Dativ: der → dem, die → der, das → dem, Plural → den." }
+    items:
+      - type: article-pick
+        kind: definite
+        case: dat
+        items:
+          - { g: m, noun: Mann, frame: "Ich helfe ___ Mann." }
+          - { g: f, noun: Frau, frame: "Wir helfen ___ Frau." }
+          - { g: n, noun: Kind, frame: "Sie hilft ___ Kind." }
+          - { g: m, noun: Lehrer, frame: "Wir danken ___ Lehrer." }
+          - { g: f, noun: Lehrerin, frame: "Er antwortet ___ Lehrerin." }
+          - { g: n, noun: Baby, frame: "Ich zeige ___ Baby das Foto." }
+          - { g: m, noun: Gast, frame: "Das Essen schmeckt ___ Gast." }
+          - { g: f, noun: Oma, frame: "Das Haus gehört ___ Oma." }
+
+  - id: indefinite
+    title: { en: "einem, einer", de: "einem, einer" }
+    count: 8
+    concepts: [case.dat-articles]
+    instruction: { en: "Which form of “ein” is right? The article of the noun is shown in its colour.", de: "Welche Form von „ein“ ist richtig? Der Artikel vom Nomen steht in seiner Farbe." }
+    explanation: { en: "Dativ: ein (m) → einem, eine (f) → einer, ein (n) → einem.", de: "Dativ: ein (m) → einem, eine (f) → einer, ein (n) → einem." }
+    items:
+      - type: article-pick
+        kind: indefinite
+        case: dat
+        items:
+          - { g: m, noun: Freund, frame: "Ich schreibe ___ Freund." }
+          - { g: f, noun: Freundin, frame: "Ich schreibe ___ Freundin." }
+          - { g: n, noun: Kind, frame: "Wir schenken ___ Kind ein Buch." }
+          - { g: m, noun: Mann, frame: "Sie hilft ___ Mann." }
+          - { g: f, noun: Frau, frame: "Er gibt ___ Frau die Tasche." }
+          - { g: n, noun: Baby, frame: "Sie singt ___ Baby ein Lied." }
+          - { g: m, noun: Arzt, frame: "Ich erkläre ___ Arzt das Problem." }
+          - { g: f, noun: Kollegin, frame: "Ich schicke ___ Kollegin eine E-Mail." }
+
+  - id: possessive
+    title: { en: "meinem, meiner, meinen", de: "meinem, meiner, meinen" }
+    count: 8
+    concepts: [case.dat-articles]
+    instruction: { en: "Which form of “mein” is right? The article of the noun is shown in its colour.", de: "Welche Form von „mein“ ist richtig? Der Artikel vom Nomen steht in seiner Farbe." }
+    explanation: { en: "mein works like ein: meinem (m, n), meiner (f), meinen (plural).", de: "„mein“ funktioniert wie „ein“: meinem (m, n), meiner (f), meinen (Plural)." }
+    items:
+      - type: article-pick
+        kind: possessive
+        case: dat
+        items:
+          - { g: m, noun: Bruder, frame: "Ich helfe ___ Bruder." }
+          - { g: f, noun: Schwester, frame: "Ich helfe ___ Schwester." }
+          - { g: n, noun: Kind, frame: "Ich lese ___ Kind ein Buch vor." }
+          - { g: pl, noun: Eltern, frame: "Ich danke ___ Eltern." }
+          - { g: m, noun: Vater, frame: "Das Auto gehört ___ Vater." }
+          - { g: f, noun: Mutter, frame: "Ich gratuliere ___ Mutter." }
+          - { g: pl, noun: Freunde, frame: "Ich zeige ___ Freunden die Stadt." }
+          - { g: n, noun: Baby, frame: "Ich gebe ___ Baby die Flasche." }
+
+  - id: negative
+    title: { en: "keinem, keiner, keinen", de: "keinem, keiner, keinen" }
+    count: 6
+    concepts: [case.dat-articles]
+    instruction: { en: "Which form of “kein” is right? The article of the noun is shown in its colour.", de: "Welche Form von „kein“ ist richtig? Der Artikel vom Nomen steht in seiner Farbe." }
+    explanation: { en: "kein works like mein: keinem (m, n), keiner (f), keinen (plural).", de: "„kein“ funktioniert wie „mein“: keinem (m, n), keiner (f), keinen (Plural)." }
+    items:
+      - type: article-pick
+        kind: negative
+        case: dat
+        items:
+          - { g: m, noun: Mann, frame: "Ich antworte ___ Mann." }
+          - { g: f, noun: Frau, frame: "Er hilft ___ Frau." }
+          - { g: n, noun: Kind, frame: "Sie gibt ___ Kind ein Eis." }
+          - { g: pl, noun: Leute, frame: "Ich vertraue ___ Leuten." }
+          - { g: m, noun: Freund, frame: "Sie schreibt ___ Freund." }
+          - { g: f, noun: Lehrerin, frame: "Er dankt ___ Lehrerin nicht." }
+
+  - id: whom
+    title: { en: "Find the object", de: "Das Objekt finden" }
+    count: 8
+    shuffle: true
+    concepts: [case.question-wem]
+    items:
+      - { type: pick, instruction: { en: "Which part is the Dativ object?", de: "Welcher Teil ist das Dativobjekt?" }, prompt: "Ich helfe dem Mann.", options: ["Ich", "helfe", "dem Mann"], answer: "dem Mann", explanation: { en: "Wem helfe ich? – dem Mann.", de: "Wem helfe ich? – dem Mann." } }
+      - { type: pick, instruction: { en: "Which part is the Dativ object?", de: "Welcher Teil ist das Dativobjekt?" }, prompt: "Wir danken der Lehrerin.", options: ["Wir", "danken", "der Lehrerin"], answer: "der Lehrerin", explanation: { en: "Wem danken wir? – der Lehrerin.", de: "Wem danken wir? – der Lehrerin." } }
+      - { type: pick, instruction: { en: "Which part is the Dativ object?", de: "Welcher Teil ist das Dativobjekt?" }, prompt: "Das Buch gehört meiner Schwester.", options: ["Das Buch", "gehört", "meiner Schwester"], answer: "meiner Schwester", explanation: { en: "Wem gehört das Buch? – meiner Schwester.", de: "Wem gehört das Buch? – meiner Schwester." } }
+      - { type: pick, instruction: { en: "Which part is the Dativ object?", de: "Welcher Teil ist das Dativobjekt?" }, prompt: "Ich gebe dem Kind einen Apfel.", options: ["dem Kind", "einen Apfel"], answer: "dem Kind", explanation: { en: "Wem gebe ich einen Apfel? – dem Kind. “einen Apfel” is the Akkusativ object.", de: "Wem gebe ich einen Apfel? – dem Kind. „einen Apfel“ ist das Akkusativobjekt." } }
+      - { type: pick, instruction: { en: "Which part is the Akkusativ object?", de: "Welcher Teil ist das Akkusativobjekt?" }, prompt: "Sie schenkt der Oma eine Blume.", options: ["der Oma", "eine Blume"], answer: "eine Blume", explanation: { en: "Was schenkt sie? – eine Blume.", de: "Was schenkt sie? – eine Blume." } }
+      - { type: pick, instruction: { en: "Which part is the Dativ object?", de: "Welcher Teil ist das Dativobjekt?" }, prompt: "Der Film gefällt den Kindern.", options: ["Der Film", "gefällt", "den Kindern"], answer: "den Kindern", explanation: { en: "Wem gefällt der Film? – den Kindern.", de: "Wem gefällt der Film? – den Kindern." } }
+      - { type: pick, instruction: { en: "Which part is the Dativ object?", de: "Welcher Teil ist das Dativobjekt?" }, prompt: "Wir zeigen dem Gast die Stadt.", options: ["dem Gast", "die Stadt"], answer: "dem Gast", explanation: { en: "Wem zeigen wir die Stadt? – dem Gast.", de: "Wem zeigen wir die Stadt? – dem Gast." } }
+      - { type: pick, instruction: { en: "Which part is the Dativ object?", de: "Welcher Teil ist das Dativobjekt?" }, prompt: "Ben schickt seiner Freundin ein Foto.", options: ["seiner Freundin", "ein Foto"], answer: "seiner Freundin", explanation: { en: "Wem schickt Ben ein Foto? – seiner Freundin.", de: "Wem schickt Ben ein Foto? – seiner Freundin." } }
+
+  - id: subject
+    title: { en: "Who does what?", de: "Wer macht was?" }
+    count: 5
+    shuffle: true
+    concepts: [case.dat-articles, syntax.inversion]
+    instruction: { en: "The Dativ object is first. Which part is the subject?", de: "Das Dativobjekt steht vorn. Welcher Teil ist das Subjekt?" }
+    items:
+      - { type: pick, prompt: "Dem Kind hilft der Lehrer.", options: ["der Lehrer", "dem Kind"], answer: "der Lehrer", explanation: { en: "“dem Kind” is the Dativ object. The teacher helps.", de: "„dem Kind“ ist das Dativobjekt. Der Lehrer hilft." } }
+      - { type: pick, prompt: "Der Frau gehört das Auto.", options: ["das Auto", "der Frau"], answer: "das Auto", explanation: { en: "“der Frau” is the Dativ object. The car belongs to her.", de: "„der Frau“ ist das Dativobjekt. Das Auto gehört ihr." } }
+      - { type: pick, prompt: "Meinem Bruder schenkt Mia ein Buch.", options: ["Mia", "meinem Bruder"], answer: "Mia", explanation: { en: "“meinem Bruder” is the Dativ object. Mia gives.", de: "„meinem Bruder“ ist das Dativobjekt. Mia schenkt." } }
+      - { type: pick, prompt: "Den Kindern gefällt der Film.", options: ["der Film", "den Kindern"], answer: "der Film", explanation: { en: "“den Kindern” (Dativ plural + n). The film is the subject.", de: "„den Kindern“ (Dativ Plural + n). Der Film ist das Subjekt." } }
+      - { type: pick, prompt: "Der Lehrerin dankt der Schüler.", options: ["der Schüler", "der Lehrerin"], answer: "der Schüler", explanation: { en: "“der Lehrerin” is Dativ. “der Schüler” (masculine) can only be the subject.", de: "„der Lehrerin“ ist Dativ. „der Schüler“ (maskulin) kann nur das Subjekt sein." } }
+
+  - id: both
+    title: { en: "Both objects", de: "Beide Objekte" }
+    count: 6
+    shuffle: true
+    concepts: [case.dat-before-akk, case.dat-articles]
+    instruction: { en: "Choose the right form for both gaps. Then tap Check.", de: "Wähle für beide Lücken die richtige Form. Tippe dann auf „Prüfen“." }
+    items:
+      - { type: gaps, sentence: "Ich schenke {0} Mutter {1} Blume.", gaps: [{ options: [meine, meiner, meinen], answer: meiner }, { options: [ein, eine, einen], answer: eine }], explanation: { en: "Dativ feminine: meiner Mutter. Akkusativ feminine does not change: eine Blume.", de: "Dativ feminin: meiner Mutter. Akkusativ feminin bleibt: eine Blume." } }
+      - { type: gaps, sentence: "Der Lehrer gibt {0} Schüler {1} Heft.", gaps: [{ options: [dem, den, der], answer: dem }, { options: [das, dem, die], answer: das }], explanation: { en: "Dativ masculine: dem Schüler. Akkusativ neuter does not change: das Heft.", de: "Dativ maskulin: dem Schüler. Akkusativ Neutrum bleibt: das Heft." } }
+      - { type: gaps, sentence: "Wir zeigen {0} Freund {1} Stadt.", gaps: [{ options: [unserem, unseren, unser], answer: unserem }, { options: [die, der, das], answer: die }], explanation: { en: "Dativ masculine: unserem Freund. Akkusativ feminine: die Stadt.", de: "Dativ maskulin: unserem Freund. Akkusativ feminin: die Stadt." } }
+      - { type: gaps, sentence: "Die Mutter kauft {0} Kind {1} Rucksack.", gaps: [{ options: [dem, das, der], answer: dem }, { options: [ein, einen, einem], answer: einen }], explanation: { en: "Dativ neuter: dem Kind. Akkusativ masculine: einen Rucksack.", de: "Dativ Neutrum: dem Kind. Akkusativ maskulin: einen Rucksack." } }
+      - { type: gaps, sentence: "Ich schicke {0} Oma {1} Brief.", gaps: [{ options: [meine, meiner, meinen], answer: meiner }, { options: [ein, einen, einem], answer: einen }], explanation: { en: "Dativ feminine: meiner Oma. Akkusativ masculine: einen Brief.", de: "Dativ feminin: meiner Oma. Akkusativ maskulin: einen Brief." } }
+      - { type: gaps, sentence: "Er erklärt {0} Kindern {1} Regel.", gaps: [{ options: [die, den, der], answer: den }, { options: [die, der, den], answer: die }], explanation: { en: "Dativ plural: den Kindern. Akkusativ feminine: die Regel.", de: "Dativ Plural: den Kindern. Akkusativ feminin: die Regel." } }
+
+  - id: pronouns
+    title: { en: "Pronouns", de: "Pronomen" }
+    count: 8
+    concepts: [case.dat-pronouns]
+    instruction: { en: "Which pronoun replaces the noun?", de: "Welches Pronomen ersetzt das Nomen?" }
+    explanation: { en: "der → ihm, die → ihr, das → ihm, plural → ihnen.", de: "der → ihm, die → ihr, das → ihm, Plural → ihnen." }
+    items:
+      - { type: pick, sentence: "Ich helfe dem Mann. Ich helfe ___.", options: [ihm, ihn, ihr, ihnen], answer: ihm }
+      - { type: pick, sentence: "Ich helfe der Frau. Ich helfe ___.", options: [ihr, ihm, sie, ihnen], answer: ihr }
+      - { type: pick, sentence: "Wir danken dem Kind. Wir danken ___.", options: [ihm, es, ihr, ihnen], answer: ihm }
+      - { type: pick, sentence: "Ich antworte den Kindern. Ich antworte ___.", options: [ihnen, ihm, sie, ihr], answer: ihnen }
+      - { type: pick, sentence: "Das ist dein Buch. Es gehört ___.", options: [dir, dich, du, euch], answer: dir }
+      - { type: pick, sentence: "Du hilfst mir. Ich helfe ___ auch.", options: [dir, dich, du, ihm], answer: dir }
+      - { type: pick, sentence: "Der Film gefällt ___ (ich).", options: [mir, mich, ich, dir], answer: mir }
+      - { type: pick, sentence: "Maria kommt morgen. Ich gebe ___ das Buch.", options: [ihr, sie, ihm, ihnen], answer: ihr }
+      - { type: pick, sentence: "Wir gratulieren euch. Wir gratulieren ___.", options: [euch, ihr, dir, uns], answer: euch }
+
+  - id: verbs
+    title: { en: "Verbs", de: "Verben" }
+    shuffle: false
+    items:
+      - type: pairs
+        concepts: [case.dat-verbs]
+        instruction: { en: "Tap a verb, then a sentence with a Dativ object.", de: "Tippe ein Verb an, dann den Satz mit Dativobjekt." }
+        pairs: [[helfen, Ich helfe dem Mann.], [danken, Wir danken der Lehrerin.], [gefallen, Der Film gefällt mir.], [gehören, Das Auto gehört meinem Vater.], [schmecken, Die Suppe schmeckt dem Kind.]]
+      - type: pairs
+        concepts: [case.dat-pronouns]
+        instruction: { en: "Tap a pronoun, then its Dativ form.", de: "Tippe ein Pronomen an, dann die Dativ-Form." }
+        pairs: [[ich, mir], [du, dir], [er, ihm], [sie (singular), ihr], [wir, uns], [ihr, euch]]
+      - type: pairs
+        concepts: [case.dat-articles]
+        instruction: { en: "Tap a word, then its Dativ form.", de: "Tippe ein Wort an, dann die Dativ-Form." }
+        pairs: [[der Mann, dem Mann], [die Frau, der Frau], [das Kind, dem Kind], [ein Freund, einem Freund], [meine Schwester, meiner Schwester]]
+
+  - id: prepositions
+    title: { en: "Prepositions", de: "Präpositionen" }
+    count: 8
+    concepts: [case.dat-prepositions]
+    instruction: { en: "After these prepositions we always use the Dativ. Which form is right?", de: "Nach diesen Präpositionen steht immer der Dativ. Welche Form ist richtig?" }
+    explanation: { en: "mit, bei, nach, von, zu, aus, seit + Dativ.", de: "mit, bei, nach, von, zu, aus, seit + Dativ." }
+    items:
+      - type: article-pick
+        kind: definite
+        case: dat
+        items:
+          - { g: m, noun: Bus, frame: "Ich fahre mit ___ Bus." }
+          - { g: f, noun: Freundin, frame: "Ich gehe mit ___ Freundin einkaufen." }
+          - { g: n, noun: Kind, frame: "Sie spielt mit ___ Kind." }
+          - { g: f, noun: Oma, frame: "Er wohnt bei ___ Oma." }
+          - { g: m, noun: Lehrer, frame: "Das ist ein Brief von ___ Lehrer." }
+          - { g: f, noun: Küche, frame: "Der Kaffee kommt aus ___ Küche." }
+          - { g: n, noun: Haus, frame: "Er kommt aus ___ Haus." }
+          - { g: pl, noun: Freunde, frame: "Wir spielen mit ___ Freunden." }
+      - type: article-pick
+        kind: possessive
+        case: dat
+        items:
+          - { g: m, noun: Bruder, frame: "Ich wohne bei ___ Bruder." }
+          - { g: f, noun: Schwester, frame: "Ich fahre mit ___ Schwester." }
+
+  - id: contractions
+    title: { en: "zum, zur, beim, vom", de: "zum, zur, beim, vom" }
+    shuffle: true
+    concepts: [case.dat-prepositions]
+    items:
+      - { type: pick, sentence: "Ich gehe ___ Arzt.", options: [zum, zur, beim, vom], answer: zum, explanation: { en: "zu + dem Arzt = zum Arzt (Arzt is masculine).", de: "zu + dem Arzt = zum Arzt („Arzt“ ist maskulin)." } }
+      - { type: pick, sentence: "Ich gehe ___ Schule.", options: [zur, zum, beim, vom], answer: zur, explanation: { en: "zu + der Schule = zur Schule (feminine).", de: "zu + der Schule = zur Schule (feminin)." } }
+      - { type: pick, sentence: "Ich bin ___ Arzt.", options: [beim, zum, zur, vom], answer: beim, explanation: { en: "bei + dem Arzt = beim Arzt.", de: "bei + dem Arzt = beim Arzt." } }
+      - { type: pick, sentence: "Das Geschenk ist ___ Lehrer.", options: [vom, zum, beim, zur], answer: vom, explanation: { en: "von + dem Lehrer = vom Lehrer.", de: "von + dem Lehrer = vom Lehrer." } }
+      - { type: pick, sentence: "Wir gehen ___ Bahnhof.", options: [zum, zur, beim, vom], answer: zum, explanation: { en: "zu + dem Bahnhof = zum Bahnhof.", de: "zu + dem Bahnhof = zum Bahnhof." } }
+      - { type: pick, sentence: "Sie geht ___ Bäckerei.", options: [zur, zum, beim, vom], answer: zur, explanation: { en: "zu + der Bäckerei = zur Bäckerei.", de: "zu + der Bäckerei = zur Bäckerei." } }
+
+  - id: correct
+    title: { en: "Which is right?", de: "Was ist richtig?" }
+    count: 8
+    concepts: [case.dat-articles, case.dat-verbs, case.dat-before-akk]
+    instruction: { en: "Tap the correct sentence.", de: "Tippe den richtigen Satz an." }
+    items:
+      - type: pick
+        options: ["Ich helfe dem Mann.", "Ich helfe den Mann.", "Ich helfe der Mann."]
+        answer: "Ich helfe dem Mann."
+        explanation: { en: "helfen takes the Dativ: der Mann → dem Mann.", de: "„helfen“ steht mit Dativ: der Mann → dem Mann." }
+      - type: pick
+        options: ["Wir danken der Lehrerin.", "Wir danken die Lehrerin.", "Wir danken dem Lehrerin."]
+        answer: "Wir danken der Lehrerin."
+        explanation: { en: "Feminine Dativ: die → der.", de: "Feminin im Dativ: die → der." }
+      - type: pick
+        options: ["Der Film gefällt mir.", "Der Film gefällt mich.", "Der Film gefällt ich."]
+        answer: "Der Film gefällt mir."
+        explanation: { en: "gefallen takes the Dativ: ich → mir.", de: "„gefallen“ steht mit Dativ: ich → mir." }
+      - type: pick
+        options: ["Ich gebe dem Kind einen Apfel.", "Ich gebe das Kind einen Apfel.", "Ich gebe dem Kind ein Apfel."]
+        answer: "Ich gebe dem Kind einen Apfel."
+        explanation: { en: "Kind is the Dativ object (dem Kind), Apfel the Akkusativ object (masculine: einen).", de: "„Kind“ ist das Dativobjekt (dem Kind), „Apfel“ das Akkusativobjekt (maskulin: einen)." }
+      - type: pick
+        options: ["Ich fahre mit dem Bus.", "Ich fahre mit den Bus.", "Ich fahre mit der Bus."]
+        answer: "Ich fahre mit dem Bus."
+        explanation: { en: "mit always takes the Dativ.", de: "„mit“ steht immer mit Dativ." }
+      - type: pick
+        options: ["Wir spielen mit den Kindern.", "Wir spielen mit den Kinder.", "Wir spielen mit die Kinder."]
+        answer: "Wir spielen mit den Kindern."
+        explanation: { en: "Dativ plural: den + noun with -n.", de: "Dativ Plural: den + Nomen mit -n." }
+      - type: pick
+        options: ["Das Auto gehört meiner Mutter.", "Das Auto gehört meine Mutter.", "Das Auto gehört meinem Mutter."]
+        answer: "Das Auto gehört meiner Mutter."
+        explanation: { en: "Feminine Dativ: meine → meiner.", de: "Feminin im Dativ: meine → meiner." }
+      - type: pick
+        options: ["Ich gehe zum Arzt.", "Ich gehe zu Arzt.", "Ich gehe zur Arzt."]
+        answer: "Ich gehe zum Arzt."
+        explanation: { en: "zu + dem = zum (Arzt is masculine).", de: "zu + dem = zum („Arzt“ ist maskulin)." }
+
+  - id: puzzle
+    title: { en: "Sentence puzzle", de: "Satzpuzzle" }
+    count: 6
+    concepts: [case.dat-before-akk, syntax.verb-position-2]
+    instruction: { en: "Put the words in the right order. Start with the subject.", de: "Bringe die Wörter in die richtige Reihenfolge. Beginne mit dem Subjekt." }
+    explanation: { en: "Subject, verb in position 2, then the Dativ object, then the Akkusativ object.", de: "Subjekt, Verb auf Position 2, dann das Dativobjekt, dann das Akkusativobjekt." }
+    items:
+      - { type: sentence-order, words: "ich helfe dem Mann", accept: ["ich helfe dem Mann"] }
+      - { type: sentence-order, words: "wir danken der Lehrerin", accept: ["wir danken der Lehrerin"] }
+      - { type: sentence-order, words: "ich gebe dem Kind einen Apfel", accept: ["ich gebe dem Kind einen Apfel"] }
+      - { type: sentence-order, words: "Anna schenkt ihrer Oma eine Blume", accept: ["Anna schenkt ihrer Oma eine Blume"] }
+      - { type: sentence-order, words: "er zeigt dem Gast die Stadt", accept: ["er zeigt dem Gast die Stadt"] }
+      - { type: sentence-order, words: "das Buch gehört meiner Schwester", accept: ["das Buch gehört meiner Schwester"] }
+      - { type: sentence-order, words: "ich fahre mit dem Bus", accept: ["ich fahre mit dem Bus"] }
+
+  - id: write
+    title: { en: "Writing", de: "Schreiben" }
+    concepts: [writing.simple-sentences, case.dat-articles]
+    instruction: { en: "Write 4 or more sentences. Use the words.", de: "Schreibe 4 Sätze oder mehr. Benutze die Wörter." }
+    items:
+      - type: free-writing
+        task: { en: "Write about presents and helping: Who helps you? Who do you help? What do you give to friends and family?", de: "Schreibe über Geschenke und Hilfe: Wer hilft dir? Wem hilfst du? Was gibst du Freunden und deiner Familie?" }
+        words: [ich helfe, ich schenke, ich gebe, dem, der, meiner]
+        minSentences: 4
+        detect:
+          - { label: { en: "a Dativ word (dem, einem, meiner, mir, ihm …)", de: "ein Dativ-Wort (dem, einem, meiner, mir, ihm …)" }, pattern: "\\b(dem|einem|meinem|deinem|seinem|ihrem|unserem|keinem|meiner|deiner|seiner|ihrer|unserer|einer|keiner|mir|dir|ihm|ihnen|euch)\\b", tip: { en: "No Dativ word yet. Who do you help or give something to? (dem, einer, meiner, mir …)", de: "Noch kein Dativ-Wort. Wem hilfst du oder wem gibst du etwas? (dem, einer, meiner, mir …)" } }
+          - { label: { en: "an Akkusativ word (einen, meinen, ihn …)", de: "ein Akkusativ-Wort (einen, meinen, ihn …)" }, pattern: "\\b(einen|meinen|deinen|seinen|ihren|unseren|keinen|mich|dich|ihn)\\b", tip: { en: "No masculine Akkusativ word yet (einen, meinen …). That is fine if you have no masculine object.", de: "Noch kein maskulines Akkusativ-Wort (einen, meinen …). Das ist okay, wenn du kein maskulines Objekt hast." } }
+        checklist:
+          - { en: "I used the Dativ after helfen, danken, geben or schenken.", de: "Ich habe nach „helfen“, „danken“, „geben“ oder „schenken“ den Dativ benutzt." }
+          - { en: "The person (Dativ) comes before the thing (Akkusativ).", de: "Die Person (Dativ) steht vor der Sache (Akkusativ)." }
+          - { en: "The verb is in position 2.", de: "Das Verb steht auf Position 2." }
+        model: "Meine Schwester hilft mir oft. Ich helfe meinem Bruder bei den Hausaufgaben. Zum Geburtstag schenke ich meiner Mutter eine Blume. Ich gebe meinem Freund ein Buch."

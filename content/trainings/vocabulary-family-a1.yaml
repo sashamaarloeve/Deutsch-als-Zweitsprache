@@ -1,0 +1,136 @@
+# Vocabulary training, level A1: vocabulary-family-a1. Original word selection and sentences (own work, no word lists copied).
+# Each word has an article (nouns), plural, a meaning (English / simple German) and an example with the word marked <c>…</c>.
+kind: lesson
+id: vocabulary-family-a1
+title:
+  en: Family and friends
+  de: Familie und Freunde
+level: A1
+skill: vocabulary
+minutes: 15
+status: draft
+description:
+  en: '14 words for family and friends, with article, plural and an example sentence. Practice: match, write, sentences, odd one out.'
+  de: '14 Wörter für Familie und Freunde, mit Artikel, Plural und einem Beispielsatz. Übungen: zuordnen, schreiben, Sätze, was passt nicht?'
+canDo:
+- en: I can name my family members and friends.
+  de: Ich kann meine Familie und meine Freunde benennen.
+- en: 'I can say who somebody is: Das ist meine Mutter.'
+  de: 'Ich kann sagen, wer jemand ist: Das ist meine Mutter.'
+words:
+- {id: mutter, art: die, word: Mutter, pl: Mütter, meaning: {en: mother, de: Mama}, ex: Meine <c>Mutter</c> kocht gern.}
+- {id: vater, art: der, word: Vater, pl: Väter, meaning: {en: father, de: Papa}, ex: Mein <c>Vater</c> arbeitet in einer Bank.}
+- {id: eltern, art: pl, word: Eltern, meaning: {en: parents, de: Mama und Papa}, ex: Meine <c>Eltern</c> wohnen in Hamburg.}
+- {id: bruder, art: der, word: Bruder, pl: Brüder, meaning: {en: brother, de: Ein Junge oder Mann mit denselben Eltern wie ich}, ex: Mein <c>Bruder</c> spielt Fußball.}
+- {id: schwester, art: die, word: Schwester, pl: Schwestern, meaning: {en: sister, de: Ein Mädchen oder eine Frau mit denselben Eltern wie ich}, ex: Meine <c>Schwester</c> ist 15 Jahre alt.}
+- {id: kind, art: das, word: Kind, pl: Kinder, meaning: {en: child, de: 'Ein kleiner Mensch, noch kein Erwachsener'}, ex: Das <c>Kind</c> spielt im Park.}
+- {id: oma, art: die, word: Oma, pl: Omas, meaning: {en: grandma, de: Die Mutter von meiner Mutter oder von meinem Vater}, ex: Meine <c>Oma</c> backt Kuchen.}
+- {id: opa, art: der, word: Opa, pl: Opas, meaning: {en: grandpa, de: Der Vater von meiner Mutter oder von meinem Vater}, ex: Mein <c>Opa</c> liest die Zeitung.}
+- {id: onkel, art: der, word: Onkel, pl: Onkel, meaning: {en: uncle, de: Der Bruder von meiner Mutter oder von meinem Vater}, ex: Mein <c>Onkel</c> wohnt in Wien.}
+- {id: tante, art: die, word: Tante, pl: Tanten, meaning: {en: aunt, de: Die Schwester von meiner Mutter oder von meinem Vater}, ex: Meine <c>Tante</c> besucht uns am Sonntag.}
+- {id: freund, art: der, word: Freund, pl: Freunde, meaning: {en: friend (male), de: 'Ein Mann oder Junge, mit dem ich gern Zeit verbringe'}, ex: Ben ist mein <c>Freund</c>.}
+- {id: freundin, art: die, word: Freundin, pl: Freundinnen, meaning: {en: friend (female), de: 'Eine Frau oder ein Mädchen, mit der ich gern Zeit verbringe'}, ex: Mia ist meine <c>Freundin</c>.}
+- {id: familie, art: die, word: Familie, pl: Familien, meaning: {en: family, de: 'Mutter, Vater und Kinder sind zusammen eine …'}, ex: Meine <c>Familie</c> ist groß.}
+- {id: baby, art: das, word: Baby, pl: Babys, meaning: {en: baby, de: Ein ganz kleines Kind}, ex: Das <c>Baby</c> schläft.}
+understand:
+- type: word-list
+  title:
+    en: Close family
+    de: Die Familie
+  intro:
+    en: Look at the words. Say them aloud and read the example.
+    de: Schau die Wörter an. Sprich sie laut und lies den Beispielsatz.
+  words: [mutter, vater, eltern, bruder, schwester, kind, baby, familie]
+- type: word-list
+  title:
+    en: More family and friends
+    de: Mehr Familie und Freunde
+  words: [oma, opa, onkel, tante, freund, freundin]
+- type: rule
+  title:
+    en: Useful sentences
+    de: Nützliche Sätze
+  body:
+  - en: Das ist meine <c>Mutter</c>.
+    de: Das ist meine <c>Mutter</c>.
+  - en: Ich habe einen <c>Bruder</c> und eine <c>Schwester</c>.
+    de: Ich habe einen <c>Bruder</c> und eine <c>Schwester</c>.
+  - en: Hast du Geschwister? – Nein, ich habe keine Geschwister.
+    de: Hast du Geschwister? – Nein, ich habe keine Geschwister.
+  - en: Mia ist meine Freundin.
+    de: Mia ist meine Freundin.
+- type: rule
+  title:
+    en: Learn nouns with article and plural
+    de: Nomen mit Artikel und Plural lernen
+  body:
+  - en: 'Learn every noun together with its article and its plural. The article colour helps: <der>der</der> blue, <die>die</die> red, <das>das</das> green, plural orange.'
+    de: 'Lerne jedes Nomen zusammen mit Artikel und Plural. Die Farben helfen: <der>der</der> blau, <die>die</die> rot, <das>das</das> grün, Plural orange.'
+  - en: 'Many nouns change in the plural: der Bruder → die Brüder.'
+    de: 'Viele Nomen ändern sich im Plural: der Bruder → die Brüder.'
+practice:
+- id: cards
+  title:
+    en: Flashcards
+    de: Lernkarten
+  kind: cards
+- id: pairs
+  title:
+    en: Match
+    de: Zuordnen
+  shuffle: false
+  concepts:
+  - vocab.family
+  - vocab.noun-article
+  instruction:
+    en: Tap a German word, then its meaning.
+    de: Tippe ein deutsches Wort an, dann die Bedeutung.
+  items:
+  - {type: words-pairs, ids: [mutter, vater, eltern, bruder, schwester, kind, oma, opa, onkel, tante, freund, freundin, familie, baby], size: 5}
+- id: memory
+  title:
+    en: Memory
+    de: Memory
+  kind: memory
+- id: write
+  title:
+    en: Write the word
+    de: Das Wort schreiben
+  shuffle: true
+  count: 8
+  concepts:
+  - vocab.family
+  - vocab.noun-article
+  instruction:
+    en: 'Write the German word. For nouns, write the article too (for example: die Mutter).'
+    de: 'Schreibe das deutsche Wort. Bei Nomen schreibe auch den Artikel (zum Beispiel: die Mutter).'
+  items:
+  - {type: words-write, ids: [mutter, vater, eltern, bruder, schwester, kind, oma, opa, onkel, tante, freund, freundin, familie, baby]}
+- id: sentences
+  title:
+    en: In sentences
+    de: In Sätzen
+  shuffle: true
+  concepts:
+  - vocab.family
+  items:
+  - {type: pick, instruction: {en: 'Which word fits the sentence?', de: 'Welches Wort passt in den Satz?'}, sentence: Mein Vater und meine ___ sind meine Eltern., options: [Mutter, Schwester, Tante, Oma], answer: Mutter, explanation: {en: The mother and the father are the parents., de: Mutter und Vater sind die Eltern.}}
+  - {type: pick, instruction: {en: 'Which word fits the sentence?', de: 'Welches Wort passt in den Satz?'}, sentence: Die Mutter von meinem Vater ist meine ___., options: [Oma, Tante, Schwester, Freundin], answer: Oma, explanation: {en: Your father’s mother is your grandmother., de: Die Mutter vom Vater ist die Oma.}}
+  - {type: pick, instruction: {en: 'Which word fits the sentence?', de: 'Welches Wort passt in den Satz?'}, sentence: Der Bruder von meiner Mutter ist mein ___., options: [Onkel, Opa, Freund, Vater], answer: Onkel, explanation: {en: Your mother’s brother is your uncle., de: Der Bruder von der Mutter ist der Onkel.}}
+  - {type: pick, instruction: {en: 'Which word fits the sentence?', de: 'Welches Wort passt in den Satz?'}, sentence: Das ___ ist erst drei Monate alt und schläft viel., options: [Baby, Opa, Onkel, Freund], answer: Baby, explanation: {en: A three-month-old is a baby., de: Mit drei Monaten ist man ein Baby.}}
+  - {type: pick, instruction: {en: 'Which word fits the sentence?', de: 'Welches Wort passt in den Satz?'}, sentence: 'Meine Eltern, meine Schwester und ich: Wir sind eine ___.', options: [Familie, Freundin, Tante, Oma], answer: Familie, explanation: {en: Parents and children together are a family., de: Eltern und Kinder zusammen sind eine Familie.}}
+  - {type: pick, instruction: {en: 'Which word fits the sentence?', de: 'Welches Wort passt in den Satz?'}, sentence: 'Mia gehört nicht zu meiner Familie, aber ich habe sie gern. Sie ist meine ___.', options: [Freundin, Tante, Schwester, Oma], answer: Freundin, explanation: {en: A person you like who is not family is a friend., de: 'Eine Person, die man gern hat und die nicht zur Familie gehört, ist ein Freund oder eine Freundin.'}}
+  - {type: pick, instruction: {en: 'Which word fits the sentence?', de: 'Welches Wort passt in den Satz?'}, sentence: 'Mein Vater und meine Mutter, das sind meine ___.', options: [Eltern, Kinder, Brüder, Tanten], answer: Eltern, explanation: {en: Mother and father are the parents., de: Mutter und Vater sind die Eltern.}}
+  - {type: pick, instruction: {en: 'Which word fits the sentence?', de: 'Welches Wort passt in den Satz?'}, sentence: Meine Schwester und mein Bruder sind noch klein. Sie sind ___., options: [Kinder, Eltern, Omas, Tanten], answer: Kinder, explanation: {en: Small brothers and sisters are children., de: Kleine Geschwister sind Kinder.}}
+- id: odd
+  title:
+    en: Odd one out
+    de: Was passt nicht?
+  shuffle: true
+  concepts:
+  - vocab.family
+  items:
+  - {type: pick, instruction: {en: 'Which word is not a family member?', de: 'Welches Wort gehört nicht zur Familie?'}, prompt: '', options: [die Oma, der Opa, das Auto, die Tante], answer: das Auto, explanation: {en: A car is not a person., de: Ein Auto ist keine Person.}}
+  - {type: pick, instruction: {en: 'Which word is not a person?', de: 'Welches Wort ist keine Person?'}, prompt: '', options: [das Baby, das Kind, der Apfel, die Schwester], answer: der Apfel, explanation: {en: An apple is food., de: Ein Apfel ist Essen.}}
+  - {type: pick, instruction: {en: 'Which word is not a person?', de: 'Welches Wort ist keine Person?'}, prompt: '', options: [die Freundin, der Onkel, die Eltern, das Wasser], answer: das Wasser, explanation: {en: Water is a drink., de: Wasser ist ein Getränk.}}
+  - {type: pick, instruction: {en: 'Which word is not a woman or girl?', de: 'Welches Wort ist keine Frau oder kein Mädchen?'}, prompt: '', options: [die Tante, die Oma, die Schwester, der Onkel], answer: der Onkel, explanation: {en: An uncle is a man., de: Ein Onkel ist ein Mann.}}

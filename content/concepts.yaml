@@ -1,0 +1,67 @@
+# Concepts: small, specific things a learner can master. Ids are permanent.
+perfekt.aux-choice: Choosing haben or sein in the Perfekt
+perfekt.participle-regular: Partizip II of regular verbs (ge-…-t)
+perfekt.participle-irregular: Partizip II of irregular verbs (ge-…-en)
+perfekt.participle-separable: Partizip II of separable verbs (auf-ge-…)
+perfekt.participle-no-ge: Partizip II without ge- (be-, ver-, -ieren …)
+perfekt.word-order: Word order in Perfekt sentences
+perfekt.convert: Turning a Präsens sentence into the Perfekt
+present.sein-forms: Present tense of sein (bin, bist, ist, sind, seid)
+present.haben-forms: Present tense of haben (habe, hast, hat, haben, habt)
+present.sein-vs-haben: Choosing sein or haben (age, feelings, hunger, possession)
+present.regular-endings: Endings of regular verbs in the present tense
+present.regular-special-stems: Regular verbs with special stems (arbeitest, tanzt, heißt)
+syntax.verb-position-2: Verb in position 2 in statements
+syntax.inversion: Subject after the verb when another word is first
+syntax.w-question: Questions with a question word (Wo? Was? Wie?)
+syntax.yes-no-question: Yes/no questions with the verb first
+writing.simple-sentences: Writing simple correct sentences
+modal.forms: Present tense of modal verbs (kann, muss, will, möchte, darf)
+modal.meaning: What modal verbs express (ability, duty, wish, permission)
+modal.bracket: Modal verb in position 2, infinitive at the end
+irregular.e-i: Vowel change e → i in du and er/sie/es (sprechen, essen, geben, nehmen, helfen)
+irregular.e-ie: Vowel change e → ie in du and er/sie/es (lesen, sehen)
+irregular.a-ae: Vowel change a → ä in du and er/sie/es (fahren, schlafen, laufen)
+irregular.no-change-others: No vowel change in ich, wir, ihr and sie/Sie
+separable.forms: Present tense of separable verbs
+separable.vowel-change: Separable verbs with a vowel change (fernsehen, einladen, anfangen)
+separable.prefix-end: The prefix goes to the end of the statement
+separable.with-modal: Separable verbs with a modal verb stay together (Ich muss früh aufstehen)
+case.question-wen-was: Asking for the Akkusativ object (wen? was?)
+case.akk-masculine: Only the masculine article changes in the Akkusativ (der → den, ein → einen)
+case.akk-articles: Articles in the Akkusativ (den, die, das; einen, eine, ein; meinen, meine, mein; keinen, keine, kein)
+case.akk-pronouns: Pronouns in the Akkusativ (mich, dich, ihn, sie, es, uns, euch)
+case.akk-verbs: Verbs that take an Akkusativ object (haben, sehen, kaufen, brauchen …)
+case.question-wem: Asking for the Dativ object (wem?)
+case.dat-articles: Articles in the Dativ (dem, der, dem, den; einem, einer; meinem, meiner)
+case.dat-plural-n: Plural nouns get -n in the Dativ (den Kindern)
+case.dat-pronouns: Pronouns in the Dativ (mir, dir, ihm, ihr, uns, euch, ihnen)
+case.dat-verbs: Verbs with a Dativ object (helfen, danken, gefallen, gehören …)
+case.dat-prepositions: Prepositions with the Dativ (mit, bei, nach, von, zu, aus, seit)
+case.dat-before-akk: Dativ object before Akkusativ object (Ich gebe dem Kind einen Apfel)
+syntax.parts: "Sentence parts (Satzteile): subject, verb, objects, time, place"
+syntax.mittelfeld-order: "Usual order in the Mittelfeld: time, Dativ, Akkusativ, place"
+syntax.klammer-with-objects: Verb in position 2, second verb part at the end, objects in between
+case.overview: "The four cases: Nominativ, Akkusativ, Dativ, Genitiv"
+case.verbs-decide: The verb decides which case its object needs
+case.prepositions-overview: Some prepositions always need the Akkusativ, others the Dativ
+case.genitive-intro: Genitiv shows belonging (das Auto des Mannes), mostly in writing
+case.pronouns-overview: Personal pronouns in Nominativ, Akkusativ and Dativ
+case.gen-articles: Articles in the Genitiv (des, der, des, der; eines, einer; meines, meiner)
+case.gen-nouns: Masculine and neuter nouns get -s or -es in the Genitiv
+case.gen-names: Names in the Genitiv (Annas Buch, Lukas' Buch)
+case.gen-prepositions: Prepositions with the Genitiv (wegen, während, trotz)
+case.gen-vs-von: Genitiv in writing, von + Dativ in speaking
+prep.two-way-list: The two-way prepositions (an, auf, hinter, in, neben, über, unter, vor, zwischen)
+prep.two-way-wo-dat: Wo? (place, no movement) takes the Dativ
+prep.two-way-wohin-akk: Wohin? (movement to a new place) takes the Akkusativ
+prep.two-way-verb-pairs: Position and movement verbs (liegen/legen, stehen/stellen, sitzen/setzen)
+prep.two-way-contractions: Contractions (im, am, ins, ans, aufs)
+reading.true-false: "Reading: decide if a statement is right or wrong"
+reading.find-statement: "Reading: find the sentence that says the same in other words"
+reading.find-details: "Reading: find specific information and write it down"
+reading.match: "Reading: match people, things or reasons with details from the text"
+vocab.family: Family and friends (Mutter, Vater, Bruder, Freundin …)
+vocab.food: Food and drink (Brot, Käse, Wasser, essen, trinken …)
+vocab.work: Work and jobs (Beruf, Büro, Termin, Gehalt …)
+vocab.noun-article: Learn every noun with its article and its plural
