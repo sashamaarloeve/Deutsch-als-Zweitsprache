@@ -12,6 +12,7 @@ import { emptyProgress, recordResult } from './progress';
 import { pickQuickPractice, priority } from './practice';
 import { defaultPrefs, ZOOMS } from './prefs';
 import { todayInGerman } from './today';
+import { parseAktuell } from '../content/aktuell';
 
 // Helpers that tell TypeScript which kind of training a file is.
 const perfektOf = (yamlText: string, overlay?: string, problems: string[] = []): PerfektTraining => {
@@ -494,5 +495,19 @@ describe('stylesheet', () => {
   it('has balanced braces (an unclosed block silently switches off all rules after it)', () => {
     const css = readFileSync('src/styles.css', 'utf8').replace(/\/\*[\s\S]*?\*\//g, '');
     expect(css.split('{').length).toBe(css.split('}').length);
+  });
+});
+
+describe('Aktuell tab', () => {
+  it('reads the intro and the list of training ids', () => {
+    expect(parseAktuell('intro: Hallo\ntrainings:\n  - perfekt\n  - dative-a2\n')).toEqual({ intro: 'Hallo', ids: ['perfekt', 'dative-a2'] });
+  });
+  it('copes with an empty or incomplete file', () => {
+    expect(parseAktuell('')).toEqual({ intro: '', ids: [] });
+    expect(parseAktuell('trainings: [1, perfekt]')).toEqual({ intro: '', ids: ['perfekt'] });
+  });
+  it('lists only trainings that exist', () => {
+    const real = readFileSync('content/aktuell.yaml', 'utf8');
+    for (const id of parseAktuell(real).ids) expect(existsSync(`content/trainings/${id}.yaml`)).toBe(true);
   });
 });

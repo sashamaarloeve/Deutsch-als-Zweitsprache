@@ -94,7 +94,8 @@ header.top { padding: 20px 0 8px; display: flex; justify-content: space-between;
 h1.tt, h2.tt { font-size: clamp(2rem, 7vw, 3rem); margin: 10px 0 6px; }
 .maintabs, .subtabs { display: flex; gap: 8px; padding: 4px 2px 12px; }
 .maintabs { position: sticky; top: 0; z-index: 20; background: var(--paper); border-bottom: 2px solid var(--ink); padding: 10px 2px; margin: 0 0 18px; }
-.maintabs .btn { flex: 1; font-size: 1.2rem; }
+.maintabs { flex-wrap: wrap; }
+.maintabs .btn { flex: 1 1 0; min-width: 0; font-size: 1.05rem; padding-left: 6px; padding-right: 6px; }
 .subtabs { overflow-x: auto; }
 .subtabs .btn { white-space: nowrap; }
 .btn.on { background: var(--hl); color: var(--ink); }

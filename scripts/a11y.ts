@@ -54,6 +54,11 @@ async function main() {
       await fresh();
       await scan(page, `${theme} ${lang} · Start`);
 
+      // Aktuell
+      await fresh();
+      await page.getByRole('button', { name: 'Aktuell', exact: true }).first().click();
+      await scan(page, `${theme} ${lang} · Aktuell`);
+
       // Understand: the list and every topic
       await fresh();
       await page.getByRole('button', { name: L.understand, exact: true }).first().click();

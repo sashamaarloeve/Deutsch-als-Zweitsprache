@@ -1,6 +1,7 @@
 import { parse } from 'yaml';
 import { parseTraining } from './expand';
 import type { Training } from './types';
+import { parseAktuell, type Aktuell } from './aktuell';
 
 export type Lang = 'en' | 'de';
 
@@ -37,3 +38,6 @@ const build = (lang: Lang): Training[] =>
     .filter(visible)
     .sort(byLevel);
 export const trainingsByLang: Record<Lang, Training[]> = { en: build('en'), de: build('de') };
+
+const aktuellFile = import.meta.glob('../../content/aktuell.yaml', { query: '?raw', import: 'default', eager: true }) as Record<string, string>;
+export const aktuell: Aktuell = parseAktuell(Object.values(aktuellFile)[0] ?? '');

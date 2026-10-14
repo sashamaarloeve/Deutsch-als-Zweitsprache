@@ -5,12 +5,14 @@ import type { ReactNode } from 'react';
 const en = {
   brandKicker: 'Deutsch üben',
   points: 'Points',
+  navCurrent: 'Current',
+  currentEmpty: 'Nothing chosen yet.',
   navUnderstand: 'Understand',
   navPractice: 'Practice',
   sections: 'Sections',
   homeHello: 'Welcome!',
   homeText: 'Today we practise German together.',
-  homeHint: 'Choose Understand or Practice above. Have fun!',
+  homeHint: 'Choose Current, Understand or Practice above. Have fun!',
   toStart: 'Back to the start page',
 
   topicsTitle: 'Topics',
@@ -201,12 +203,14 @@ type Strings = typeof en;
 const de: Strings = {
   brandKicker: 'Deutsch üben',
   points: 'Punkte',
+  navCurrent: 'Aktuell',
+  currentEmpty: 'Gerade ist nichts ausgewählt.',
   navUnderstand: 'Verstehen',
   navPractice: 'Trainieren',
   sections: 'Bereiche',
   homeHello: 'Herzlich willkommen!',
   homeText: 'Heute üben wir zusammen Deutsch.',
-  homeHint: 'Wähle oben: Verstehen oder Trainieren. Viel Spaß!',
+  homeHint: 'Wähle oben: Aktuell, Verstehen oder Trainieren. Viel Spaß!',
   toStart: 'Zurück zur Startseite',
 
   topicsTitle: 'Themen',

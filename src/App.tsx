@@ -6,12 +6,13 @@ import { Runner } from './components/Runner';
 import { LessonPractice, TopicPractice } from './components/TopicPractice';
 import { LessonUnderstand } from './components/LessonUnderstand';
 import { Whiteboard } from './components/Whiteboard';
+import { AktuellView } from './components/Aktuell';
 import { Understand } from './components/Understand';
 import { addPoints, emptyProgress, recordResult, recordTraining, type Outcome } from './logic/progress';
 import { pickQuickPractice } from './logic/practice';
 import { applyPrefs, defaultPrefs, ZOOMS } from './logic/prefs';
 
-type Tab = 'home' | 'understand' | 'practice';
+type Tab = 'home' | 'aktuell' | 'understand' | 'practice';
 const READ_LEVELS = ['A1', 'A2', 'B1'] as const;
 const AREAS = ['reading', 'grammar', 'vocabulary'] as const; // the three areas of the Practice menu
 // What is open inside each tab. Ids (not objects) so a language switch shows the right texts.
@@ -86,6 +87,9 @@ function Shell() {
       </header>
 
       <nav className="maintabs" aria-label={s.sections}>
+        <button className={'btn' + (tab === 'aktuell' ? ' on' : ' ghost')} aria-pressed={tab === 'aktuell'} onClick={() => goTab('aktuell')}>
+          {s.navCurrent}
+        </button>
         <button className={'btn' + (tab === 'understand' ? ' on' : ' ghost')} aria-pressed={tab === 'understand'} onClick={() => goTab('understand')}>
           {s.navUnderstand}
         </button>
@@ -96,6 +100,14 @@ function Shell() {
 
       <main>
         {tab === 'home' && <Whiteboard />}
+
+        {tab === 'aktuell' && (
+          <AktuellView
+            trainings={trainings}
+            onUnderstand={(id) => { setTopicId(id); goTab('understand'); }}
+            onPractice={goPractice}
+          />
+        )}
 
         {tab === 'understand' && !topic && (
           <>
