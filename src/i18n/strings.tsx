@@ -10,7 +10,7 @@ const en = {
   sections: 'Sections',
   homeHello: 'Welcome!',
   homeText: 'Today we practise German together.',
-  homeHint: 'Choose Understand or Practice above.',
+  homeHint: 'Choose Understand or Practice above. Have fun!',
   toStart: 'Back to the start page',
 
   topicsTitle: 'Topics',
@@ -207,7 +207,7 @@ const de: Strings = {
   sections: 'Bereiche',
   homeHello: 'Herzlich willkommen!',
   homeText: 'Heute üben wir zusammen Deutsch.',
-  homeHint: 'Wähle oben: Verstehen oder Trainieren.',
+  homeHint: 'Wähle oben: Verstehen oder Trainieren. Viel Spaß!',
   toStart: 'Zurück zur Startseite',
 
   topicsTitle: 'Themen',
