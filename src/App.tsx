@@ -73,8 +73,8 @@ function Shell() {
     <div className="sheet">
       <header className="top">
         <div>
-          <span className="kicker">{s.brandKicker}</span>
           <h1><button type="button" className="homelink" aria-label={`DaZ-Alex – ${s.toStart}`} onClick={() => goTab('home')}>DaZ-<span className="u">Alex</span></button></h1>
+          <span className="kicker">{s.brandKicker}</span>
         </div>
         <div className="topright">
           <div className="prefs" role="group" aria-label={s.prefsLabel}>
