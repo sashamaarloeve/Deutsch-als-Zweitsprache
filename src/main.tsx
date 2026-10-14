@@ -1,5 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import '@fontsource/comic-neue/latin-400.css';
+import '@fontsource/comic-neue/latin-700.css';
 import './styles.css';
 import { App } from './App';
 import { applyPrefs, defaultPrefs } from './logic/prefs';

@@ -1,6 +1,6 @@
 /* Calm, dyslexia-friendly style, see docs/STYLE.md: light yellow paper, sans-serif text, generous spacing, no grid lines */
 :root {
-  --ink: #27343b; --paper: #fff9c4; --desk: #f0e9a6; --grid: #e6dc8a; --margin: #e58a8a;
+  --ink: #27343b; --paper: #fff6c2; --desk: #fcf9f1; --grid: #f0e3a0; --margin: #e58a8a;
   --teal: #1f7a7a; --teal-soft: #e3f1f1; --orange: #d9822b; --orange-dark: #a85a0e; --orange-soft: #ffe3b0;
   --der: #1f5fbf; --die: #b02a1e; --das: #176438; --pl: #9c4d00;
   --hl: #ffea7a; --ok: #2a7d4f; --ok-soft: #e3f4ea; --no: #a82a1d; --no-soft: #fbe6e3;
@@ -10,9 +10,9 @@
   --violet-bg: #e9e2fd; --violet-ink: #5a34c4; --navy-bg: #e3e9f4; --navy-ink: #1c2b4a;
   --amber-bg: #ffe8cc; --amber-ink: #8a4400; --aqua-bg: #d9f1ef; --aqua-ink: #075f5b;
   color-scheme: light;
-  /* clear sans-serif fonts already on the device; no web fonts are loaded */
-  --hand: Verdana, "DejaVu Sans", Arial, sans-serif;
-  --body: Verdana, "DejaVu Sans", Arial, sans-serif;
+  /* Comic Sans where the device has it, otherwise the self-hosted look-alike Comic Neue */
+  --hand: "Comic Sans MS", "Comic Neue", "Chalkboard SE", sans-serif;
+  --body: "Comic Sans MS", "Comic Neue", "Chalkboard SE", sans-serif;
 }
 * { box-sizing: border-box; }
 html { font-size: calc(100% * var(--zoom, 1)); }
@@ -22,11 +22,14 @@ button { font: inherit; cursor: pointer; color: inherit; }
 
 .sheet {
   max-width: 760px; margin: 0 auto; min-height: 100vh; position: relative;
-  padding: 0 16px 90px;
+  padding: 0 16px 90px 40px;
   background-color: var(--paper);
-  box-shadow: 0 0 30px rgba(0, 0, 0, .1);
+  background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 26px 26px;
+  box-shadow: 0 0 24px rgba(120, 100, 40, .15);
 }
-@media (min-width: 700px) { .sheet { padding: 0 28px 90px; } }
+.sheet::before { content: ""; position: absolute; left: 26px; top: 0; bottom: 0; width: 2px; background: var(--margin); opacity: .6; }
+@media (min-width: 700px) { .sheet { padding: 0 28px 90px 70px; } .sheet::before { left: 46px; } }
 /* wider letter and line spacing, switched on by the button at the top */
 :root[data-spacing="wide"] body { line-height: 2.05; letter-spacing: .08em; word-spacing: .25em; }
 
@@ -280,7 +283,7 @@ button.sentpart.sel { outline: 3px solid var(--ink); outline-offset: 2px; }
 
 /* white background: set by the toggle (data-theme on the html element) */
 :root[data-theme="white"] {
-  --paper: #ffffff; --desk: #eceff1; --grid: #dfe6ea;
+  --paper: #ffffff; --desk: #fcf9f1; --grid: #cfe3ea;
   --card: #ffffff; --card-soft: #fafdfd; --note-bg: #fff7cc; --mark-bg: #fff2a8; --orange-soft: #fff1dc; --hl: #ffe45c;
 }
 .prefs { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
