@@ -27,7 +27,6 @@ import type {
   Verb,
   WritingItem,
 } from './types';
-import type { Lang } from './load';
 
 export const AUXF = {
   haben: ['habe', 'hast', 'hat', 'hat', 'haben', 'habt', 'haben'],
@@ -115,74 +114,6 @@ export function expandPerfekt(raw: Omit<PerfektTraining, 'items' | 'kind'>): Per
     items.push(item);
   });
   return { ...raw, kind: 'perfekt', verbs, items };
-}
-
-type Json = Record<string, unknown> | unknown[] | string | number | boolean | null;
-
-// Lays a translation over the main file. Objects merge key by key, lists of objects merge
-// item by item, everything else (text, lists of text) is replaced. Keys that do not exist
-// in the main file are reported in `problems`, so typos do not go unnoticed.
-export function mergeOverlay(base: Json, over: Json, path = '', problems: string[] = []): Json {
-  const isObj = (x: Json): x is Record<string, unknown> => !!x && typeof x === 'object' && !Array.isArray(x);
-  if (isObj(base) && isObj(over)) {
-    const out: Record<string, unknown> = { ...base };
-    for (const k of Object.keys(over)) {
-      if (!(k in base)) problems.push(`German overlay: "${path}${k}" does not exist in the main file.`);
-      else out[k] = mergeOverlay(base[k] as Json, over[k] as Json, `${path}${k}.`, problems);
-    }
-    return out;
-  }
-  if (Array.isArray(base) && Array.isArray(over) && base.some((x) => isObj(x as Json))) {
-    if (base.length !== over.length) problems.push(`German overlay: "${path.slice(0, -1)}" has ${over.length} entries, the main file has ${base.length}.`);
-    return base.map((b, i) => (i < over.length ? mergeOverlay(b as Json, over[i] as Json, `${path}${i}.`, problems) : b));
-  }
-  return over;
-}
-
-/* ---- lesson trainings: English and German side by side ---- */
-
-const isBilingual = (x: unknown): x is { en: string; de: string } =>
-  !!x && typeof x === 'object' && !Array.isArray(x) && Object.keys(x).length === 2 && 'en' in x && 'de' in x;
-
-// Picks the text of one language wherever a value is written as { en: ..., de: ... }.
-export function localize<T>(x: T, lang: Lang): T {
-  if (Array.isArray(x)) return x.map((v) => localize(v, lang)) as unknown as T;
-  if (isBilingual(x)) return (x as unknown as Record<Lang, string>)[lang] as unknown as T;
-  if (x && typeof x === 'object') return Object.fromEntries(Object.entries(x).map(([k, v]) => [k, localize(v, lang)])) as T;
-  return x;
-}
-
-// Keys whose values are explanation text for the learner and therefore must exist in both languages.
-const NEEDS_BOTH = new Set(['note', 'leadLabel', 'actionLabel', 'partLabels', 'title', 'description', 'canDo', 'instruction', 'explanation', 'hint', 'rule', 'label', 'body', 'intro', 'irregularNote', 'checklist', 'task', 'boxLabels', 'meaning', 'tip']);
-
-export function bilingualProblems(x: unknown, path = ''): string[] {
-  const problems: string[] = [];
-  if (Array.isArray(x)) x.forEach((v, i) => problems.push(...bilingualProblems(v, `${path}[${i}]`)));
-  else if (x && typeof x === 'object') {
-    if ('en' in x || 'de' in x) {
-      const o = x as Record<string, unknown>;
-      const ok = (v: unknown) => typeof v === 'string' && v.trim() !== '';
-      if (!(ok(o.en) && ok(o.de) && Object.keys(o).length === 2)) problems.push(`${path}: needs both an English (en) and a German (de) text.`);
-    } else {
-      for (const [k, v] of Object.entries(x)) {
-        const p = path ? `${path}.${k}` : k;
-        if ((k === 'roles' || k === 'roleLabels') && !Array.isArray(v)) {
-          // a map of codes to labels: every label needs both languages (an array is a list of codes)
-          for (const [code, label] of Object.entries((v ?? {}) as Record<string, unknown>)) {
-            if (!isBilingual(label)) problems.push(`${p}.${code}: write this as { en: "...", de: "..." }.`);
-          }
-        } else if (NEEDS_BOTH.has(k)) {
-          const leaves = Array.isArray(v) ? v : [v];
-          for (const [i, leaf] of leaves.entries()) {
-            if (leaf && typeof leaf === 'object' && !isBilingual(leaf) && !('en' in leaf) && !('de' in leaf)) problems.push(...bilingualProblems(leaf, `${p}[${i}]`));
-            else if (typeof leaf === 'string') problems.push(`${p}${Array.isArray(v) ? `[${i}]` : ''}: write this as { en: "...", de: "..." }.`);
-            else if (isBilingual(leaf) || (leaf && typeof leaf === 'object')) problems.push(...bilingualProblems(leaf, `${p}${Array.isArray(v) ? `[${i}]` : ''}`));
-          }
-        } else problems.push(...bilingualProblems(v, p));
-      }
-    }
-  }
-  return problems;
 }
 
 export const PERSONS = ['ich', 'du', 'er/sie/es', 'wir', 'ihr', 'sie/Sie'] as const;
@@ -519,9 +450,7 @@ export function expandLesson(raw: any): LessonTraining {
 }
 /* eslint-enable @typescript-eslint/no-explicit-any */
 
-export function parseTraining(yamlText: string, overlayText?: string, problems: string[] = [], lang: Lang = 'en'): Training {
+export function parseTraining(yamlText: string): Training {
   const raw = parse(yamlText);
-  if (raw.kind === 'lesson') return expandLesson(localize(raw, lang));
-  const merged = overlayText ? (mergeOverlay(raw, parse(overlayText), '', problems) as typeof raw) : raw;
-  return expandPerfekt(merged);
+  return raw.kind === 'lesson' ? expandLesson(raw) : expandPerfekt(raw);
 }

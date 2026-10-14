@@ -1,137 +1,99 @@
 # Vocabulary training, level A2: vocabulary-work-a2. Original word selection and sentences (own work, no word lists copied).
-# Each word has an article (nouns), plural, a meaning (English / simple German) and an example with the word marked <c>…</c>.
+# Each word has an article (nouns), plural, a meaning (simple German) and an example with the word marked <c>…</c>.
 kind: lesson
 id: vocabulary-work-a2
-title:
-  en: Work and jobs
-  de: Arbeit und Beruf
+title: Arbeit und Beruf
 level: A2
 skill: vocabulary
 minutes: 20
 status: draft
-description:
-  en: '16 words for work, jobs and applications, with article, plural and an example sentence. Practice: match, write, sentences, odd one out.'
-  de: '16 Wörter für Arbeit, Beruf und Bewerbung, mit Artikel, Plural und einem Beispielsatz. Übungen: zuordnen, schreiben, Sätze, was passt nicht?'
+description: '16 Wörter für Arbeit, Beruf und Bewerbung, mit Artikel, Plural und einem Beispielsatz. Übungen: zuordnen, schreiben, Sätze, was passt nicht?'
 canDo:
-- en: I can talk about my job and workplace.
-  de: Ich kann über meinen Beruf und meinen Arbeitsplatz sprechen.
-- en: I can understand simple words in job ads and applications.
-  de: Ich kann einfache Wörter in Anzeigen und Bewerbungen verstehen.
+  - Ich kann über meinen Beruf und meinen Arbeitsplatz sprechen.
+  - Ich kann einfache Wörter in Anzeigen und Bewerbungen verstehen.
 words:
-- {id: beruf, art: der, word: Beruf, pl: Berufe, meaning: {en: profession, de: 'Die Arbeit, die man gelernt hat, zum Beispiel Lehrer oder Arzt'}, ex: 'Was ist dein <c>Beruf</c>?'}
-- {id: arbeit, art: die, word: Arbeit, noPlural: true, meaning: {en: work, de: 'Das, was man jeden Tag für Geld macht'}, ex: Meine <c>Arbeit</c> beginnt um acht Uhr.}
-- {id: kollege, art: der, word: Kollege, pl: Kollegen, meaning: {en: colleague (male), de: 'Ein Mann, der in derselben Firma arbeitet wie ich'}, ex: Mein <c>Kollege</c> hilft mir oft.}
-- {id: chefin, art: die, word: Chefin, pl: Chefinnen, meaning: {en: boss (female), de: 'Die Frau, die sagt, was die Mitarbeiter tun'}, ex: Unsere <c>Chefin</c> hat heute Geburtstag.}
-- {id: buero, art: das, word: Büro, pl: Büros, meaning: {en: office, de: 'Ein Zimmer mit Schreibtisch und Computer, in dem man arbeitet'}, ex: Ich fahre mit dem Rad ins <c>Büro</c>.}
-- {id: termin, art: der, word: Termin, pl: Termine, meaning: {en: appointment, de: 'Eine feste Zeit für ein Treffen, zum Beispiel beim Arzt'}, ex: Ich habe morgen einen <c>Termin</c> beim Arzt.}
-- {id: besprechung, art: die, word: Besprechung, pl: Besprechungen, meaning: {en: meeting, de: 'Ein Treffen, bei dem Kollegen über die Arbeit sprechen'}, ex: Die <c>Besprechung</c> dauert eine Stunde.}
-- {id: gehalt, art: das, word: Gehalt, pl: Gehälter, meaning: {en: salary, de: 'Das Geld, das man jeden Monat für die Arbeit bekommt'}, ex: Das <c>Gehalt</c> kommt am Ende vom Monat.}
-- {id: urlaub, art: der, word: Urlaub, noPlural: true, meaning: {en: holiday (from work), de: 'Freie Tage von der Arbeit, zum Beispiel im Sommer'}, ex: Im Sommer mache ich zwei Wochen <c>Urlaub</c>.}
-- {id: bewerbung, art: die, word: Bewerbung, pl: Bewerbungen, meaning: {en: job application, de: 'Ein Brief oder eine E-Mail, mit der man eine Stelle haben möchte'}, ex: Ich habe eine <c>Bewerbung</c> geschrieben.}
-- {id: lebenslauf, art: der, word: Lebenslauf, pl: Lebensläufe, meaning: {en: CV, de: 'Eine Liste mit Schule, Ausbildung und früheren Jobs von einem Menschen'}, ex: Zur Bewerbung gehört ein <c>Lebenslauf</c>.}
-- {id: stelle, art: die, word: Stelle, pl: Stellen, meaning: {en: job (vacancy), de: 'Ein Job, den eine Firma anbietet'}, ex: Die Firma hat eine neue <c>Stelle</c>.}
-- {id: firma, art: die, word: Firma, pl: Firmen, meaning: {en: company, de: 'Ein Unternehmen, bei dem viele Menschen arbeiten'}, ex: Er arbeitet in einer großen <c>Firma</c>.}
-- {id: aufgabe, art: die, word: Aufgabe, pl: Aufgaben, meaning: {en: task, de: 'Etwas, das man bei der Arbeit oder in der Schule machen muss'}, ex: Das ist meine wichtigste <c>Aufgabe</c>.}
-- {id: verdienen, word: verdienen, meaning: {en: to earn, de: Geld für die Arbeit bekommen}, ex: Sie <c>verdient</c> gut.}
-- {id: feierabend, art: der, word: Feierabend, noPlural: true, meaning: {en: end of the working day, de: 'Die Zeit nach der Arbeit am Abend, wenn man frei hat'}, ex: Nach dem <c>Feierabend</c> gehe ich einkaufen.}
+  - { id: beruf, art: der, word: Beruf, pl: Berufe, meaning: 'Die Arbeit, die man gelernt hat, zum Beispiel Lehrer oder Arzt', ex: 'Was ist dein <c>Beruf</c>?' }
+  - { id: arbeit, art: die, word: Arbeit, noPlural: true, meaning: 'Das, was man jeden Tag für Geld macht', ex: Meine <c>Arbeit</c> beginnt um acht Uhr. }
+  - { id: kollege, art: der, word: Kollege, pl: Kollegen, meaning: 'Ein Mann, der in derselben Firma arbeitet wie ich', ex: Mein <c>Kollege</c> hilft mir oft. }
+  - { id: chefin, art: die, word: Chefin, pl: Chefinnen, meaning: 'Die Frau, die sagt, was die Mitarbeiter tun', ex: Unsere <c>Chefin</c> hat heute Geburtstag. }
+  - { id: buero, art: das, word: Büro, pl: Büros, meaning: 'Ein Zimmer mit Schreibtisch und Computer, in dem man arbeitet', ex: Ich fahre mit dem Rad ins <c>Büro</c>. }
+  - { id: termin, art: der, word: Termin, pl: Termine, meaning: 'Eine feste Zeit für ein Treffen, zum Beispiel beim Arzt', ex: Ich habe morgen einen <c>Termin</c> beim Arzt. }
+  - { id: besprechung, art: die, word: Besprechung, pl: Besprechungen, meaning: 'Ein Treffen, bei dem Kollegen über die Arbeit sprechen', ex: Die <c>Besprechung</c> dauert eine Stunde. }
+  - { id: gehalt, art: das, word: Gehalt, pl: Gehälter, meaning: 'Das Geld, das man jeden Monat für die Arbeit bekommt', ex: Das <c>Gehalt</c> kommt am Ende vom Monat. }
+  - { id: urlaub, art: der, word: Urlaub, noPlural: true, meaning: 'Freie Tage von der Arbeit, zum Beispiel im Sommer', ex: Im Sommer mache ich zwei Wochen <c>Urlaub</c>. }
+  - { id: bewerbung, art: die, word: Bewerbung, pl: Bewerbungen, meaning: 'Ein Brief oder eine E-Mail, mit der man eine Stelle haben möchte', ex: Ich habe eine <c>Bewerbung</c> geschrieben. }
+  - { id: lebenslauf, art: der, word: Lebenslauf, pl: Lebensläufe, meaning: 'Eine Liste mit Schule, Ausbildung und früheren Jobs von einem Menschen', ex: Zur Bewerbung gehört ein <c>Lebenslauf</c>. }
+  - { id: stelle, art: die, word: Stelle, pl: Stellen, meaning: 'Ein Job, den eine Firma anbietet', ex: Die Firma hat eine neue <c>Stelle</c>. }
+  - { id: firma, art: die, word: Firma, pl: Firmen, meaning: 'Ein Unternehmen, bei dem viele Menschen arbeiten', ex: Er arbeitet in einer großen <c>Firma</c>. }
+  - { id: aufgabe, art: die, word: Aufgabe, pl: Aufgaben, meaning: 'Etwas, das man bei der Arbeit oder in der Schule machen muss', ex: Das ist meine wichtigste <c>Aufgabe</c>. }
+  - { id: verdienen, word: verdienen, meaning: Geld für die Arbeit bekommen, ex: Sie <c>verdient</c> gut. }
+  - { id: feierabend, art: der, word: Feierabend, noPlural: true, meaning: 'Die Zeit nach der Arbeit am Abend, wenn man frei hat', ex: Nach dem <c>Feierabend</c> gehe ich einkaufen. }
 understand:
-- type: word-list
-  title:
-    en: People and places at work
-    de: Menschen und Orte bei der Arbeit
-  words: [beruf, arbeit, kollege, chefin, firma, buero]
-- type: word-list
-  title:
-    en: Time and money
-    de: Zeit und Geld
-  words: [termin, besprechung, gehalt, urlaub, feierabend, verdienen]
-- type: word-list
-  title:
-    en: Looking for a job
-    de: Eine Stelle suchen
-  words: [stelle, bewerbung, lebenslauf, aufgabe]
-- type: rule
-  title:
-    en: Useful sentences
-    de: Nützliche Sätze
-  body:
-  - en: Was machst du beruflich? – Ich arbeite als Lehrerin.
-    de: Was machst du beruflich? – Ich arbeite als Lehrerin.
-  - en: Ich habe heute eine Besprechung um zehn Uhr.
-    de: Ich habe heute eine Besprechung um zehn Uhr.
-  - en: Ich habe mich auf eine Stelle beworben.
-    de: Ich habe mich auf eine Stelle beworben.
-  - en: Nächste Woche habe ich Urlaub.
-    de: Nächste Woche habe ich Urlaub.
-- type: rule
-  title:
-    en: Learn nouns with article and plural
-    de: Nomen mit Artikel und Plural lernen
-  body:
-  - en: 'Learn every noun together with its article and its plural. The article colour helps: <der>der</der> blue, <die>die</die> red, <das>das</das> green, plural orange.'
-    de: 'Lerne jedes Nomen zusammen mit Artikel und Plural. Die Farben helfen: <der>der</der> blau, <die>die</die> rot, <das>das</das> grün, Plural orange.'
-  - en: 'Note: Kollege and Chef have a female form with -in: die Kollegin, die Chefin.'
-    de: 'Achtung: Zu „Kollege“ und „Chef“ gibt es eine weibliche Form mit -in: die Kollegin, die Chefin.'
+  - type: word-list
+    title: Menschen und Orte bei der Arbeit
+    words: [ beruf, arbeit, kollege, chefin, firma, buero ]
+  - type: word-list
+    title: Zeit und Geld
+    words: [ termin, besprechung, gehalt, urlaub, feierabend, verdienen ]
+  - type: word-list
+    title: Eine Stelle suchen
+    words: [ stelle, bewerbung, lebenslauf, aufgabe ]
+  - type: rule
+    title: Nützliche Sätze
+    body:
+      - Was machst du beruflich? – Ich arbeite als Lehrerin.
+      - Ich habe heute eine Besprechung um zehn Uhr.
+      - Ich habe mich auf eine Stelle beworben.
+      - Nächste Woche habe ich Urlaub.
+  - type: rule
+    title: Nomen mit Artikel und Plural lernen
+    body:
+      - 'Lerne jedes Nomen zusammen mit Artikel und Plural. Die Farben helfen: <der>der</der> blau, <die>die</die> rot, <das>das</das> grün, Plural orange.'
+      - 'Achtung: Zu „Kollege“ und „Chef“ gibt es eine weibliche Form mit -in: die Kollegin, die Chefin.'
 practice:
-- id: cards
-  title:
-    en: Flashcards
-    de: Lernkarten
-  kind: cards
-- id: pairs
-  title:
-    en: Match
-    de: Zuordnen
-  shuffle: false
-  concepts:
-  - vocab.work
-  - vocab.noun-article
-  instruction:
-    en: Tap a German word, then its meaning.
-    de: Tippe ein deutsches Wort an, dann die Bedeutung.
-  items:
-  - {type: words-pairs, ids: [beruf, arbeit, kollege, chefin, buero, termin, besprechung, gehalt, urlaub, bewerbung, lebenslauf, stelle, firma, aufgabe, verdienen, feierabend], size: 5}
-- id: memory
-  title:
-    en: Memory
-    de: Memory
-  kind: memory
-- id: write
-  title:
-    en: Write the word
-    de: Das Wort schreiben
-  shuffle: true
-  count: 8
-  concepts:
-  - vocab.work
-  - vocab.noun-article
-  instruction:
-    en: 'Write the German word. For nouns, write the article too (for example: die Mutter).'
-    de: 'Schreibe das deutsche Wort. Bei Nomen schreibe auch den Artikel (zum Beispiel: die Mutter).'
-  items:
-  - {type: words-write, ids: [beruf, arbeit, kollege, chefin, buero, termin, besprechung, gehalt, urlaub, bewerbung, lebenslauf, stelle, firma, aufgabe, verdienen, feierabend]}
-- id: sentences
-  title:
-    en: In sentences
-    de: In Sätzen
-  shuffle: true
-  concepts:
-  - vocab.work
-  items:
-  - {type: pick, instruction: {en: 'Which word fits the sentence?', de: 'Welches Wort passt in den Satz?'}, sentence: Ich möchte mich bei einer Firma bewerben. Dafür schreibe ich eine ___ und einen Lebenslauf., options: [Bewerbung, Besprechung, Urlaub, Gehalt], answer: Bewerbung, explanation: {en: You write an application and a CV., de: Man schreibt eine Bewerbung und einen Lebenslauf.}}
-  - {type: pick, instruction: {en: 'Which word fits the sentence?', de: 'Welches Wort passt in den Satz?'}, sentence: Am Ende vom Monat bekomme ich mein ___ auf das Konto., options: [Gehalt, Büro, Termin, Feierabend], answer: Gehalt, explanation: {en: The salary arrives at the end of the month., de: Das Gehalt kommt am Ende vom Monat.}}
-  - {type: pick, instruction: {en: 'Which word fits the sentence?', de: 'Welches Wort passt in den Satz?'}, sentence: Wir haben um zehn Uhr eine ___ mit allen Kollegen., options: [Besprechung, Bewerbung, Stelle, Aufgabe], answer: Besprechung, explanation: {en: Colleagues meet in a meeting., de: Kollegen treffen sich in einer Besprechung.}}
-  - {type: pick, instruction: {en: 'Which word fits the sentence?', de: 'Welches Wort passt in den Satz?'}, sentence: Nach dem ___ gehe ich nach Hause und koche., options: [Feierabend, Gehalt, Lebenslauf, Beruf], answer: Feierabend, explanation: {en: After work you go home., de: Nach der Arbeit ist Feierabend.}}
-  - {type: pick, instruction: {en: 'Which word fits the sentence?', de: 'Welches Wort passt in den Satz?'}, sentence: 'Meine Schwester ist Ärztin. Ihr ___ ist sehr anstrengend, aber sie liebt ihn.', options: [Beruf, Urlaub, Gehalt, Termin], answer: Beruf, explanation: {en: Being a doctor is a profession., de: Ärztin ist ein Beruf.}}
-  - {type: pick, instruction: {en: 'Which word fits the sentence?', de: 'Welches Wort passt in den Satz?'}, sentence: Die Firma sucht neue Mitarbeiter und hat drei freie ___., options: [Stellen, Lebensläufe, Gehälter, Besprechungen], answer: Stellen, explanation: {en: A company has vacancies., de: Eine Firma hat freie Stellen.}}
-- id: odd
-  title:
-    en: Odd one out
-    de: Was passt nicht?
-  shuffle: true
-  concepts:
-  - vocab.work
-  items:
-  - {type: pick, instruction: {en: 'Which word is a person?', de: 'Welches Wort ist eine Person?'}, prompt: '', options: [das Büro, die Firma, die Stelle, der Kollege], answer: der Kollege, explanation: {en: A colleague is a person., de: Ein Kollege ist eine Person.}}
-  - {type: pick, instruction: {en: 'Which word is a verb?', de: 'Welches Wort ist ein Verb?'}, prompt: '', options: [verdienen, das Gehalt, der Urlaub, der Termin], answer: verdienen, explanation: {en: 'verdienen is a verb: to earn.', de: „verdienen“ ist ein Verb.}}
-  - {type: pick, instruction: {en: 'Which word is not about a job application?', de: 'Welches Wort gehört nicht zur Bewerbung?'}, prompt: '', options: [der Lebenslauf, die Bewerbung, die Stelle, der Feierabend], answer: der Feierabend, explanation: {en: Feierabend is the end of the working day., de: Feierabend ist das Ende vom Arbeitstag.}}
+  - id: cards
+    title: Lernkarten
+    kind: cards
+  - id: pairs
+    title: Zuordnen
+    shuffle: false
+    concepts:
+      - vocab.work
+      - vocab.noun-article
+    instruction: Tippe ein deutsches Wort an, dann die Bedeutung.
+    items:
+      - { type: words-pairs, ids: [ beruf, arbeit, kollege, chefin, buero, termin, besprechung, gehalt, urlaub, bewerbung, lebenslauf, stelle, firma, aufgabe, verdienen, feierabend ], size: 5 }
+  - id: memory
+    title: Memory
+    kind: memory
+  - id: write
+    title: Das Wort schreiben
+    shuffle: true
+    count: 8
+    concepts:
+      - vocab.work
+      - vocab.noun-article
+    instruction: 'Schreibe das deutsche Wort. Bei Nomen schreibe auch den Artikel (zum Beispiel: die Mutter).'
+    items:
+      - { type: words-write, ids: [ beruf, arbeit, kollege, chefin, buero, termin, besprechung, gehalt, urlaub, bewerbung, lebenslauf, stelle, firma, aufgabe, verdienen, feierabend ] }
+  - id: sentences
+    title: In Sätzen
+    shuffle: true
+    concepts:
+      - vocab.work
+    items:
+      - { type: pick, instruction: 'Welches Wort passt in den Satz?', sentence: Ich möchte mich bei einer Firma bewerben. Dafür schreibe ich eine ___ und einen Lebenslauf., options: [ Bewerbung, Besprechung, Urlaub, Gehalt ], answer: Bewerbung, explanation: Man schreibt eine Bewerbung und einen Lebenslauf. }
+      - { type: pick, instruction: 'Welches Wort passt in den Satz?', sentence: Am Ende vom Monat bekomme ich mein ___ auf das Konto., options: [ Gehalt, Büro, Termin, Feierabend ], answer: Gehalt, explanation: Das Gehalt kommt am Ende vom Monat. }
+      - { type: pick, instruction: 'Welches Wort passt in den Satz?', sentence: Wir haben um zehn Uhr eine ___ mit allen Kollegen., options: [ Besprechung, Bewerbung, Stelle, Aufgabe ], answer: Besprechung, explanation: Kollegen treffen sich in einer Besprechung. }
+      - { type: pick, instruction: 'Welches Wort passt in den Satz?', sentence: Nach dem ___ gehe ich nach Hause und koche., options: [ Feierabend, Gehalt, Lebenslauf, Beruf ], answer: Feierabend, explanation: Nach der Arbeit ist Feierabend. }
+      - { type: pick, instruction: 'Welches Wort passt in den Satz?', sentence: 'Meine Schwester ist Ärztin. Ihr ___ ist sehr anstrengend, aber sie liebt ihn.', options: [ Beruf, Urlaub, Gehalt, Termin ], answer: Beruf, explanation: Ärztin ist ein Beruf. }
+      - { type: pick, instruction: 'Welches Wort passt in den Satz?', sentence: Die Firma sucht neue Mitarbeiter und hat drei freie ___., options: [ Stellen, Lebensläufe, Gehälter, Besprechungen ], answer: Stellen, explanation: Eine Firma hat freie Stellen. }
+  - id: odd
+    title: Was passt nicht?
+    shuffle: true
+    concepts:
+      - vocab.work
+    items:
+      - { type: pick, instruction: 'Welches Wort ist eine Person?', prompt: '', options: [ das Büro, die Firma, die Stelle, der Kollege ], answer: der Kollege, explanation: Ein Kollege ist eine Person. }
+      - { type: pick, instruction: 'Welches Wort ist ein Verb?', prompt: '', options: [ verdienen, das Gehalt, der Urlaub, der Termin ], answer: verdienen, explanation: „verdienen“ ist ein Verb. }
+      - { type: pick, instruction: 'Welches Wort gehört nicht zur Bewerbung?', prompt: '', options: [ der Lebenslauf, die Bewerbung, die Stelle, der Feierabend ], answer: der Feierabend, explanation: Feierabend ist das Ende vom Arbeitstag. }

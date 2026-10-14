@@ -1,42 +1,40 @@
 # Training: the Akkusativ (A1). Only the masculine article changes; objects, pronouns, verbs.
 # Articles are shown in their gender colour: der blue, die red, das green, plural orange.
-# Original content. English and German texts are written side by side: { en: "...", de: "..." }.
+# Original content, written in German.
 kind: lesson
 id: accusative-a1
-title: { en: "Akkusativ", de: "Akkusativ" }
+title: "Akkusativ"
 level: A1
 skill: grammar
 minutes: 25
 status: draft
-description:
-  en: "Many verbs take an object in the Akkusativ: Ich sehe den Hund. Only the masculine article changes. Includes ein-, mein-, kein-words and the pronouns mich, dich, ihn …"
-  de: "Viele Verben haben ein Objekt im Akkusativ: Ich sehe den Hund. Nur der maskuline Artikel ändert sich. Mit ein-, mein-, kein-Wörtern und den Pronomen mich, dich, ihn …"
+description: "Viele Verben haben ein Objekt im Akkusativ: Ich sehe den Hund. Nur der maskuline Artikel ändert sich. Mit ein-, mein-, kein-Wörtern und den Pronomen mich, dich, ihn …"
 canDo:
-  - { en: "I can recognise an Akkusativ object and the verbs that need one.", de: "Ich kann ein Akkusativobjekt und die Verben dazu erkennen." }
-  - { en: "I can use den, einen, meinen and keinen with masculine nouns.", de: "Ich kann „den“, „einen“, „meinen“ und „keinen“ mit maskulinen Nomen benutzen." }
-  - { en: "I can use the pronouns mich, dich, ihn, sie, es, uns, euch.", de: "Ich kann die Pronomen „mich“, „dich“, „ihn“, „sie“, „es“, „uns“, „euch“ benutzen." }
+  - "Ich kann ein Akkusativobjekt und die Verben dazu erkennen."
+  - "Ich kann „den“, „einen“, „meinen“ und „keinen“ mit maskulinen Nomen benutzen."
+  - "Ich kann die Pronomen „mich“, „dich“, „ihn“, „sie“, „es“, „uns“, „euch“ benutzen."
 
 articles:
   definite:
-    label: { en: "the", de: "der, die, das" }
-    nom: [der, die, das, die]
-    akk: [den, die, das, die]
+    label: "der, die, das"
+    nom: [ der, die, das, die ]
+    akk: [ den, die, das, die ]
   indefinite:
-    label: { en: "a", de: "ein, eine" }
-    nom: [ein, eine, ein, ""]
-    akk: [einen, eine, ein, ""]
+    label: "ein, eine"
+    nom: [ ein, eine, ein, "" ]
+    akk: [ einen, eine, ein, "" ]
   possessive:
-    label: { en: "my", de: "mein, meine" }
-    nom: [mein, meine, mein, meine]
-    akk: [meinen, meine, mein, meine]
+    label: "mein, meine"
+    nom: [ mein, meine, mein, meine ]
+    akk: [ meinen, meine, mein, meine ]
   negative:
-    label: { en: "no", de: "kein, keine" }
-    nom: [kein, keine, kein, keine]
-    akk: [keinen, keine, kein, keine]
+    label: "kein, keine"
+    nom: [ kein, keine, kein, keine ]
+    akk: [ keinen, keine, kein, keine ]
 
 understand:
   - type: dialogue
-    title: { en: "Listen: who? and whom/what?", de: "Hör zu: Wer? und Wen/Was?" }
+    title: "Hör zu: Wer? und Wen/Was?"
     lines:
       - { who: Mia, say: "Ich <v>suche</v> <der>den</der> Schlüssel. <v>Siehst</v> du <der>den</der> Schlüssel?" }
       - { who: Ben, say: "Nein. Aber ich <v>sehe</v> <die>die</die> Tasche und <das>das</das> Handy." }
@@ -44,69 +42,57 @@ understand:
       - { who: Ben, say: "Ja, ich <v>habe</v> <der>einen</der> Stift und <die>eine</die> Tasche." }
 
   - type: text
-    title: { en: "Objects and cases", de: "Objekte und Fälle" }
+    title: "Objekte und Fälle"
     body:
-      - en: "Many verbs have an object. An object can be in the Akkusativ, in the Dativ or (rarely) in the Genitiv. The verb decides which case it needs. This is why the article can look different."
-        de: "Viele Verben haben ein Objekt. Ein Objekt kann im Akkusativ, im Dativ oder (selten) im Genitiv stehen. Das Verb bestimmt, welchen Fall es braucht. Deshalb sieht der Artikel manchmal anders aus."
-      - { en: "<p>Der Mann</p> <v>sieht</v> <der>den</der> Hund.", de: "<p>Der Mann</p> <v>sieht</v> <der>den</der> Hund." }
-      - en: "Here the verb sehen needs an Akkusativ object, so der Hund becomes den Hund. Tip: you can find the Akkusativ object with the question wen? or was? (Wen sieht der Mann? – den Hund). But the most important thing is to learn the verb together with its case."
-        de: "Hier braucht das Verb „sehen“ ein Akkusativobjekt, deshalb wird aus „der Hund“ „den Hund“. Tipp: Das Akkusativobjekt findest du mit der Frage „Wen?“ oder „Was?“ (Wen sieht der Mann? – den Hund). Wichtiger ist aber: Lerne das Verb zusammen mit seinem Fall."
+      - "Viele Verben haben ein Objekt. Ein Objekt kann im Akkusativ, im Dativ oder (selten) im Genitiv stehen. Das Verb bestimmt, welchen Fall es braucht. Deshalb sieht der Artikel manchmal anders aus."
+      - "<p>Der Mann</p> <v>sieht</v> <der>den</der> Hund."
+      - "Hier braucht das Verb „sehen“ ein Akkusativobjekt, deshalb wird aus „der Hund“ „den Hund“. Tipp: Das Akkusativobjekt findest du mit der Frage „Wen?“ oder „Was?“ (Wen sieht der Mann? – den Hund). Wichtiger ist aber: Lerne das Verb zusammen mit seinem Fall."
 
   - type: parts-lab
-    title: { en: "Same roles, other order", de: "Dieselben Rollen, andere Reihenfolge" }
-    intro:
-      en: "Choose a sentence and a part for position 1. The order changes, but the roles stay the same. The article shows the role: der Hund is still the subject, den Mann is still the Akkusativ object."
-      de: "Wähle einen Satz und einen Teil für Position 1. Die Reihenfolge ändert sich, aber die Rollen bleiben gleich. Der Artikel zeigt die Rolle: „der Hund“ ist weiter das Subjekt, „den Mann“ ist weiter das Akkusativobjekt."
+    title: "Dieselben Rollen, andere Reihenfolge"
+    intro: "Wähle einen Satz und einen Teil für Position 1. Die Reihenfolge ändert sich, aber die Rollen bleiben gleich. Der Artikel zeigt die Rolle: „der Hund“ ist weiter das Subjekt, „den Mann“ ist weiter das Akkusativobjekt."
     roles:
-      S: { en: "who does it (subject, Nominativ)", de: "wer macht es (Subjekt, Nominativ)" }
-      V: { en: "verb", de: "Verb" }
-      A: { en: "object (Akkusativ)", de: "Objekt (Akkusativ)" }
+      S: "wer macht es (Subjekt, Nominativ)"
+      V: "Verb"
+      A: "Objekt (Akkusativ)"
     sentences:
-      - { parts: [{ t: der Hund, r: S }, { t: beißt, r: V }, { t: den Mann, r: A }], starts: [S, A] }
-      - { parts: [{ t: der Lehrer, r: S }, { t: lobt, r: V }, { t: den Schüler, r: A }], starts: [S, A] }
-      - { parts: [{ t: meine Tante, r: S }, { t: besucht, r: V }, { t: meinen Bruder, r: A }], starts: [S, A] }
+      - { parts: [ { t: der Hund, r: S }, { t: beißt, r: V }, { t: den Mann, r: A } ], starts: [ S, A ] }
+      - { parts: [ { t: der Lehrer, r: S }, { t: lobt, r: V }, { t: den Schüler, r: A } ], starts: [ S, A ] }
+      - { parts: [ { t: meine Tante, r: S }, { t: besucht, r: V }, { t: meinen Bruder, r: A } ], starts: [ S, A ] }
 
   - type: detective
-    title: { en: "Sentence detective", de: "Satz-Detektiv" }
-    intro:
-      en: "Tap a part. You see the question that finds it and its role."
-      de: "Tippe einen Teil an. Du siehst die Frage, die ihn findet, und seine Rolle."
+    title: "Satz-Detektiv"
+    intro: "Tippe einen Teil an. Du siehst die Frage, die ihn findet, und seine Rolle."
     roles:
-      S: { en: "subject (Nominativ)", de: "Subjekt (Nominativ)" }
-      V: { en: "verb (position 2)", de: "Verb (Position 2)" }
-      T: { en: "time (no case from the verb)", de: "Zeit (kein Fall vom Verb)" }
-      A: { en: "Akkusativ object", de: "Akkusativobjekt" }
+      S: "Subjekt (Nominativ)"
+      V: "Verb (Position 2)"
+      T: "Zeit (kein Fall vom Verb)"
+      A: "Akkusativobjekt"
     sentences:
-      - parts: [{ t: Mia, r: S, q: "Wer kauft?" }, { t: kauft, r: V, q: "Was macht Mia?" }, { t: heute, r: T, q: "Wann kauft Mia einen Tisch?" }, { t: einen Tisch, r: A, q: "Was kauft Mia heute?" }]
+      - parts: [ { t: Mia, r: S, q: "Wer kauft?" }, { t: kauft, r: V, q: "Was macht Mia?" }, { t: heute, r: T, q: "Wann kauft Mia einen Tisch?" }, { t: einen Tisch, r: A, q: "Was kauft Mia heute?" } ]
 
   - type: article-table
-    title: { en: "The articles", de: "Die Artikel" }
-    intro:
-      en: "Look at the table. The colour shows the gender of the noun: der blue, die red, das green, plural orange. Only one column changes."
-      de: "Schau auf die Tabelle. Die Farbe zeigt das Genus vom Nomen: der blau, die rot, das grün, Plural orange. Nur eine Spalte ändert sich."
-    kinds: [definite, indefinite, possessive, negative]
+    title: "Die Artikel"
+    intro: "Schau auf die Tabelle. Die Farbe zeigt das Genus vom Nomen: der blau, die rot, das grün, Plural orange. Nur eine Spalte ändert sich."
+    kinds: [ definite, indefinite, possessive, negative ]
     cases:
-      - { id: nom, label: { en: Nominativ, de: Nominativ } }
-      - { id: akk, label: { en: Akkusativ, de: Akkusativ } }
-    note:
-      en: "Only the masculine changes: der → <der>den</der>, ein → <der>einen</der>, mein → <der>meinen</der>, kein → <der>keinen</der>. die, das and the plural stay the same."
-      de: "Nur das Maskulinum ändert sich: der → <der>den</der>, ein → <der>einen</der>, mein → <der>meinen</der>, kein → <der>keinen</der>. die, das und der Plural bleiben gleich."
+      - { id: nom, label: Nominativ }
+      - { id: akk, label: Akkusativ }
+    note: "Nur das Maskulinum ändert sich: der → <der>den</der>, ein → <der>einen</der>, mein → <der>meinen</der>, kein → <der>keinen</der>. die, das und der Plural bleiben gleich."
 
   - type: case-lab
-    title: { en: "The case lab", de: "Das Fall-Labor" }
-    intro:
-      en: "Choose an article, a case and a noun. The article that changes is highlighted."
-      de: "Wähle einen Artikel, einen Fall und ein Nomen. Der Artikel, der sich ändert, ist markiert."
-    kinds: [definite, indefinite, possessive, negative]
+    title: "Das Fall-Labor"
+    intro: "Wähle einen Artikel, einen Fall und ein Nomen. Der Artikel, der sich ändert, ist markiert."
+    kinds: [ definite, indefinite, possessive, negative ]
     cases:
       - id: nom
-        label: { en: Nominativ, de: Nominativ }
-        frame: ["___ ist hier.", "___ sind hier."]
-        rule: { en: "Nominativ: wer? or was? – the subject.", de: "Nominativ: Wer? oder Was? – das Subjekt." }
+        label: Nominativ
+        frame: [ "___ ist hier.", "___ sind hier." ]
+        rule: "Nominativ: Wer? oder Was? – das Subjekt."
       - id: akk
-        label: { en: Akkusativ, de: Akkusativ }
+        label: Akkusativ
         frame: "Ich sehe ___."
-        rule: { en: "Akkusativ: wen? or was? – the object. Only the masculine article changes.", de: "Akkusativ: Wen? oder Was? – das Objekt. Nur der maskuline Artikel ändert sich." }
+        rule: "Akkusativ: Wen? oder Was? – das Objekt. Nur der maskuline Artikel ändert sich."
     nouns:
       - { g: m, noun: Hund }
       - { g: m, noun: Tisch }
@@ -117,35 +103,35 @@ understand:
       - { g: pl, noun: Kinder }
 
   - type: rule
-    title: { en: "Verbs with an Akkusativ object", de: "Verben mit Akkusativobjekt" }
+    title: "Verben mit Akkusativobjekt"
     body:
-      - { en: "haben: Ich <v>habe</v> <der>einen</der> Bruder.", de: "haben: Ich <v>habe</v> <der>einen</der> Bruder." }
-      - { en: "sehen, suchen, brauchen: Wir <v>brauchen</v> <der>einen</der> Tisch.", de: "sehen, suchen, brauchen: Wir <v>brauchen</v> <der>einen</der> Tisch." }
-      - { en: "kaufen, essen, trinken: Er <v>trinkt</v> <der>den</der> Kaffee.", de: "kaufen, essen, trinken: Er <v>trinkt</v> <der>den</der> Kaffee." }
-      - { en: "lesen, mögen, möchten: Sie <v>liest</v> <das>ein</das> Buch.", de: "lesen, mögen, möchten: Sie <v>liest</v> <das>ein</das> Buch." }
+      - "haben: Ich <v>habe</v> <der>einen</der> Bruder."
+      - "sehen, suchen, brauchen: Wir <v>brauchen</v> <der>einen</der> Tisch."
+      - "kaufen, essen, trinken: Er <v>trinkt</v> <der>den</der> Kaffee."
+      - "lesen, mögen, möchten: Sie <v>liest</v> <das>ein</das> Buch."
 
   - type: rule
-    title: { en: "Pronouns in the Akkusativ", de: "Pronomen im Akkusativ" }
+    title: "Pronomen im Akkusativ"
     body:
-      - { en: "ich → mich · du → dich · er → ihn · sie → sie · es → es · wir → uns · ihr → euch · sie/Sie → sie/Sie", de: "ich → mich · du → dich · er → ihn · sie → sie · es → es · wir → uns · ihr → euch · sie/Sie → sie/Sie" }
-      - { en: "Ich sehe <der>den</der> Hund. → Ich sehe <der>ihn</der>.", de: "Ich sehe <der>den</der> Hund. → Ich sehe <der>ihn</der>." }
-      - { en: "Ich sehe <die>die</die> Katze. → Ich sehe <die>sie</die>.", de: "Ich sehe <die>die</die> Katze. → Ich sehe <die>sie</die>." }
-      - { en: "Ich liebe <v>dich</v>. Er ruft <v>mich</v> an.", de: "Ich liebe <v>dich</v>. Er ruft <v>mich</v> an." }
+      - "ich → mich · du → dich · er → ihn · sie → sie · es → es · wir → uns · ihr → euch · sie/Sie → sie/Sie"
+      - "Ich sehe <der>den</der> Hund. → Ich sehe <der>ihn</der>."
+      - "Ich sehe <die>die</die> Katze. → Ich sehe <die>sie</die>."
+      - "Ich liebe <v>dich</v>. Er ruft <v>mich</v> an."
 
   - type: rule
-    title: { en: "Watch out!", de: "Achtung!" }
+    title: "Achtung!"
     body:
-      - { en: "<x>Ich habe ein Bruder.</x> ✗ Ich habe <der>einen</der> Bruder. ✓", de: "<x>Ich habe ein Bruder.</x> ✗ Ich habe <der>einen</der> Bruder. ✓" }
-      - { en: "<x>Ich sehe der Hund.</x> ✗ Ich sehe <der>den</der> Hund. ✓", de: "<x>Ich sehe der Hund.</x> ✗ Ich sehe <der>den</der> Hund. ✓" }
-      - { en: "feminine, neuter and plural do not change: Ich sehe <die>die</die> Katze. <x>Ich sehe den Katze.</x> ✗", de: "Feminin, Neutrum und Plural ändern sich nicht: Ich sehe <die>die</die> Katze. <x>Ich sehe den Katze.</x> ✗" }
+      - "<x>Ich habe ein Bruder.</x> ✗ Ich habe <der>einen</der> Bruder. ✓"
+      - "<x>Ich sehe der Hund.</x> ✗ Ich sehe <der>den</der> Hund. ✓"
+      - "Feminin, Neutrum und Plural ändern sich nicht: Ich sehe <die>die</die> Katze. <x>Ich sehe den Katze.</x> ✗"
 
 practice:
   - id: definite
-    title: { en: "den", de: "den" }
+    title: "den"
     count: 8
-    concepts: [case.akk-masculine, case.akk-articles]
-    instruction: { en: "Which form is right? The article of the noun is shown in its colour.", de: "Welche Form ist richtig? Der Artikel vom Nomen steht in seiner Farbe." }
-    explanation: { en: "Akkusativ object, masculine: der → den.", de: "Akkusativobjekt, maskulin: der → den." }
+    concepts: [ case.akk-masculine, case.akk-articles ]
+    instruction: "Welche Form ist richtig? Der Artikel vom Nomen steht in seiner Farbe."
+    explanation: "Akkusativobjekt, maskulin: der → den."
     items:
       - type: article-pick
         kind: definite
@@ -161,11 +147,11 @@ practice:
           - { g: m, noun: Stift, frame: "Ich brauche ___ Stift." }
 
   - id: indefinite
-    title: { en: "einen, eine, ein", de: "einen, eine, ein" }
+    title: "einen, eine, ein"
     count: 10
-    concepts: [case.akk-articles]
-    instruction: { en: "Which form of “ein” is right? The article of the noun is shown in its colour.", de: "Welche Form von „ein“ ist richtig? Der Artikel vom Nomen steht in seiner Farbe." }
-    explanation: { en: "Look at the colour: blue (der) → einen, red (die) → eine, green (das) → ein.", de: "Schau auf die Farbe: blau (der) → einen, rot (die) → eine, grün (das) → ein." }
+    concepts: [ case.akk-articles ]
+    instruction: "Welche Form von „ein“ ist richtig? Der Artikel vom Nomen steht in seiner Farbe."
+    explanation: "Schau auf die Farbe: blau (der) → einen, rot (die) → eine, grün (das) → ein."
     items:
       - type: article-pick
         kind: indefinite
@@ -183,11 +169,11 @@ practice:
           - { g: m, noun: Tee, frame: "Ich möchte ___ Tee." }
 
   - id: possessive
-    title: { en: "meinen, meine, mein", de: "meinen, meine, mein" }
+    title: "meinen, meine, mein"
     count: 8
-    concepts: [case.akk-articles]
-    instruction: { en: "Which form of “mein” is right? The article of the noun is shown in its colour.", de: "Welche Form von „mein“ ist richtig? Der Artikel vom Nomen steht in seiner Farbe." }
-    explanation: { en: "Same rule as “ein”: only the masculine form changes (mein → meinen).", de: "Dieselbe Regel wie bei „ein“: Nur die maskuline Form ändert sich (mein → meinen)." }
+    concepts: [ case.akk-articles ]
+    instruction: "Welche Form von „mein“ ist richtig? Der Artikel vom Nomen steht in seiner Farbe."
+    explanation: "Dieselbe Regel wie bei „ein“: Nur die maskuline Form ändert sich (mein → meinen)."
     items:
       - type: article-pick
         kind: possessive
@@ -203,11 +189,11 @@ practice:
           - { g: n, noun: Zimmer, frame: "Ich räume ___ Zimmer auf." }
 
   - id: negative
-    title: { en: "keinen, keine, kein", de: "keinen, keine, kein" }
+    title: "keinen, keine, kein"
     count: 8
-    concepts: [case.akk-articles]
-    instruction: { en: "Which form of “kein” is right? The article of the noun is shown in its colour.", de: "Welche Form von „kein“ ist richtig? Der Artikel vom Nomen steht in seiner Farbe." }
-    explanation: { en: "kein works like ein: only the masculine form changes (kein → keinen).", de: "„kein“ funktioniert wie „ein“: Nur die maskuline Form ändert sich (kein → keinen)." }
+    concepts: [ case.akk-articles ]
+    instruction: "Welche Form von „kein“ ist richtig? Der Artikel vom Nomen steht in seiner Farbe."
+    explanation: "„kein“ funktioniert wie „ein“: Nur die maskuline Form ändert sich (kein → keinen)."
     items:
       - type: article-pick
         kind: negative
@@ -223,135 +209,135 @@ practice:
           - { g: n, noun: Geld, frame: "Ich habe ___ Geld." }
 
   - id: whom
-    title: { en: "Find the object", de: "Das Objekt finden" }
+    title: "Das Objekt finden"
     count: 8
     shuffle: true
-    concepts: [case.question-wen-was]
+    concepts: [ case.question-wen-was ]
     items:
-      - { type: pick, instruction: { en: "Which part is the Akkusativ object?", de: "Welcher Teil ist das Akkusativobjekt?" }, prompt: "Der Mann sieht den Hund.", options: ["Der Mann", "sieht", "den Hund"], answer: "den Hund", explanation: { en: "Wen sieht der Mann? – den Hund.", de: "Wen sieht der Mann? – den Hund." } }
-      - { type: pick, instruction: { en: "Which part is the Akkusativ object?", de: "Welcher Teil ist das Akkusativobjekt?" }, prompt: "Wir kaufen einen Tisch.", options: ["Wir", "kaufen", "einen Tisch"], answer: "einen Tisch", explanation: { en: "Was kaufen wir? – einen Tisch.", de: "Was kaufen wir? – einen Tisch." } }
-      - { type: pick, instruction: { en: "Which part is the Akkusativ object?", de: "Welcher Teil ist das Akkusativobjekt?" }, prompt: "Mia liest ein Buch.", options: ["Mia", "liest", "ein Buch"], answer: "ein Buch", explanation: { en: "Was liest Mia? – ein Buch.", de: "Was liest Mia? – ein Buch." } }
-      - { type: pick, instruction: { en: "Which part is the Akkusativ object?", de: "Welcher Teil ist das Akkusativobjekt?" }, prompt: "Ben isst einen Apfel.", options: ["Ben", "isst", "einen Apfel"], answer: "einen Apfel", explanation: { en: "Was isst Ben? – einen Apfel.", de: "Was isst Ben? – einen Apfel." } }
-      - { type: pick, instruction: { en: "Which part is the Akkusativ object?", de: "Welcher Teil ist das Akkusativobjekt?" }, prompt: "Die Kinder haben keinen Hund.", options: ["Die Kinder", "haben", "keinen Hund"], answer: "keinen Hund", explanation: { en: "Wen oder was haben die Kinder nicht? – keinen Hund.", de: "Wen oder was haben die Kinder nicht? – keinen Hund." } }
-      - { type: pick, instruction: { en: "Which part is the Akkusativ object?", de: "Welcher Teil ist das Akkusativobjekt?" }, prompt: "Anna sucht die Tasche.", options: ["Anna", "sucht", "die Tasche"], answer: "die Tasche", explanation: { en: "Was sucht Anna? – die Tasche.", de: "Was sucht Anna? – die Tasche." } }
-      - { type: pick, instruction: { en: "Which part is the subject?", de: "Welcher Teil ist das Subjekt?" }, prompt: "Den Hund sieht der Mann.", options: ["Den Hund", "sieht", "der Mann"], answer: "der Mann", explanation: { en: "Wer sieht? – der Mann. The object “den Hund” is in position 1 here.", de: "Wer sieht? – der Mann. Das Objekt „den Hund“ steht hier auf Position 1." } }
-      - { type: pick, instruction: { en: "Which part is the subject?", de: "Welcher Teil ist das Subjekt?" }, prompt: "Einen Apfel isst die Frau.", options: ["Einen Apfel", "isst", "die Frau"], answer: "die Frau", explanation: { en: "Wer isst? – die Frau.", de: "Wer isst? – die Frau." } }
+      - { type: pick, instruction: "Welcher Teil ist das Akkusativobjekt?", prompt: "Der Mann sieht den Hund.", options: [ "Der Mann", "sieht", "den Hund" ], answer: "den Hund", explanation: "Wen sieht der Mann? – den Hund." }
+      - { type: pick, instruction: "Welcher Teil ist das Akkusativobjekt?", prompt: "Wir kaufen einen Tisch.", options: [ "Wir", "kaufen", "einen Tisch" ], answer: "einen Tisch", explanation: "Was kaufen wir? – einen Tisch." }
+      - { type: pick, instruction: "Welcher Teil ist das Akkusativobjekt?", prompt: "Mia liest ein Buch.", options: [ "Mia", "liest", "ein Buch" ], answer: "ein Buch", explanation: "Was liest Mia? – ein Buch." }
+      - { type: pick, instruction: "Welcher Teil ist das Akkusativobjekt?", prompt: "Ben isst einen Apfel.", options: [ "Ben", "isst", "einen Apfel" ], answer: "einen Apfel", explanation: "Was isst Ben? – einen Apfel." }
+      - { type: pick, instruction: "Welcher Teil ist das Akkusativobjekt?", prompt: "Die Kinder haben keinen Hund.", options: [ "Die Kinder", "haben", "keinen Hund" ], answer: "keinen Hund", explanation: "Wen oder was haben die Kinder nicht? – keinen Hund." }
+      - { type: pick, instruction: "Welcher Teil ist das Akkusativobjekt?", prompt: "Anna sucht die Tasche.", options: [ "Anna", "sucht", "die Tasche" ], answer: "die Tasche", explanation: "Was sucht Anna? – die Tasche." }
+      - { type: pick, instruction: "Welcher Teil ist das Subjekt?", prompt: "Den Hund sieht der Mann.", options: [ "Den Hund", "sieht", "der Mann" ], answer: "der Mann", explanation: "Wer sieht? – der Mann. Das Objekt „den Hund“ steht hier auf Position 1." }
+      - { type: pick, instruction: "Welcher Teil ist das Subjekt?", prompt: "Einen Apfel isst die Frau.", options: [ "Einen Apfel", "isst", "die Frau" ], answer: "die Frau", explanation: "Wer isst? – die Frau." }
 
   - id: subject
-    title: { en: "Who does what?", de: "Wer macht was?" }
+    title: "Wer macht was?"
     count: 6
     shuffle: true
-    concepts: [case.akk-masculine, syntax.inversion]
-    instruction: { en: "The object is first. Which part is the subject?", de: "Das Objekt steht vorn. Welcher Teil ist das Subjekt?" }
+    concepts: [ case.akk-masculine, syntax.inversion ]
+    instruction: "Das Objekt steht vorn. Welcher Teil ist das Subjekt?"
     items:
-      - { type: pick, prompt: "Den Kuchen backt meine Oma.", options: ["meine Oma", "den Kuchen"], answer: "meine Oma", explanation: { en: "Meine Oma bakes. “den Kuchen” is the Akkusativ object (den shows it).", de: "Meine Oma backt. „den Kuchen“ ist das Akkusativobjekt (der Artikel „den“ zeigt es)." } }
-      - { type: pick, prompt: "Meinen Bruder besucht heute meine Tante.", options: ["meine Tante", "meinen Bruder"], answer: "meine Tante", explanation: { en: "“meinen Bruder” (meinen!) is the object, so “meine Tante” is the subject.", de: "„meinen Bruder“ (meinen!) ist das Objekt, also ist „meine Tante“ das Subjekt." } }
-      - { type: pick, prompt: "Einen Tisch kauft Ben.", options: ["Ben", "einen Tisch"], answer: "Ben", explanation: { en: "Ben buys. “einen Tisch” is the Akkusativ object.", de: "Ben kauft. „einen Tisch“ ist das Akkusativobjekt." } }
-      - { type: pick, prompt: "Den Film sieht Mia gern.", options: ["Mia", "den Film"], answer: "Mia", explanation: { en: "Mia sees. “den Film” is the Akkusativ object.", de: "Mia sieht. „den Film“ ist das Akkusativobjekt." } }
-      - { type: pick, prompt: "Einen Hund hat der Nachbar.", options: ["der Nachbar", "einen Hund"], answer: "der Nachbar", explanation: { en: "“einen Hund” is the object. “der Nachbar” can only be the subject.", de: "„einen Hund“ ist das Objekt. „der Nachbar“ kann nur das Subjekt sein." } }
-      - { type: pick, prompt: "Die Katze sucht der Junge.", options: ["der Junge", "die Katze"], answer: "der Junge", explanation: { en: "“die Katze” looks the same in Nominativ and Akkusativ. But “der Junge” (der!) can only be the subject.", de: "„die Katze“ sieht im Nominativ und Akkusativ gleich aus. Aber „der Junge“ (der!) kann nur das Subjekt sein." } }
+      - { type: pick, prompt: "Den Kuchen backt meine Oma.", options: [ "meine Oma", "den Kuchen" ], answer: "meine Oma", explanation: "Meine Oma backt. „den Kuchen“ ist das Akkusativobjekt (der Artikel „den“ zeigt es)." }
+      - { type: pick, prompt: "Meinen Bruder besucht heute meine Tante.", options: [ "meine Tante", "meinen Bruder" ], answer: "meine Tante", explanation: "„meinen Bruder“ (meinen!) ist das Objekt, also ist „meine Tante“ das Subjekt." }
+      - { type: pick, prompt: "Einen Tisch kauft Ben.", options: [ "Ben", "einen Tisch" ], answer: "Ben", explanation: "Ben kauft. „einen Tisch“ ist das Akkusativobjekt." }
+      - { type: pick, prompt: "Den Film sieht Mia gern.", options: [ "Mia", "den Film" ], answer: "Mia", explanation: "Mia sieht. „den Film“ ist das Akkusativobjekt." }
+      - { type: pick, prompt: "Einen Hund hat der Nachbar.", options: [ "der Nachbar", "einen Hund" ], answer: "der Nachbar", explanation: "„einen Hund“ ist das Objekt. „der Nachbar“ kann nur das Subjekt sein." }
+      - { type: pick, prompt: "Die Katze sucht der Junge.", options: [ "der Junge", "die Katze" ], answer: "der Junge", explanation: "„die Katze“ sieht im Nominativ und Akkusativ gleich aus. Aber „der Junge“ (der!) kann nur das Subjekt sein." }
 
   - id: pronouns
-    title: { en: "Pronouns", de: "Pronomen" }
+    title: "Pronomen"
     count: 8
-    concepts: [case.akk-pronouns]
-    instruction: { en: "Which pronoun replaces the noun?", de: "Welches Pronomen ersetzt das Nomen?" }
-    explanation: { en: "der → ihn, die → sie, das → es, plural → sie.", de: "der → ihn, die → sie, das → es, Plural → sie." }
+    concepts: [ case.akk-pronouns ]
+    instruction: "Welches Pronomen ersetzt das Nomen?"
+    explanation: "der → ihn, die → sie, das → es, Plural → sie."
     items:
-      - { type: pick, sentence: "Ich sehe den Hund. Ich sehe ___.", options: [ihn, er, sie, es], answer: ihn }
-      - { type: pick, sentence: "Ich sehe die Katze. Ich sehe ___.", options: [sie, ihn, es, er], answer: sie }
-      - { type: pick, sentence: "Ich lese das Buch. Ich lese ___.", options: [es, ihn, sie, er], answer: es }
-      - { type: pick, sentence: "Ich sehe die Kinder. Ich sehe ___.", options: [sie, ihn, es, er], answer: sie }
-      - { type: pick, sentence: "Ich kaufe den Tisch. Ich kaufe ___.", options: [ihn, er, sie, es], answer: ihn }
-      - { type: pick, sentence: "Ich suche die Lampe. Ich suche ___.", options: [sie, ihn, es, er], answer: sie }
-      - { type: pick, sentence: "Ich habe das Auto. Ich habe ___.", options: [es, ihn, sie, er], answer: es }
-      - { type: pick, sentence: "Ich kenne Ben. Ich kenne ___ gut.", options: [ihn, er, sie, es], answer: ihn }
-      - { type: pick, sentence: "Anna kommt. Ich sehe ___.", options: [sie, ihn, es, er], answer: sie }
+      - { type: pick, sentence: "Ich sehe den Hund. Ich sehe ___.", options: [ ihn, er, sie, es ], answer: ihn }
+      - { type: pick, sentence: "Ich sehe die Katze. Ich sehe ___.", options: [ sie, ihn, es, er ], answer: sie }
+      - { type: pick, sentence: "Ich lese das Buch. Ich lese ___.", options: [ es, ihn, sie, er ], answer: es }
+      - { type: pick, sentence: "Ich sehe die Kinder. Ich sehe ___.", options: [ sie, ihn, es, er ], answer: sie }
+      - { type: pick, sentence: "Ich kaufe den Tisch. Ich kaufe ___.", options: [ ihn, er, sie, es ], answer: ihn }
+      - { type: pick, sentence: "Ich suche die Lampe. Ich suche ___.", options: [ sie, ihn, es, er ], answer: sie }
+      - { type: pick, sentence: "Ich habe das Auto. Ich habe ___.", options: [ es, ihn, sie, er ], answer: es }
+      - { type: pick, sentence: "Ich kenne Ben. Ich kenne ___ gut.", options: [ ihn, er, sie, es ], answer: ihn }
+      - { type: pick, sentence: "Anna kommt. Ich sehe ___.", options: [ sie, ihn, es, er ], answer: sie }
 
   - id: match
-    title: { en: "Match", de: "Paare" }
+    title: "Paare"
     shuffle: false
     items:
       - type: pairs
-        concepts: [case.akk-masculine]
-        instruction: { en: "Tap a word, then its Akkusativ form.", de: "Tippe ein Wort an, dann die Akkusativ-Form." }
-        pairs: [[der Hund, den Hund], [ein Tisch, einen Tisch], [mein Bruder, meinen Bruder], [kein Apfel, keinen Apfel], [der Film, den Film]]
+        concepts: [ case.akk-masculine ]
+        instruction: "Tippe ein Wort an, dann die Akkusativ-Form."
+        pairs: [ [ der Hund, den Hund ], [ ein Tisch, einen Tisch ], [ mein Bruder, meinen Bruder ], [ kein Apfel, keinen Apfel ], [ der Film, den Film ] ]
       - type: pairs
-        concepts: [case.akk-pronouns]
-        instruction: { en: "Tap a pronoun, then its Akkusativ form.", de: "Tippe ein Pronomen an, dann die Akkusativ-Form." }
-        pairs: [[ich, mich], [du, dich], [er, ihn], [wir, uns], [ihr, euch]]
+        concepts: [ case.akk-pronouns ]
+        instruction: "Tippe ein Pronomen an, dann die Akkusativ-Form."
+        pairs: [ [ ich, mich ], [ du, dich ], [ er, ihn ], [ wir, uns ], [ ihr, euch ] ]
       - type: pairs
-        concepts: [case.akk-verbs]
-        instruction: { en: "Tap a verb, then a sentence with an Akkusativ object.", de: "Tippe ein Verb an, dann den Satz mit Akkusativobjekt." }
-        pairs: [[haben, Ich habe einen Hund.], [kaufen, Wir kaufen den Tisch.], [sehen, Du siehst den Film.], [brauchen, Ich brauche einen Stift.], [suchen, Er sucht die Tasche.]]
+        concepts: [ case.akk-verbs ]
+        instruction: "Tippe ein Verb an, dann den Satz mit Akkusativobjekt."
+        pairs: [ [ haben, Ich habe einen Hund. ], [ kaufen, Wir kaufen den Tisch. ], [ sehen, Du siehst den Film. ], [ brauchen, Ich brauche einen Stift. ], [ suchen, Er sucht die Tasche. ] ]
 
   - id: correct
-    title: { en: "Which is right?", de: "Was ist richtig?" }
+    title: "Was ist richtig?"
     count: 8
-    concepts: [case.akk-articles, case.akk-masculine]
-    instruction: { en: "Tap the correct sentence.", de: "Tippe den richtigen Satz an." }
+    concepts: [ case.akk-articles, case.akk-masculine ]
+    instruction: "Tippe den richtigen Satz an."
     items:
       - type: pick
-        options: ["Ich habe einen Bruder.", "Ich habe ein Bruder.", "Ich habe eine Bruder."]
+        options: [ "Ich habe einen Bruder.", "Ich habe ein Bruder.", "Ich habe eine Bruder." ]
         answer: "Ich habe einen Bruder."
-        explanation: { en: "Bruder is masculine: ein → einen in the Akkusativ.", de: "„Bruder“ ist maskulin: ein → einen im Akkusativ." }
+        explanation: "„Bruder“ ist maskulin: ein → einen im Akkusativ."
       - type: pick
-        options: ["Wir kaufen den Tisch.", "Wir kaufen der Tisch.", "Wir kaufen die Tisch."]
+        options: [ "Wir kaufen den Tisch.", "Wir kaufen der Tisch.", "Wir kaufen die Tisch." ]
         answer: "Wir kaufen den Tisch."
-        explanation: { en: "Tisch is masculine: der → den.", de: "„Tisch“ ist maskulin: der → den." }
+        explanation: "„Tisch“ ist maskulin: der → den."
       - type: pick
-        options: ["Ich sehe die Katze.", "Ich sehe den Katze.", "Ich sehe der Katze."]
+        options: [ "Ich sehe die Katze.", "Ich sehe den Katze.", "Ich sehe der Katze." ]
         answer: "Ich sehe die Katze."
-        explanation: { en: "Katze is feminine: die does not change.", de: "„Katze“ ist feminin: „die“ ändert sich nicht." }
+        explanation: "„Katze“ ist feminin: „die“ ändert sich nicht."
       - type: pick
-        options: ["Er hat keinen Hund.", "Er hat kein Hund.", "Er hat keine Hund."]
+        options: [ "Er hat keinen Hund.", "Er hat kein Hund.", "Er hat keine Hund." ]
         answer: "Er hat keinen Hund."
-        explanation: { en: "Hund is masculine: kein → keinen.", de: "„Hund“ ist maskulin: kein → keinen." }
+        explanation: "„Hund“ ist maskulin: kein → keinen."
       - type: pick
-        options: ["Ich lese ein Buch.", "Ich lese einen Buch.", "Ich lese eine Buch."]
+        options: [ "Ich lese ein Buch.", "Ich lese einen Buch.", "Ich lese eine Buch." ]
         answer: "Ich lese ein Buch."
-        explanation: { en: "Buch is neuter: ein does not change.", de: "„Buch“ ist Neutrum: „ein“ ändert sich nicht." }
+        explanation: "„Buch“ ist Neutrum: „ein“ ändert sich nicht."
       - type: pick
-        options: ["Siehst du meinen Bruder?", "Siehst du mein Bruder?", "Siehst du meine Bruder?"]
+        options: [ "Siehst du meinen Bruder?", "Siehst du mein Bruder?", "Siehst du meine Bruder?" ]
         answer: "Siehst du meinen Bruder?"
-        explanation: { en: "Bruder is masculine: mein → meinen.", de: "„Bruder“ ist maskulin: mein → meinen." }
+        explanation: "„Bruder“ ist maskulin: mein → meinen."
       - type: pick
-        options: ["Ich suche ihn.", "Ich suche er.", "Ich suche ihm."]
+        options: [ "Ich suche ihn.", "Ich suche er.", "Ich suche ihm." ]
         answer: "Ich suche ihn."
-        explanation: { en: "The Akkusativ pronoun for er is ihn.", de: "Das Akkusativ-Pronomen zu „er“ ist „ihn“." }
+        explanation: "Das Akkusativ-Pronomen zu „er“ ist „ihn“."
       - type: pick
-        options: ["Er liebt mich.", "Er liebt ich.", "Er liebt mir."]
+        options: [ "Er liebt mich.", "Er liebt ich.", "Er liebt mir." ]
         answer: "Er liebt mich."
-        explanation: { en: "ich → mich in the Akkusativ.", de: "ich → mich im Akkusativ." }
+        explanation: "ich → mich im Akkusativ."
 
   - id: puzzle
-    title: { en: "Sentence puzzle", de: "Satzpuzzle" }
+    title: "Satzpuzzle"
     count: 6
-    concepts: [case.akk-articles, syntax.verb-position-2]
-    instruction: { en: "Put the words in the right order. Start with the subject.", de: "Bringe die Wörter in die richtige Reihenfolge. Beginne mit dem Subjekt." }
-    explanation: { en: "Subject, verb in position 2, then the Akkusativ object.", de: "Subjekt, Verb auf Position 2, dann das Akkusativobjekt." }
+    concepts: [ case.akk-articles, syntax.verb-position-2 ]
+    instruction: "Bringe die Wörter in die richtige Reihenfolge. Beginne mit dem Subjekt."
+    explanation: "Subjekt, Verb auf Position 2, dann das Akkusativobjekt."
     items:
-      - { type: sentence-order, words: "ich sehe den Hund", accept: ["ich sehe den Hund"] }
-      - { type: sentence-order, words: "wir kaufen einen Tisch", accept: ["wir kaufen einen Tisch"] }
-      - { type: sentence-order, words: "Anna liest ein Buch", accept: ["Anna liest ein Buch"] }
-      - { type: sentence-order, words: "ich brauche meinen Stift", accept: ["ich brauche meinen Stift"] }
-      - { type: sentence-order, words: "er hat keinen Bruder", accept: ["er hat keinen Bruder"] }
-      - { type: sentence-order, words: "du suchst deinen Schlüssel", accept: ["du suchst deinen Schlüssel"] }
-      - { type: sentence-order, words: "Mia trinkt einen Tee", accept: ["Mia trinkt einen Tee"] }
+      - { type: sentence-order, words: "ich sehe den Hund", accept: [ "ich sehe den Hund" ] }
+      - { type: sentence-order, words: "wir kaufen einen Tisch", accept: [ "wir kaufen einen Tisch" ] }
+      - { type: sentence-order, words: "Anna liest ein Buch", accept: [ "Anna liest ein Buch" ] }
+      - { type: sentence-order, words: "ich brauche meinen Stift", accept: [ "ich brauche meinen Stift" ] }
+      - { type: sentence-order, words: "er hat keinen Bruder", accept: [ "er hat keinen Bruder" ] }
+      - { type: sentence-order, words: "du suchst deinen Schlüssel", accept: [ "du suchst deinen Schlüssel" ] }
+      - { type: sentence-order, words: "Mia trinkt einen Tee", accept: [ "Mia trinkt einen Tee" ] }
 
   - id: write
-    title: { en: "Writing", de: "Schreiben" }
-    concepts: [writing.simple-sentences, case.akk-articles]
-    instruction: { en: "Write 4 or more sentences. Use the words.", de: "Schreibe 4 Sätze oder mehr. Benutze die Wörter." }
+    title: "Schreiben"
+    concepts: [ writing.simple-sentences, case.akk-articles ]
+    instruction: "Schreibe 4 Sätze oder mehr. Benutze die Wörter."
     items:
       - type: free-writing
-        task: { en: "Write about your things and your family: What do you have? What do you need? What do you not have?", de: "Schreibe über deine Sachen und deine Familie: Was hast du? Was brauchst du? Was hast du nicht?" }
-        words: [ich habe, ich brauche, ich suche, einen, keinen, meinen]
+        task: "Schreibe über deine Sachen und deine Familie: Was hast du? Was brauchst du? Was hast du nicht?"
+        words: [ ich habe, ich brauche, ich suche, einen, keinen, meinen ]
         minSentences: 4
         detect:
-          - { label: { en: "an Akkusativ word (den, einen, meinen, keinen, ihn …)", de: "ein Akkusativ-Wort (den, einen, meinen, keinen, ihn …)" }, pattern: "\\b(den|einen|meinen|deinen|seinen|ihren|unseren|keinen|mich|dich|ihn)\\b", tip: { en: "No masculine Akkusativ word yet (den, einen, meinen, keinen). Do you have a masculine noun?", de: "Noch kein maskulines Akkusativ-Wort (den, einen, meinen, keinen). Hast du ein maskulines Nomen?" } }
+          - { label: "ein Akkusativ-Wort (den, einen, meinen, keinen, ihn …)", pattern: "\\b(den|einen|meinen|deinen|seinen|ihren|unseren|keinen|mich|dich|ihn)\\b", tip: "Noch kein maskulines Akkusativ-Wort (den, einen, meinen, keinen). Hast du ein maskulines Nomen?" }
         checklist:
-          - { en: "For masculine nouns I used den, einen, meinen or keinen.", de: "Bei maskulinen Nomen habe ich „den“, „einen“, „meinen“ oder „keinen“ benutzt." }
-          - { en: "The verb is in position 2.", de: "Das Verb steht auf Position 2." }
-          - { en: "Every sentence starts with a capital letter and ends with a full stop.", de: "Jeder Satz beginnt mit einem großen Buchstaben und endet mit einem Punkt." }
+          - "Bei maskulinen Nomen habe ich „den“, „einen“, „meinen“ oder „keinen“ benutzt."
+          - "Das Verb steht auf Position 2."
+          - "Jeder Satz beginnt mit einem großen Buchstaben und endet mit einem Punkt."
         model: "Ich habe einen Bruder und eine Schwester. Ich habe keinen Hund, aber ich habe eine Katze. Ich brauche einen Stift und ein Heft. Ich suche meinen Schlüssel."

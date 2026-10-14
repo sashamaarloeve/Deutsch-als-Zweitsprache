@@ -1,31 +1,29 @@
 # Training: two-way prepositions (Wechselpräpositionen), A2. Wo? + Dativ, wohin? + Akkusativ.
 # Meant to be done after the Dativ training (a soft hint, never a gate).
-# Original content. English and German texts are written side by side: { en: "...", de: "..." }.
+# Original content, written in German.
 kind: lesson
 id: two-way-prepositions-a2
-title: { en: "Two-way prepositions", de: "Wechselpräpositionen" }
+title: "Wechselpräpositionen"
 level: A2
 skill: grammar
 minutes: 30
 status: draft
-description:
-  en: "an, auf, hinter, in, neben, über, unter, vor, zwischen: Dativ for a place (wo?), Akkusativ for a movement (wohin?). Good to learn after the Dativ training."
-  de: "an, auf, hinter, in, neben, über, unter, vor, zwischen: Dativ für einen Ort (Wo?), Akkusativ für eine Bewegung (Wohin?). Am besten nach dem Training „Dativ“."
+description: "an, auf, hinter, in, neben, über, unter, vor, zwischen: Dativ für einen Ort (Wo?), Akkusativ für eine Bewegung (Wohin?). Am besten nach dem Training „Dativ“."
 canDo:
-  - { en: "I can say where something is (Dativ) and where something goes (Akkusativ).", de: "Ich kann sagen, wo etwas ist (Dativ) und wohin etwas geht (Akkusativ)." }
-  - { en: "I can use the verb pairs liegen/legen, stehen/stellen and sitzen/setzen.", de: "Ich kann die Verbpaare liegen/legen, stehen/stellen und sitzen/setzen benutzen." }
-  - { en: "I can use im, am, ins and ans.", de: "Ich kann „im“, „am“, „ins“ und „ans“ benutzen." }
+  - "Ich kann sagen, wo etwas ist (Dativ) und wohin etwas geht (Akkusativ)."
+  - "Ich kann die Verbpaare liegen/legen, stehen/stellen und sitzen/setzen benutzen."
+  - "Ich kann „im“, „am“, „ins“ und „ans“ benutzen."
 
 articles:
   definite:
-    label: { en: "the", de: "der, die, das" }
-    nom: [der, die, das, die]
-    akk: [den, die, das, die]
-    dat: [dem, der, dem, den]
+    label: "der, die, das"
+    nom: [ der, die, das, die ]
+    akk: [ den, die, das, die ]
+    dat: [ dem, der, dem, den ]
 
 understand:
   - type: dialogue
-    title: { en: "Listen: where and where to?", de: "Hör zu: Wo und wohin?" }
+    title: "Hör zu: Wo und wohin?"
     lines:
       - { who: Mia, say: "Wo ist mein Buch? Ich suche es." }
       - { who: Ben, say: "Es <v>liegt</v> auf <das>dem</das> Sofa. Ich <v>lege</v> es auf <der>den</der> Tisch." }
@@ -33,39 +31,36 @@ understand:
       - { who: Ben, say: "Nein, ich bin im Garten." }
 
   - type: text
-    title: { en: "Two cases, one preposition", de: "Zwei Fälle, eine Präposition" }
+    title: "Zwei Fälle, eine Präposition"
     body:
-      - en: "Most prepositions always have the same case. Nine prepositions can have the Dativ or the Akkusativ. They are called two-way prepositions (Wechselpräpositionen). Here the question wo? or wohin? helps a lot."
-        de: "Die meisten Präpositionen haben immer denselben Fall. Neun Präpositionen können den Dativ oder den Akkusativ haben. Sie heißen Wechselpräpositionen. Hier helfen die Fragen „Wo?“ und „Wohin?“ sehr."
-      - { en: "Wo? – a place, nothing moves to a new place → Dativ: Das Buch liegt auf <c>dem Tisch</c>.", de: "Wo? – ein Ort, nichts geht an einen neuen Ort → Dativ: Das Buch liegt auf <c>dem Tisch</c>." }
-      - { en: "Wohin? – a movement to a new place → Akkusativ: Ich lege das Buch auf <c>den Tisch</c>.", de: "Wohin? – eine Bewegung an einen neuen Ort → Akkusativ: Ich lege das Buch auf <c>den Tisch</c>." }
+      - "Die meisten Präpositionen haben immer denselben Fall. Neun Präpositionen können den Dativ oder den Akkusativ haben. Sie heißen Wechselpräpositionen. Hier helfen die Fragen „Wo?“ und „Wohin?“ sehr."
+      - "Wo? – ein Ort, nichts geht an einen neuen Ort → Dativ: Das Buch liegt auf <c>dem Tisch</c>."
+      - "Wohin? – eine Bewegung an einen neuen Ort → Akkusativ: Ich lege das Buch auf <c>den Tisch</c>."
 
   - type: rule
-    title: { en: "The nine prepositions", de: "Die neun Präpositionen" }
+    title: "Die neun Präpositionen"
     body:
-      - { en: "an (at, on the side) · auf (on top) · hinter (behind)", de: "an · auf · hinter" }
-      - { en: "in (in, into) · neben (next to) · über (above, over)", de: "in · neben · über" }
-      - { en: "unter (under) · vor (in front of) · zwischen (between)", de: "unter · vor · zwischen" }
+      - "an · auf · hinter"
+      - "in · neben · über"
+      - "unter · vor · zwischen"
 
   - type: case-lab
-    title: { en: "The case lab", de: "Das Fall-Labor" }
-    intro:
-      en: "Choose a noun and look at the two sentences. The article that changes is highlighted. Only the Dativ and the Akkusativ are shown here."
-      de: "Wähle ein Nomen und schau auf die beiden Sätze. Der Artikel, der sich ändert, ist markiert. Hier gibt es nur Dativ und Akkusativ."
-    kinds: [definite]
+    title: "Das Fall-Labor"
+    intro: "Wähle ein Nomen und schau auf die beiden Sätze. Der Artikel, der sich ändert, ist markiert. Hier gibt es nur Dativ und Akkusativ."
+    kinds: [ definite ]
     cases:
       - id: nom
-        label: { en: Nominativ, de: Nominativ }
-        frame: ["___ ist hier.", "___ sind hier."]
-        rule: { en: "Nominativ: the subject.", de: "Nominativ: das Subjekt." }
+        label: Nominativ
+        frame: [ "___ ist hier.", "___ sind hier." ]
+        rule: "Nominativ: das Subjekt."
       - id: dat
-        label: { en: "Dativ (wo?)", de: "Dativ (Wo?)" }
+        label: "Dativ (Wo?)"
         frame: "Ich bin in ___."
-        rule: { en: "Wo? – I am there. → Dativ.", de: "Wo? – Ich bin dort. → Dativ." }
+        rule: "Wo? – Ich bin dort. → Dativ."
       - id: akk
-        label: { en: "Akkusativ (wohin?)", de: "Akkusativ (Wohin?)" }
+        label: "Akkusativ (Wohin?)"
         frame: "Ich gehe in ___."
-        rule: { en: "Wohin? – I go there. → Akkusativ.", de: "Wohin? – Ich gehe dorthin. → Akkusativ." }
+        rule: "Wohin? – Ich gehe dorthin. → Akkusativ."
     nouns:
       - { g: m, noun: Park }
       - { g: m, noun: Garten }
@@ -75,56 +70,56 @@ understand:
       - { g: n, noun: Café }
 
   - type: rule
-    title: { en: "Verb pairs", de: "Verbpaare" }
+    title: "Verbpaare"
     body:
-      - { en: "Some verbs come in pairs: one says where something is, the other says that something moves.", de: "Einige Verben gibt es als Paar: Das eine sagt, wo etwas ist, das andere sagt, dass sich etwas bewegt." }
-      - { en: "liegen (Wo?): Das Buch <v>liegt</v> auf <der>dem</der> Tisch.", de: "liegen (Wo?): Das Buch <v>liegt</v> auf <der>dem</der> Tisch." }
-      - { en: "legen (Wohin?): Ich <v>lege</v> das Buch auf <der>den</der> Tisch.", de: "legen (Wohin?): Ich <v>lege</v> das Buch auf <der>den</der> Tisch." }
-      - { en: "stehen (Wo?): Die Lampe <v>steht</v> neben <das>dem</das> Sofa.", de: "stehen (Wo?): Die Lampe <v>steht</v> neben <das>dem</das> Sofa." }
-      - { en: "stellen (Wohin?): Ich <v>stelle</v> die Lampe neben <das>das</das> Sofa.", de: "stellen (Wohin?): Ich <v>stelle</v> die Lampe neben <das>das</das> Sofa." }
-      - { en: "sitzen (Wo?): Das Kind <v>sitzt</v> auf <der>dem</der> Stuhl.", de: "sitzen (Wo?): Das Kind <v>sitzt</v> auf <der>dem</der> Stuhl." }
-      - { en: "setzen (Wohin?): Ich <v>setze</v> das Kind auf <der>den</der> Stuhl.", de: "setzen (Wohin?): Ich <v>setze</v> das Kind auf <der>den</der> Stuhl." }
+      - "Einige Verben gibt es als Paar: Das eine sagt, wo etwas ist, das andere sagt, dass sich etwas bewegt."
+      - "liegen (Wo?): Das Buch <v>liegt</v> auf <der>dem</der> Tisch."
+      - "legen (Wohin?): Ich <v>lege</v> das Buch auf <der>den</der> Tisch."
+      - "stehen (Wo?): Die Lampe <v>steht</v> neben <das>dem</das> Sofa."
+      - "stellen (Wohin?): Ich <v>stelle</v> die Lampe neben <das>das</das> Sofa."
+      - "sitzen (Wo?): Das Kind <v>sitzt</v> auf <der>dem</der> Stuhl."
+      - "setzen (Wohin?): Ich <v>setze</v> das Kind auf <der>den</der> Stuhl."
 
   - type: rule
-    title: { en: "Short forms", de: "Kurzformen" }
+    title: "Kurzformen"
     body:
-      - { en: "in + dem = im: Ich bin im Park.", de: "in + dem = im: Ich bin im Park." }
-      - { en: "an + dem = am: Er steht am Fenster.", de: "an + dem = am: Er steht am Fenster." }
-      - { en: "in + das = ins: Wir gehen ins Kino.", de: "in + das = ins: Wir gehen ins Kino." }
-      - { en: "an + das = ans: Sie geht ans Fenster.", de: "an + das = ans: Sie geht ans Fenster." }
-      - { en: "auf + das = aufs is also possible: Er legt es aufs Sofa.", de: "auf + das = aufs ist auch möglich: Er legt es aufs Sofa." }
+      - "in + dem = im: Ich bin im Park."
+      - "an + dem = am: Er steht am Fenster."
+      - "in + das = ins: Wir gehen ins Kino."
+      - "an + das = ans: Sie geht ans Fenster."
+      - "auf + das = aufs ist auch möglich: Er legt es aufs Sofa."
 
   - type: rule
-    title: { en: "Watch out!", de: "Achtung!" }
+    title: "Achtung!"
     body:
-      - { en: "<x>Ich bin in die Schule.</x> ✗ Ich bin in <die>der</die> Schule. ✓ (Wo?)", de: "<x>Ich bin in die Schule.</x> ✗ Ich bin in <die>der</die> Schule. ✓ (Wo?)" }
-      - { en: "<x>Ich gehe in der Schule.</x> ✗ Ich gehe in <die>die</die> Schule. ✓ (Wohin?)", de: "<x>Ich gehe in der Schule.</x> ✗ Ich gehe in <die>die</die> Schule. ✓ (Wohin?)" }
-      - { en: "Only a movement to a new place is Wohin?. Walking around inside a place is Wo?: Er läuft im Park. (Wo?)", de: "Nur eine Bewegung an einen neuen Ort ist „Wohin?“. Wenn man sich innerhalb eines Ortes bewegt, ist es „Wo?“: Er läuft im Park. (Wo?)" }
-      - { en: "Not every “an, auf, in” is a two-way preposition with a place. Many verbs have a fixed preposition and case (warten auf + Akkusativ). You learn them with the verb.", de: "Nicht jedes „an, auf, in“ ist eine Wechselpräposition mit einem Ort. Viele Verben haben eine feste Präposition mit festem Fall (warten auf + Akkusativ). Die lernst du mit dem Verb." }
+      - "<x>Ich bin in die Schule.</x> ✗ Ich bin in <die>der</die> Schule. ✓ (Wo?)"
+      - "<x>Ich gehe in der Schule.</x> ✗ Ich gehe in <die>die</die> Schule. ✓ (Wohin?)"
+      - "Nur eine Bewegung an einen neuen Ort ist „Wohin?“. Wenn man sich innerhalb eines Ortes bewegt, ist es „Wo?“: Er läuft im Park. (Wo?)"
+      - "Nicht jedes „an, auf, in“ ist eine Wechselpräposition mit einem Ort. Viele Verben haben eine feste Präposition mit festem Fall (warten auf + Akkusativ). Die lernst du mit dem Verb."
 
 practice:
   - id: which
-    title: { en: "Wo or wohin?", de: "Wo oder wohin?" }
+    title: "Wo oder wohin?"
     count: 8
     shuffle: true
-    concepts: [prep.two-way-wo-dat, prep.two-way-wohin-akk]
-    instruction: { en: "Is something at a place or going to a new place? Which case is needed?", de: "Ist etwas an einem Ort oder geht es an einen neuen Ort? Welcher Fall passt?" }
+    concepts: [ prep.two-way-wo-dat, prep.two-way-wohin-akk ]
+    instruction: "Ist etwas an einem Ort oder geht es an einen neuen Ort? Welcher Fall passt?"
     items:
-      - { type: pick, prompt: "Das Buch liegt auf dem Tisch.", options: [Dativ, Akkusativ], answer: Dativ, explanation: { en: "Wo? Nothing moves: Dativ.", de: "Wo? Nichts bewegt sich: Dativ." } }
-      - { type: pick, prompt: "Ich lege das Buch auf den Tisch.", options: [Dativ, Akkusativ], answer: Akkusativ, explanation: { en: "Wohin? The book moves to the table: Akkusativ.", de: "Wohin? Das Buch geht auf den Tisch: Akkusativ." } }
-      - { type: pick, prompt: "Wir sind in der Küche.", options: [Dativ, Akkusativ], answer: Dativ, explanation: { en: "Wo? We are there: Dativ.", de: "Wo? Wir sind dort: Dativ." } }
-      - { type: pick, prompt: "Wir gehen in die Küche.", options: [Dativ, Akkusativ], answer: Akkusativ, explanation: { en: "Wohin? We go there: Akkusativ.", de: "Wohin? Wir gehen dorthin: Akkusativ." } }
-      - { type: pick, prompt: "Das Kind sitzt auf dem Stuhl.", options: [Dativ, Akkusativ], answer: Dativ, explanation: { en: "Wo? sitzen shows a place: Dativ.", de: "Wo? „sitzen“ zeigt einen Ort: Dativ." } }
-      - { type: pick, prompt: "Ich setze das Kind auf den Stuhl.", options: [Dativ, Akkusativ], answer: Akkusativ, explanation: { en: "Wohin? setzen shows a movement: Akkusativ.", de: "Wohin? „setzen“ zeigt eine Bewegung: Akkusativ." } }
-      - { type: pick, prompt: "Er fährt in die Stadt.", options: [Dativ, Akkusativ], answer: Akkusativ, explanation: { en: "Wohin? He goes into the city: Akkusativ.", de: "Wohin? Er fährt in die Stadt: Akkusativ." } }
-      - { type: pick, prompt: "Er wohnt in der Stadt.", options: [Dativ, Akkusativ], answer: Dativ, explanation: { en: "Wo? He lives there: Dativ.", de: "Wo? Er wohnt dort: Dativ." } }
+      - { type: pick, prompt: "Das Buch liegt auf dem Tisch.", options: [ Dativ, Akkusativ ], answer: Dativ, explanation: "Wo? Nichts bewegt sich: Dativ." }
+      - { type: pick, prompt: "Ich lege das Buch auf den Tisch.", options: [ Dativ, Akkusativ ], answer: Akkusativ, explanation: "Wohin? Das Buch geht auf den Tisch: Akkusativ." }
+      - { type: pick, prompt: "Wir sind in der Küche.", options: [ Dativ, Akkusativ ], answer: Dativ, explanation: "Wo? Wir sind dort: Dativ." }
+      - { type: pick, prompt: "Wir gehen in die Küche.", options: [ Dativ, Akkusativ ], answer: Akkusativ, explanation: "Wohin? Wir gehen dorthin: Akkusativ." }
+      - { type: pick, prompt: "Das Kind sitzt auf dem Stuhl.", options: [ Dativ, Akkusativ ], answer: Dativ, explanation: "Wo? „sitzen“ zeigt einen Ort: Dativ." }
+      - { type: pick, prompt: "Ich setze das Kind auf den Stuhl.", options: [ Dativ, Akkusativ ], answer: Akkusativ, explanation: "Wohin? „setzen“ zeigt eine Bewegung: Akkusativ." }
+      - { type: pick, prompt: "Er fährt in die Stadt.", options: [ Dativ, Akkusativ ], answer: Akkusativ, explanation: "Wohin? Er fährt in die Stadt: Akkusativ." }
+      - { type: pick, prompt: "Er wohnt in der Stadt.", options: [ Dativ, Akkusativ ], answer: Dativ, explanation: "Wo? Er wohnt dort: Dativ." }
 
   - id: dative
-    title: { en: "Wo? (Dativ)", de: "Wo? (Dativ)" }
+    title: "Wo? (Dativ)"
     count: 8
-    concepts: [prep.two-way-wo-dat]
-    instruction: { en: "Something is at a place. Which form is right? The article of the noun is shown in its colour.", de: "Etwas ist an einem Ort. Welche Form ist richtig? Der Artikel vom Nomen steht in seiner Farbe." }
-    explanation: { en: "Wo? → Dativ: dem (m), der (f), dem (n).", de: "Wo? → Dativ: dem (m), der (f), dem (n)." }
+    concepts: [ prep.two-way-wo-dat ]
+    instruction: "Etwas ist an einem Ort. Welche Form ist richtig? Der Artikel vom Nomen steht in seiner Farbe."
+    explanation: "Wo? → Dativ: dem (m), der (f), dem (n)."
     items:
       - type: article-pick
         kind: definite
@@ -140,11 +135,11 @@ practice:
           - { g: f, noun: Küche, frame: "Wir sind in ___ Küche." }
 
   - id: accusative
-    title: { en: "Wohin? (Akkusativ)", de: "Wohin? (Akkusativ)" }
+    title: "Wohin? (Akkusativ)"
     count: 8
-    concepts: [prep.two-way-wohin-akk]
-    instruction: { en: "Something goes to a new place. Which form is right? The article of the noun is shown in its colour.", de: "Etwas geht an einen neuen Ort. Welche Form ist richtig? Der Artikel vom Nomen steht in seiner Farbe." }
-    explanation: { en: "Wohin? → Akkusativ: den (m), die (f), das (n).", de: "Wohin? → Akkusativ: den (m), die (f), das (n)." }
+    concepts: [ prep.two-way-wohin-akk ]
+    instruction: "Etwas geht an einen neuen Ort. Welche Form ist richtig? Der Artikel vom Nomen steht in seiner Farbe."
+    explanation: "Wohin? → Akkusativ: den (m), die (f), das (n)."
     items:
       - type: article-pick
         kind: definite
@@ -160,12 +155,12 @@ practice:
           - { g: f, noun: Küche, frame: "Wir gehen in ___ Küche." }
 
   - id: mix
-    title: { en: "Mixed", de: "Gemischt" }
+    title: "Gemischt"
     count: 8
     shuffle: true
-    concepts: [prep.two-way-wo-dat, prep.two-way-wohin-akk]
-    instruction: { en: "Look at the verb: place or movement? Which form is right?", de: "Schau auf das Verb: Ort oder Bewegung? Welche Form ist richtig?" }
-    explanation: { en: "Place (wo?) → Dativ. Movement (wohin?) → Akkusativ.", de: "Ort (Wo?) → Dativ. Bewegung (Wohin?) → Akkusativ." }
+    concepts: [ prep.two-way-wo-dat, prep.two-way-wohin-akk ]
+    instruction: "Schau auf das Verb: Ort oder Bewegung? Welche Form ist richtig?"
+    explanation: "Ort (Wo?) → Dativ. Bewegung (Wohin?) → Akkusativ."
     items:
       - type: article-pick
         kind: definite
@@ -185,111 +180,111 @@ practice:
           - { g: m, noun: Bus, frame: "Wir steigen in ___ Bus." }
 
   - id: verbs
-    title: { en: "Verb pairs", de: "Verbpaare" }
+    title: "Verbpaare"
     count: 8
     shuffle: true
-    concepts: [prep.two-way-verb-pairs]
-    instruction: { en: "Which verb is right?", de: "Welches Verb ist richtig?" }
-    explanation: { en: "liegen, stehen, sitzen = place (Dativ). legen, stellen, setzen = movement (Akkusativ).", de: "liegen, stehen, sitzen = Ort (Dativ). legen, stellen, setzen = Bewegung (Akkusativ)." }
+    concepts: [ prep.two-way-verb-pairs ]
+    instruction: "Welches Verb ist richtig?"
+    explanation: "liegen, stehen, sitzen = Ort (Dativ). legen, stellen, setzen = Bewegung (Akkusativ)."
     items:
-      - { type: pick, sentence: "Das Buch ___ auf dem Tisch.", options: [liegt, legt], answer: liegt }
-      - { type: pick, sentence: "Ich ___ das Buch auf den Tisch.", options: [lege, liege], answer: lege }
-      - { type: pick, sentence: "Die Lampe ___ neben dem Sofa.", options: [steht, stellt], answer: steht }
-      - { type: pick, sentence: "Ich ___ die Lampe neben das Sofa.", options: [stelle, stehe], answer: stelle }
-      - { type: pick, sentence: "Das Kind ___ auf dem Stuhl.", options: [sitzt, setzt], answer: sitzt }
-      - { type: pick, sentence: "Ich ___ das Kind auf den Stuhl.", options: [setze, sitze], answer: setze }
-      - { type: pick, sentence: "Die Flasche ___ im Kühlschrank.", options: [steht, stellt], answer: steht }
-      - { type: pick, sentence: "Er ___ die Flasche in den Kühlschrank.", options: [stellt, steht], answer: stellt }
+      - { type: pick, sentence: "Das Buch ___ auf dem Tisch.", options: [ liegt, legt ], answer: liegt }
+      - { type: pick, sentence: "Ich ___ das Buch auf den Tisch.", options: [ lege, liege ], answer: lege }
+      - { type: pick, sentence: "Die Lampe ___ neben dem Sofa.", options: [ steht, stellt ], answer: steht }
+      - { type: pick, sentence: "Ich ___ die Lampe neben das Sofa.", options: [ stelle, stehe ], answer: stelle }
+      - { type: pick, sentence: "Das Kind ___ auf dem Stuhl.", options: [ sitzt, setzt ], answer: sitzt }
+      - { type: pick, sentence: "Ich ___ das Kind auf den Stuhl.", options: [ setze, sitze ], answer: setze }
+      - { type: pick, sentence: "Die Flasche ___ im Kühlschrank.", options: [ steht, stellt ], answer: steht }
+      - { type: pick, sentence: "Er ___ die Flasche in den Kühlschrank.", options: [ stellt, steht ], answer: stellt }
 
   - id: match
-    title: { en: "Match", de: "Paare" }
+    title: "Paare"
     shuffle: false
     items:
       - type: pairs
-        concepts: [prep.two-way-verb-pairs]
-        instruction: { en: "Tap a verb, then a sentence that fits.", de: "Tippe ein Verb an, dann einen passenden Satz." }
-        pairs: [[liegen, Das Buch liegt auf dem Tisch.], [legen, Ich lege das Buch auf den Tisch.], [stehen, Die Lampe steht neben dem Sofa.], [stellen, Er stellt die Lampe neben das Sofa.], [sitzen, Das Kind sitzt auf dem Stuhl.], [setzen, Sie setzt das Kind auf den Stuhl.]]
+        concepts: [ prep.two-way-verb-pairs ]
+        instruction: "Tippe ein Verb an, dann einen passenden Satz."
+        pairs: [ [ liegen, Das Buch liegt auf dem Tisch. ], [ legen, Ich lege das Buch auf den Tisch. ], [ stehen, Die Lampe steht neben dem Sofa. ], [ stellen, Er stellt die Lampe neben das Sofa. ], [ sitzen, Das Kind sitzt auf dem Stuhl. ], [ setzen, Sie setzt das Kind auf den Stuhl. ] ]
 
   - id: short
-    title: { en: "im, am, ins, ans", de: "im, am, ins, ans" }
+    title: "im, am, ins, ans"
     count: 6
     shuffle: true
-    concepts: [prep.two-way-contractions]
-    instruction: { en: "Which short form is right?", de: "Welche Kurzform ist richtig?" }
-    explanation: { en: "in + dem = im, in + das = ins, an + dem = am, an + das = ans.", de: "in + dem = im, in + das = ins, an + dem = am, an + das = ans." }
+    concepts: [ prep.two-way-contractions ]
+    instruction: "Welche Kurzform ist richtig?"
+    explanation: "in + dem = im, in + das = ins, an + dem = am, an + das = ans."
     items:
-      - { type: pick, sentence: "Wir sind ___ Kino. (Wo?)", options: [im, ins, am, ans], answer: im }
-      - { type: pick, sentence: "Wir gehen ___ Kino. (Wohin?)", options: [ins, im, am, ans], answer: ins }
-      - { type: pick, sentence: "Er steht ___ Fenster. (Wo?)", options: [am, ans, im, ins], answer: am }
-      - { type: pick, sentence: "Er geht ___ Fenster. (Wohin?)", options: [ans, am, im, ins], answer: ans }
-      - { type: pick, sentence: "Ich bin ___ Park. (Wo?)", options: [im, ins, am, ans], answer: im }
-      - { type: pick, sentence: "Ich gehe ___ Café. (Wohin?)", options: [ins, im, am, ans], answer: ins }
+      - { type: pick, sentence: "Wir sind ___ Kino. (Wo?)", options: [ im, ins, am, ans ], answer: im }
+      - { type: pick, sentence: "Wir gehen ___ Kino. (Wohin?)", options: [ ins, im, am, ans ], answer: ins }
+      - { type: pick, sentence: "Er steht ___ Fenster. (Wo?)", options: [ am, ans, im, ins ], answer: am }
+      - { type: pick, sentence: "Er geht ___ Fenster. (Wohin?)", options: [ ans, am, im, ins ], answer: ans }
+      - { type: pick, sentence: "Ich bin ___ Park. (Wo?)", options: [ im, ins, am, ans ], answer: im }
+      - { type: pick, sentence: "Ich gehe ___ Café. (Wohin?)", options: [ ins, im, am, ans ], answer: ins }
 
   - id: correct
-    title: { en: "Which is right?", de: "Was ist richtig?" }
+    title: "Was ist richtig?"
     count: 8
-    concepts: [prep.two-way-wo-dat, prep.two-way-wohin-akk]
-    instruction: { en: "Tap the correct sentence.", de: "Tippe den richtigen Satz an." }
+    concepts: [ prep.two-way-wo-dat, prep.two-way-wohin-akk ]
+    instruction: "Tippe den richtigen Satz an."
     items:
       - type: pick
-        options: ["Das Buch liegt auf dem Tisch.", "Das Buch liegt auf den Tisch.", "Das Buch liegt auf der Tisch."]
+        options: [ "Das Buch liegt auf dem Tisch.", "Das Buch liegt auf den Tisch.", "Das Buch liegt auf der Tisch." ]
         answer: "Das Buch liegt auf dem Tisch."
-        explanation: { en: "Wo? → Dativ: dem Tisch.", de: "Wo? → Dativ: dem Tisch." }
+        explanation: "Wo? → Dativ: dem Tisch."
       - type: pick
-        options: ["Ich lege das Buch auf den Tisch.", "Ich lege das Buch auf dem Tisch.", "Ich lege das Buch auf der Tisch."]
+        options: [ "Ich lege das Buch auf den Tisch.", "Ich lege das Buch auf dem Tisch.", "Ich lege das Buch auf der Tisch." ]
         answer: "Ich lege das Buch auf den Tisch."
-        explanation: { en: "Wohin? → Akkusativ: den Tisch.", de: "Wohin? → Akkusativ: den Tisch." }
+        explanation: "Wohin? → Akkusativ: den Tisch."
       - type: pick
-        options: ["Ich bin in der Schule.", "Ich bin in die Schule.", "Ich bin in den Schule."]
+        options: [ "Ich bin in der Schule.", "Ich bin in die Schule.", "Ich bin in den Schule." ]
         answer: "Ich bin in der Schule."
-        explanation: { en: "Wo? → Dativ feminine: der Schule.", de: "Wo? → Dativ feminin: der Schule." }
+        explanation: "Wo? → Dativ feminin: der Schule."
       - type: pick
-        options: ["Ich gehe in die Schule.", "Ich gehe in der Schule.", "Ich gehe in dem Schule."]
+        options: [ "Ich gehe in die Schule.", "Ich gehe in der Schule.", "Ich gehe in dem Schule." ]
         answer: "Ich gehe in die Schule."
-        explanation: { en: "Wohin? → Akkusativ feminine: die Schule.", de: "Wohin? → Akkusativ feminin: die Schule." }
+        explanation: "Wohin? → Akkusativ feminin: die Schule."
       - type: pick
-        options: ["Wir gehen ins Kino.", "Wir gehen im Kino.", "Wir gehen in Kino."]
+        options: [ "Wir gehen ins Kino.", "Wir gehen im Kino.", "Wir gehen in Kino." ]
         answer: "Wir gehen ins Kino."
-        explanation: { en: "Wohin? in + das = ins.", de: "Wohin? in + das = ins." }
+        explanation: "Wohin? in + das = ins."
       - type: pick
-        options: ["Die Katze sitzt unter dem Tisch.", "Die Katze sitzt unter den Tisch.", "Die Katze setzt unter dem Tisch."]
+        options: [ "Die Katze sitzt unter dem Tisch.", "Die Katze sitzt unter den Tisch.", "Die Katze setzt unter dem Tisch." ]
         answer: "Die Katze sitzt unter dem Tisch."
-        explanation: { en: "sitzen = place → Dativ.", de: "„sitzen“ = Ort → Dativ." }
+        explanation: "„sitzen“ = Ort → Dativ."
       - type: pick
-        options: ["Er stellt die Flasche auf den Tisch.", "Er steht die Flasche auf den Tisch.", "Er stellt die Flasche auf dem Tisch."]
+        options: [ "Er stellt die Flasche auf den Tisch.", "Er steht die Flasche auf den Tisch.", "Er stellt die Flasche auf dem Tisch." ]
         answer: "Er stellt die Flasche auf den Tisch."
-        explanation: { en: "stellen = movement → Akkusativ.", de: "„stellen“ = Bewegung → Akkusativ." }
+        explanation: "„stellen“ = Bewegung → Akkusativ."
       - type: pick
-        options: ["Sie wohnt im Haus.", "Sie wohnt ins Haus.", "Sie wohnt in das Haus."]
+        options: [ "Sie wohnt im Haus.", "Sie wohnt ins Haus.", "Sie wohnt in das Haus." ]
         answer: "Sie wohnt im Haus."
-        explanation: { en: "wohnen = place → Dativ: in + dem = im.", de: "„wohnen“ = Ort → Dativ: in + dem = im." }
+        explanation: "„wohnen“ = Ort → Dativ: in + dem = im."
 
   - id: puzzle
-    title: { en: "Sentence puzzle", de: "Satzpuzzle" }
+    title: "Satzpuzzle"
     count: 6
-    concepts: [prep.two-way-wo-dat, prep.two-way-wohin-akk, syntax.verb-position-2]
-    instruction: { en: "Put the words in the right order.", de: "Bringe die Wörter in die richtige Reihenfolge." }
-    explanation: { en: "Subject, verb in position 2, then the rest.", de: "Subjekt, Verb auf Position 2, dann der Rest." }
+    concepts: [ prep.two-way-wo-dat, prep.two-way-wohin-akk, syntax.verb-position-2 ]
+    instruction: "Bringe die Wörter in die richtige Reihenfolge."
+    explanation: "Subjekt, Verb auf Position 2, dann der Rest."
     items:
-      - { type: sentence-order, words: "das Buch liegt auf dem Tisch", accept: ["das Buch liegt auf dem Tisch"] }
-      - { type: sentence-order, words: "ich lege das Buch auf den Tisch", accept: ["ich lege das Buch auf den Tisch"] }
-      - { type: sentence-order, words: "die Katze sitzt unter dem Stuhl", accept: ["die Katze sitzt unter dem Stuhl"] }
-      - { type: sentence-order, words: "wir gehen ins Kino", accept: ["wir gehen ins Kino"] }
-      - { type: sentence-order, words: "er stellt die Lampe neben das Sofa", accept: ["er stellt die Lampe neben das Sofa"] }
-      - { type: sentence-order, words: "die Kinder spielen im Garten", accept: ["die Kinder spielen im Garten"] }
-      - { type: sentence-order, words: "ich hänge das Bild an die Wand", accept: ["ich hänge das Bild an die Wand"] }
+      - { type: sentence-order, words: "das Buch liegt auf dem Tisch", accept: [ "das Buch liegt auf dem Tisch" ] }
+      - { type: sentence-order, words: "ich lege das Buch auf den Tisch", accept: [ "ich lege das Buch auf den Tisch" ] }
+      - { type: sentence-order, words: "die Katze sitzt unter dem Stuhl", accept: [ "die Katze sitzt unter dem Stuhl" ] }
+      - { type: sentence-order, words: "wir gehen ins Kino", accept: [ "wir gehen ins Kino" ] }
+      - { type: sentence-order, words: "er stellt die Lampe neben das Sofa", accept: [ "er stellt die Lampe neben das Sofa" ] }
+      - { type: sentence-order, words: "die Kinder spielen im Garten", accept: [ "die Kinder spielen im Garten" ] }
+      - { type: sentence-order, words: "ich hänge das Bild an die Wand", accept: [ "ich hänge das Bild an die Wand" ] }
 
   - id: write
-    title: { en: "Writing", de: "Schreiben" }
-    concepts: [writing.simple-sentences, prep.two-way-list]
-    instruction: { en: "Write 4 or more sentences. Use the words.", de: "Schreibe 4 Sätze oder mehr. Benutze die Wörter." }
+    title: "Schreiben"
+    concepts: [ writing.simple-sentences, prep.two-way-list ]
+    instruction: "Schreibe 4 Sätze oder mehr. Benutze die Wörter."
     items:
       - type: free-writing
-        task: { en: "Describe your room: Where are your things? Where do you put things?", de: "Beschreibe dein Zimmer: Wo sind deine Sachen? Wohin legst oder stellst du Sachen?" }
-        words: [liegt, steht, auf dem, neben dem, ich lege, ich stelle]
+        task: "Beschreibe dein Zimmer: Wo sind deine Sachen? Wohin legst oder stellst du Sachen?"
+        words: [ liegt, steht, auf dem, neben dem, ich lege, ich stelle ]
         minSentences: 4
         checklist:
-          - { en: "For places (wo?) I used the Dativ.", de: "Für Orte (Wo?) habe ich den Dativ benutzt." }
-          - { en: "For movements (wohin?) I used the Akkusativ.", de: "Für Bewegungen (Wohin?) habe ich den Akkusativ benutzt." }
-          - { en: "I used liegen/legen or stehen/stellen.", de: "Ich habe „liegen/legen“ oder „stehen/stellen“ benutzt." }
+          - "Für Orte (Wo?) habe ich den Dativ benutzt."
+          - "Für Bewegungen (Wohin?) habe ich den Akkusativ benutzt."
+          - "Ich habe „liegen/legen“ oder „stehen/stellen“ benutzt."
         model: "Mein Bett steht neben dem Fenster. Auf dem Tisch liegt mein Handy. Ich lege meine Jacke auf den Stuhl. Die Lampe stelle ich neben das Bett."

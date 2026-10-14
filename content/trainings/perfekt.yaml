@@ -1,202 +1,703 @@
-# Training: Das Perfekt. Ported from the owner's prototype (Perfekt_Einfuehrung_und_Training.html).
-# German examples and sentences are the owner's; instructions and explanations are in English.
 id: perfekt
 title: Das Perfekt
 level: A2
 skill: grammar
 minutes: 20
 status: draft
-description: Talk about the past in everyday German. Understand the Perfekt, build the Partizip II, choose haben or sein, then train with seven exercises.
+description: Über die Vergangenheit sprechen. Verstehe das Perfekt, bilde das Partizip II, wähle haben oder sein und trainiere mit sieben Übungen.
 canDo:
-  - I can say what I did yesterday or last weekend.
-  - I can build the Partizip II of common verbs.
-  - I can choose between haben and sein.
-  - I can put a Perfekt sentence in the right order.
-
+  - Ich kann sagen, was ich gestern oder am Wochenende gemacht habe.
+  - Ich kann das Partizip II von häufigen Verben bilden.
+  - Ich kann haben oder sein richtig wählen.
+  - Ich kann einen Satz im Perfekt in die richtige Reihenfolge bringen.
 intro:
-  title: When do we use the Perfekt?
-  lead: "We use the Perfekt to talk about the past, mostly when speaking, chatting and writing messages."
+  title: Wann sagen wir das Perfekt?
+  lead: Mit dem Perfekt sprechen wir über die Vergangenheit – im Gespräch, in Chats und in Nachrichten.
   dialogue:
-    - {who: Mia, text: "Was hast du am Wochenende gemacht?"}
-    - {who: Ben, text: "Ich [habe] Fußball [gespielt] und ich [bin] ins Kino [gegangen]."}
-  formulaText: "The Perfekt always has two parts:"
-  formula: [haben / sein, "… (rest of the sentence)", Partizip II]
-
+    - who: Mia
+      text: Was hast du am Wochenende gemacht?
+    - who: Ben
+      text: Ich [habe] Fußball [gespielt] und ich [bin] ins Kino [gegangen].
+  formulaText: "Das Perfekt hat immer zwei Teile:"
+  formula:
+    - haben / sein
+    - … (Satzteile)
+    - Partizip II
 klammer:
-  title: The bracket lab – main clauses
-  text: "Build a sentence. Watch the bracket: the helper verb and the Partizip II stand far apart."
-  scope: "These rules are for main clauses (Hauptsätze). In subordinate clauses (Nebensätze) the word order is different: try the next lab!"
-  persons: [ich, du, er, sie, wir, ihr, sie (pl.)]
-  personWords: [ich, du, er, sie, wir, ihr, sie]
+  title: Das Klammer-Labor – Hauptsätze
+  text: "Baue einen Satz. Achte auf die Klammer: Das Hilfsverb und das Partizip II stehen weit auseinander."
+  scope: "Diese Regeln gelten für Hauptsätze. In Nebensätzen ist die Wortstellung anders: Probiere das nächste Labor!"
+  persons:
+    - ich
+    - du
+    - er
+    - sie
+    - wir
+    - ihr
+    - sie (Pl.)
+  personWords:
+    - ich
+    - du
+    - er
+    - sie
+    - wir
+    - ihr
+    - sie
   verbs:
-    - [spielen, Fußball]
-    - [kaufen, ein Eis]
-    - [lesen, ein Buch]
-    - [trinken, Tee]
-    - [lernen, Deutsch]
-    - [schlafen, lange]
-    - [gehen, ins Kino]
-    - [fahren, nach Hamburg]
-  modes: [Statement, "with “gestern” in the middle", "“gestern” at the start", Yes/no question]
-  rulePos2: "In a main clause the helper verb is in position 2. The Partizip II is at the end."
-  rulePos1: "In a yes/no question the helper verb is in position 1. The Partizip II is at the end."
-  ruleStart: "“Gestern” is position 1."
-
+    - - spielen
+      - Fußball
+    - - kaufen
+      - ein Eis
+    - - lesen
+      - ein Buch
+    - - trinken
+      - Tee
+    - - lernen
+      - Deutsch
+    - - schlafen
+      - lange
+    - - gehen
+      - ins Kino
+    - - fahren
+      - nach Hamburg
+  modes:
+    - Aussage
+    - mit „gestern“ in der Mitte
+    - „gestern“ am Anfang
+    - Ja/Nein-Frage
+  rulePos2: Im Hauptsatz steht das Hilfsverb auf Position 2. Das Partizip II steht am Ende.
+  rulePos1: In der Ja/Nein-Frage steht das Hilfsverb auf Position 1. Das Partizip II steht am Ende.
+  ruleStart: „Gestern“ ist Position 1.
 subKlammer:
-  title: The bracket lab – subordinate clauses (weil, dass)
-  text: "In subordinate clauses the verb moves to the end of the clause. In the Perfekt the helper verb comes last, after the Partizip II. Build a sentence and watch the bracket: it now stretches from weil or dass to the helper verb."
-  conjunctions: [weil, dass]
+  title: Das Klammer-Labor – Nebensätze (weil, dass)
+  text: "Im Nebensatz steht das Verb am Ende. Im Perfekt steht das Hilfsverb ganz hinten, nach dem Partizip II. Baue einen Satz und achte auf die Klammer: Sie geht jetzt von weil oder dass bis zum Hilfsverb."
+  conjunctions:
+    - weil
+    - dass
   openers:
     weil: Ich bin heute zufrieden
     dass: Ich weiß
-  modes: [Simple, "with “gestern”"]
-  rule: "In a subordinate clause (after weil, dass …) the helper verb is at the very end, after the Partizip II. There is a comma before weil and dass."
-  compareLabel: "Compare – main clause:"
-
+  modes:
+    - Einfach
+    - mit „gestern“
+  rule: Im Nebensatz (nach weil, dass …) steht das Hilfsverb ganz am Ende, nach dem Partizip II. Vor weil und dass steht ein Komma.
+  compareLabel: "Zum Vergleich – Hauptsatz:"
 partTypes:
-  title: The Partizip II workshop
-  text: "The Partizip II comes in four types. Tap a type, then a verb."
+  title: Das Partizip II – die Werkstatt
+  text: Das Partizip II gibt es in vier Typen. Tippe einen Typ an, dann ein Verb.
   reg:
-    name: regular
-    formula: [[ge, ge], [stem, stem], [-t, end]]
-    text: "The stem stays the same. If the stem ends in -t or -d, we write -et: arbeiten → gearbeitet."
-    hint: "Regular: ge + stem + -t"
+    name: regelmäßig
+    formula:
+      - - ge
+        - ge
+      - - Stamm
+        - stem
+      - - -t
+        - end
+    text: "Der Stamm bleibt gleich. Endet der Stamm auf -t oder -d, schreiben wir -et: arbeiten → gearbeitet."
+    hint: "Regelmäßig: ge + Stamm + -t"
   irr:
-    name: irregular
-    formula: [[ge, ge], [stem*, stem], [-en, end]]
-    text: "The stem often changes (trinken → getrunken). You have to learn these forms. Ending: almost always -en."
-    hint: "Irregular: ge + changed stem + -en"
+    name: unregelmäßig
+    formula:
+      - - ge
+        - ge
+      - - Stamm*
+        - stem
+      - - -en
+        - end
+    text: "Der Stamm ändert sich oft (trinken → getrunken). Diese Formen musst du lernen. Endung: fast immer -en."
+    hint: "Unregelmäßig: ge + veränderter Stamm + -en"
   trenn:
-    name: separable
-    formula: [[prefix, pre], [ge, ge], [stem, stem], [-t / -en, end]]
-    text: "With separable verbs, ge goes in the middle: auf·ge·stand·en."
-    hint: "Separable: prefix + ge + stem + -t/-en"
+    name: trennbar
+    formula:
+      - - Vorsilbe
+        - pre
+      - - ge
+        - ge
+      - - Stamm
+        - stem
+      - - -t / -en
+        - end
+    text: "Bei trennbaren Verben steht ge in der Mitte: auf·ge·stand·en."
+    hint: "Trennbar: Vorsilbe + ge + Stamm + -t/-en"
   ohne:
-    name: without ge-
-    formula: [[be- ver- er- ent-, pre], [stem, stem], [-t / -en, end]]
-    text: "Verbs with be-, ver-, er-, ent- and all verbs ending in -ieren get no ge-."
-    hint: "No ge-: verbs with be-, ver-, er-, ent- and -ieren"
-
+    name: ohne ge-
+    formula:
+      - - be- ver- er- ent-
+        - pre
+      - - Stamm
+        - stem
+      - - -t / -en
+        - end
+    text: Verben mit be-, ver-, er-, ent- und alle Verben auf -ieren bekommen kein ge-.
+    hint: "Kein ge-: Verben mit be-, ver-, er-, ent- und -ieren"
 auxCards:
-  title: haben or sein?
+  title: haben oder sein?
   haben:
-    title: haben – with most verbs
+    title: haben – bei den meisten Verben
     points:
-      - "almost all verbs: gespielt, gegessen, gelesen, gemacht"
-      - "verbs with an accusative object: Ich habe einen Apfel gegessen."
+      - "fast alle Verben: gespielt, gegessen, gelesen, gemacht"
+      - "Verben mit Akkusativ: Ich habe einen Apfel gegessen."
   sein:
-    title: sein – in three cases
+    title: sein – in drei Fällen
     points:
-      - "change of place (A → B): gegangen, gefahren, geflogen"
-      - "change of state: aufgestanden"
-      - "exceptions: geblieben, gewesen, passiert"
-
+      - "Ortswechsel (A → B): gegangen, gefahren, geflogen"
+      - "Zustandswechsel: aufgestanden"
+      - "Ausnahmen: geblieben, gewesen, passiert"
 why:
-  move: "Change of place: you go or travel from A to B."
-  change: "Change of state: you go from lying or sitting to standing."
-  exc: "Exception: bleiben and sein always take sein."
-  event: "Something happens: this verb takes sein."
-  haben: "No change of place, no change of state, so haben."
-
+  move: "Ortswechsel: Du gehst oder fährst von A nach B."
+  change: "Zustandswechsel: Du wechselst von „liegen/sitzen“ zu „stehen“."
+  exc: "Ausnahme: bleiben und sein nehmen immer sein."
+  event: "Ereignis: Etwas passiert – dieses Verb nimmt sein."
+  haben: Kein Ortswechsel, kein Zustandswechsel – also haben.
 orderRules:
-  main: "The helper verb is in position 2 (or 1 in a yes/no question). The Partizip II is at the end."
-  question: "In a yes/no question the helper verb is in position 1. The Partizip II is at the end."
-
+  main: Das Hilfsverb steht auf Position 2 (oder auf Position 1 in der Ja/Nein-Frage). Das Partizip II steht am Ende.
+  question: In der Ja/Nein-Frage steht das Hilfsverb auf Position 1. Das Partizip II steht am Ende.
 exceptions:
-  sein: "Er ist krank gewesen."
-  bleiben: "Er ist zu Hause geblieben."
-  passieren: "Was ist passiert?"
-
+  sein: Er ist krank gewesen.
+  bleiben: Er ist zu Hause geblieben.
+  passieren: Was ist passiert?
 writing:
-  prompt: "Write about your last weekend. Write at least 5 sentences in the Perfekt."
-  placeholder: "Am Samstag habe ich …"
+  prompt: Schreibe über dein letztes Wochenende. Schreibe mindestens 5 Sätze im Perfekt.
+  placeholder: Am Samstag habe ich …
   minSentences: 5
-  note: "Automatic check: it recognises typical forms, but not every sentence. A teacher or a friend can check exactly."
-
+  note: "Automatischer Check: Er erkennt typische Formen, aber nicht jeden Satz. Deine Lehrerin / dein Lehrer prüft genau."
 verbs:
-  - {inf: machen, pc: ge.mach.t, aux: haben, type: reg, fakes: [gemachen, gemach]}
-  - {inf: spielen, pc: ge.spiel.t, aux: haben, type: reg, fakes: [gespielen, gespiel]}
-  - {inf: lernen, pc: ge.lern.t, aux: haben, type: reg, fakes: [gelernen, gelern]}
-  - {inf: kaufen, pc: ge.kauf.t, aux: haben, type: reg, fakes: [gekaufen, gekauf]}
-  - {inf: wohnen, pc: ge.wohn.t, aux: haben, type: reg, fakes: [gewohnen, gewohn]}
-  - {inf: arbeiten, pc: ge.arbeit.et, aux: haben, type: reg, fakes: [gearbeitten, gearbeiten]}
-  - {inf: kochen, pc: ge.koch.t, aux: haben, type: reg, fakes: [gekochen, gekoch]}
-  - {inf: hören, pc: ge.hör.t, aux: haben, type: reg, fakes: [gehöret, gehör]}
-  - {inf: tanzen, pc: ge.tanz.t, aux: haben, type: reg, fakes: [getanzen, getanz]}
-  - {inf: sagen, pc: ge.sag.t, aux: haben, type: reg, fakes: [gesagen, gesag]}
-  - {inf: reisen, pc: ge.reis.t, aux: sein, type: reg, why: move, fakes: [gereisen, gereis]}
-  - {inf: trinken, pc: ge.trunk.en, aux: haben, type: irr, fakes: [getrinkt, getrinken]}
-  - {inf: essen, pc: ge.gess.en, aux: haben, type: irr, fakes: [geesst, geessen]}
-  - {inf: schreiben, pc: ge.schrieb.en, aux: haben, type: irr, fakes: [geschreibt, geschreiben]}
-  - {inf: lesen, pc: ge.les.en, aux: haben, type: irr, fakes: [gelest, gelasen]}
-  - {inf: sehen, pc: ge.seh.en, aux: haben, type: irr, fakes: [gesehnt, gesieht]}
-  - {inf: nehmen, pc: ge.nomm.en, aux: haben, type: irr, fakes: [genehmt, genehmen]}
-  - {inf: schlafen, pc: ge.schlaf.en, aux: haben, type: irr, fakes: [geschlaft, geschlofen]}
-  - {inf: finden, pc: ge.fund.en, aux: haben, type: irr, fakes: [gefindet, gefinden]}
-  - {inf: geben, pc: ge.geb.en, aux: haben, type: irr, fakes: [gegebt, gegaben]}
-  - {inf: sprechen, pc: ge.sproch.en, aux: haben, type: irr, fakes: [gesprecht, gesprechen]}
-  - {inf: singen, pc: ge.sung.en, aux: haben, type: irr, fakes: [gesingt, gesingen]}
-  - {inf: treffen, pc: ge.troff.en, aux: haben, type: irr, fakes: [getrefft, getreffen]}
-  - {inf: bringen, pc: ge.bracht, aux: haben, type: irr, fakes: [gebringt, gebringen]}
-  - {inf: gehen, pc: ge.gang.en, aux: sein, type: irr, why: move, fakes: [gegeht, gegehen]}
-  - {inf: fahren, pc: ge.fahr.en, aux: sein, type: irr, why: move, fakes: [gefahrt, gefährt]}
-  - {inf: kommen, pc: ge.komm.en, aux: sein, type: irr, why: move, fakes: [gekommt, gekomen]}
-  - {inf: fliegen, pc: ge.flog.en, aux: sein, type: irr, why: move, fakes: [gefliegt, gefliegen]}
-  - {inf: laufen, pc: ge.lauf.en, aux: sein, type: irr, why: move, fakes: [gelauft, geläufen]}
-  - {inf: schwimmen, pc: ge.schwomm.en, aux: sein, type: irr, why: move, fakes: [geschwimmt, geschwimmen]}
-  - {inf: bleiben, pc: ge.blieb.en, aux: sein, type: irr, why: exc, fakes: [gebleibt, gebleiben]}
-  - {inf: sein, pc: ge.wes.en, aux: sein, type: irr, why: exc, fakes: [gesein, gewest]}
-  - {inf: aufstehen, pc: auf.ge.stand.en, aux: sein, type: trenn, why: change, fakes: [aufgestehnt, aufgestehen]}
-  - {inf: einkaufen, pc: ein.ge.kauf.t, aux: haben, type: trenn, fakes: [eingekaufen, geeinkauft]}
-  - {inf: anrufen, pc: an.ge.ruf.en, aux: haben, type: trenn, fakes: [angeruft, geanrufen]}
-  - {inf: mitkommen, pc: mit.ge.komm.en, aux: sein, type: trenn, why: move, fakes: [mitgekommt, gemitkommen]}
-  - {inf: ankommen, pc: an.ge.komm.en, aux: sein, type: trenn, why: move, fakes: [angekommt, geankommen]}
-  - {inf: aufräumen, pc: auf.ge.räum.t, aux: haben, type: trenn, fakes: [aufgeräumen, geaufräumt]}
-  - {inf: fernsehen, pc: fern.ge.seh.en, aux: haben, type: trenn, fakes: [ferngesehnt, gefernsehen]}
-  - {inf: abholen, pc: ab.ge.hol.t, aux: haben, type: trenn, fakes: [abgeholen, geabholt]}
-  - {inf: einladen, pc: ein.ge.lad.en, aux: haben, type: trenn, fakes: [eingeladt, geeinladen]}
-  - {inf: mitbringen, pc: mit.ge.bracht, aux: haben, type: trenn, fakes: [mitgebringt, gemitbracht]}
-  - {inf: besuchen, pc: be.such.t, aux: haben, type: ohne, fakes: [gebesucht, besuchen]}
-  - {inf: verstehen, pc: ver.stand.en, aux: haben, type: ohne, fakes: [geverstanden, verstehnt]}
-  - {inf: bekommen, pc: be.komm.en, aux: haben, type: ohne, fakes: [gebekommen, bekommt]}
-  - {inf: erzählen, pc: er.zähl.t, aux: haben, type: ohne, fakes: [geerzählt, erzählen]}
-  - {inf: vergessen, pc: ver.gess.en, aux: haben, type: ohne, fakes: [gevergessen, vergesst]}
-  - {inf: telefonieren, pc: telefonier.t, aux: haben, type: ohne, fakes: [getelefoniert, telefonieren]}
-  - {inf: studieren, pc: studier.t, aux: haben, type: ohne, fakes: [gestudiert, studieren]}
-  - {inf: verlieren, pc: ver.lor.en, aux: haben, type: ohne, fakes: [geverloren, verliert]}
-  - {inf: entdecken, pc: ent.deck.t, aux: haben, type: ohne, fakes: [geentdeckt, entdecken]}
-  - {inf: passieren, pc: passier.t, aux: sein, type: ohne, why: event, fakes: [gepassiert, passieren]}
-
+  - inf: machen
+    pc: ge.mach.t
+    aux: haben
+    type: reg
+    fakes:
+      - gemachen
+      - gemach
+  - inf: spielen
+    pc: ge.spiel.t
+    aux: haben
+    type: reg
+    fakes:
+      - gespielen
+      - gespiel
+  - inf: lernen
+    pc: ge.lern.t
+    aux: haben
+    type: reg
+    fakes:
+      - gelernen
+      - gelern
+  - inf: kaufen
+    pc: ge.kauf.t
+    aux: haben
+    type: reg
+    fakes:
+      - gekaufen
+      - gekauf
+  - inf: wohnen
+    pc: ge.wohn.t
+    aux: haben
+    type: reg
+    fakes:
+      - gewohnen
+      - gewohn
+  - inf: arbeiten
+    pc: ge.arbeit.et
+    aux: haben
+    type: reg
+    fakes:
+      - gearbeitten
+      - gearbeiten
+  - inf: kochen
+    pc: ge.koch.t
+    aux: haben
+    type: reg
+    fakes:
+      - gekochen
+      - gekoch
+  - inf: hören
+    pc: ge.hör.t
+    aux: haben
+    type: reg
+    fakes:
+      - gehöret
+      - gehör
+  - inf: tanzen
+    pc: ge.tanz.t
+    aux: haben
+    type: reg
+    fakes:
+      - getanzen
+      - getanz
+  - inf: sagen
+    pc: ge.sag.t
+    aux: haben
+    type: reg
+    fakes:
+      - gesagen
+      - gesag
+  - inf: reisen
+    pc: ge.reis.t
+    aux: sein
+    type: reg
+    why: move
+    fakes:
+      - gereisen
+      - gereis
+  - inf: trinken
+    pc: ge.trunk.en
+    aux: haben
+    type: irr
+    fakes:
+      - getrinkt
+      - getrinken
+  - inf: essen
+    pc: ge.gess.en
+    aux: haben
+    type: irr
+    fakes:
+      - geesst
+      - geessen
+  - inf: schreiben
+    pc: ge.schrieb.en
+    aux: haben
+    type: irr
+    fakes:
+      - geschreibt
+      - geschreiben
+  - inf: lesen
+    pc: ge.les.en
+    aux: haben
+    type: irr
+    fakes:
+      - gelest
+      - gelasen
+  - inf: sehen
+    pc: ge.seh.en
+    aux: haben
+    type: irr
+    fakes:
+      - gesehnt
+      - gesieht
+  - inf: nehmen
+    pc: ge.nomm.en
+    aux: haben
+    type: irr
+    fakes:
+      - genehmt
+      - genehmen
+  - inf: schlafen
+    pc: ge.schlaf.en
+    aux: haben
+    type: irr
+    fakes:
+      - geschlaft
+      - geschlofen
+  - inf: finden
+    pc: ge.fund.en
+    aux: haben
+    type: irr
+    fakes:
+      - gefindet
+      - gefinden
+  - inf: geben
+    pc: ge.geb.en
+    aux: haben
+    type: irr
+    fakes:
+      - gegebt
+      - gegaben
+  - inf: sprechen
+    pc: ge.sproch.en
+    aux: haben
+    type: irr
+    fakes:
+      - gesprecht
+      - gesprechen
+  - inf: singen
+    pc: ge.sung.en
+    aux: haben
+    type: irr
+    fakes:
+      - gesingt
+      - gesingen
+  - inf: treffen
+    pc: ge.troff.en
+    aux: haben
+    type: irr
+    fakes:
+      - getrefft
+      - getreffen
+  - inf: bringen
+    pc: ge.bracht
+    aux: haben
+    type: irr
+    fakes:
+      - gebringt
+      - gebringen
+  - inf: gehen
+    pc: ge.gang.en
+    aux: sein
+    type: irr
+    why: move
+    fakes:
+      - gegeht
+      - gegehen
+  - inf: fahren
+    pc: ge.fahr.en
+    aux: sein
+    type: irr
+    why: move
+    fakes:
+      - gefahrt
+      - gefährt
+  - inf: kommen
+    pc: ge.komm.en
+    aux: sein
+    type: irr
+    why: move
+    fakes:
+      - gekommt
+      - gekomen
+  - inf: fliegen
+    pc: ge.flog.en
+    aux: sein
+    type: irr
+    why: move
+    fakes:
+      - gefliegt
+      - gefliegen
+  - inf: laufen
+    pc: ge.lauf.en
+    aux: sein
+    type: irr
+    why: move
+    fakes:
+      - gelauft
+      - geläufen
+  - inf: schwimmen
+    pc: ge.schwomm.en
+    aux: sein
+    type: irr
+    why: move
+    fakes:
+      - geschwimmt
+      - geschwimmen
+  - inf: bleiben
+    pc: ge.blieb.en
+    aux: sein
+    type: irr
+    why: exc
+    fakes:
+      - gebleibt
+      - gebleiben
+  - inf: sein
+    pc: ge.wes.en
+    aux: sein
+    type: irr
+    why: exc
+    fakes:
+      - gesein
+      - gewest
+  - inf: aufstehen
+    pc: auf.ge.stand.en
+    aux: sein
+    type: trenn
+    why: change
+    fakes:
+      - aufgestehnt
+      - aufgestehen
+  - inf: einkaufen
+    pc: ein.ge.kauf.t
+    aux: haben
+    type: trenn
+    fakes:
+      - eingekaufen
+      - geeinkauft
+  - inf: anrufen
+    pc: an.ge.ruf.en
+    aux: haben
+    type: trenn
+    fakes:
+      - angeruft
+      - geanrufen
+  - inf: mitkommen
+    pc: mit.ge.komm.en
+    aux: sein
+    type: trenn
+    why: move
+    fakes:
+      - mitgekommt
+      - gemitkommen
+  - inf: ankommen
+    pc: an.ge.komm.en
+    aux: sein
+    type: trenn
+    why: move
+    fakes:
+      - angekommt
+      - geankommen
+  - inf: aufräumen
+    pc: auf.ge.räum.t
+    aux: haben
+    type: trenn
+    fakes:
+      - aufgeräumen
+      - geaufräumt
+  - inf: fernsehen
+    pc: fern.ge.seh.en
+    aux: haben
+    type: trenn
+    fakes:
+      - ferngesehnt
+      - gefernsehen
+  - inf: abholen
+    pc: ab.ge.hol.t
+    aux: haben
+    type: trenn
+    fakes:
+      - abgeholen
+      - geabholt
+  - inf: einladen
+    pc: ein.ge.lad.en
+    aux: haben
+    type: trenn
+    fakes:
+      - eingeladt
+      - geeinladen
+  - inf: mitbringen
+    pc: mit.ge.bracht
+    aux: haben
+    type: trenn
+    fakes:
+      - mitgebringt
+      - gemitbracht
+  - inf: besuchen
+    pc: be.such.t
+    aux: haben
+    type: ohne
+    fakes:
+      - gebesucht
+      - besuchen
+  - inf: verstehen
+    pc: ver.stand.en
+    aux: haben
+    type: ohne
+    fakes:
+      - geverstanden
+      - verstehnt
+  - inf: bekommen
+    pc: be.komm.en
+    aux: haben
+    type: ohne
+    fakes:
+      - gebekommen
+      - bekommt
+  - inf: erzählen
+    pc: er.zähl.t
+    aux: haben
+    type: ohne
+    fakes:
+      - geerzählt
+      - erzählen
+  - inf: vergessen
+    pc: ver.gess.en
+    aux: haben
+    type: ohne
+    fakes:
+      - gevergessen
+      - vergesst
+  - inf: telefonieren
+    pc: telefonier.t
+    aux: haben
+    type: ohne
+    fakes:
+      - getelefoniert
+      - telefonieren
+  - inf: studieren
+    pc: studier.t
+    aux: haben
+    type: ohne
+    fakes:
+      - gestudiert
+      - studieren
+  - inf: verlieren
+    pc: ver.lor.en
+    aux: haben
+    type: ohne
+    fakes:
+      - geverloren
+      - verliert
+  - inf: entdecken
+    pc: ent.deck.t
+    aux: haben
+    type: ohne
+    fakes:
+      - geentdeckt
+      - entdecken
+  - inf: passieren
+    pc: passier.t
+    aux: sein
+    type: ohne
+    why: event
+    fakes:
+      - gepassiert
+      - passieren
 conv:
-  - {present: "Ich spiele Fußball.", right: "Ich habe Fußball gespielt.", wrong: ["Ich bin Fußball gespielt.", "Ich habe Fußball gespielen."], explanation: "spielen is regular: ge + spiel + t, with haben."}
-  - {present: "Er geht nach Hause.", right: "Er ist nach Hause gegangen.", wrong: ["Er hat nach Hause gegangen.", "Er ist nach Hause gegeht."], explanation: "gehen is a change of place (sein) and irregular: gegangen."}
-  - {present: "Wir essen Pizza.", right: "Wir haben Pizza gegessen.", wrong: ["Wir haben Pizza geessen.", "Wir sind Pizza gegessen."], explanation: "essen → gegessen (irregular), with haben."}
-  - {present: "Sie steht um sechs Uhr auf.", right: "Sie ist um sechs Uhr aufgestanden.", wrong: ["Sie hat um sechs Uhr aufgestanden.", "Sie ist um sechs Uhr gestanden auf."], explanation: "aufstehen: change of state → sein. Separable: auf·ge·stand·en."}
-  - {present: "Du besuchst deine Oma.", right: "Du hast deine Oma besucht.", wrong: ["Du hast deine Oma gebesucht.", "Du bist deine Oma besucht."], explanation: "Verbs with be- get no ge-: besucht."}
-  - {present: "Ich telefoniere mit Anna.", right: "Ich habe mit Anna telefoniert.", wrong: ["Ich habe mit Anna getelefoniert.", "Ich habe mit Anna telefonieren."], explanation: "Verbs ending in -ieren get no ge-."}
-  - {present: "Sie fahren nach Berlin.", right: "Sie sind nach Berlin gefahren.", wrong: ["Sie haben nach Berlin gefahren.", "Sie sind nach Berlin gefahrt."], explanation: "fahren = change of place → sein. Participle: gefahren (-en)."}
-  - {present: "Ich lese ein Buch.", right: "Ich habe ein Buch gelesen.", wrong: ["Ich habe ein Buch gelest.", "Ich bin ein Buch gelesen."], explanation: "lesen → gelesen (irregular, -en), with haben."}
-  - {present: "Wir bleiben zu Hause.", right: "Wir sind zu Hause geblieben.", wrong: ["Wir haben zu Hause geblieben.", "Wir sind zu Hause gebleibt."], explanation: "bleiben is an exception: always sein. Participle: geblieben."}
-  - {present: "Er ruft mich an.", right: "Er hat mich angerufen.", wrong: ["Er hat mich gerufen an.", "Er hat mich angeruft."], explanation: "anrufen is separable: an·ge·ruf·en (irregular)."}
-  - {present: "Sie kauft im Supermarkt ein.", right: "Sie hat im Supermarkt eingekauft.", wrong: ["Sie hat im Supermarkt geeinkauft.", "Sie ist im Supermarkt eingekauft."], explanation: "einkaufen is separable: ein·ge·kauf·t. No change of place → haben."}
-  - {present: "Ihr schreibt einen Test.", right: "Ihr habt einen Test geschrieben.", wrong: ["Ihr habt einen Test geschreibt.", "Ihr seid einen Test geschrieben."], explanation: "schreiben → geschrieben (irregular), with haben."}
-  - {present: "Ich vergesse mein Heft.", right: "Ich habe mein Heft vergessen.", wrong: ["Ich habe mein Heft gevergessen.", "Ich bin mein Heft vergessen."], explanation: "Verbs with ver- get no ge-: vergessen."}
-  - {present: "Wir kommen um acht Uhr an.", right: "Wir sind um acht Uhr angekommen.", wrong: ["Wir haben um acht Uhr angekommen.", "Wir sind um acht Uhr geankommen."], explanation: "ankommen: change of place → sein. Separable: an·ge·kommen."}
-
+  - present: Ich spiele Fußball.
+    right: Ich habe Fußball gespielt.
+    wrong:
+      - Ich bin Fußball gespielt.
+      - Ich habe Fußball gespielen.
+    explanation: "spielen ist regelmäßig: ge + spiel + t, mit haben."
+  - present: Er geht nach Hause.
+    right: Er ist nach Hause gegangen.
+    wrong:
+      - Er hat nach Hause gegangen.
+      - Er ist nach Hause gegeht.
+    explanation: "gehen ist ein Ortswechsel (sein) und unregelmäßig: gegangen."
+  - present: Wir essen Pizza.
+    right: Wir haben Pizza gegessen.
+    wrong:
+      - Wir haben Pizza geessen.
+      - Wir sind Pizza gegessen.
+    explanation: essen → gegessen (unregelmäßig), mit haben.
+  - present: Sie steht um sechs Uhr auf.
+    right: Sie ist um sechs Uhr aufgestanden.
+    wrong:
+      - Sie hat um sechs Uhr aufgestanden.
+      - Sie ist um sechs Uhr gestanden auf.
+    explanation: "aufstehen: Zustandswechsel → sein. Trennbar: auf·ge·standen."
+  - present: Du besuchst deine Oma.
+    right: Du hast deine Oma besucht.
+    wrong:
+      - Du hast deine Oma gebesucht.
+      - Du bist deine Oma besucht.
+    explanation: "Verben mit be- bekommen kein ge-: besucht."
+  - present: Ich telefoniere mit Anna.
+    right: Ich habe mit Anna telefoniert.
+    wrong:
+      - Ich habe mit Anna getelefoniert.
+      - Ich habe mit Anna telefonieren.
+    explanation: Verben auf -ieren bekommen kein ge-.
+  - present: Sie fahren nach Berlin.
+    right: Sie sind nach Berlin gefahren.
+    wrong:
+      - Sie haben nach Berlin gefahren.
+      - Sie sind nach Berlin gefahrt.
+    explanation: "fahren = Ortswechsel → sein. Partizip: gefahren (-en)."
+  - present: Ich lese ein Buch.
+    right: Ich habe ein Buch gelesen.
+    wrong:
+      - Ich habe ein Buch gelest.
+      - Ich bin ein Buch gelesen.
+    explanation: lesen → gelesen (unregelmäßig, -en), mit haben.
+  - present: Wir bleiben zu Hause.
+    right: Wir sind zu Hause geblieben.
+    wrong:
+      - Wir haben zu Hause geblieben.
+      - Wir sind zu Hause gebleibt.
+    explanation: "bleiben ist eine Ausnahme: immer sein. Partizip: geblieben."
+  - present: Er ruft mich an.
+    right: Er hat mich angerufen.
+    wrong:
+      - Er hat mich gerufen an.
+      - Er hat mich angeruft.
+    explanation: "anrufen ist trennbar: an·ge·ruf·en (unregelmäßig)."
+  - present: Sie kauft im Supermarkt ein.
+    right: Sie hat im Supermarkt eingekauft.
+    wrong:
+      - Sie hat im Supermarkt geeinkauft.
+      - Sie ist im Supermarkt eingekauft.
+    explanation: "einkaufen ist trennbar: ein·ge·kauf·t. Kein Ortswechsel → haben."
+  - present: Ihr schreibt einen Test.
+    right: Ihr habt einen Test geschrieben.
+    wrong:
+      - Ihr habt einen Test geschreibt.
+      - Ihr seid einen Test geschrieben.
+    explanation: schreiben → geschrieben (unregelmäßig), mit haben.
+  - present: Ich vergesse mein Heft.
+    right: Ich habe mein Heft vergessen.
+    wrong:
+      - Ich habe mein Heft gevergessen.
+      - Ich bin mein Heft vergessen.
+    explanation: "Verben mit ver- bekommen kein ge-: vergessen."
+  - present: Wir kommen um acht Uhr an.
+    right: Wir sind um acht Uhr angekommen.
+    wrong:
+      - Wir haben um acht Uhr angekommen.
+      - Wir sind um acht Uhr geankommen.
+    explanation: "ankommen: Ortswechsel → sein. Trennbar: an·ge·kommen."
 puzzles:
-  - {words: "ich habe gestern Fußball gespielt", end: ".", accept: ["ich habe gestern Fußball gespielt", "gestern habe ich Fußball gespielt"]}
-  - {words: "ich bin gestern ins Kino gegangen", end: ".", accept: ["ich bin gestern ins Kino gegangen", "gestern bin ich ins Kino gegangen"]}
-  - {words: "wir haben am Wochenende Pizza gegessen", end: ".", accept: ["wir haben am Wochenende Pizza gegessen", "am Wochenende haben wir Pizza gegessen"]}
-  - {words: "meine Schwester hat ein Buch gelesen", end: ".", accept: ["meine Schwester hat ein Buch gelesen", "ein Buch hat meine Schwester gelesen"]}
-  - {words: "am Montag sind wir nach Berlin gefahren", end: ".", accept: ["am Montag sind wir nach Berlin gefahren", "wir sind am Montag nach Berlin gefahren"]}
-  - {words: "was hast du gestern gemacht", end: "?", accept: ["was hast du gestern gemacht"]}
-  - {words: "hast du deine Hausaufgaben gemacht", end: "?", accept: ["hast du deine Hausaufgaben gemacht"]}
-  - {words: "er ist um sieben Uhr aufgestanden", end: ".", accept: ["er ist um sieben Uhr aufgestanden", "um sieben Uhr ist er aufgestanden"]}
-  - {words: "sie hat ihre Freundin angerufen", end: ".", accept: ["sie hat ihre Freundin angerufen"]}
-  - {words: "wir haben zusammen Deutsch gelernt", end: ".", accept: ["wir haben zusammen Deutsch gelernt", "zusammen haben wir Deutsch gelernt"]}
-  - {words: "die Kinder sind im Park gelaufen", end: ".", accept: ["die Kinder sind im Park gelaufen", "im Park sind die Kinder gelaufen"]}
-  - {words: "ich habe gestern nicht gearbeitet", end: ".", accept: ["ich habe gestern nicht gearbeitet", "gestern habe ich nicht gearbeitet"]}
-  - {words: "letzte Woche haben wir einen Film gesehen", end: ".", accept: ["letzte Woche haben wir einen Film gesehen", "wir haben letzte Woche einen Film gesehen"]}
-  - {words: "ich bin zu Hause geblieben", end: ".", accept: ["ich bin zu Hause geblieben", "zu Hause bin ich geblieben"]}
-  - {words: "hast du das Museum besucht", end: "?", accept: ["hast du das Museum besucht"]}
-  - {words: "wohin bist du am Wochenende gefahren", end: "?", accept: ["wohin bist du am Wochenende gefahren"]}
+  - words: ich habe gestern Fußball gespielt
+    end: .
+    accept:
+      - ich habe gestern Fußball gespielt
+      - gestern habe ich Fußball gespielt
+  - words: ich bin gestern ins Kino gegangen
+    end: .
+    accept:
+      - ich bin gestern ins Kino gegangen
+      - gestern bin ich ins Kino gegangen
+  - words: wir haben am Wochenende Pizza gegessen
+    end: .
+    accept:
+      - wir haben am Wochenende Pizza gegessen
+      - am Wochenende haben wir Pizza gegessen
+  - words: meine Schwester hat ein Buch gelesen
+    end: .
+    accept:
+      - meine Schwester hat ein Buch gelesen
+      - ein Buch hat meine Schwester gelesen
+  - words: am Montag sind wir nach Berlin gefahren
+    end: .
+    accept:
+      - am Montag sind wir nach Berlin gefahren
+      - wir sind am Montag nach Berlin gefahren
+  - words: was hast du gestern gemacht
+    end: "?"
+    accept:
+      - was hast du gestern gemacht
+  - words: hast du deine Hausaufgaben gemacht
+    end: "?"
+    accept:
+      - hast du deine Hausaufgaben gemacht
+  - words: er ist um sieben Uhr aufgestanden
+    end: .
+    accept:
+      - er ist um sieben Uhr aufgestanden
+      - um sieben Uhr ist er aufgestanden
+  - words: sie hat ihre Freundin angerufen
+    end: .
+    accept:
+      - sie hat ihre Freundin angerufen
+  - words: wir haben zusammen Deutsch gelernt
+    end: .
+    accept:
+      - wir haben zusammen Deutsch gelernt
+      - zusammen haben wir Deutsch gelernt
+  - words: die Kinder sind im Park gelaufen
+    end: .
+    accept:
+      - die Kinder sind im Park gelaufen
+      - im Park sind die Kinder gelaufen
+  - words: ich habe gestern nicht gearbeitet
+    end: .
+    accept:
+      - ich habe gestern nicht gearbeitet
+      - gestern habe ich nicht gearbeitet
+  - words: letzte Woche haben wir einen Film gesehen
+    end: .
+    accept:
+      - letzte Woche haben wir einen Film gesehen
+      - wir haben letzte Woche einen Film gesehen
+  - words: ich bin zu Hause geblieben
+    end: .
+    accept:
+      - ich bin zu Hause geblieben
+      - zu Hause bin ich geblieben
+  - words: hast du das Museum besucht
+    end: "?"
+    accept:
+      - hast du das Museum besucht
+  - words: wohin bist du am Wochenende gefahren
+    end: "?"
+    accept:
+      - wohin bist du am Wochenende gefahren

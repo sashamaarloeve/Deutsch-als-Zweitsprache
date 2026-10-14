@@ -1,50 +1,48 @@
 # Training: the Genitiv (B1). Belonging, articles, noun endings, names, wegen/während/trotz.
 # Typical level: the Genitiv is taught around B1 (spoken German often uses von + Dativ instead).
-# Original content. English and German texts are written side by side: { en: "...", de: "..." }.
+# Original content, written in German.
 kind: lesson
 id: genitive-b1
-title: { en: "Genitiv", de: "Genitiv" }
+title: "Genitiv"
 level: B1
 skill: grammar
 minutes: 30
 status: draft
-description:
-  en: "The Genitiv shows belonging: das Auto des Mannes. Articles, noun endings (-s, -es), names (Annas Buch) and the prepositions wegen, während, trotz."
-  de: "Der Genitiv zeigt Zugehörigkeit: das Auto des Mannes. Mit Artikeln, Nomen-Endungen (-s, -es), Namen (Annas Buch) und den Präpositionen wegen, während, trotz."
+description: "Der Genitiv zeigt Zugehörigkeit: das Auto des Mannes. Mit Artikeln, Nomen-Endungen (-s, -es), Namen (Annas Buch) und den Präpositionen wegen, während, trotz."
 canDo:
-  - { en: "I can say who something belongs to with the Genitiv.", de: "Ich kann mit dem Genitiv sagen, wem etwas gehört." }
-  - { en: "I can use des, der, eines, einer, meines, meiner and the noun endings -s and -es.", de: "Ich kann „des“, „der“, „eines“, „einer“, „meines“, „meiner“ und die Endungen -s und -es benutzen." }
-  - { en: "I can understand wegen, während and trotz with the Genitiv.", de: "Ich kann „wegen“, „während“ und „trotz“ mit Genitiv verstehen." }
+  - "Ich kann mit dem Genitiv sagen, wem etwas gehört."
+  - "Ich kann „des“, „der“, „eines“, „einer“, „meines“, „meiner“ und die Endungen -s und -es benutzen."
+  - "Ich kann „wegen“, „während“ und „trotz“ mit Genitiv verstehen."
 
 articles:
   definite:
-    label: { en: "the", de: "der, die, das" }
-    nom: [der, die, das, die]
-    akk: [den, die, das, die]
-    dat: [dem, der, dem, den]
-    gen: [des, der, des, der]
+    label: "der, die, das"
+    nom: [ der, die, das, die ]
+    akk: [ den, die, das, die ]
+    dat: [ dem, der, dem, den ]
+    gen: [ des, der, des, der ]
   indefinite:
-    label: { en: "a", de: "ein, eine" }
-    nom: [ein, eine, ein, ""]
-    akk: [einen, eine, ein, ""]
-    dat: [einem, einer, einem, ""]
-    gen: [eines, einer, eines, ""]
+    label: "ein, eine"
+    nom: [ ein, eine, ein, "" ]
+    akk: [ einen, eine, ein, "" ]
+    dat: [ einem, einer, einem, "" ]
+    gen: [ eines, einer, eines, "" ]
   possessive:
-    label: { en: "my", de: "mein, meine" }
-    nom: [mein, meine, mein, meine]
-    akk: [meinen, meine, mein, meine]
-    dat: [meinem, meiner, meinem, meinen]
-    gen: [meines, meiner, meines, meiner]
+    label: "mein, meine"
+    nom: [ mein, meine, mein, meine ]
+    akk: [ meinen, meine, mein, meine ]
+    dat: [ meinem, meiner, meinem, meinen ]
+    gen: [ meines, meiner, meines, meiner ]
   negative:
-    label: { en: "no", de: "kein, keine" }
-    nom: [kein, keine, kein, keine]
-    akk: [keinen, keine, kein, keine]
-    dat: [keinem, keiner, keinem, keinen]
-    gen: [keines, keiner, keines, keiner]
+    label: "kein, keine"
+    nom: [ kein, keine, kein, keine ]
+    akk: [ keinen, keine, kein, keine ]
+    dat: [ keinem, keiner, keinem, keinen ]
+    gen: [ keines, keiner, keines, keiner ]
 
 understand:
   - type: dialogue
-    title: { en: "Listen: whose is it?", de: "Hör zu: Wem gehört das?" }
+    title: "Hör zu: Wem gehört das?"
     lines:
       - { who: Mia, say: "Ist das das Handy <die>deiner</die> Schwester?" }
       - { who: Ben, say: "Nein, das ist das Handy <der>meines</der> Bruders." }
@@ -52,76 +50,61 @@ understand:
       - { who: Ben, say: "Nein, das ist Annas Tasche." }
 
   - type: text
-    title: { en: "The Genitiv: belonging", de: "Der Genitiv: Zugehörigkeit" }
+    title: "Der Genitiv: Zugehörigkeit"
     body:
-      - en: "Objects can be in the Akkusativ, the Dativ or the Genitiv. The Genitiv does not follow a verb. It belongs to a noun and shows that something belongs to somebody or is a part of something."
-        de: "Objekte können im Akkusativ, im Dativ oder im Genitiv stehen. Der Genitiv steht nicht nach einem Verb. Er gehört zu einem Nomen und zeigt, wem etwas gehört oder wovon etwas ein Teil ist."
-      - { en: "Das ist das Auto <c>des Mannes</c>.", de: "Das ist das Auto <c>des Mannes</c>." }
-      - { en: "“des Mannes” is the Genitiv. It belongs to “das Auto” and tells us whose car it is. It always comes after the noun it belongs to.", de: "„des Mannes“ ist der Genitiv. Er gehört zu „das Auto“ und sagt, wessen Auto es ist. Er steht immer nach dem Nomen, zu dem er gehört." }
-      - { en: "Tip: the question wessen? (whose?) can help. Wessen Auto ist das? – das Auto des Mannes.", de: "Tipp: Die Frage „Wessen?“ kann helfen. Wessen Auto ist das? – das Auto des Mannes." }
+      - "Objekte können im Akkusativ, im Dativ oder im Genitiv stehen. Der Genitiv steht nicht nach einem Verb. Er gehört zu einem Nomen und zeigt, wem etwas gehört oder wovon etwas ein Teil ist."
+      - "Das ist das Auto <c>des Mannes</c>."
+      - "„des Mannes“ ist der Genitiv. Er gehört zu „das Auto“ und sagt, wessen Auto es ist. Er steht immer nach dem Nomen, zu dem er gehört."
+      - "Tipp: Die Frage „Wessen?“ kann helfen. Wessen Auto ist das? – das Auto des Mannes."
 
   - type: article-table
-    title: { en: "The articles: der, die, das", de: "Die Artikel: der, die, das" }
-    intro:
-      en: "Look at the tables. The colour shows the gender of the noun. Highlighted forms are different from the Nominativ."
-      de: "Schau auf die Tabellen. Die Farbe zeigt das Genus vom Nomen. Markierte Formen sind anders als im Nominativ."
-    kinds: [definite]
+    title: "Die Artikel: der, die, das"
+    intro: "Schau auf die Tabellen. Die Farbe zeigt das Genus vom Nomen. Markierte Formen sind anders als im Nominativ."
+    kinds: [ definite ]
     cases:
-      - { id: nom, label: { en: Nominativ, de: Nominativ } }
-      - { id: gen, label: { en: Genitiv, de: Genitiv } }
-    note:
-      en: |-
-        masculine and neuter: <der>des</der> / <das>des</das> + noun with -s or -es
-        feminine and plural: <die>der</die>, the noun does not change
-      de: |-
-        Maskulin und Neutrum: <der>des</der> / <das>des</das> + Nomen mit -s oder -es
-        Feminin und Plural: <die>der</die>, das Nomen ändert sich nicht
+      - { id: nom, label: Nominativ }
+      - { id: gen, label: Genitiv }
+    note: |-
+      Maskulin und Neutrum: <der>des</der> / <das>des</das> + Nomen mit -s oder -es
+      Feminin und Plural: <die>der</die>, das Nomen ändert sich nicht
 
   - type: article-table
-    title: { en: "ein, eine", de: "ein, eine" }
-    kinds: [indefinite]
+    title: "ein, eine"
+    kinds: [ indefinite ]
     cases:
-      - { id: nom, label: { en: Nominativ, de: Nominativ } }
-      - { id: gen, label: { en: Genitiv, de: Genitiv } }
-    note:
-      en: "ein → <der>eines</der>, eine → <die>einer</die>, ein → <das>eines</das>."
-      de: "ein → <der>eines</der>, eine → <die>einer</die>, ein → <das>eines</das>."
+      - { id: nom, label: Nominativ }
+      - { id: gen, label: Genitiv }
+    note: "ein → <der>eines</der>, eine → <die>einer</die>, ein → <das>eines</das>."
 
   - type: article-table
-    title: { en: "mein, meine", de: "mein, meine" }
-    kinds: [possessive]
+    title: "mein, meine"
+    kinds: [ possessive ]
     cases:
-      - { id: nom, label: { en: Nominativ, de: Nominativ } }
-      - { id: gen, label: { en: Genitiv, de: Genitiv } }
-    note:
-      en: "mein → <der>meines</der>, meine → <die>meiner</die>, mein → <das>meines</das>, meine (plural) → <pl>meiner</pl>. dein, sein, ihr … work in the same way."
-      de: "mein → <der>meines</der>, meine → <die>meiner</die>, mein → <das>meines</das>, meine (Plural) → <pl>meiner</pl>. „dein“, „sein“, „ihr“ … funktionieren genauso."
+      - { id: nom, label: Nominativ }
+      - { id: gen, label: Genitiv }
+    note: "mein → <der>meines</der>, meine → <die>meiner</die>, mein → <das>meines</das>, meine (Plural) → <pl>meiner</pl>. „dein“, „sein“, „ihr“ … funktionieren genauso."
 
   - type: article-table
-    title: { en: "kein, keine", de: "kein, keine" }
-    kinds: [negative]
+    title: "kein, keine"
+    kinds: [ negative ]
     cases:
-      - { id: nom, label: { en: Nominativ, de: Nominativ } }
-      - { id: gen, label: { en: Genitiv, de: Genitiv } }
-    note:
-      en: "kein → <der>keines</der>, keine → <die>keiner</die>, kein → <das>keines</das>, keine (plural) → <pl>keiner</pl>."
-      de: "kein → <der>keines</der>, keine → <die>keiner</die>, kein → <das>keines</das>, keine (Plural) → <pl>keiner</pl>."
+      - { id: nom, label: Nominativ }
+      - { id: gen, label: Genitiv }
+    note: "kein → <der>keines</der>, keine → <die>keiner</die>, kein → <das>keines</das>, keine (Plural) → <pl>keiner</pl>."
 
   - type: case-lab
-    title: { en: "The case lab", de: "Das Fall-Labor" }
-    intro:
-      en: "Choose an article, a case and a noun. The article that changes is highlighted. In the Genitiv, masculine and neuter nouns change too."
-      de: "Wähle einen Artikel, einen Fall und ein Nomen. Der Artikel, der sich ändert, ist markiert. Im Genitiv ändern sich auch maskuline und neutrale Nomen."
-    kinds: [definite, indefinite, possessive, negative]
+    title: "Das Fall-Labor"
+    intro: "Wähle einen Artikel, einen Fall und ein Nomen. Der Artikel, der sich ändert, ist markiert. Im Genitiv ändern sich auch maskuline und neutrale Nomen."
+    kinds: [ definite, indefinite, possessive, negative ]
     cases:
       - id: nom
-        label: { en: Nominativ, de: Nominativ }
-        frame: ["___ ist hier.", "___ sind hier."]
-        rule: { en: "Nominativ: the subject.", de: "Nominativ: das Subjekt." }
+        label: Nominativ
+        frame: [ "___ ist hier.", "___ sind hier." ]
+        rule: "Nominativ: das Subjekt."
       - id: gen
-        label: { en: Genitiv, de: Genitiv }
+        label: Genitiv
         frame: "Das ist das Auto ___."
-        rule: { en: "Genitiv: belonging. Masculine and neuter nouns get -s or -es.", de: "Genitiv: Zugehörigkeit. Maskuline und neutrale Nomen bekommen -s oder -es." }
+        rule: "Genitiv: Zugehörigkeit. Maskuline und neutrale Nomen bekommen -s oder -es."
     nouns:
       - { g: m, noun: Mann, gen: Mannes }
       - { g: m, noun: Lehrer, gen: Lehrers }
@@ -133,51 +116,51 @@ understand:
       - { g: pl, noun: Freunde }
 
   - type: rule
-    title: { en: "The noun endings", de: "Die Endungen am Nomen" }
+    title: "Die Endungen am Nomen"
     body:
-      - { en: "Masculine and neuter nouns get -s or -es in the Genitiv.", de: "Maskuline und neutrale Nomen bekommen im Genitiv -s oder -es." }
-      - { en: "-s: das Auto des Lehrers, das Auto des Vaters, das Dach des Autos", de: "-s: das Auto des Lehrers, das Auto des Vaters, das Dach des Autos" }
-      - { en: "-es: often after one-syllable nouns and after -s, -ß, -x, -z, -sch: das Dach des Hauses, das Auto des Mannes, das Ende des Tisches", de: "-es: oft bei einsilbigen Nomen und nach -s, -ß, -x, -z, -sch: das Dach des Hauses, das Auto des Mannes, das Ende des Tisches" }
-      - { en: "Feminine nouns and plural nouns do not change: das Auto <die>der</die> Frau, die Spielsachen <pl>der</pl> Kinder.", de: "Feminine Nomen und Plural-Nomen ändern sich nicht: das Auto <die>der</die> Frau, die Spielsachen <pl>der</pl> Kinder." }
-      - { en: "A few masculine nouns get -n or -en: der Junge → des Jungen, der Student → des Studenten.", de: "Einige maskuline Nomen bekommen -n oder -en: der Junge → des Jungen, der Student → des Studenten." }
+      - "Maskuline und neutrale Nomen bekommen im Genitiv -s oder -es."
+      - "-s: das Auto des Lehrers, das Auto des Vaters, das Dach des Autos"
+      - "-es: oft bei einsilbigen Nomen und nach -s, -ß, -x, -z, -sch: das Dach des Hauses, das Auto des Mannes, das Ende des Tisches"
+      - "Feminine Nomen und Plural-Nomen ändern sich nicht: das Auto <die>der</die> Frau, die Spielsachen <pl>der</pl> Kinder."
+      - "Einige maskuline Nomen bekommen -n oder -en: der Junge → des Jungen, der Student → des Studenten."
 
   - type: rule
-    title: { en: "Names", de: "Namen" }
+    title: "Namen"
     body:
-      - { en: "With names, add -s and put the name in front. There is no article: Annas Buch, Bens Handy.", de: "Bei Namen kommt ein -s dazu, und der Name steht vorn. Es gibt keinen Artikel: Annas Buch, Bens Handy." }
-      - { en: "If the name ends in -s, -ß, -x or -z, write only an apostrophe: Lukas’ Buch.", de: "Wenn der Name auf -s, -ß, -x oder -z endet, schreibst du nur ein Apostroph: Lukas’ Buch." }
-      - { en: "No apostrophe with -s after other names: <x>Anna’s Buch</x> ✗ Annas Buch ✓", de: "Kein Apostroph vor dem -s bei anderen Namen: <x>Anna’s Buch</x> ✗ Annas Buch ✓" }
+      - "Bei Namen kommt ein -s dazu, und der Name steht vorn. Es gibt keinen Artikel: Annas Buch, Bens Handy."
+      - "Wenn der Name auf -s, -ß, -x oder -z endet, schreibst du nur ein Apostroph: Lukas’ Buch."
+      - "Kein Apostroph vor dem -s bei anderen Namen: <x>Anna’s Buch</x> ✗ Annas Buch ✓"
 
   - type: rule
-    title: { en: "Writing and speaking", de: "Schreiben und Sprechen" }
+    title: "Schreiben und Sprechen"
     body:
-      - { en: "In writing, the Genitiv is common: das Auto des Mannes.", de: "In geschriebenen Texten ist der Genitiv häufig: das Auto des Mannes." }
-      - { en: "In speaking, people often use von + Dativ: das Auto von dem Mann, das Auto vom Mann.", de: "Beim Sprechen benutzt man oft „von“ + Dativ: das Auto von dem Mann, das Auto vom Mann." }
-      - { en: "Both are understood. Learn to understand the Genitiv and to use it in writing.", de: "Man versteht beides. Lerne, den Genitiv zu verstehen und im Schreiben zu benutzen." }
+      - "In geschriebenen Texten ist der Genitiv häufig: das Auto des Mannes."
+      - "Beim Sprechen benutzt man oft „von“ + Dativ: das Auto von dem Mann, das Auto vom Mann."
+      - "Man versteht beides. Lerne, den Genitiv zu verstehen und im Schreiben zu benutzen."
 
   - type: rule
-    title: { en: "Prepositions with the Genitiv", de: "Präpositionen mit Genitiv" }
+    title: "Präpositionen mit Genitiv"
     body:
-      - { en: "Some prepositions are followed by the Genitiv, for example: wegen, während, trotz", de: "Nach einigen Präpositionen steht der Genitiv, zum Beispiel: wegen, während, trotz" }
-      - { en: "Wegen <c>des Regens</c> bleibe ich zu Hause.", de: "Wegen <c>des Regens</c> bleibe ich zu Hause." }
-      - { en: "Während <c>des Unterrichts</c> sprechen wir Deutsch.", de: "Während <c>des Unterrichts</c> sprechen wir Deutsch." }
-      - { en: "Trotz <c>der Kälte</c> gehen wir spazieren.", de: "Trotz <c>der Kälte</c> gehen wir spazieren." }
-      - { en: "In speaking you will also hear the Dativ: wegen dem Regen. In writing, use the Genitiv.", de: "Beim Sprechen hörst du auch den Dativ: wegen dem Regen. Beim Schreiben benutze den Genitiv." }
+      - "Nach einigen Präpositionen steht der Genitiv, zum Beispiel: wegen, während, trotz"
+      - "Wegen <c>des Regens</c> bleibe ich zu Hause."
+      - "Während <c>des Unterrichts</c> sprechen wir Deutsch."
+      - "Trotz <c>der Kälte</c> gehen wir spazieren."
+      - "Beim Sprechen hörst du auch den Dativ: wegen dem Regen. Beim Schreiben benutze den Genitiv."
 
   - type: rule
-    title: { en: "Watch out!", de: "Achtung!" }
+    title: "Achtung!"
     body:
-      - { en: "<x>Das ist das Auto der Mann.</x> ✗ Das ist das Auto <der>des</der> Mannes. ✓", de: "<x>Das ist das Auto der Mann.</x> ✗ Das ist das Auto <der>des</der> Mannes. ✓" }
-      - { en: "<x>Das ist das Auto des Frau.</x> ✗ Das ist das Auto <die>der</die> Frau. ✓", de: "<x>Das ist das Auto des Frau.</x> ✗ Das ist das Auto <die>der</die> Frau. ✓" }
-      - { en: "<x>Das ist das Auto des Mann.</x> ✗ Remember the ending: des Mannes. ✓", de: "<x>Das ist das Auto des Mann.</x> ✗ Denk an die Endung: des Mannes. ✓" }
+      - "<x>Das ist das Auto der Mann.</x> ✗ Das ist das Auto <der>des</der> Mannes. ✓"
+      - "<x>Das ist das Auto des Frau.</x> ✗ Das ist das Auto <die>der</die> Frau. ✓"
+      - "<x>Das ist das Auto des Mann.</x> ✗ Denk an die Endung: des Mannes. ✓"
 
 practice:
   - id: definite
-    title: { en: "des, der", de: "des, der" }
+    title: "des, der"
     count: 8
-    concepts: [case.gen-articles]
-    instruction: { en: "Which form is right? The article of the noun is shown in its colour.", de: "Welche Form ist richtig? Der Artikel vom Nomen steht in seiner Farbe." }
-    explanation: { en: "Genitiv: der → des (+ -s/-es), die → der, das → des (+ -s/-es), plural → der.", de: "Genitiv: der → des (+ -s/-es), die → der, das → des (+ -s/-es), Plural → der." }
+    concepts: [ case.gen-articles ]
+    instruction: "Welche Form ist richtig? Der Artikel vom Nomen steht in seiner Farbe."
+    explanation: "Genitiv: der → des (+ -s/-es), die → der, das → des (+ -s/-es), Plural → der."
     items:
       - type: article-pick
         kind: definite
@@ -193,11 +176,11 @@ practice:
           - { g: m, noun: Hund, frame: "Das ist das Futter ___ Hundes." }
 
   - id: indefinite
-    title: { en: "eines, einer", de: "eines, einer" }
+    title: "eines, einer"
     count: 6
-    concepts: [case.gen-articles]
-    instruction: { en: "Which form of “ein” is right? The article of the noun is shown in its colour.", de: "Welche Form von „ein“ ist richtig? Der Artikel vom Nomen steht in seiner Farbe." }
-    explanation: { en: "Genitiv: ein (m) → eines, eine (f) → einer, ein (n) → eines.", de: "Genitiv: ein (m) → eines, eine (f) → einer, ein (n) → eines." }
+    concepts: [ case.gen-articles ]
+    instruction: "Welche Form von „ein“ ist richtig? Der Artikel vom Nomen steht in seiner Farbe."
+    explanation: "Genitiv: ein (m) → eines, eine (f) → einer, ein (n) → eines."
     items:
       - type: article-pick
         kind: indefinite
@@ -211,11 +194,11 @@ practice:
           - { g: n, noun: Baby, frame: "Das ist die Flasche ___ Babys." }
 
   - id: possessive
-    title: { en: "meines, meiner", de: "meines, meiner" }
+    title: "meines, meiner"
     count: 8
-    concepts: [case.gen-articles]
-    instruction: { en: "Which form of “mein” is right? The article of the noun is shown in its colour.", de: "Welche Form von „mein“ ist richtig? Der Artikel vom Nomen steht in seiner Farbe." }
-    explanation: { en: "Genitiv: meines (m, n), meiner (f and plural).", de: "Genitiv: meines (m, n), meiner (f und Plural)." }
+    concepts: [ case.gen-articles ]
+    instruction: "Welche Form von „mein“ ist richtig? Der Artikel vom Nomen steht in seiner Farbe."
+    explanation: "Genitiv: meines (m, n), meiner (f und Plural)."
     items:
       - type: article-pick
         kind: possessive
@@ -231,11 +214,11 @@ practice:
           - { g: n, noun: Baby, frame: "Das ist das Bett ___ Babys." }
 
   - id: negative
-    title: { en: "keines, keiner", de: "keines, keiner" }
+    title: "keines, keiner"
     count: 4
-    concepts: [case.gen-articles]
-    instruction: { en: "Which form of “kein” is right? The article of the noun is shown in its colour.", de: "Welche Form von „kein“ ist richtig? Der Artikel vom Nomen steht in seiner Farbe." }
-    explanation: { en: "kein works like mein: keines (m, n), keiner (f and plural).", de: "„kein“ funktioniert wie „mein“: keines (m, n), keiner (f und Plural)." }
+    concepts: [ case.gen-articles ]
+    instruction: "Welche Form von „kein“ ist richtig? Der Artikel vom Nomen steht in seiner Farbe."
+    explanation: "„kein“ funktioniert wie „mein“: keines (m, n), keiner (f und Plural)."
     items:
       - type: article-pick
         kind: negative
@@ -247,129 +230,129 @@ practice:
           - { g: pl, noun: Kinder, frame: "Das ist das Zimmer ___ Kinder." }
 
   - id: endings
-    title: { en: "Noun endings", de: "Endungen" }
+    title: "Endungen"
     count: 8
     shuffle: true
-    concepts: [case.gen-nouns]
-    instruction: { en: "Which noun form is right?", de: "Welche Form vom Nomen ist richtig?" }
-    explanation: { en: "Masculine and neuter nouns get -s or -es in the Genitiv.", de: "Maskuline und neutrale Nomen bekommen im Genitiv -s oder -es." }
+    concepts: [ case.gen-nouns ]
+    instruction: "Welche Form vom Nomen ist richtig?"
+    explanation: "Maskuline und neutrale Nomen bekommen im Genitiv -s oder -es."
     items:
-      - { type: pick, sentence: "Das ist das Auto des ___.", options: [Mannes, Mann, Männer], answer: Mannes, explanation: { en: "der Mann → des Mannes (-es).", de: "der Mann → des Mannes (-es)." } }
-      - { type: pick, sentence: "Das ist die Tasche des ___.", options: [Lehrers, Lehrer, Lehrern], answer: Lehrers, explanation: { en: "der Lehrer → des Lehrers (-s).", de: "der Lehrer → des Lehrers (-s)." } }
-      - { type: pick, sentence: "Das ist das Dach des ___.", options: [Hauses, Haus, Häuser], answer: Hauses, explanation: { en: "das Haus → des Hauses (-es after -s).", de: "das Haus → des Hauses (-es nach -s)." } }
-      - { type: pick, sentence: "Das ist das Futter des ___.", options: [Hundes, Hund, Hunde], answer: Hundes, explanation: { en: "der Hund → des Hundes (-es).", de: "der Hund → des Hundes (-es)." } }
-      - { type: pick, sentence: "Das ist das Zimmer meines ___.", options: [Vaters, Vater, Väter], answer: Vaters, explanation: { en: "der Vater → des Vaters (-s).", de: "der Vater → des Vaters (-s)." } }
-      - { type: pick, sentence: "Das ist das Ende des ___.", options: [Tisches, Tisch, Tische], answer: Tisches, explanation: { en: "der Tisch → des Tisches (-es after -sch).", de: "der Tisch → des Tisches (-es nach -sch)." } }
-      - { type: pick, sentence: "Das ist die Tür der ___.", options: [Schule, Schules, Schulen], answer: Schule, explanation: { en: "Feminine nouns do not change: die Schule → der Schule.", de: "Feminine Nomen ändern sich nicht: die Schule → der Schule." } }
-      - { type: pick, sentence: "Das ist das Fahrrad des ___.", options: [Jungen, Junge, Jungens], answer: Jungen, explanation: { en: "der Junge → des Jungen (a few masculine nouns get -n or -en).", de: "der Junge → des Jungen (einige maskuline Nomen bekommen -n oder -en)." } }
-      - { type: pick, sentence: "Das ist der Name des ___.", options: [Autos, Auto, Autoes], answer: Autos, explanation: { en: "das Auto → des Autos (-s).", de: "das Auto → des Autos (-s)." } }
+      - { type: pick, sentence: "Das ist das Auto des ___.", options: [ Mannes, Mann, Männer ], answer: Mannes, explanation: "der Mann → des Mannes (-es)." }
+      - { type: pick, sentence: "Das ist die Tasche des ___.", options: [ Lehrers, Lehrer, Lehrern ], answer: Lehrers, explanation: "der Lehrer → des Lehrers (-s)." }
+      - { type: pick, sentence: "Das ist das Dach des ___.", options: [ Hauses, Haus, Häuser ], answer: Hauses, explanation: "das Haus → des Hauses (-es nach -s)." }
+      - { type: pick, sentence: "Das ist das Futter des ___.", options: [ Hundes, Hund, Hunde ], answer: Hundes, explanation: "der Hund → des Hundes (-es)." }
+      - { type: pick, sentence: "Das ist das Zimmer meines ___.", options: [ Vaters, Vater, Väter ], answer: Vaters, explanation: "der Vater → des Vaters (-s)." }
+      - { type: pick, sentence: "Das ist das Ende des ___.", options: [ Tisches, Tisch, Tische ], answer: Tisches, explanation: "der Tisch → des Tisches (-es nach -sch)." }
+      - { type: pick, sentence: "Das ist die Tür der ___.", options: [ Schule, Schules, Schulen ], answer: Schule, explanation: "Feminine Nomen ändern sich nicht: die Schule → der Schule." }
+      - { type: pick, sentence: "Das ist das Fahrrad des ___.", options: [ Jungen, Junge, Jungens ], answer: Jungen, explanation: "der Junge → des Jungen (einige maskuline Nomen bekommen -n oder -en)." }
+      - { type: pick, sentence: "Das ist der Name des ___.", options: [ Autos, Auto, Autoes ], answer: Autos, explanation: "das Auto → des Autos (-s)." }
 
   - id: names
-    title: { en: "Names", de: "Namen" }
+    title: "Namen"
     count: 5
     shuffle: true
-    concepts: [case.gen-names]
-    instruction: { en: "Which form is right?", de: "Welche Form ist richtig?" }
-    explanation: { en: "Names get -s and stand in front, without an article.", de: "Namen bekommen -s und stehen vorn, ohne Artikel." }
+    concepts: [ case.gen-names ]
+    instruction: "Welche Form ist richtig?"
+    explanation: "Namen bekommen -s und stehen vorn, ohne Artikel."
     items:
-      - { type: pick, sentence: "Das ist ___ Handy. (Anna)", options: [Annas, Anna’s, Annes], answer: Annas, explanation: { en: "Anna + s = Annas. No apostrophe.", de: "Anna + s = Annas. Kein Apostroph." } }
-      - { type: pick, sentence: "Das ist ___ Fahrrad. (Ben)", options: [Bens, Ben’s, Benes], answer: Bens, explanation: { en: "Ben + s = Bens.", de: "Ben + s = Bens." } }
-      - { type: pick, sentence: "Das ist ___ Buch. (Lukas)", options: [Lukas’, Lukass, Lukases], answer: Lukas’, explanation: { en: "Names with -s at the end only get an apostrophe.", de: "Namen mit -s am Ende bekommen nur einen Apostroph." } }
-      - { type: pick, sentence: "Das ist ___ Tasche. (Mia)", options: [Mias, Mia’s, Mien], answer: Mias, explanation: { en: "Mia + s = Mias.", de: "Mia + s = Mias." } }
-      - { type: pick, sentence: "Das ist ___ Zimmer. (Max)", options: [Max’, Maxs, Maxes], answer: Max’, explanation: { en: "Names with -x at the end only get an apostrophe.", de: "Namen mit -x am Ende bekommen nur einen Apostroph." } }
+      - { type: pick, sentence: "Das ist ___ Handy. (Anna)", options: [ Annas, Anna’s, Annes ], answer: Annas, explanation: "Anna + s = Annas. Kein Apostroph." }
+      - { type: pick, sentence: "Das ist ___ Fahrrad. (Ben)", options: [ Bens, Ben’s, Benes ], answer: Bens, explanation: "Ben + s = Bens." }
+      - { type: pick, sentence: "Das ist ___ Buch. (Lukas)", options: [ Lukas’, Lukass, Lukases ], answer: Lukas’, explanation: "Namen mit -s am Ende bekommen nur einen Apostroph." }
+      - { type: pick, sentence: "Das ist ___ Tasche. (Mia)", options: [ Mias, Mia’s, Mien ], answer: Mias, explanation: "Mia + s = Mias." }
+      - { type: pick, sentence: "Das ist ___ Zimmer. (Max)", options: [ Max’, Maxs, Maxes ], answer: Max’, explanation: "Namen mit -x am Ende bekommen nur einen Apostroph." }
 
   - id: which
-    title: { en: "Which case?", de: "Welcher Fall?" }
+    title: "Welcher Fall?"
     count: 6
     shuffle: true
-    concepts: [case.gen-articles, case.overview]
+    concepts: [ case.gen-articles, case.overview ]
     items:
-      - { type: pick, instruction: { en: "Which case is “des Mannes”?", de: "Welcher Fall ist „des Mannes“?" }, prompt: "Das ist das Auto des Mannes.", options: [Nominativ, Akkusativ, Dativ, Genitiv], answer: Genitiv, explanation: { en: "des Mannes shows belonging: Genitiv.", de: "„des Mannes“ zeigt Zugehörigkeit: Genitiv." } }
-      - { type: pick, instruction: { en: "Which case is “dem Mann”?", de: "Welcher Fall ist „dem Mann“?" }, prompt: "Ich helfe dem Mann.", options: [Nominativ, Akkusativ, Dativ, Genitiv], answer: Dativ, explanation: { en: "helfen needs the Dativ.", de: "„helfen“ braucht den Dativ." } }
-      - { type: pick, instruction: { en: "Which case is “den Mann”?", de: "Welcher Fall ist „den Mann“?" }, prompt: "Ich sehe den Mann.", options: [Nominativ, Akkusativ, Dativ, Genitiv], answer: Akkusativ, explanation: { en: "sehen needs the Akkusativ.", de: "„sehen“ braucht den Akkusativ." } }
-      - { type: pick, instruction: { en: "Which case is “der Frau”?", de: "Welcher Fall ist „der Frau“?" }, prompt: "Das ist die Tasche der Frau.", options: [Nominativ, Akkusativ, Dativ, Genitiv], answer: Genitiv, explanation: { en: "The bag belongs to the woman: Genitiv. (der Frau can also be Dativ, but here it belongs to “die Tasche”.)", de: "Die Tasche gehört der Frau: Genitiv. („der Frau“ kann auch Dativ sein, hier gehört es aber zu „die Tasche“.)" } }
-      - { type: pick, instruction: { en: "Which case is “der Mann”?", de: "Welcher Fall ist „der Mann“?" }, prompt: "Der Mann schläft.", options: [Nominativ, Akkusativ, Dativ, Genitiv], answer: Nominativ, explanation: { en: "The subject is in the Nominativ.", de: "Das Subjekt steht im Nominativ." } }
-      - { type: pick, instruction: { en: "Which case is “meines Bruders”?", de: "Welcher Fall ist „meines Bruders“?" }, prompt: "Das ist das Handy meines Bruders.", options: [Nominativ, Akkusativ, Dativ, Genitiv], answer: Genitiv, explanation: { en: "meines Bruders: Genitiv (belonging).", de: "„meines Bruders“: Genitiv (Zugehörigkeit)." } }
+      - { type: pick, instruction: "Welcher Fall ist „des Mannes“?", prompt: "Das ist das Auto des Mannes.", options: [ Nominativ, Akkusativ, Dativ, Genitiv ], answer: Genitiv, explanation: "„des Mannes“ zeigt Zugehörigkeit: Genitiv." }
+      - { type: pick, instruction: "Welcher Fall ist „dem Mann“?", prompt: "Ich helfe dem Mann.", options: [ Nominativ, Akkusativ, Dativ, Genitiv ], answer: Dativ, explanation: "„helfen“ braucht den Dativ." }
+      - { type: pick, instruction: "Welcher Fall ist „den Mann“?", prompt: "Ich sehe den Mann.", options: [ Nominativ, Akkusativ, Dativ, Genitiv ], answer: Akkusativ, explanation: "„sehen“ braucht den Akkusativ." }
+      - { type: pick, instruction: "Welcher Fall ist „der Frau“?", prompt: "Das ist die Tasche der Frau.", options: [ Nominativ, Akkusativ, Dativ, Genitiv ], answer: Genitiv, explanation: "Die Tasche gehört der Frau: Genitiv. („der Frau“ kann auch Dativ sein, hier gehört es aber zu „die Tasche“.)" }
+      - { type: pick, instruction: "Welcher Fall ist „der Mann“?", prompt: "Der Mann schläft.", options: [ Nominativ, Akkusativ, Dativ, Genitiv ], answer: Nominativ, explanation: "Das Subjekt steht im Nominativ." }
+      - { type: pick, instruction: "Welcher Fall ist „meines Bruders“?", prompt: "Das ist das Handy meines Bruders.", options: [ Nominativ, Akkusativ, Dativ, Genitiv ], answer: Genitiv, explanation: "„meines Bruders“: Genitiv (Zugehörigkeit)." }
 
   - id: match
-    title: { en: "Match", de: "Paare" }
+    title: "Paare"
     shuffle: false
     items:
       - type: pairs
-        concepts: [case.gen-vs-von]
-        instruction: { en: "Tap the written form, then the spoken form.", de: "Tippe die geschriebene Form an, dann die gesprochene Form." }
-        pairs: [[das Auto des Mannes, das Auto vom Mann], [das Zimmer meiner Schwester, das Zimmer von meiner Schwester], [das Handy des Lehrers, das Handy vom Lehrer], [die Tasche der Frau, die Tasche von der Frau]]
+        concepts: [ case.gen-vs-von ]
+        instruction: "Tippe die geschriebene Form an, dann die gesprochene Form."
+        pairs: [ [ das Auto des Mannes, das Auto vom Mann ], [ das Zimmer meiner Schwester, das Zimmer von meiner Schwester ], [ das Handy des Lehrers, das Handy vom Lehrer ], [ die Tasche der Frau, die Tasche von der Frau ] ]
 
   - id: prepositions
-    title: { en: "wegen, während, trotz", de: "wegen, während, trotz" }
+    title: "wegen, während, trotz"
     count: 6
     shuffle: true
-    concepts: [case.gen-prepositions]
-    instruction: { en: "These prepositions take the Genitiv. Which form is right?", de: "Nach diesen Präpositionen steht der Genitiv. Welche Form ist richtig?" }
-    explanation: { en: "wegen, während, trotz + Genitiv.", de: "wegen, während, trotz + Genitiv." }
+    concepts: [ case.gen-prepositions ]
+    instruction: "Nach diesen Präpositionen steht der Genitiv. Welche Form ist richtig?"
+    explanation: "wegen, während, trotz + Genitiv."
     items:
-      - { type: pick, sentence: "Wegen ___ Regens bleibe ich zu Hause.", options: [des, dem, den, der], answer: des }
-      - { type: pick, sentence: "Während ___ Unterrichts sprechen wir Deutsch.", options: [des, dem, den, der], answer: des }
-      - { type: pick, sentence: "Trotz ___ Kälte gehen wir spazieren.", options: [der, des, dem, den], answer: der }
-      - { type: pick, sentence: "Wegen ___ Krankheit kommt sie nicht.", options: [der, des, dem, den], answer: der }
-      - { type: pick, sentence: "Während ___ Pause trinken wir Kaffee.", options: [der, des, dem, den], answer: der }
-      - { type: pick, sentence: "Trotz ___ Lärms schläft das Baby.", options: [des, dem, den, der], answer: des }
+      - { type: pick, sentence: "Wegen ___ Regens bleibe ich zu Hause.", options: [ des, dem, den, der ], answer: des }
+      - { type: pick, sentence: "Während ___ Unterrichts sprechen wir Deutsch.", options: [ des, dem, den, der ], answer: des }
+      - { type: pick, sentence: "Trotz ___ Kälte gehen wir spazieren.", options: [ der, des, dem, den ], answer: der }
+      - { type: pick, sentence: "Wegen ___ Krankheit kommt sie nicht.", options: [ der, des, dem, den ], answer: der }
+      - { type: pick, sentence: "Während ___ Pause trinken wir Kaffee.", options: [ der, des, dem, den ], answer: der }
+      - { type: pick, sentence: "Trotz ___ Lärms schläft das Baby.", options: [ des, dem, den, der ], answer: des }
 
   - id: correct
-    title: { en: "Which is right?", de: "Was ist richtig?" }
+    title: "Was ist richtig?"
     count: 6
-    concepts: [case.gen-articles, case.gen-nouns]
-    instruction: { en: "Tap the correct sentence.", de: "Tippe den richtigen Satz an." }
+    concepts: [ case.gen-articles, case.gen-nouns ]
+    instruction: "Tippe den richtigen Satz an."
     items:
       - type: pick
-        options: ["Das ist das Auto des Mannes.", "Das ist das Auto des Mann.", "Das ist das Auto der Mannes."]
+        options: [ "Das ist das Auto des Mannes.", "Das ist das Auto des Mann.", "Das ist das Auto der Mannes." ]
         answer: "Das ist das Auto des Mannes."
-        explanation: { en: "Masculine: des + noun with -es.", de: "Maskulin: des + Nomen mit -es." }
+        explanation: "Maskulin: des + Nomen mit -es."
       - type: pick
-        options: ["Das ist die Tasche der Lehrerin.", "Das ist die Tasche des Lehrerin.", "Das ist die Tasche der Lehrerins."]
+        options: [ "Das ist die Tasche der Lehrerin.", "Das ist die Tasche des Lehrerin.", "Das ist die Tasche der Lehrerins." ]
         answer: "Das ist die Tasche der Lehrerin."
-        explanation: { en: "Feminine: der, and the noun does not change.", de: "Feminin: der, und das Nomen ändert sich nicht." }
+        explanation: "Feminin: der, und das Nomen ändert sich nicht."
       - type: pick
-        options: ["Das ist das Handy meines Bruders.", "Das ist das Handy meinem Bruder.", "Das ist das Handy mein Bruders."]
+        options: [ "Das ist das Handy meines Bruders.", "Das ist das Handy meinem Bruder.", "Das ist das Handy mein Bruders." ]
         answer: "Das ist das Handy meines Bruders."
-        explanation: { en: "Masculine Genitiv: meines + noun with -s.", de: "Maskulin im Genitiv: meines + Nomen mit -s." }
+        explanation: "Maskulin im Genitiv: meines + Nomen mit -s."
       - type: pick
-        options: ["Das ist Annas Buch.", "Das ist Anna’s Buch.", "Das ist das Buch Annas’."]
+        options: [ "Das ist Annas Buch.", "Das ist Anna’s Buch.", "Das ist das Buch Annas’." ]
         answer: "Das ist Annas Buch."
-        explanation: { en: "Names: add -s, no apostrophe.", de: "Namen: -s dazu, kein Apostroph." }
+        explanation: "Namen: -s dazu, kein Apostroph."
       - type: pick
-        options: ["Wegen des Regens bleiben wir hier.", "Wegen der Regen bleiben wir hier.", "Wegen dem Regens bleiben wir hier."]
+        options: [ "Wegen des Regens bleiben wir hier.", "Wegen der Regen bleiben wir hier.", "Wegen dem Regens bleiben wir hier." ]
         answer: "Wegen des Regens bleiben wir hier."
-        explanation: { en: "wegen + Genitiv: des Regens.", de: "„wegen“ + Genitiv: des Regens." }
+        explanation: "„wegen“ + Genitiv: des Regens."
       - type: pick
-        options: ["Das ist das Zimmer der Kinder.", "Das ist das Zimmer des Kinder.", "Das ist das Zimmer den Kindern."]
+        options: [ "Das ist das Zimmer der Kinder.", "Das ist das Zimmer des Kinder.", "Das ist das Zimmer den Kindern." ]
         answer: "Das ist das Zimmer der Kinder."
-        explanation: { en: "Plural Genitiv: der, the noun does not change.", de: "Plural im Genitiv: der, das Nomen ändert sich nicht." }
+        explanation: "Plural im Genitiv: der, das Nomen ändert sich nicht."
 
   - id: puzzle
-    title: { en: "Sentence puzzle", de: "Satzpuzzle" }
+    title: "Satzpuzzle"
     count: 5
-    concepts: [case.gen-articles, syntax.verb-position-2]
-    instruction: { en: "Put the words in the right order.", de: "Bringe die Wörter in die richtige Reihenfolge." }
-    explanation: { en: "The Genitiv comes directly after the noun it belongs to.", de: "Der Genitiv steht direkt nach dem Nomen, zu dem er gehört." }
+    concepts: [ case.gen-articles, syntax.verb-position-2 ]
+    instruction: "Bringe die Wörter in die richtige Reihenfolge."
+    explanation: "Der Genitiv steht direkt nach dem Nomen, zu dem er gehört."
     items:
-      - { type: sentence-order, words: "das ist das Auto des Mannes", accept: ["das ist das Auto des Mannes"] }
-      - { type: sentence-order, words: "ich suche das Handy meiner Schwester", accept: ["ich suche das Handy meiner Schwester"] }
-      - { type: sentence-order, words: "wir besuchen die Eltern meines Freundes", accept: ["wir besuchen die Eltern meines Freundes"] }
-      - { type: sentence-order, words: "wegen des Regens bleiben wir zu_Hause", accept: ["wegen des Regens bleiben wir zu_Hause"] }
-      - { type: sentence-order, words: "Anna liest Bens Buch", accept: ["Anna liest Bens Buch"] }
+      - { type: sentence-order, words: "das ist das Auto des Mannes", accept: [ "das ist das Auto des Mannes" ] }
+      - { type: sentence-order, words: "ich suche das Handy meiner Schwester", accept: [ "ich suche das Handy meiner Schwester" ] }
+      - { type: sentence-order, words: "wir besuchen die Eltern meines Freundes", accept: [ "wir besuchen die Eltern meines Freundes" ] }
+      - { type: sentence-order, words: "wegen des Regens bleiben wir zu_Hause", accept: [ "wegen des Regens bleiben wir zu_Hause" ] }
+      - { type: sentence-order, words: "Anna liest Bens Buch", accept: [ "Anna liest Bens Buch" ] }
 
   - id: write
-    title: { en: "Writing", de: "Schreiben" }
-    concepts: [writing.simple-sentences, case.gen-articles]
-    instruction: { en: "Write 4 or more sentences. Use the words.", de: "Schreibe 4 Sätze oder mehr. Benutze die Wörter." }
+    title: "Schreiben"
+    concepts: [ writing.simple-sentences, case.gen-articles ]
+    instruction: "Schreibe 4 Sätze oder mehr. Benutze die Wörter."
     items:
       - type: free-writing
-        task: { en: "Write about the people and things around you: Whose things do you see? Whose family members do you know?", de: "Schreibe über Menschen und Dinge um dich herum: Wessen Sachen siehst du? Wessen Familie kennst du?" }
-        words: [das Auto, das Zimmer, des, der, meines, meiner, wegen]
+        task: "Schreibe über Menschen und Dinge um dich herum: Wessen Sachen siehst du? Wessen Familie kennst du?"
+        words: [ das Auto, das Zimmer, des, der, meines, meiner, wegen ]
         minSentences: 4
         checklist:
-          - { en: "I used the Genitiv after a noun (das Auto des Mannes).", de: "Ich habe den Genitiv nach einem Nomen benutzt (das Auto des Mannes)." }
-          - { en: "Masculine and neuter nouns have -s or -es.", de: "Maskuline und neutrale Nomen haben -s oder -es." }
-          - { en: "I wrote names with -s, without an apostrophe (Annas Buch).", de: "Ich habe Namen mit -s ohne Apostroph geschrieben (Annas Buch)." }
+          - "Ich habe den Genitiv nach einem Nomen benutzt (das Auto des Mannes)."
+          - "Maskuline und neutrale Nomen haben -s oder -es."
+          - "Ich habe Namen mit -s ohne Apostroph geschrieben (Annas Buch)."
         model: "Das ist das Zimmer meiner Schwester. Ich suche das Handy meines Bruders. Annas Katze schläft im Garten. Wegen des Regens bleiben wir zu Hause."

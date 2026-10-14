@@ -2,172 +2,126 @@
 # Texts: heading + paragraphs. Every practice item shows its text (text: id) above the exercise.
 kind: lesson
 id: reading-a2
-title:
-  en: 'Reading: everyday texts'
-  de: 'Lesen: Alltagstexte'
+title: 'Lesen: Alltagstexte'
 level: A2
 skill: reading
 minutes: 25
 status: draft
-description:
-  en: 'A short blog text and an information notice, with four kinds of tasks: right or wrong, find the sentence, write the answer, match.'
-  de: 'Ein kurzer Blogtext und eine Information zu einem Kurs, mit vier Aufgabenarten: richtig oder falsch, Satz finden, Antwort schreiben, zuordnen.'
+description: 'Ein kurzer Blogtext und eine Information zu einem Kurs, mit vier Aufgabenarten: richtig oder falsch, Satz finden, Antwort schreiben, zuordnen.'
 canDo:
-- en: I can understand short everyday texts such as blog posts and notices.
-  de: Ich kann kurze Alltagstexte wie Blogtexte und Informationen verstehen.
-- en: I can find prices, days, times and reasons in a text.
-  de: Ich kann Preise, Tage, Uhrzeiten und Gründe in einem Text finden.
+  - Ich kann kurze Alltagstexte wie Blogtexte und Informationen verstehen.
+  - Ich kann Preise, Tage, Uhrzeiten und Gründe in einem Text finden.
 texts:
-- id: balkon
-  heading: Unser Balkongarten
-  paragraphs:
-  - Im Frühling haben wir auf unserem Balkon einen kleinen Garten angelegt. Mein Mann Tomás hat im Baumarkt Erde und Töpfe gekauft. Ich habe Tomaten, Kräuter und Blumen gepflanzt. Jeden Morgen gieße ich die Pflanzen. Das dauert nur fünf Minuten.
-  - Im Juli haben wir die ersten Tomaten gegessen. Sie haben super geschmeckt, weil sie ganz frisch waren. Unsere Nachbarin hat gesagt, dass sie den Balkon sehr schön findet. Jetzt möchte sie auch Pflanzen kaufen. Nächstes Jahr wollen wir Gurken probieren.
-- id: kurs
-  heading: Schwimmkurs für Erwachsene
-  paragraphs:
-  - Das Stadtbad bietet im Herbst einen neuen Schwimmkurs für Erwachsene an. Der Kurs beginnt am 7. Oktober und dauert acht Wochen. Er findet jeden Dienstag von 18.30 bis 19.30 Uhr statt. Die Gruppe hat höchstens zehn Personen.
-  - Der Kurs kostet 64 Euro. Wer eine Karte vom Stadtbad hat, bezahlt nur 50 Euro. Bitte bringt ein Handtuch und eine Badekappe mit. Duschgel gibt es im Bad.
-  - 'Anmelden kann man sich an der Kasse oder online. Wichtig: Kinder unter 16 Jahren können nicht teilnehmen.'
+  - id: balkon
+    heading: Unser Balkongarten
+    paragraphs:
+      - Im Frühling haben wir auf unserem Balkon einen kleinen Garten angelegt. Mein Mann Tomás hat im Baumarkt Erde und Töpfe gekauft. Ich habe Tomaten, Kräuter und Blumen gepflanzt. Jeden Morgen gieße ich die Pflanzen. Das dauert nur fünf Minuten.
+      - Im Juli haben wir die ersten Tomaten gegessen. Sie haben super geschmeckt, weil sie ganz frisch waren. Unsere Nachbarin hat gesagt, dass sie den Balkon sehr schön findet. Jetzt möchte sie auch Pflanzen kaufen. Nächstes Jahr wollen wir Gurken probieren.
+  - id: kurs
+    heading: Schwimmkurs für Erwachsene
+    paragraphs:
+      - Das Stadtbad bietet im Herbst einen neuen Schwimmkurs für Erwachsene an. Der Kurs beginnt am 7. Oktober und dauert acht Wochen. Er findet jeden Dienstag von 18.30 bis 19.30 Uhr statt. Die Gruppe hat höchstens zehn Personen.
+      - Der Kurs kostet 64 Euro. Wer eine Karte vom Stadtbad hat, bezahlt nur 50 Euro. Bitte bringt ein Handtuch und eine Badekappe mit. Duschgel gibt es im Bad.
+      - 'Anmelden kann man sich an der Kasse oder online. Wichtig: Kinder unter 16 Jahren können nicht teilnehmen.'
 understand:
-- type: rule
-  title:
-    en: How to read
-    de: So liest du
-  body:
-  - en: Read the whole text once. You do not need to understand every word.
-    de: Lies zuerst den ganzen Text. Du musst nicht jedes Wort verstehen.
-  - en: Look for names, numbers, times and places first.
-    de: Suche zuerst Namen, Zahlen, Zeiten und Orte.
-  - en: Then read the statement or the question. Go back to the text and find the sentence.
-    de: Lies dann die Aussage oder die Frage. Gehe zurück in den Text und finde den Satz.
-  - en: 'Key words help: often the question and the text use the same word or a similar word.'
-    de: 'Schlüsselwörter helfen: Oft benutzen die Frage und der Text dasselbe oder ein ähnliches Wort.'
-- type: text
-  title:
-    en: The four tasks
-    de: Die vier Aufgaben
-  body:
-  - en: Right or wrong? Decide if a statement agrees with the text.
-    de: Richtig oder falsch? Entscheide, ob eine Aussage zum Text passt.
-  - en: Find the sentence. The statement uses other words. Find the sentence in the text that says the same.
-    de: Den Satz finden. Die Aussage benutzt andere Wörter. Finde den Satz im Text, der dasselbe sagt.
-  - en: Write the answer. Find the information in the text and write it down.
-    de: Antwort schreiben. Finde die Information im Text und schreibe sie auf.
-  - en: Match. Connect things that belong together.
-    de: Zuordnen. Verbinde, was zusammengehört.
+  - type: rule
+    title: So liest du
+    body:
+      - Lies zuerst den ganzen Text. Du musst nicht jedes Wort verstehen.
+      - Suche zuerst Namen, Zahlen, Zeiten und Orte.
+      - Lies dann die Aussage oder die Frage. Gehe zurück in den Text und finde den Satz.
+      - 'Schlüsselwörter helfen: Oft benutzen die Frage und der Text dasselbe oder ein ähnliches Wort.'
+  - type: text
+    title: Die vier Aufgaben
+    body:
+      - Richtig oder falsch? Entscheide, ob eine Aussage zum Text passt.
+      - Den Satz finden. Die Aussage benutzt andere Wörter. Finde den Satz im Text, der dasselbe sagt.
+      - Antwort schreiben. Finde die Information im Text und schreibe sie auf.
+      - Zuordnen. Verbinde, was zusammengehört.
 practice:
-- id: truefalse
-  title:
-    en: Right or wrong?
-    de: Richtig oder falsch?
-  shuffle: false
-  inText: false
-  concepts:
-  - reading.true-false
-  instruction:
-    en: Read the text. Is the statement right or wrong?
-    de: Lies den Text. Ist die Aussage richtig oder falsch?
-  items:
-  - {type: pick, text: balkon, prompt: Die Autorin und ihr Mann haben im Winter einen Garten angelegt., options: [richtig, falsch], answer: falsch, explanation: {en: 'In the text: “Im Frühling haben wir auf unserem Balkon einen kleinen Garten angelegt.”', de: 'Im Text steht: „Im Frühling haben wir auf unserem Balkon einen kleinen Garten angelegt.“'}}
-  - {type: pick, text: balkon, prompt: Tomás hat im Baumarkt Erde und Töpfe gekauft., options: [richtig, falsch], answer: richtig, explanation: {en: 'In the text: “Mein Mann Tomás hat im Baumarkt Erde und Töpfe gekauft.”', de: 'Im Text steht: „Mein Mann Tomás hat im Baumarkt Erde und Töpfe gekauft.“'}}
-  - {type: pick, text: balkon, prompt: Die Autorin gießt die Pflanzen jeden Morgen., options: [richtig, falsch], answer: richtig, explanation: {en: 'In the text: “Jeden Morgen gieße ich die Pflanzen.”', de: 'Im Text steht: „Jeden Morgen gieße ich die Pflanzen.“'}}
-  - {type: pick, text: balkon, prompt: Die ersten Tomaten haben nicht gut geschmeckt., options: [richtig, falsch], answer: falsch, explanation: {en: 'In the text: “Sie haben super geschmeckt, weil sie ganz frisch waren.”', de: 'Im Text steht: „Sie haben super geschmeckt, weil sie ganz frisch waren.“'}}
-  - {type: pick, text: balkon, prompt: Die Nachbarin findet den Balkon schön., options: [richtig, falsch], answer: richtig, explanation: {en: 'In the text: “Unsere Nachbarin hat gesagt, dass sie den Balkon sehr schön findet.”', de: 'Im Text steht: „Unsere Nachbarin hat gesagt, dass sie den Balkon sehr schön findet.“'}}
-  - {type: pick, text: kurs, prompt: Der Kurs dauert acht Wochen., options: [richtig, falsch], answer: richtig, explanation: {en: 'In the text: “Der Kurs beginnt am 7. Oktober und dauert acht Wochen.”', de: 'Im Text steht: „Der Kurs beginnt am 7. Oktober und dauert acht Wochen.“'}}
-  - {type: pick, text: kurs, prompt: Der Kurs findet am Mittwoch statt., options: [richtig, falsch], answer: falsch, explanation: {en: 'In the text: “Er findet jeden Dienstag von 18.30 bis 19.30 Uhr statt.”', de: 'Im Text steht: „Er findet jeden Dienstag von 18.30 bis 19.30 Uhr statt.“'}}
-  - {type: pick, text: kurs, prompt: Mit der Karte kostet der Kurs 50 Euro., options: [richtig, falsch], answer: richtig, explanation: {en: 'In the text: “Wer eine Karte vom Stadtbad hat, bezahlt nur 50 Euro.”', de: 'Im Text steht: „Wer eine Karte vom Stadtbad hat, bezahlt nur 50 Euro.“'}}
-  - {type: pick, text: kurs, prompt: Man kann sich nur an der Kasse anmelden., options: [richtig, falsch], answer: falsch, explanation: {en: 'In the text: “Anmelden kann man sich an der Kasse oder online.”', de: 'Im Text steht: „Anmelden kann man sich an der Kasse oder online.“'}}
-  - {type: pick, text: kurs, prompt: Auch Kinder unter 16 Jahren können teilnehmen., options: [richtig, falsch], answer: falsch, explanation: {en: 'In the text: “Wichtig: Kinder unter 16 Jahren können nicht teilnehmen.”', de: 'Im Text steht: „Wichtig: Kinder unter 16 Jahren können nicht teilnehmen.“'}}
-- id: find
-  title:
-    en: Find the sentence
-    de: Den Satz finden
-  shuffle: false
-  inText: true
-  concepts:
-  - reading.find-statement
-  instruction:
-    en: Which sentence in the text says the same in other words?
-    de: Welcher Satz im Text sagt dasselbe mit anderen Worten?
-  items:
-  - type: pick
-    text: balkon
-    prompt: Wir haben einen Garten auf dem Balkon gemacht.
-    options: [Im Frühling haben wir auf unserem Balkon einen kleinen Garten angelegt., Mein Mann Tomás hat im Baumarkt Erde und Töpfe gekauft., Das dauert nur fünf Minuten., 'Unsere Nachbarin hat gesagt, dass sie den Balkon sehr schön findet.']
-    answer: Im Frühling haben wir auf unserem Balkon einen kleinen Garten angelegt.
-    explanation:
-      en: 'The text says it in other words: “Im Frühling haben wir auf unserem Balkon einen kleinen Garten angelegt.”'
-      de: 'Der Text sagt es mit anderen Worten: „Im Frühling haben wir auf unserem Balkon einen kleinen Garten angelegt.“'
-  - type: pick
-    text: balkon
-    prompt: Die Pflanzen zu gießen kostet nicht viel Zeit.
-    options: [Das dauert nur fünf Minuten., 'Ich habe Tomaten, Kräuter und Blumen gepflanzt.', 'Sie haben super geschmeckt, weil sie ganz frisch waren.', Nächstes Jahr wollen wir Gurken probieren.]
-    answer: Das dauert nur fünf Minuten.
-    explanation:
-      en: 'The text says it in other words: “Das dauert nur fünf Minuten.”'
-      de: 'Der Text sagt es mit anderen Worten: „Das dauert nur fünf Minuten.“'
-  - type: pick
-    text: balkon
-    prompt: Die Frau von nebenan möchte auch Pflanzen.
-    options: [Jetzt möchte sie auch Pflanzen kaufen., Das dauert nur fünf Minuten., 'Unsere Nachbarin hat gesagt, dass sie den Balkon sehr schön findet.', Mein Mann Tomás hat im Baumarkt Erde und Töpfe gekauft.]
-    answer: Jetzt möchte sie auch Pflanzen kaufen.
-    explanation:
-      en: 'The text says it in other words: “Jetzt möchte sie auch Pflanzen kaufen.”'
-      de: 'Der Text sagt es mit anderen Worten: „Jetzt möchte sie auch Pflanzen kaufen.“'
-  - type: pick
-    text: kurs
-    prompt: Nur zehn Leute können mitmachen.
-    options: [Die Gruppe hat höchstens zehn Personen., Duschgel gibt es im Bad., Das Stadtbad bietet im Herbst einen neuen Schwimmkurs für Erwachsene an., Der Kurs kostet 64 Euro.]
-    answer: Die Gruppe hat höchstens zehn Personen.
-    explanation:
-      en: 'The text says it in other words: “Die Gruppe hat höchstens zehn Personen.”'
-      de: 'Der Text sagt es mit anderen Worten: „Die Gruppe hat höchstens zehn Personen.“'
-  - type: pick
-    text: kurs
-    prompt: Mit der Karte vom Bad ist der Kurs billiger.
-    options: ['Wer eine Karte vom Stadtbad hat, bezahlt nur 50 Euro.', 'Wichtig: Kinder unter 16 Jahren können nicht teilnehmen.', Er findet jeden Dienstag von 18.30 bis 19.30 Uhr statt., Bitte bringt ein Handtuch und eine Badekappe mit.]
-    answer: Wer eine Karte vom Stadtbad hat, bezahlt nur 50 Euro.
-    explanation:
-      en: 'The text says it in other words: “Wer eine Karte vom Stadtbad hat, bezahlt nur 50 Euro.”'
-      de: 'Der Text sagt es mit anderen Worten: „Wer eine Karte vom Stadtbad hat, bezahlt nur 50 Euro.“'
-  - type: pick
-    text: kurs
-    prompt: Man soll Sachen zum Abtrocknen mitnehmen.
-    options: [Bitte bringt ein Handtuch und eine Badekappe mit., Der Kurs beginnt am 7. Oktober und dauert acht Wochen., Der Kurs kostet 64 Euro., Anmelden kann man sich an der Kasse oder online.]
-    answer: Bitte bringt ein Handtuch und eine Badekappe mit.
-    explanation:
-      en: 'The text says it in other words: “Bitte bringt ein Handtuch und eine Badekappe mit.”'
-      de: 'Der Text sagt es mit anderen Worten: „Bitte bringt ein Handtuch und eine Badekappe mit.“'
-- id: write
-  title:
-    en: Write the answer
-    de: Antwort schreiben
-  shuffle: false
-  concepts:
-  - reading.find-details
-  instruction:
-    en: Find the information in the text and write a short answer.
-    de: Finde die Information im Text und schreibe eine kurze Antwort.
-  items:
-  - {type: short-answer, text: balkon, prompt: 'Was hat Tomás im Baumarkt gekauft?', accept: [Erde und Töpfe, Töpfe und Erde, ~erde, ~töpfe], explanation: {en: 'In the text: “Mein Mann Tomás hat im Baumarkt Erde und Töpfe gekauft.”', de: 'Im Text steht: „Mein Mann Tomás hat im Baumarkt Erde und Töpfe gekauft.“'}}
-  - {type: short-answer, text: balkon, prompt: 'Was hat die Autorin gepflanzt?', accept: [~tomaten, ~kräuter, ~blumen], explanation: {en: 'In the text: “Ich habe Tomaten, Kräuter und Blumen gepflanzt.”', de: 'Im Text steht: „Ich habe Tomaten, Kräuter und Blumen gepflanzt.“'}}
-  - {type: short-answer, text: balkon, prompt: 'Wann haben sie die ersten Tomaten gegessen?', accept: [im Juli, Juli], explanation: {en: 'In the text: “Im Juli haben wir die ersten Tomaten gegessen.”', de: 'Im Text steht: „Im Juli haben wir die ersten Tomaten gegessen.“'}}
-  - {type: short-answer, text: balkon, prompt: 'Was wollen sie nächstes Jahr probieren?', accept: [Gurken], explanation: {en: 'In the text: “Nächstes Jahr wollen wir Gurken probieren.”', de: 'Im Text steht: „Nächstes Jahr wollen wir Gurken probieren.“'}}
-  - {type: short-answer, text: kurs, prompt: 'Wie lange dauert der Kurs?', accept: [acht Wochen, 8 Wochen], explanation: {en: 'In the text: “Der Kurs beginnt am 7. Oktober und dauert acht Wochen.”', de: 'Im Text steht: „Der Kurs beginnt am 7. Oktober und dauert acht Wochen.“'}}
-  - {type: short-answer, text: kurs, prompt: 'An welchem Tag findet der Kurs statt?', accept: [dienstag, jeden Dienstag, am Dienstag], explanation: {en: 'In the text: “Er findet jeden Dienstag von 18.30 bis 19.30 Uhr statt.”', de: 'Im Text steht: „Er findet jeden Dienstag von 18.30 bis 19.30 Uhr statt.“'}}
-  - {type: short-answer, text: kurs, prompt: 'Wie viel kostet der Kurs mit der Karte?', accept: [50 Euro, 50 €, '50'], explanation: {en: 'In the text: “Wer eine Karte vom Stadtbad hat, bezahlt nur 50 Euro.”', de: 'Im Text steht: „Wer eine Karte vom Stadtbad hat, bezahlt nur 50 Euro.“'}}
-  - {type: short-answer, text: kurs, prompt: 'Was soll man mitbringen?', accept: [~handtuch, ~badekappe], explanation: {en: 'In the text: “Bitte bringt ein Handtuch und eine Badekappe mit.”', de: 'Im Text steht: „Bitte bringt ein Handtuch und eine Badekappe mit.“'}}
-- id: match
-  title:
-    en: Match
-    de: Zuordnen
-  shuffle: false
-  concepts:
-  - reading.match
-  instruction:
-    en: Tap a word or phrase, then the detail that fits.
-    de: Tippe ein Wort oder eine Wortgruppe an, dann die passende Information.
-  items:
-  - {type: pairs, text: balkon, pairs: [[Tomás, kauft Erde und Töpfe], [die Autorin, 'pflanzt Tomaten, Kräuter und Blumen'], [die Nachbarin, findet den Balkon schön], [im Juli, die ersten Tomaten]]}
-  - {type: pairs, text: kurs, pairs: [[die Dauer, acht Wochen], [der Preis ohne Karte, 64 Euro], [die Gruppe, höchstens zehn Personen], [die Anmeldung, an der Kasse oder online]]}
+  - id: truefalse
+    title: Richtig oder falsch?
+    shuffle: false
+    inText: false
+    concepts:
+      - reading.true-false
+    instruction: Lies den Text. Ist die Aussage richtig oder falsch?
+    items:
+      - { type: pick, text: balkon, prompt: Die Autorin und ihr Mann haben im Winter einen Garten angelegt., options: [ richtig, falsch ], answer: falsch, explanation: 'Im Text steht: „Im Frühling haben wir auf unserem Balkon einen kleinen Garten angelegt.“' }
+      - { type: pick, text: balkon, prompt: Tomás hat im Baumarkt Erde und Töpfe gekauft., options: [ richtig, falsch ], answer: richtig, explanation: 'Im Text steht: „Mein Mann Tomás hat im Baumarkt Erde und Töpfe gekauft.“' }
+      - { type: pick, text: balkon, prompt: Die Autorin gießt die Pflanzen jeden Morgen., options: [ richtig, falsch ], answer: richtig, explanation: 'Im Text steht: „Jeden Morgen gieße ich die Pflanzen.“' }
+      - { type: pick, text: balkon, prompt: Die ersten Tomaten haben nicht gut geschmeckt., options: [ richtig, falsch ], answer: falsch, explanation: 'Im Text steht: „Sie haben super geschmeckt, weil sie ganz frisch waren.“' }
+      - { type: pick, text: balkon, prompt: Die Nachbarin findet den Balkon schön., options: [ richtig, falsch ], answer: richtig, explanation: 'Im Text steht: „Unsere Nachbarin hat gesagt, dass sie den Balkon sehr schön findet.“' }
+      - { type: pick, text: kurs, prompt: Der Kurs dauert acht Wochen., options: [ richtig, falsch ], answer: richtig, explanation: 'Im Text steht: „Der Kurs beginnt am 7. Oktober und dauert acht Wochen.“' }
+      - { type: pick, text: kurs, prompt: Der Kurs findet am Mittwoch statt., options: [ richtig, falsch ], answer: falsch, explanation: 'Im Text steht: „Er findet jeden Dienstag von 18.30 bis 19.30 Uhr statt.“' }
+      - { type: pick, text: kurs, prompt: Mit der Karte kostet der Kurs 50 Euro., options: [ richtig, falsch ], answer: richtig, explanation: 'Im Text steht: „Wer eine Karte vom Stadtbad hat, bezahlt nur 50 Euro.“' }
+      - { type: pick, text: kurs, prompt: Man kann sich nur an der Kasse anmelden., options: [ richtig, falsch ], answer: falsch, explanation: 'Im Text steht: „Anmelden kann man sich an der Kasse oder online.“' }
+      - { type: pick, text: kurs, prompt: Auch Kinder unter 16 Jahren können teilnehmen., options: [ richtig, falsch ], answer: falsch, explanation: 'Im Text steht: „Wichtig: Kinder unter 16 Jahren können nicht teilnehmen.“' }
+  - id: find
+    title: Den Satz finden
+    shuffle: false
+    inText: true
+    concepts:
+      - reading.find-statement
+    instruction: Welcher Satz im Text sagt dasselbe mit anderen Worten?
+    items:
+      - type: pick
+        text: balkon
+        prompt: Wir haben einen Garten auf dem Balkon gemacht.
+        options: [ Im Frühling haben wir auf unserem Balkon einen kleinen Garten angelegt., Mein Mann Tomás hat im Baumarkt Erde und Töpfe gekauft., Das dauert nur fünf Minuten., 'Unsere Nachbarin hat gesagt, dass sie den Balkon sehr schön findet.' ]
+        answer: Im Frühling haben wir auf unserem Balkon einen kleinen Garten angelegt.
+        explanation: 'Der Text sagt es mit anderen Worten: „Im Frühling haben wir auf unserem Balkon einen kleinen Garten angelegt.“'
+      - type: pick
+        text: balkon
+        prompt: Die Pflanzen zu gießen kostet nicht viel Zeit.
+        options: [ Das dauert nur fünf Minuten., 'Ich habe Tomaten, Kräuter und Blumen gepflanzt.', 'Sie haben super geschmeckt, weil sie ganz frisch waren.', Nächstes Jahr wollen wir Gurken probieren. ]
+        answer: Das dauert nur fünf Minuten.
+        explanation: 'Der Text sagt es mit anderen Worten: „Das dauert nur fünf Minuten.“'
+      - type: pick
+        text: balkon
+        prompt: Die Frau von nebenan möchte auch Pflanzen.
+        options: [ Jetzt möchte sie auch Pflanzen kaufen., Das dauert nur fünf Minuten., 'Unsere Nachbarin hat gesagt, dass sie den Balkon sehr schön findet.', Mein Mann Tomás hat im Baumarkt Erde und Töpfe gekauft. ]
+        answer: Jetzt möchte sie auch Pflanzen kaufen.
+        explanation: 'Der Text sagt es mit anderen Worten: „Jetzt möchte sie auch Pflanzen kaufen.“'
+      - type: pick
+        text: kurs
+        prompt: Nur zehn Leute können mitmachen.
+        options: [ Die Gruppe hat höchstens zehn Personen., Duschgel gibt es im Bad., Das Stadtbad bietet im Herbst einen neuen Schwimmkurs für Erwachsene an., Der Kurs kostet 64 Euro. ]
+        answer: Die Gruppe hat höchstens zehn Personen.
+        explanation: 'Der Text sagt es mit anderen Worten: „Die Gruppe hat höchstens zehn Personen.“'
+      - type: pick
+        text: kurs
+        prompt: Mit der Karte vom Bad ist der Kurs billiger.
+        options: [ 'Wer eine Karte vom Stadtbad hat, bezahlt nur 50 Euro.', 'Wichtig: Kinder unter 16 Jahren können nicht teilnehmen.', Er findet jeden Dienstag von 18.30 bis 19.30 Uhr statt., Bitte bringt ein Handtuch und eine Badekappe mit. ]
+        answer: Wer eine Karte vom Stadtbad hat, bezahlt nur 50 Euro.
+        explanation: 'Der Text sagt es mit anderen Worten: „Wer eine Karte vom Stadtbad hat, bezahlt nur 50 Euro.“'
+      - type: pick
+        text: kurs
+        prompt: Man soll Sachen zum Abtrocknen mitnehmen.
+        options: [ Bitte bringt ein Handtuch und eine Badekappe mit., Der Kurs beginnt am 7. Oktober und dauert acht Wochen., Der Kurs kostet 64 Euro., Anmelden kann man sich an der Kasse oder online. ]
+        answer: Bitte bringt ein Handtuch und eine Badekappe mit.
+        explanation: 'Der Text sagt es mit anderen Worten: „Bitte bringt ein Handtuch und eine Badekappe mit.“'
+  - id: write
+    title: Antwort schreiben
+    shuffle: false
+    concepts:
+      - reading.find-details
+    instruction: Finde die Information im Text und schreibe eine kurze Antwort.
+    items:
+      - { type: short-answer, text: balkon, prompt: 'Was hat Tomás im Baumarkt gekauft?', accept: [ Erde und Töpfe, Töpfe und Erde, ~erde, ~töpfe ], explanation: 'Im Text steht: „Mein Mann Tomás hat im Baumarkt Erde und Töpfe gekauft.“' }
+      - { type: short-answer, text: balkon, prompt: 'Was hat die Autorin gepflanzt?', accept: [ ~tomaten, ~kräuter, ~blumen ], explanation: 'Im Text steht: „Ich habe Tomaten, Kräuter und Blumen gepflanzt.“' }
+      - { type: short-answer, text: balkon, prompt: 'Wann haben sie die ersten Tomaten gegessen?', accept: [ im Juli, Juli ], explanation: 'Im Text steht: „Im Juli haben wir die ersten Tomaten gegessen.“' }
+      - { type: short-answer, text: balkon, prompt: 'Was wollen sie nächstes Jahr probieren?', accept: [ Gurken ], explanation: 'Im Text steht: „Nächstes Jahr wollen wir Gurken probieren.“' }
+      - { type: short-answer, text: kurs, prompt: 'Wie lange dauert der Kurs?', accept: [ acht Wochen, 8 Wochen ], explanation: 'Im Text steht: „Der Kurs beginnt am 7. Oktober und dauert acht Wochen.“' }
+      - { type: short-answer, text: kurs, prompt: 'An welchem Tag findet der Kurs statt?', accept: [ dienstag, jeden Dienstag, am Dienstag ], explanation: 'Im Text steht: „Er findet jeden Dienstag von 18.30 bis 19.30 Uhr statt.“' }
+      - { type: short-answer, text: kurs, prompt: 'Wie viel kostet der Kurs mit der Karte?', accept: [ 50 Euro, 50 €, '50' ], explanation: 'Im Text steht: „Wer eine Karte vom Stadtbad hat, bezahlt nur 50 Euro.“' }
+      - { type: short-answer, text: kurs, prompt: 'Was soll man mitbringen?', accept: [ ~handtuch, ~badekappe ], explanation: 'Im Text steht: „Bitte bringt ein Handtuch und eine Badekappe mit.“' }
+  - id: match
+    title: Zuordnen
+    shuffle: false
+    concepts:
+      - reading.match
+    instruction: Tippe ein Wort oder eine Wortgruppe an, dann die passende Information.
+    items:
+      - { type: pairs, text: balkon, pairs: [ [ Tomás, kauft Erde und Töpfe ], [ die Autorin, 'pflanzt Tomaten, Kräuter und Blumen' ], [ die Nachbarin, findet den Balkon schön ], [ im Juli, die ersten Tomaten ] ] }
+      - { type: pairs, text: kurs, pairs: [ [ die Dauer, acht Wochen ], [ der Preis ohne Karte, 64 Euro ], [ die Gruppe, höchstens zehn Personen ], [ die Anmeldung, an der Kasse oder online ] ] }

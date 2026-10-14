@@ -2,160 +2,117 @@
 # Texts: heading + paragraphs. Every practice item shows its text (text: id) above the exercise.
 kind: lesson
 id: reading-a1
-title:
-  en: 'Reading: short texts'
-  de: 'Lesen: kurze Texte'
+title: 'Lesen: kurze Texte'
 level: A1
 skill: reading
 minutes: 20
 status: draft
-description:
-  en: 'Two short texts (a day, a message) with four kinds of tasks: right or wrong, find the sentence, write the answer, match.'
-  de: 'Zwei kurze Texte (ein Tag, eine Nachricht) mit vier Aufgabenarten: richtig oder falsch, Satz finden, Antwort schreiben, zuordnen.'
+description: 'Zwei kurze Texte (ein Tag, eine Nachricht) mit vier Aufgabenarten: richtig oder falsch, Satz finden, Antwort schreiben, zuordnen.'
 canDo:
-- en: I can understand short, simple texts about everyday life.
-  de: Ich kann kurze, einfache Texte über den Alltag verstehen.
-- en: I can find names, times and places in a text.
-  de: Ich kann Namen, Uhrzeiten und Orte in einem Text finden.
+  - Ich kann kurze, einfache Texte über den Alltag verstehen.
+  - Ich kann Namen, Uhrzeiten und Orte in einem Text finden.
 texts:
-- id: mia
-  heading: Mias Montag
-  paragraphs:
-  - 'Mia ist 24 Jahre alt. Sie wohnt in Köln. Montags steht sie um sechs Uhr auf. Sie frühstückt um halb sieben: Brot und Tee. Um sieben Uhr fährt sie mit dem Bus zur Arbeit. Mia arbeitet in einem Café. Sie arbeitet von acht bis vier Uhr. Am Abend kocht sie Suppe. Dann sieht sie fern. Um zehn Uhr geht sie ins Bett.'
-- id: lara
-  heading: Eine Nachricht von Lara
-  paragraphs:
-  - Hallo Ben,
-  - 'Ich bin jetzt in Wien. Das Hotel ist klein, aber schön. Es hat ein Café und einen Garten. Das Wetter ist gut: Es ist sonnig und warm. Heute besuche ich das Museum. Morgen fahre ich mit dem Zug nach Salzburg. Das Essen hier ist super! Ich esse jeden Tag Kuchen.'
-  - Bis bald, Lara
+  - id: mia
+    heading: Mias Montag
+    paragraphs:
+      - 'Mia ist 24 Jahre alt. Sie wohnt in Köln. Montags steht sie um sechs Uhr auf. Sie frühstückt um halb sieben: Brot und Tee. Um sieben Uhr fährt sie mit dem Bus zur Arbeit. Mia arbeitet in einem Café. Sie arbeitet von acht bis vier Uhr. Am Abend kocht sie Suppe. Dann sieht sie fern. Um zehn Uhr geht sie ins Bett.'
+  - id: lara
+    heading: Eine Nachricht von Lara
+    paragraphs:
+      - Hallo Ben,
+      - 'Ich bin jetzt in Wien. Das Hotel ist klein, aber schön. Es hat ein Café und einen Garten. Das Wetter ist gut: Es ist sonnig und warm. Heute besuche ich das Museum. Morgen fahre ich mit dem Zug nach Salzburg. Das Essen hier ist super! Ich esse jeden Tag Kuchen.'
+      - Bis bald, Lara
 understand:
-- type: rule
-  title:
-    en: How to read
-    de: So liest du
-  body:
-  - en: Read the whole text once. You do not need to understand every word.
-    de: Lies zuerst den ganzen Text. Du musst nicht jedes Wort verstehen.
-  - en: Look for names, numbers, times and places first.
-    de: Suche zuerst Namen, Zahlen, Zeiten und Orte.
-  - en: Then read the statement or the question. Go back to the text and find the sentence.
-    de: Lies dann die Aussage oder die Frage. Gehe zurück in den Text und finde den Satz.
-- type: text
-  title:
-    en: The four tasks
-    de: Die vier Aufgaben
-  body:
-  - en: Right or wrong? Decide if a statement agrees with the text.
-    de: Richtig oder falsch? Entscheide, ob eine Aussage zum Text passt.
-  - en: Find the sentence. The statement uses other words. Find the sentence in the text that says the same.
-    de: Den Satz finden. Die Aussage benutzt andere Wörter. Finde den Satz im Text, der dasselbe sagt.
-  - en: Write the answer. Find the information in the text and write it down.
-    de: Antwort schreiben. Finde die Information im Text und schreibe sie auf.
-  - en: Match. Connect things that belong together.
-    de: Zuordnen. Verbinde, was zusammengehört.
+  - type: rule
+    title: So liest du
+    body:
+      - Lies zuerst den ganzen Text. Du musst nicht jedes Wort verstehen.
+      - Suche zuerst Namen, Zahlen, Zeiten und Orte.
+      - Lies dann die Aussage oder die Frage. Gehe zurück in den Text und finde den Satz.
+  - type: text
+    title: Die vier Aufgaben
+    body:
+      - Richtig oder falsch? Entscheide, ob eine Aussage zum Text passt.
+      - Den Satz finden. Die Aussage benutzt andere Wörter. Finde den Satz im Text, der dasselbe sagt.
+      - Antwort schreiben. Finde die Information im Text und schreibe sie auf.
+      - Zuordnen. Verbinde, was zusammengehört.
 practice:
-- id: truefalse
-  title:
-    en: Right or wrong?
-    de: Richtig oder falsch?
-  shuffle: false
-  inText: false
-  concepts:
-  - reading.true-false
-  instruction:
-    en: Read the text. Is the statement right or wrong?
-    de: Lies den Text. Ist die Aussage richtig oder falsch?
-  items:
-  - {type: pick, text: mia, prompt: Mia wohnt in Köln., options: [richtig, falsch], answer: richtig, explanation: {en: 'In the text: “Sie wohnt in Köln.”', de: 'Im Text steht: „Sie wohnt in Köln.“'}}
-  - {type: pick, text: mia, prompt: Mia steht um sieben Uhr auf., options: [richtig, falsch], answer: falsch, explanation: {en: 'In the text: “Montags steht sie um sechs Uhr auf.”', de: 'Im Text steht: „Montags steht sie um sechs Uhr auf.“'}}
-  - {type: pick, text: mia, prompt: Mia fährt mit dem Bus zur Arbeit., options: [richtig, falsch], answer: richtig, explanation: {en: 'In the text: “Um sieben Uhr fährt sie mit dem Bus zur Arbeit.”', de: 'Im Text steht: „Um sieben Uhr fährt sie mit dem Bus zur Arbeit.“'}}
-  - {type: pick, text: mia, prompt: Mia arbeitet in einem Büro., options: [richtig, falsch], answer: falsch, explanation: {en: 'In the text: “Mia arbeitet in einem Café.”', de: 'Im Text steht: „Mia arbeitet in einem Café.“'}}
-  - {type: pick, text: mia, prompt: Am Abend kocht Mia Suppe., options: [richtig, falsch], answer: richtig, explanation: {en: 'In the text: “Am Abend kocht sie Suppe.”', de: 'Im Text steht: „Am Abend kocht sie Suppe.“'}}
-  - {type: pick, text: lara, prompt: Lara ist in Salzburg., options: [richtig, falsch], answer: falsch, explanation: {en: 'In the text: “Ich bin jetzt in Wien.”', de: 'Im Text steht: „Ich bin jetzt in Wien.“'}}
-  - {type: pick, text: lara, prompt: Das Hotel ist groß., options: [richtig, falsch], answer: falsch, explanation: {en: 'In the text: “Das Hotel ist klein, aber schön.”', de: 'Im Text steht: „Das Hotel ist klein, aber schön.“'}}
-  - {type: pick, text: lara, prompt: Das Wetter ist gut., options: [richtig, falsch], answer: richtig, explanation: {en: 'In the text: “Das Wetter ist gut: Es ist sonnig und warm.”', de: 'Im Text steht: „Das Wetter ist gut: Es ist sonnig und warm.“'}}
-  - {type: pick, text: lara, prompt: Lara fährt morgen mit dem Zug nach Salzburg., options: [richtig, falsch], answer: richtig, explanation: {en: 'In the text: “Morgen fahre ich mit dem Zug nach Salzburg.”', de: 'Im Text steht: „Morgen fahre ich mit dem Zug nach Salzburg.“'}}
-- id: find
-  title:
-    en: Find the sentence
-    de: Den Satz finden
-  shuffle: false
-  inText: true
-  concepts:
-  - reading.find-statement
-  instruction:
-    en: Which sentence in the text says the same in other words?
-    de: Welcher Satz im Text sagt dasselbe mit anderen Worten?
-  items:
-  - type: pick
-    text: mia
-    prompt: Mia lebt in Köln.
-    options: [Sie wohnt in Köln., Mia ist 24 Jahre alt., Um sieben Uhr fährt sie mit dem Bus zur Arbeit., Am Abend kocht sie Suppe.]
-    answer: Sie wohnt in Köln.
-    explanation:
-      en: 'The text says it in other words: “Sie wohnt in Köln.”'
-      de: 'Der Text sagt es mit anderen Worten: „Sie wohnt in Köln.“'
-  - type: pick
-    text: mia
-    prompt: Mia geht um 22 Uhr schlafen.
-    options: [Um zehn Uhr geht sie ins Bett., Montags steht sie um sechs Uhr auf., Mia arbeitet in einem Café., Dann sieht sie fern.]
-    answer: Um zehn Uhr geht sie ins Bett.
-    explanation:
-      en: 'The text says it in other words: “Um zehn Uhr geht sie ins Bett.”'
-      de: 'Der Text sagt es mit anderen Worten: „Um zehn Uhr geht sie ins Bett.“'
-  - type: pick
-    text: mia
-    prompt: Mia macht das Essen am Abend selbst.
-    options: [Am Abend kocht sie Suppe., Um sieben Uhr fährt sie mit dem Bus zur Arbeit., Dann sieht sie fern., Sie wohnt in Köln.]
-    answer: Am Abend kocht sie Suppe.
-    explanation:
-      en: 'The text says it in other words: “Am Abend kocht sie Suppe.”'
-      de: 'Der Text sagt es mit anderen Worten: „Am Abend kocht sie Suppe.“'
-  - type: pick
-    text: lara
-    prompt: Lara isst viel Kuchen.
-    options: [Ich esse jeden Tag Kuchen., Das Essen hier ist super!, 'Das Hotel ist klein, aber schön.', Heute besuche ich das Museum.]
-    answer: Ich esse jeden Tag Kuchen.
-    explanation:
-      en: 'The text says it in other words: “Ich esse jeden Tag Kuchen.”'
-      de: 'Der Text sagt es mit anderen Worten: „Ich esse jeden Tag Kuchen.“'
-  - type: pick
-    text: lara
-    prompt: Lara geht heute ins Museum.
-    options: [Heute besuche ich das Museum., Ich bin jetzt in Wien., 'Das Wetter ist gut: Es ist sonnig und warm.', Ich esse jeden Tag Kuchen.]
-    answer: Heute besuche ich das Museum.
-    explanation:
-      en: 'The text says it in other words: “Heute besuche ich das Museum.”'
-      de: 'Der Text sagt es mit anderen Worten: „Heute besuche ich das Museum.“'
-- id: write
-  title:
-    en: Write the answer
-    de: Antwort schreiben
-  shuffle: false
-  concepts:
-  - reading.find-details
-  instruction:
-    en: Find the information in the text and write a short answer.
-    de: Finde die Information im Text und schreibe eine kurze Antwort.
-  items:
-  - {type: short-answer, text: mia, prompt: 'Wo arbeitet Mia?', accept: [in einem Café, im Café, Café, ein Café], explanation: {en: 'In the text: “Mia arbeitet in einem Café.”', de: 'Im Text steht: „Mia arbeitet in einem Café.“'}}
-  - {type: short-answer, text: mia, prompt: 'Wann steht Mia auf?', accept: [um sechs Uhr, um 6 Uhr, sechs Uhr, 6 Uhr, um sechs, um 6], explanation: {en: 'In the text: “Montags steht sie um sechs Uhr auf.”', de: 'Im Text steht: „Montags steht sie um sechs Uhr auf.“'}}
-  - {type: short-answer, text: mia, prompt: 'Was gibt es bei Mia zum Frühstück?', accept: [Brot und Tee, Tee und Brot, 'Brot, Tee'], explanation: {en: 'In the text: “Sie frühstückt um halb sieben: Brot und Tee.”', de: 'Im Text steht: „Sie frühstückt um halb sieben: Brot und Tee.“'}}
-  - {type: short-answer, text: mia, prompt: 'Wie fährt Mia zur Arbeit?', accept: [mit dem Bus, Bus], explanation: {en: 'In the text: “Um sieben Uhr fährt sie mit dem Bus zur Arbeit.”', de: 'Im Text steht: „Um sieben Uhr fährt sie mit dem Bus zur Arbeit.“'}}
-  - {type: short-answer, text: lara, prompt: 'Wo ist Lara jetzt?', accept: [in Wien, Wien], explanation: {en: 'In the text: “Ich bin jetzt in Wien.”', de: 'Im Text steht: „Ich bin jetzt in Wien.“'}}
-  - {type: short-answer, text: lara, prompt: 'Wohin fährt Lara morgen?', accept: [nach Salzburg, Salzburg], explanation: {en: 'In the text: “Morgen fahre ich mit dem Zug nach Salzburg.”', de: 'Im Text steht: „Morgen fahre ich mit dem Zug nach Salzburg.“'}}
-  - {type: short-answer, text: lara, prompt: 'Was isst Lara jeden Tag?', accept: [Kuchen], explanation: {en: 'In the text: “Ich esse jeden Tag Kuchen.”', de: 'Im Text steht: „Ich esse jeden Tag Kuchen.“'}}
-  - {type: short-answer, text: lara, prompt: 'Wie fährt Lara nach Salzburg?', accept: [mit dem Zug, Zug], explanation: {en: 'In the text: “Morgen fahre ich mit dem Zug nach Salzburg.”', de: 'Im Text steht: „Morgen fahre ich mit dem Zug nach Salzburg.“'}}
-- id: match
-  title:
-    en: Match
-    de: Zuordnen
-  shuffle: false
-  concepts:
-  - reading.match
-  instruction:
-    en: Tap a word or phrase, then the detail that fits.
-    de: Tippe ein Wort oder eine Wortgruppe an, dann die passende Information.
-  items:
-  - {type: pairs, text: mia, pairs: [[um sechs Uhr, Mia steht auf.], [um halb sieben, Mia frühstückt.], [um sieben Uhr, Mia fährt mit dem Bus.], [um zehn Uhr, Mia geht ins Bett.]]}
-  - {type: pairs, text: lara, pairs: [[heute, Lara besucht das Museum.], [morgen, Lara fährt nach Salzburg.], [jeden Tag, Lara isst Kuchen.], [im Hotel, ein Café und ein Garten]]}
+  - id: truefalse
+    title: Richtig oder falsch?
+    shuffle: false
+    inText: false
+    concepts:
+      - reading.true-false
+    instruction: Lies den Text. Ist die Aussage richtig oder falsch?
+    items:
+      - { type: pick, text: mia, prompt: Mia wohnt in Köln., options: [ richtig, falsch ], answer: richtig, explanation: 'Im Text steht: „Sie wohnt in Köln.“' }
+      - { type: pick, text: mia, prompt: Mia steht um sieben Uhr auf., options: [ richtig, falsch ], answer: falsch, explanation: 'Im Text steht: „Montags steht sie um sechs Uhr auf.“' }
+      - { type: pick, text: mia, prompt: Mia fährt mit dem Bus zur Arbeit., options: [ richtig, falsch ], answer: richtig, explanation: 'Im Text steht: „Um sieben Uhr fährt sie mit dem Bus zur Arbeit.“' }
+      - { type: pick, text: mia, prompt: Mia arbeitet in einem Büro., options: [ richtig, falsch ], answer: falsch, explanation: 'Im Text steht: „Mia arbeitet in einem Café.“' }
+      - { type: pick, text: mia, prompt: Am Abend kocht Mia Suppe., options: [ richtig, falsch ], answer: richtig, explanation: 'Im Text steht: „Am Abend kocht sie Suppe.“' }
+      - { type: pick, text: lara, prompt: Lara ist in Salzburg., options: [ richtig, falsch ], answer: falsch, explanation: 'Im Text steht: „Ich bin jetzt in Wien.“' }
+      - { type: pick, text: lara, prompt: Das Hotel ist groß., options: [ richtig, falsch ], answer: falsch, explanation: 'Im Text steht: „Das Hotel ist klein, aber schön.“' }
+      - { type: pick, text: lara, prompt: Das Wetter ist gut., options: [ richtig, falsch ], answer: richtig, explanation: 'Im Text steht: „Das Wetter ist gut: Es ist sonnig und warm.“' }
+      - { type: pick, text: lara, prompt: Lara fährt morgen mit dem Zug nach Salzburg., options: [ richtig, falsch ], answer: richtig, explanation: 'Im Text steht: „Morgen fahre ich mit dem Zug nach Salzburg.“' }
+  - id: find
+    title: Den Satz finden
+    shuffle: false
+    inText: true
+    concepts:
+      - reading.find-statement
+    instruction: Welcher Satz im Text sagt dasselbe mit anderen Worten?
+    items:
+      - type: pick
+        text: mia
+        prompt: Mia lebt in Köln.
+        options: [ Sie wohnt in Köln., Mia ist 24 Jahre alt., Um sieben Uhr fährt sie mit dem Bus zur Arbeit., Am Abend kocht sie Suppe. ]
+        answer: Sie wohnt in Köln.
+        explanation: 'Der Text sagt es mit anderen Worten: „Sie wohnt in Köln.“'
+      - type: pick
+        text: mia
+        prompt: Mia geht um 22 Uhr schlafen.
+        options: [ Um zehn Uhr geht sie ins Bett., Montags steht sie um sechs Uhr auf., Mia arbeitet in einem Café., Dann sieht sie fern. ]
+        answer: Um zehn Uhr geht sie ins Bett.
+        explanation: 'Der Text sagt es mit anderen Worten: „Um zehn Uhr geht sie ins Bett.“'
+      - type: pick
+        text: mia
+        prompt: Mia macht das Essen am Abend selbst.
+        options: [ Am Abend kocht sie Suppe., Um sieben Uhr fährt sie mit dem Bus zur Arbeit., Dann sieht sie fern., Sie wohnt in Köln. ]
+        answer: Am Abend kocht sie Suppe.
+        explanation: 'Der Text sagt es mit anderen Worten: „Am Abend kocht sie Suppe.“'
+      - type: pick
+        text: lara
+        prompt: Lara isst viel Kuchen.
+        options: [ Ich esse jeden Tag Kuchen., Das Essen hier ist super!, 'Das Hotel ist klein, aber schön.', Heute besuche ich das Museum. ]
+        answer: Ich esse jeden Tag Kuchen.
+        explanation: 'Der Text sagt es mit anderen Worten: „Ich esse jeden Tag Kuchen.“'
+      - type: pick
+        text: lara
+        prompt: Lara geht heute ins Museum.
+        options: [ Heute besuche ich das Museum., Ich bin jetzt in Wien., 'Das Wetter ist gut: Es ist sonnig und warm.', Ich esse jeden Tag Kuchen. ]
+        answer: Heute besuche ich das Museum.
+        explanation: 'Der Text sagt es mit anderen Worten: „Heute besuche ich das Museum.“'
+  - id: write
+    title: Antwort schreiben
+    shuffle: false
+    concepts:
+      - reading.find-details
+    instruction: Finde die Information im Text und schreibe eine kurze Antwort.
+    items:
+      - { type: short-answer, text: mia, prompt: 'Wo arbeitet Mia?', accept: [ in einem Café, im Café, Café, ein Café ], explanation: 'Im Text steht: „Mia arbeitet in einem Café.“' }
+      - { type: short-answer, text: mia, prompt: 'Wann steht Mia auf?', accept: [ um sechs Uhr, um 6 Uhr, sechs Uhr, 6 Uhr, um sechs, um 6 ], explanation: 'Im Text steht: „Montags steht sie um sechs Uhr auf.“' }
+      - { type: short-answer, text: mia, prompt: 'Was gibt es bei Mia zum Frühstück?', accept: [ Brot und Tee, Tee und Brot, 'Brot, Tee' ], explanation: 'Im Text steht: „Sie frühstückt um halb sieben: Brot und Tee.“' }
+      - { type: short-answer, text: mia, prompt: 'Wie fährt Mia zur Arbeit?', accept: [ mit dem Bus, Bus ], explanation: 'Im Text steht: „Um sieben Uhr fährt sie mit dem Bus zur Arbeit.“' }
+      - { type: short-answer, text: lara, prompt: 'Wo ist Lara jetzt?', accept: [ in Wien, Wien ], explanation: 'Im Text steht: „Ich bin jetzt in Wien.“' }
+      - { type: short-answer, text: lara, prompt: 'Wohin fährt Lara morgen?', accept: [ nach Salzburg, Salzburg ], explanation: 'Im Text steht: „Morgen fahre ich mit dem Zug nach Salzburg.“' }
+      - { type: short-answer, text: lara, prompt: 'Was isst Lara jeden Tag?', accept: [ Kuchen ], explanation: 'Im Text steht: „Ich esse jeden Tag Kuchen.“' }
+      - { type: short-answer, text: lara, prompt: 'Wie fährt Lara nach Salzburg?', accept: [ mit dem Zug, Zug ], explanation: 'Im Text steht: „Morgen fahre ich mit dem Zug nach Salzburg.“' }
+  - id: match
+    title: Zuordnen
+    shuffle: false
+    concepts:
+      - reading.match
+    instruction: Tippe ein Wort oder eine Wortgruppe an, dann die passende Information.
+    items:
+      - { type: pairs, text: mia, pairs: [ [ um sechs Uhr, Mia steht auf. ], [ um halb sieben, Mia frühstückt. ], [ um sieben Uhr, Mia fährt mit dem Bus. ], [ um zehn Uhr, Mia geht ins Bett. ] ] }
+      - { type: pairs, text: lara, pairs: [ [ heute, Lara besucht das Museum. ], [ morgen, Lara fährt nach Salzburg. ], [ jeden Tag, Lara isst Kuchen. ], [ im Hotel, ein Café und ein Garten ] ] }

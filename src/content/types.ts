@@ -299,7 +299,7 @@ export interface VocabWord {
   word: string; // the word without article (nouns: singular)
   pl?: string; // plural of a noun, without article
   noPlural?: boolean; // nouns without a plural (Milch, Urlaub)
-  meaning: string; // English in English mode, a simple German explanation in German mode
+  meaning: string; // a simple German explanation
   ex: string;
 }
 export interface ReadingText {

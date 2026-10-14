@@ -10,7 +10,7 @@ The owner is a German teacher (DaZ) and **not a programmer**. Explain in plain l
 
 ## Product rules
 
-- **App language is German only** (simple German, children aged about 10). No English switch. Learning content is German too. The English texts still inside `src/i18n/strings.tsx` and `content/trainings/*.yaml` (`{en, de}` pairs) are leftovers and are never shown; do not write new English texts.
+- **App language is German only** (simple German, children aged about 10). No English switch. Learning content is German too. All texts, in `src/i18n/strings.tsx` and in `content/trainings/*.yaml`, are plain German (no English or `{en, de}` pairs). Trainings are single files without a translation.
 - **No accounts, no saving, no tracking.** Nothing is written to localStorage, IndexedDB or cookies. Results exist only in memory while the page is open. Display settings (text size, wide spacing) reset on every visit. The offline file cache (service worker) is fine.
 - **No read-aloud, no sounds.**
 - **Dyslexia-friendly** (see `docs/STYLE.md`): butter-yellow squared notebook page on a cream-white background, white cards with navy outlines, handwriting headings (Patrick Hand), clear sans-serif text (see the style guide), generous spacing, left-aligned text, short sentences, one task at a time, no italics, no time pressure, no error-hunting tasks (sentence ordering over finding mistakes), encouraging feedback only. Colour is never the only signal.

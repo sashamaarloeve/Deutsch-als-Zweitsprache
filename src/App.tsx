@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { trainingsByLang } from './content/load';
+import { trainings } from './content/load';
 import type { Item, Training } from './content/types';
 import { LangProvider, useLang } from './i18n';
 import { Runner } from './components/Runner';
@@ -36,8 +36,7 @@ function TopicCard({ t, done, onClick, extra }: { t: Training; done?: { best: nu
 }
 
 function Shell() {
-  const { lang, s } = useLang();
-  const trainings = trainingsByLang[lang];
+  const { s } = useLang();
   const [tab, setTab] = useState<Tab>('home');
   const [topicId, setTopicId] = useState<string | null>(null); // open topic in "Understand"
   const [practice, setPractice] = useState<PracticeView>({ name: 'menu' });

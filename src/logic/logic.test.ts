@@ -2,9 +2,8 @@ import { describe, expect, it } from 'vitest';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { parse } from 'yaml';
 import type { BoxesItem, BuildItem, ChoiceItem, ConvertItem, LessonTraining, OrderItem, PerfektTraining, Training } from '../content/types';
-import { articleOptions, bilingualProblems, formOptions, localize, mergeOverlay, parseParts, parseTraining, partsArrangement, possibleStarts } from '../content/expand';
+import { articleOptions, formOptions, parseParts, parseTraining, partsArrangement, possibleStarts } from '../content/expand';
 import { parseRich, richProblems, stripRich } from '../content/rich';
-import { strings } from '../i18n/strings';
 import { roleTokens, isParticiple } from './german';
 import { validateTraining } from '../content/validate';
 import { boxesSentence, buildSentenceText, checkBoxes, checkBuild, checkChoice, checkConvert, checkOrder, glued, matchSentenceBuild, sentenceText, checkShortAnswer } from './check';
@@ -15,13 +14,13 @@ import { todayInGerman } from './today';
 import { parseAktuell } from '../content/aktuell';
 
 // Helpers that tell TypeScript which kind of training a file is.
-const perfektOf = (yamlText: string, overlay?: string, problems: string[] = []): PerfektTraining => {
-  const t = parseTraining(yamlText, overlay, problems);
+const perfektOf = (yamlText: string): PerfektTraining => {
+  const t = parseTraining(yamlText);
   if (t.kind !== 'perfekt') throw new Error('not a perfekt training');
   return t;
 };
-const lessonOf = (file: string, lang: 'en' | 'de' = 'en'): LessonTraining => {
-  const t = parseTraining(readFileSync(`content/trainings/${file}`, 'utf8'), undefined, [], lang);
+const lessonOf = (file: string): LessonTraining => {
+  const t = parseTraining(readFileSync(`content/trainings/${file}`, 'utf8'));
   if (t.kind !== 'lesson') throw new Error('not a lesson training');
   return t;
 };
@@ -89,39 +88,18 @@ describe('German helpers', () => {
   });
 });
 
-describe('German-only version', () => {
+describe('the Perfekt training', () => {
   const main = readFileSync('content/trainings/perfekt.yaml', 'utf8');
-  const de = readFileSync('content/trainings/de/perfekt.yaml', 'utf8');
   const concepts = parse(readFileSync('content/concepts.yaml', 'utf8'));
-  it('has no keys that are missing in the main file', () => {
-    const problems: string[] = [];
-    parseTraining(main, de, problems);
-    expect(problems).toEqual([]);
+  it('passes the content check', () => {
+    expect(validateTraining(perfektOf(main), concepts)).toEqual([]);
   });
-  it('passes the content check and keeps the same ids', () => {
-    const en = perfektOf(main);
-    const g = perfektOf(main, de);
-    expect(validateTraining(g, concepts)).toEqual([]);
-    expect(g.items.map((i) => i.id)).toEqual(en.items.map((i) => i.id));
-  });
-  it('translates explanations, hints and rules', () => {
-    const en = perfektOf(main);
-    const g = perfektOf(main, de);
-    expect(g.canDo).not.toEqual(en.canDo);
+  it('is written in German', () => {
+    const g = perfektOf(main);
     expect(g.klammer.rulePos2).toContain('Hauptsatz');
     expect(g.subKlammer.rule).toContain('Nebensatz');
-    const enChoice = en.items.find((i) => i.id === 'perfekt-aux-gehen');
-    const deChoice = g.items.find((i) => i.id === 'perfekt-aux-gehen');
-    expect(enChoice && 'explanation' in enChoice && enChoice.explanation).toContain('Change of place');
-    expect(deChoice && 'explanation' in deChoice && deChoice.explanation).toContain('Ortswechsel');
-  });
-  it('reports typos in a translation file', () => {
-    const problems: string[] = [];
-    mergeOverlay({ a: { b: 'x' } }, { a: { c: 'y' } }, '', problems);
-    expect(problems.join(' ')).toContain('a.c');
-  });
-  it('has a German text for every interface string', () => {
-    expect(Object.keys(strings.de).sort()).toEqual(Object.keys(strings.en).sort());
+    const choice = g.items.find((i) => i.id === 'perfekt-aux-gehen');
+    expect(choice && 'explanation' in choice && choice.explanation).toContain('Ortswechsel');
   });
 });
 
@@ -129,14 +107,9 @@ describe('content files', () => {
   const concepts = parse(readFileSync('content/concepts.yaml', 'utf8'));
   const files = readdirSync('content/trainings').filter((x) => x.endsWith('.yaml'));
   for (const f of files) {
-    for (const lang of ['en', 'de'] as const) {
-      it(`${f} passes the content check (${lang})`, () => {
-        const main = readFileSync(`content/trainings/${f}`, 'utf8');
-        const deFile = `content/trainings/de/${f}`;
-        const overlay = lang === 'de' && existsSync(deFile) ? readFileSync(deFile, 'utf8') : undefined;
-        expect(validateTraining(parseTraining(main, overlay, [], lang), concepts)).toEqual([]);
-      });
-    }
+    it(`${f} passes the content check`, () => {
+      expect(validateTraining(parseTraining(readFileSync(`content/trainings/${f}`, 'utf8')), concepts)).toEqual([]);
+    });
   }
   it('the Perfekt training has the full verb list and exercises', () => {
     const t = perfektOf(readFileSync('content/trainings/perfekt.yaml', 'utf8'));
@@ -166,19 +139,6 @@ describe('inline markup', () => {
     expect(richProblems('Ich <v>bin</v> müde.')).toEqual([]);
     expect(richProblems('Ich <b>bin</b> müde.')).not.toEqual([]);
     expect(richProblems('Ich <v>bin müde.')).not.toEqual([]);
-  });
-});
-
-describe('English and German side by side', () => {
-  it('picks one language', () => {
-    const x = { a: { en: 'Hello', de: 'Hallo' }, b: [{ en: 'x', de: 'y' }, 'same'] };
-    expect(localize(x, 'de')).toEqual({ a: 'Hallo', b: ['y', 'same'] });
-    expect(localize(x, 'en')).toEqual({ a: 'Hello', b: ['x', 'same'] });
-  });
-  it('finds texts that exist in only one language', () => {
-    expect(bilingualProblems({ title: { en: 'x' } }).join(' ')).toContain('both');
-    expect(bilingualProblems({ title: 'only English' }).join(' ')).toContain('en:');
-    expect(bilingualProblems({ title: { en: 'x', de: 'y' } })).toEqual([]);
   });
 });
 
@@ -227,13 +187,9 @@ describe('A1 lesson trainings', () => {
       for (const s of t.sets) expect(s.itemIds.length).toBeGreaterThan(0);
     }
   });
-  it('gives the German version different texts', () => {
-    const de = lessonOf('haben-sein-present.yaml', 'de');
-    expect(de.title).toBe('haben und sein');
-    expect(hs.title).toBe('haben and sein');
-    expect(de.canDo[0]).toContain('Ich kann');
-    expect(hs.canDo[0]).toContain('I can');
-    expect(de.items.map((i) => i.id)).toEqual(hs.items.map((i) => i.id));
+  it('is written in German', () => {
+    expect(hs.title).toBe('haben und sein');
+    expect(hs.canDo[0]).toContain('Ich kann');
   });
   it('checks boxes and builds the finished sentence', () => {
     const item: BoxesItem = { id: 'b', type: 'boxes', concepts: ['x'], instruction: '', boxes: ['P1', 'V', 'S', 'R'], chunks: ['heute', 'spiele', 'ich', 'Fußball'], solutions: [[['heute'], ['spiele'], ['ich'], ['Fußball']]], end: '.', explanation: '' };
@@ -365,13 +321,11 @@ describe('cases and sentence parts', () => {
     expect(possibleStarts(parts)).toEqual(['S', 'T', 'D', 'A']);
   });
 
-  it('the new trainings are valid in both languages', () => {
+  it('the new trainings are valid', () => {
     for (const f of ['vocabulary-family-a1', 'vocabulary-food-a1', 'vocabulary-work-a2', 'reading-a1', 'reading-a2', 'reading-b1', 'genitive-b1', 'two-way-prepositions-a2', 'cases-overview', 'accusative-a1', 'dative-a2', 'main-clauses-a1', 'main-clauses-a2']) {
-      for (const lang of ['en', 'de'] as const) {
-        const t = lessonOf(`${f}.yaml`, lang);
-        expect(validateTraining(t, parse(readFileSync('content/concepts.yaml', 'utf8')))).toEqual([]);
-        expect(t.items.length).toBeGreaterThan(20);
-      }
+      const t = lessonOf(`${f}.yaml`);
+      expect(validateTraining(t, parse(readFileSync('content/concepts.yaml', 'utf8')))).toEqual([]);
+      expect(t.items.length).toBeGreaterThan(20);
     }
   });
 
@@ -438,11 +392,9 @@ describe('vocabulary', () => {
     const verb = t.items.find((i) => i.type === 'short-answer' && i.accept.includes('essen'));
     expect(verb && verb.type === 'short-answer' && checkShortAnswer(verb.accept, 'esse')).toBe(false);
   });
-  it('in German mode the meaning is a German explanation', () => {
-    const en = lessonOf('vocabulary-family-a1.yaml', 'en').words!.find((w) => w.id === 'mutter')!;
-    const de = lessonOf('vocabulary-family-a1.yaml', 'de').words!.find((w) => w.id === 'mutter')!;
-    expect(en.meaning).toBe('mother');
-    expect(de.meaning).toBe('Mama');
+  it('the meaning is a simple German explanation', () => {
+    const w = lessonOf('vocabulary-family-a1.yaml').words!.find((x) => x.id === 'mutter')!;
+    expect(w.meaning).toBe('Mama');
   });
 });
 

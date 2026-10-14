@@ -4,16 +4,15 @@ Every training is a **draft** until you set `status: reviewed` in its file (or a
 
 ## How to review one training (about 15 minutes each)
 
-1. Open the preview link, switch to **English instructions**. Open the training under *Understand*, read it.
-2. Do every task under *Practice* once. Make one mistake on purpose in a few tasks to see the feedback.
-3. Switch to **Alles auf Deutsch** and look again, especially the explanations.
-4. Mark your answers below (✓ fine, ✎ change, ? unsure) and send me the list. I make the changes.
+1. Open the preview link. Open the training under *Verstehen*, read it.
+2. Do every task under *Trainieren* once. Make one mistake on purpose in a few tasks to see the feedback.
+3. Mark your answers below (✓ fine, ✎ change, ? unsure) and send me the list. I make the changes.
 
 For every training ask yourself:
 - Is the German correct and natural? Is it at the right level (nothing too hard without a gloss)?
 - Are the rules true, without wrong simplifications? Are important exceptions mentioned?
 - Are all correct answers accepted? Is any wrong answer accidentally accepted?
-- Is the English simple and warm? Is the German in the German-only mode simple?
+- Is the German simple and warm enough for 10-year-olds?
 - Do the examples avoid stereotypes and real people?
 
 ## Training by training

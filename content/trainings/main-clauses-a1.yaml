@@ -1,23 +1,21 @@
 # Training: main clauses with short sentences (A1), at most 5 sentence parts (Satzteile).
-# Original content. English and German texts are written side by side: { en: "...", de: "..." }.
+# Original content, written in German.
 kind: lesson
 id: main-clauses-a1
-title: { en: "Main clauses: short sentences", de: "Hauptsätze: kurze Sätze" }
+title: "Hauptsätze: kurze Sätze"
 level: A1
 skill: grammar
 minutes: 25
 status: draft
-description:
-  en: "Short statements with up to 5 sentence parts: subject, verb, time, place and object. Learn what goes where and what can stand in position 1."
-  de: "Kurze Aussagesätze mit bis zu 5 Satzteilen: Subjekt, Verb, Zeit, Ort und Objekt. Du lernst, was wohin gehört und was auf Position 1 stehen kann."
+description: "Kurze Aussagesätze mit bis zu 5 Satzteilen: Subjekt, Verb, Zeit, Ort und Objekt. Du lernst, was wohin gehört und was auf Position 1 stehen kann."
 canDo:
-  - { en: "I can find the parts of a short sentence: who, what, when, where.", de: "Ich kann die Teile eines kurzen Satzes finden: wer, was, wann, wo." }
-  - { en: "I can put the verb in position 2 and the other parts in a good order.", de: "Ich kann das Verb auf Position 2 setzen und die anderen Teile gut ordnen." }
-  - { en: "I can write short sentences with up to 5 parts.", de: "Ich kann kurze Sätze mit bis zu 5 Teilen schreiben." }
+  - "Ich kann die Teile eines kurzen Satzes finden: wer, was, wann, wo."
+  - "Ich kann das Verb auf Position 2 setzen und die anderen Teile gut ordnen."
+  - "Ich kann kurze Sätze mit bis zu 5 Teilen schreiben."
 
 understand:
   - type: dialogue
-    title: { en: "Listen: short sentences", de: "Hör zu: kurze Sätze" }
+    title: "Hör zu: kurze Sätze"
     lines:
       - { who: Mia, say: "Ich <v>lerne</v> heute Deutsch. Und du?" }
       - { who: Ben, say: "Ich <v>spiele</v> heute Fußball. Dann <v>koche</v> ich Suppe." }
@@ -25,101 +23,96 @@ understand:
       - { who: Ben, say: "Ich <v>wohne</v> in Wien." }
 
   - type: text
-    title: { en: "Sentence parts (Satzteile)", de: "Satzteile" }
+    title: "Satzteile"
     body:
-      - en: "A sentence is made of parts. A part can be one word (heute) or several words that belong together (in der Schule). In this training, a sentence has 3 to 5 parts."
-        de: "Ein Satz besteht aus Teilen. Ein Teil kann ein Wort sein (heute) oder mehrere Wörter, die zusammengehören (in der Schule). In diesem Training hat ein Satz 3 bis 5 Teile."
-      - { en: "<p>Ich</p> <v>lerne</v> heute in der Schule Deutsch.", de: "<p>Ich</p> <v>lerne</v> heute in der Schule Deutsch." }
-      - { en: "Wer lernt? – ich (subject)", de: "Wer lernt? – ich (Subjekt)" }
-      - { en: "Wann? – heute (time)", de: "Wann? – heute (Zeit)" }
-      - { en: "Wo? – in der Schule (place)", de: "Wo? – in der Schule (Ort)" }
-      - { en: "Was? – Deutsch (object)", de: "Was? – Deutsch (Objekt)" }
+      - "Ein Satz besteht aus Teilen. Ein Teil kann ein Wort sein (heute) oder mehrere Wörter, die zusammengehören (in der Schule). In diesem Training hat ein Satz 3 bis 5 Teile."
+      - "<p>Ich</p> <v>lerne</v> heute in der Schule Deutsch."
+      - "Wer lernt? – ich (Subjekt)"
+      - "Wann? – heute (Zeit)"
+      - "Wo? – in der Schule (Ort)"
+      - "Was? – Deutsch (Objekt)"
 
   - type: parts-lab
-    title: { en: "The parts lab", de: "Das Satzteile-Labor" }
-    intro:
-      en: "Choose a sentence and a part for position 1. The <v>verb</v> always stays in position 2. The other parts go into the Mittelfeld."
-      de: "Wähle einen Satz und einen Teil für Position 1. Das <v>Verb</v> bleibt immer auf Position 2. Die anderen Teile stehen im Mittelfeld."
+    title: "Das Satzteile-Labor"
+    intro: "Wähle einen Satz und einen Teil für Position 1. Das <v>Verb</v> bleibt immer auf Position 2. Die anderen Teile stehen im Mittelfeld."
     roles:
-      S: { en: "who (subject)", de: "wer (Subjekt)" }
-      V: { en: "verb", de: "Verb" }
-      T: { en: "when (time)", de: "wann (Zeit)" }
-      L: { en: "where (place)", de: "wo (Ort)" }
-      A: { en: "what (object)", de: "was (Objekt)" }
+      S: "wer (Subjekt)"
+      V: "Verb"
+      T: "wann (Zeit)"
+      L: "wo (Ort)"
+      A: "was (Objekt)"
     sentences:
-      - { parts: [{ t: ich, r: S }, { t: spiele, r: V }, { t: heute, r: T }, { t: Fußball, r: A }], starts: [S, T, A] }
-      - { parts: [{ t: Mia, r: S }, { t: trinkt, r: V }, { t: morgens, r: T }, { t: Kaffee, r: A }], starts: [S, T, A] }
-      - { parts: [{ t: wir, r: S }, { t: wohnen, r: V }, { t: in Berlin, r: L }], starts: [S, L] }
-      - { parts: [{ t: Ben, r: S }, { t: kauft, r: V }, { t: heute, r: T }, { t: im Supermarkt, r: L }, { t: Brot, r: A }], starts: [S, T, L, A] }
+      - { parts: [ { t: ich, r: S }, { t: spiele, r: V }, { t: heute, r: T }, { t: Fußball, r: A } ], starts: [ S, T, A ] }
+      - { parts: [ { t: Mia, r: S }, { t: trinkt, r: V }, { t: morgens, r: T }, { t: Kaffee, r: A } ], starts: [ S, T, A ] }
+      - { parts: [ { t: wir, r: S }, { t: wohnen, r: V }, { t: in Berlin, r: L } ], starts: [ S, L ] }
+      - { parts: [ { t: Ben, r: S }, { t: kauft, r: V }, { t: heute, r: T }, { t: im Supermarkt, r: L }, { t: Brot, r: A } ], starts: [ S, T, L, A ] }
 
   - type: detective
-    title: { en: "Sentence detective", de: "Satz-Detektiv" }
-    intro:
-      en: "Tap a part. You see the question that finds it and its role."
-      de: "Tippe einen Teil an. Du siehst die Frage, die ihn findet, und seine Rolle."
+    title: "Satz-Detektiv"
+    intro: "Tippe einen Teil an. Du siehst die Frage, die ihn findet, und seine Rolle."
     roles:
-      S: { en: "who (subject)", de: "wer (Subjekt)" }
-      V: { en: "verb (position 2)", de: "Verb (Position 2)" }
-      T: { en: "when (time)", de: "wann (Zeit)" }
-      L: { en: "where (place)", de: "wo (Ort)" }
-      A: { en: "what (object)", de: "was (Objekt)" }
+      S: "wer (Subjekt)"
+      V: "Verb (Position 2)"
+      T: "wann (Zeit)"
+      L: "wo (Ort)"
+      A: "was (Objekt)"
     sentences:
-      - parts: [{ t: Ich, r: S, q: "Wer lernt?" }, { t: lerne, r: V, q: "Was mache ich?" }, { t: heute, r: T, q: "Wann lerne ich?" }, { t: in der Schule, r: L, q: "Wo lerne ich?" }, { t: Deutsch, r: A, q: "Was lerne ich?" }]
+      - parts: [ { t: Ich, r: S, q: "Wer lernt?" }, { t: lerne, r: V, q: "Was mache ich?" }, { t: heute, r: T, q: "Wann lerne ich?" }, { t: in der Schule, r: L, q: "Wo lerne ich?" }, { t: Deutsch, r: A, q: "Was lerne ich?" } ]
 
   - type: rule
-    title: { en: "Three rules", de: "Drei Regeln" }
+    title: "Drei Regeln"
     body:
-      - { en: "1. The <v>verb</v> is in position 2.", de: "1. Das <v>Verb</v> steht auf Position 2." }
-      - { en: "2. Position 1 can be the subject, a time, a place or an object. If it is not the subject, the subject comes after the verb.", de: "2. Auf Position 1 kann das Subjekt, eine Zeit, ein Ort oder ein Objekt stehen. Wenn es nicht das Subjekt ist, steht das Subjekt nach dem Verb." }
-      - { en: "3. The usual order in the Mittelfeld: subject – time – object – place. Example: Ich lerne <en>heute</en> <st>Deutsch</st> in der Schule.", de: "3. Die normale Reihenfolge im Mittelfeld: Subjekt – Zeit – Objekt – Ort. Beispiel: Ich lerne <en>heute</en> <st>Deutsch</st> in der Schule." }
+      - "1. Das <v>Verb</v> steht auf Position 2."
+      - "2. Auf Position 1 kann das Subjekt, eine Zeit, ein Ort oder ein Objekt stehen. Wenn es nicht das Subjekt ist, steht das Subjekt nach dem Verb."
+      - "3. Die normale Reihenfolge im Mittelfeld: Subjekt – Zeit – Objekt – Ort. Beispiel: Ich lerne <en>heute</en> <st>Deutsch</st> in der Schule."
 
   - type: rule
-    title: { en: "Questions", de: "Fragen" }
+    title: "Fragen"
     body:
-      - { en: "W-questions start with a question word. The <v>verb</v> is in position 2:", de: "W-Fragen beginnen mit einem Fragewort. Das <v>Verb</v> steht auf Position 2:" }
-      - { en: "<p>Wann</p> <v>lernst</v> du Deutsch?", de: "<p>Wann</p> <v>lernst</v> du Deutsch?" }
-      - { en: "<p>Wo</p> <v>wohnt</v> Ben?", de: "<p>Wo</p> <v>wohnt</v> Ben?" }
-      - { en: "<p>Wer</p> <v>kocht</v> heute?", de: "<p>Wer</p> <v>kocht</v> heute?" }
-      - { en: "The question word is in position 1 and the <v>verb</v> in position 2.", de: "Das Fragewort steht auf Position 1 und das <v>Verb</v> auf Position 2." }
+      - "W-Fragen beginnen mit einem Fragewort. Das <v>Verb</v> steht auf Position 2:"
+      - "<p>Wann</p> <v>lernst</v> du Deutsch?"
+      - "<p>Wo</p> <v>wohnt</v> Ben?"
+      - "<p>Wer</p> <v>kocht</v> heute?"
+      - "Das Fragewort steht auf Position 1 und das <v>Verb</v> auf Position 2."
 
   - type: rule
-    title: { en: "Watch out!", de: "Achtung!" }
+    title: "Achtung!"
     body:
-      - { en: "<x>Heute ich spiele Fußball.</x> ✗ <p>Heute</p> <v>spiele</v> ich Fußball. ✓", de: "<x>Heute ich spiele Fußball.</x> ✗ <p>Heute</p> <v>spiele</v> ich Fußball. ✓" }
-      - { en: "<x>Ich spiele Fußball heute.</x> is not the usual order. Better: Ich spiele <en>heute</en> Fußball.", de: "<x>Ich spiele Fußball heute.</x> ist nicht die normale Reihenfolge. Besser: Ich spiele <en>heute</en> Fußball." }
+      - "<x>Heute ich spiele Fußball.</x> ✗ <p>Heute</p> <v>spiele</v> ich Fußball. ✓"
+      - "<x>Ich spiele Fußball heute.</x> ist nicht die normale Reihenfolge. Besser: Ich spiele <en>heute</en> Fußball."
 
 practice:
   - id: which
-    title: { en: "Which part?", de: "Welcher Teil?" }
+    title: "Welcher Teil?"
     count: 8
     shuffle: true
-    concepts: [syntax.parts]
+    concepts: [ syntax.parts ]
     items:
-      - { type: pick, instruction: { en: "Which part answers: wer? (who)", de: "Welcher Teil antwortet auf: Wer?" }, prompt: "Mia lernt heute Deutsch.", options: ["Mia", "lernt", "heute", "Deutsch"], answer: "Mia", explanation: { en: "Wer lernt? – Mia.", de: "Wer lernt? – Mia." } }
-      - { type: pick, instruction: { en: "Which part answers: wann? (when)", de: "Welcher Teil antwortet auf: Wann?" }, prompt: "Mia lernt heute Deutsch.", options: ["Mia", "lernt", "heute", "Deutsch"], answer: "heute", explanation: { en: "Wann lernt Mia? – heute.", de: "Wann lernt Mia? – heute." } }
-      - { type: pick, instruction: { en: "Which part answers: was? (what)", de: "Welcher Teil antwortet auf: Was?" }, prompt: "Mia lernt heute Deutsch.", options: ["Mia", "lernt", "heute", "Deutsch"], answer: "Deutsch", explanation: { en: "Was lernt Mia? – Deutsch.", de: "Was lernt Mia? – Deutsch." } }
-      - { type: pick, instruction: { en: "Which part answers: wo? (where)", de: "Welcher Teil antwortet auf: Wo?" }, prompt: "Wir wohnen in Berlin.", options: ["Wir", "wohnen", "in Berlin"], answer: "in Berlin", explanation: { en: "Wo wohnen wir? – in Berlin.", de: "Wo wohnen wir? – in Berlin." } }
-      - { type: pick, instruction: { en: "Which part answers: wo? (where)", de: "Welcher Teil antwortet auf: Wo?" }, prompt: "Ben kauft heute im Supermarkt Brot.", options: ["Ben", "kauft", "heute", "im Supermarkt", "Brot"], answer: "im Supermarkt", explanation: { en: "Wo kauft Ben Brot? – im Supermarkt.", de: "Wo kauft Ben Brot? – im Supermarkt." } }
-      - { type: pick, instruction: { en: "Which part is the verb?", de: "Welcher Teil ist das Verb?" }, prompt: "Anna trinkt morgens Tee.", options: ["Anna", "trinkt", "morgens", "Tee"], answer: "trinkt", explanation: { en: "The verb says what happens: trinkt.", de: "Das Verb sagt, was passiert: trinkt." } }
-      - { type: pick, instruction: { en: "Which part is in position 1?", de: "Welcher Teil steht auf Position 1?" }, prompt: "Heute spiele ich Fußball.", options: ["Heute", "spiele", "ich", "Fußball"], answer: "Heute", explanation: { en: "The first part is “Heute”. The verb is in position 2.", de: "Der erste Teil ist „Heute“. Das Verb steht auf Position 2." } }
-      - { type: pick, instruction: { en: "Which part is the subject? Ask: wer?", de: "Welcher Teil ist das Subjekt? Frage: Wer?" }, prompt: "Morgen kocht Ben Suppe.", options: ["Morgen", "kocht", "Ben", "Suppe"], answer: "Ben", explanation: { en: "Wer kocht? – Ben. The subject is after the verb.", de: "Wer kocht? – Ben. Das Subjekt steht nach dem Verb." } }
+      - { type: pick, instruction: "Welcher Teil antwortet auf: Wer?", prompt: "Mia lernt heute Deutsch.", options: [ "Mia", "lernt", "heute", "Deutsch" ], answer: "Mia", explanation: "Wer lernt? – Mia." }
+      - { type: pick, instruction: "Welcher Teil antwortet auf: Wann?", prompt: "Mia lernt heute Deutsch.", options: [ "Mia", "lernt", "heute", "Deutsch" ], answer: "heute", explanation: "Wann lernt Mia? – heute." }
+      - { type: pick, instruction: "Welcher Teil antwortet auf: Was?", prompt: "Mia lernt heute Deutsch.", options: [ "Mia", "lernt", "heute", "Deutsch" ], answer: "Deutsch", explanation: "Was lernt Mia? – Deutsch." }
+      - { type: pick, instruction: "Welcher Teil antwortet auf: Wo?", prompt: "Wir wohnen in Berlin.", options: [ "Wir", "wohnen", "in Berlin" ], answer: "in Berlin", explanation: "Wo wohnen wir? – in Berlin." }
+      - { type: pick, instruction: "Welcher Teil antwortet auf: Wo?", prompt: "Ben kauft heute im Supermarkt Brot.", options: [ "Ben", "kauft", "heute", "im Supermarkt", "Brot" ], answer: "im Supermarkt", explanation: "Wo kauft Ben Brot? – im Supermarkt." }
+      - { type: pick, instruction: "Welcher Teil ist das Verb?", prompt: "Anna trinkt morgens Tee.", options: [ "Anna", "trinkt", "morgens", "Tee" ], answer: "trinkt", explanation: "Das Verb sagt, was passiert: trinkt." }
+      - { type: pick, instruction: "Welcher Teil steht auf Position 1?", prompt: "Heute spiele ich Fußball.", options: [ "Heute", "spiele", "ich", "Fußball" ], answer: "Heute", explanation: "Der erste Teil ist „Heute“. Das Verb steht auf Position 2." }
+      - { type: pick, instruction: "Welcher Teil ist das Subjekt? Frage: Wer?", prompt: "Morgen kocht Ben Suppe.", options: [ "Morgen", "kocht", "Ben", "Suppe" ], answer: "Ben", explanation: "Wer kocht? – Ben. Das Subjekt steht nach dem Verb." }
 
   - id: boxes
-    title: { en: "Boxes", de: "Felder" }
+    title: "Felder"
     count: 8
     boxes:
-      - { en: "Position 1", de: "Position 1" }
-      - { en: "Verb", de: "Verb" }
-      - { en: "Mittelfeld", de: "Mittelfeld" }
+      - "Position 1"
+      - "Verb"
+      - "Mittelfeld"
     roleLabels:
-      S: { en: "who", de: "wer" }
-      V: { en: "verb", de: "Verb" }
-      T: { en: "when", de: "wann" }
-      L: { en: "where", de: "wo" }
-      A: { en: "what", de: "was" }
-    concepts: [syntax.parts, syntax.verb-position-2, syntax.inversion]
-    instruction: { en: "Put the parts into the boxes. Many solutions are possible: any part can be first.", de: "Lege die Teile in die Felder. Es gibt mehrere Lösungen: Jeder Teil kann zuerst stehen." }
-    explanation: { en: "The verb is in position 2. The other parts are in the Mittelfeld in the usual order: subject, time, object, place.", de: "Das Verb steht auf Position 2. Die anderen Teile stehen im Mittelfeld in der normalen Reihenfolge: Subjekt, Zeit, Objekt, Ort." }
+      S: "wer"
+      V: "Verb"
+      T: "wann"
+      L: "wo"
+      A: "was"
+    concepts: [ syntax.parts, syntax.verb-position-2, syntax.inversion ]
+    instruction: "Lege die Teile in die Felder. Es gibt mehrere Lösungen: Jeder Teil kann zuerst stehen."
+    explanation: "Das Verb steht auf Position 2. Die anderen Teile stehen im Mittelfeld in der normalen Reihenfolge: Subjekt, Zeit, Objekt, Ort."
     items:
       - { type: parts-boxes, parts: "ich/S lerne/V heute/T Deutsch/A" }
       - { type: parts-boxes, parts: "Mia/S trinkt/V morgens/T Kaffee/A" }
@@ -131,33 +124,33 @@ practice:
       - { type: parts-boxes, parts: "du/S lernst/V jeden_Tag/T Wörter/A" }
 
   - id: questions
-    title: { en: "Questions", de: "Fragen" }
+    title: "Fragen"
     count: 4
     boxes:
-      - { en: "Position 1", de: "Position 1" }
-      - { en: "Verb", de: "Verb" }
-      - { en: "Mittelfeld", de: "Mittelfeld" }
+      - "Position 1"
+      - "Verb"
+      - "Mittelfeld"
     roleLabels:
-      Q: { en: "question word", de: "Fragewort" }
-      V: { en: "verb", de: "Verb" }
-      S: { en: "who", de: "wer" }
-      A: { en: "what", de: "was" }
-      L: { en: "where", de: "wo" }
-    concepts: [syntax.w-question]
-    instruction: { en: "Make a question. The question word is first.", de: "Bilde eine Frage. Das Fragewort steht zuerst." }
-    explanation: { en: "Question word in position 1, verb in position 2, subject in the Mittelfeld.", de: "Fragewort auf Position 1, Verb auf Position 2, Subjekt im Mittelfeld." }
+      Q: "Fragewort"
+      V: "Verb"
+      S: "wer"
+      A: "was"
+      L: "wo"
+    concepts: [ syntax.w-question ]
+    instruction: "Bilde eine Frage. Das Fragewort steht zuerst."
+    explanation: "Fragewort auf Position 1, Verb auf Position 2, Subjekt im Mittelfeld."
     items:
-      - { type: boxes, chunks: [wo, wohnst, du], roles: [Q, V, S], end: "?", solutions: [[[wo], [wohnst], [du]]] }
-      - { type: boxes, chunks: [was, lernt, Mia], roles: [Q, V, S], end: "?", solutions: [[[was], [lernt], [Mia]]] }
-      - { type: boxes, chunks: [wann, spielt, Ben, Fußball], roles: [Q, V, S, A], end: "?", solutions: [[[wann], [spielt], [Ben, Fußball]]] }
-      - { type: boxes, chunks: [wo, kauft, Anna, Brot], roles: [Q, V, S, A], end: "?", solutions: [[[wo], [kauft], [Anna, Brot]]] }
+      - { type: boxes, chunks: [ wo, wohnst, du ], roles: [ Q, V, S ], end: "?", solutions: [ [ [ wo ], [ wohnst ], [ du ] ] ] }
+      - { type: boxes, chunks: [ was, lernt, Mia ], roles: [ Q, V, S ], end: "?", solutions: [ [ [ was ], [ lernt ], [ Mia ] ] ] }
+      - { type: boxes, chunks: [ wann, spielt, Ben, Fußball ], roles: [ Q, V, S, A ], end: "?", solutions: [ [ [ wann ], [ spielt ], [ Ben, Fußball ] ] ] }
+      - { type: boxes, chunks: [ wo, kauft, Anna, Brot ], roles: [ Q, V, S, A ], end: "?", solutions: [ [ [ wo ], [ kauft ], [ Anna, Brot ] ] ] }
 
   - id: puzzle
-    title: { en: "Sentence puzzle", de: "Satzpuzzle" }
+    title: "Satzpuzzle"
     count: 6
-    concepts: [syntax.mittelfeld-order, syntax.verb-position-2]
-    instruction: { en: "Put the parts in the usual order. Start with the subject.", de: "Bringe die Teile in die normale Reihenfolge. Beginne mit dem Subjekt." }
-    explanation: { en: "Subject, verb, time, object, place.", de: "Subjekt, Verb, Zeit, Objekt, Ort." }
+    concepts: [ syntax.mittelfeld-order, syntax.verb-position-2 ]
+    instruction: "Bringe die Teile in die normale Reihenfolge. Beginne mit dem Subjekt."
+    explanation: "Subjekt, Verb, Zeit, Objekt, Ort."
     items:
       - { type: parts-order, parts: "ich/S lerne/V heute/T Deutsch/A" }
       - { type: parts-order, parts: "Ben/S kauft/V heute/T Brot/A im_Supermarkt/L" }
@@ -166,50 +159,50 @@ practice:
       - { type: parts-order, parts: "sie/S trinken/V abends/T Tee/A" }
       - { type: parts-order, parts: "Anna/S liest/V heute/T Zeitung/A im_Park/L" }
       - { type: parts-order, parts: "Mia/S trinkt/V heute/T Kaffee/A" }
-      - { type: parts-order, parts: "heute/T spielt/V Ben/S Fußball/A", start: T, instruction: { en: "Put the parts in the right order. Start with “heute”.", de: "Bringe die Teile in die richtige Reihenfolge. Beginne mit „heute“." } }
+      - { type: parts-order, parts: "heute/T spielt/V Ben/S Fußball/A", start: T, instruction: "Bringe die Teile in die richtige Reihenfolge. Beginne mit „heute“." }
 
   - id: correct
-    title: { en: "Which is right?", de: "Was ist richtig?" }
+    title: "Was ist richtig?"
     count: 6
-    concepts: [syntax.verb-position-2, syntax.inversion]
-    instruction: { en: "Tap the correct sentence.", de: "Tippe den richtigen Satz an." }
+    concepts: [ syntax.verb-position-2, syntax.inversion ]
+    instruction: "Tippe den richtigen Satz an."
     items:
       - type: pick
-        options: ["Heute spiele ich Fußball.", "Heute ich spiele Fußball.", "Heute spielen Fußball ich."]
+        options: [ "Heute spiele ich Fußball.", "Heute ich spiele Fußball.", "Heute spielen Fußball ich." ]
         answer: "Heute spiele ich Fußball."
-        explanation: { en: "The verb stays in position 2. The subject comes after the verb.", de: "Das Verb bleibt auf Position 2. Das Subjekt steht nach dem Verb." }
+        explanation: "Das Verb bleibt auf Position 2. Das Subjekt steht nach dem Verb."
       - type: pick
-        options: ["Ich lerne heute Deutsch.", "Ich heute lerne Deutsch.", "Ich Deutsch lerne heute."]
+        options: [ "Ich lerne heute Deutsch.", "Ich heute lerne Deutsch.", "Ich Deutsch lerne heute." ]
         answer: "Ich lerne heute Deutsch."
-        explanation: { en: "Subject, verb in position 2, time, object.", de: "Subjekt, Verb auf Position 2, Zeit, Objekt." }
+        explanation: "Subjekt, Verb auf Position 2, Zeit, Objekt."
       - type: pick
-        options: ["Wo wohnst du?", "Wo du wohnst?", "Wo wohnen sie du?"]
+        options: [ "Wo wohnst du?", "Wo du wohnst?", "Wo wohnen sie du?" ]
         answer: "Wo wohnst du?"
-        explanation: { en: "Question word, verb, subject.", de: "Fragewort, Verb, Subjekt." }
+        explanation: "Fragewort, Verb, Subjekt."
       - type: pick
-        options: ["In Berlin wohne ich.", "In Berlin ich wohne.", "In Berlin wohnt ich."]
+        options: [ "In Berlin wohne ich.", "In Berlin ich wohne.", "In Berlin wohnt ich." ]
         answer: "In Berlin wohne ich."
-        explanation: { en: "A place in position 1: verb in position 2, then the subject.", de: "Ein Ort auf Position 1: Verb auf Position 2, dann das Subjekt." }
+        explanation: "Ein Ort auf Position 1: Verb auf Position 2, dann das Subjekt."
       - type: pick
-        options: ["Ben kauft heute Brot im Supermarkt.", "Ben kauft Brot heute im Supermarkt.", "Ben heute kauft Brot im Supermarkt."]
+        options: [ "Ben kauft heute Brot im Supermarkt.", "Ben kauft Brot heute im Supermarkt.", "Ben heute kauft Brot im Supermarkt." ]
         answer: "Ben kauft heute Brot im Supermarkt."
-        explanation: { en: "Usual order: time, object, place.", de: "Normale Reihenfolge: Zeit, Objekt, Ort." }
+        explanation: "Normale Reihenfolge: Zeit, Objekt, Ort."
       - type: pick
-        options: ["Morgen kocht Mia Suppe.", "Morgen Mia kocht Suppe.", "Mia morgen kocht Suppe."]
+        options: [ "Morgen kocht Mia Suppe.", "Morgen Mia kocht Suppe.", "Mia morgen kocht Suppe." ]
         answer: "Morgen kocht Mia Suppe."
-        explanation: { en: "“Morgen” is in position 1, so the verb comes next.", de: "„Morgen“ steht auf Position 1, deshalb kommt jetzt das Verb." }
+        explanation: "„Morgen“ steht auf Position 1, deshalb kommt jetzt das Verb."
 
   - id: write
-    title: { en: "Writing", de: "Schreiben" }
-    concepts: [writing.simple-sentences, syntax.parts]
-    instruction: { en: "Write 4 or more short sentences. Use the words.", de: "Schreibe 4 kurze Sätze oder mehr. Benutze die Wörter." }
+    title: "Schreiben"
+    concepts: [ writing.simple-sentences, syntax.parts ]
+    instruction: "Schreibe 4 kurze Sätze oder mehr. Benutze die Wörter."
     items:
       - type: free-writing
-        task: { en: "Write about your day: What do you do? When? Where?", de: "Schreibe über deinen Tag: Was machst du? Wann? Wo?" }
-        words: [heute, morgens, abends, in, zu Hause]
+        task: "Schreibe über deinen Tag: Was machst du? Wann? Wo?"
+        words: [ heute, morgens, abends, in, zu Hause ]
         minSentences: 4
         checklist:
-          - { en: "The verb is in position 2.", de: "Das Verb steht auf Position 2." }
-          - { en: "I used a time (for example heute) and a place (for example in Berlin).", de: "Ich habe eine Zeit (zum Beispiel „heute“) und einen Ort (zum Beispiel „in Berlin“) benutzt." }
-          - { en: "Every sentence has no more than 5 parts.", de: "Jeder Satz hat höchstens 5 Teile." }
+          - "Das Verb steht auf Position 2."
+          - "Ich habe eine Zeit (zum Beispiel „heute“) und einen Ort (zum Beispiel „in Berlin“) benutzt."
+          - "Jeder Satz hat höchstens 5 Teile."
         model: "Ich stehe morgens um sieben Uhr auf. Ich trinke Kaffee. Abends koche ich Suppe. Heute lerne ich Deutsch."

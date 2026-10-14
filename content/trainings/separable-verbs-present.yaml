@@ -1,37 +1,34 @@
 # Training: separable verbs in the present tense (A1): aufstehen, einkaufen, anrufen, mitkommen …
 # The prefix goes to the end of a statement. Original content.
-# English and German texts are written side by side: { en: "...", de: "..." }.
 kind: lesson
 id: separable-verbs-present
-title: { en: "Separable verbs", de: "Trennbare Verben" }
+title: "Trennbare Verben"
 level: A1
 skill: grammar
 minutes: 20
 status: draft
-description:
-  en: "Verbs like aufstehen and einkaufen split in two: Ich stehe um sieben Uhr auf. The prefix goes to the end of the sentence."
-  de: "Verben wie „aufstehen“ und „einkaufen“ teilen sich: Ich stehe um sieben Uhr auf. Die Vorsilbe steht am Satzende."
+description: "Verben wie „aufstehen“ und „einkaufen“ teilen sich: Ich stehe um sieben Uhr auf. Die Vorsilbe steht am Satzende."
 canDo:
-  - { en: "I can build the present tense of common separable verbs.", de: "Ich kann das Präsens von häufigen trennbaren Verben bilden." }
-  - { en: "I can put the verb in position 2 and the prefix at the end.", de: "Ich kann das Verb auf Position 2 und die Vorsilbe ans Ende setzen." }
-  - { en: "I can ask yes/no questions and use a time word first.", de: "Ich kann Ja/Nein-Fragen stellen und ein Zeitwort an den Anfang setzen." }
-  - { en: "I know that with a modal verb the separable verb stays together.", de: "Ich weiß: Mit einem Modalverb bleibt das trennbare Verb zusammen." }
+  - "Ich kann das Präsens von häufigen trennbaren Verben bilden."
+  - "Ich kann das Verb auf Position 2 und die Vorsilbe ans Ende setzen."
+  - "Ich kann Ja/Nein-Fragen stellen und ein Zeitwort an den Anfang setzen."
+  - "Ich weiß: Mit einem Modalverb bleibt das trennbare Verb zusammen."
 
 verbs:
-  - { inf: aufstehen, comp: "um sieben Uhr", stem: steh, prefix: auf, endings: [e, st, t, en, t, en] }
-  - { inf: einkaufen, comp: "im Supermarkt", stem: kauf, prefix: ein, endings: [e, st, t, en, t, en] }
-  - { inf: anrufen, comp: "meine Oma", stem: ruf, prefix: an, endings: [e, st, t, en, t, en] }
-  - { inf: mitkommen, comp: "gern", stem: komm, prefix: mit, endings: [e, st, t, en, t, en] }
-  - { inf: ankommen, comp: "um acht Uhr", stem: komm, prefix: an, endings: [e, st, t, en, t, en] }
-  - { inf: aufräumen, comp: "das Zimmer", stem: räum, prefix: auf, endings: [e, st, t, en, t, en] }
-  - { inf: abholen, comp: "die Kinder", stem: hol, prefix: ab, endings: [e, st, t, en, t, en] }
-  - { inf: fernsehen, comp: "abends", stem: seh, alt: sieh, altAt: [1, 2], prefix: fern, endings: [e, st, t, en, t, en] }
-  - { inf: einladen, comp: "meine Freunde", stem: lad, alt: läd, altAt: [1, 2], prefix: ein, endings: [e, st, t, en, et, en] }
-  - { inf: anfangen, comp: "um neun Uhr", stem: fang, alt: fäng, altAt: [1, 2], prefix: an, endings: [e, st, t, en, t, en] }
+  - { inf: aufstehen, comp: "um sieben Uhr", stem: steh, prefix: auf, endings: [ e, st, t, en, t, en ] }
+  - { inf: einkaufen, comp: "im Supermarkt", stem: kauf, prefix: ein, endings: [ e, st, t, en, t, en ] }
+  - { inf: anrufen, comp: "meine Oma", stem: ruf, prefix: an, endings: [ e, st, t, en, t, en ] }
+  - { inf: mitkommen, comp: "gern", stem: komm, prefix: mit, endings: [ e, st, t, en, t, en ] }
+  - { inf: ankommen, comp: "um acht Uhr", stem: komm, prefix: an, endings: [ e, st, t, en, t, en ] }
+  - { inf: aufräumen, comp: "das Zimmer", stem: räum, prefix: auf, endings: [ e, st, t, en, t, en ] }
+  - { inf: abholen, comp: "die Kinder", stem: hol, prefix: ab, endings: [ e, st, t, en, t, en ] }
+  - { inf: fernsehen, comp: "abends", stem: seh, alt: sieh, altAt: [ 1, 2 ], prefix: fern, endings: [ e, st, t, en, t, en ] }
+  - { inf: einladen, comp: "meine Freunde", stem: lad, alt: läd, altAt: [ 1, 2 ], prefix: ein, endings: [ e, st, t, en, et, en ] }
+  - { inf: anfangen, comp: "um neun Uhr", stem: fang, alt: fäng, altAt: [ 1, 2 ], prefix: an, endings: [ e, st, t, en, t, en ] }
 
 understand:
   - type: dialogue
-    title: { en: "Listen to the verbs", de: "Achte auf die Verben" }
+    title: "Achte auf die Verben"
     lines:
       - { who: Mia, say: "Wann <v>stehst</v> du <s>auf</s>?" }
       - { who: Ben, say: "Ich <v>stehe</v> um sieben Uhr <s>auf</s>. Dann <v>räume</v> ich die Wohnung <s>auf</s>." }
@@ -39,35 +36,29 @@ understand:
       - { who: Ben, say: "Ja. Meine Freundin <v>kommt</v> mit. Sie <v>sieht</v> abends gern <s>fern</s>." }
 
   - type: text
-    title: { en: "What are separable verbs?", de: "Was sind trennbare Verben?" }
+    title: "Was sind trennbare Verben?"
     body:
-      - en: "Some verbs have a prefix: <s>auf</s>stehen, <s>ein</s>kaufen, <s>an</s>rufen. In a statement the verb is in position 2 and the prefix goes to the end."
-        de: "Einige Verben haben eine Vorsilbe: <s>auf</s>stehen, <s>ein</s>kaufen, <s>an</s>rufen. Im Aussagesatz steht das Verb auf Position 2. Die Vorsilbe steht am Ende."
-      - { en: "<p>Ich</p> <v>stehe</v> um sieben Uhr <s>auf</s>.", de: "<p>Ich</p> <v>stehe</v> um sieben Uhr <s>auf</s>." }
-      - { en: "<p>Wir</p> <v>kaufen</v> heute <s>ein</s>.", de: "<p>Wir</p> <v>kaufen</v> heute <s>ein</s>." }
-      - en: "The verb and the prefix make a bracket. The Mittelfeld is between them."
-        de: "Das Verb und die Vorsilbe bilden eine Klammer. Dazwischen steht das Mittelfeld."
+      - "Einige Verben haben eine Vorsilbe: <s>auf</s>stehen, <s>ein</s>kaufen, <s>an</s>rufen. Im Aussagesatz steht das Verb auf Position 2. Die Vorsilbe steht am Ende."
+      - "<p>Ich</p> <v>stehe</v> um sieben Uhr <s>auf</s>."
+      - "<p>Wir</p> <v>kaufen</v> heute <s>ein</s>."
+      - "Das Verb und die Vorsilbe bilden eine Klammer. Dazwischen steht das Mittelfeld."
 
   - type: conjugation
-    title: { en: "The verb workshop", de: "Die Verb-Werkstatt" }
-    intro: { en: "Tap a verb. The prefix (teal) is separate and goes to the end.", de: "Tippe ein Verb an. Die Vorsilbe (türkis) steht getrennt und kommt ans Ende." }
-    verbs: [aufstehen, einkaufen, anrufen, mitkommen, ankommen, aufräumen, abholen, fernsehen, einladen, anfangen]
-    irregularNote:
-      en: "The prefix never changes. fernsehen, einladen and anfangen also change their vowel in du and er/sie/es: du siehst fern, er lädt ein, es fängt an."
-      de: "Die Vorsilbe ändert sich nie. „fernsehen“, „einladen“ und „anfangen“ haben außerdem einen Vokalwechsel bei du und er/sie/es: du siehst fern, er lädt ein, es fängt an."
+    title: "Die Verb-Werkstatt"
+    intro: "Tippe ein Verb an. Die Vorsilbe (türkis) steht getrennt und kommt ans Ende."
+    verbs: [ aufstehen, einkaufen, anrufen, mitkommen, ankommen, aufräumen, abholen, fernsehen, einladen, anfangen ]
+    irregularNote: "Die Vorsilbe ändert sich nie. „fernsehen“, „einladen“ und „anfangen“ haben außerdem einen Vokalwechsel bei du und er/sie/es: du siehst fern, er lädt ein, es fängt an."
 
   - type: bracket-lab
-    title: { en: "The bracket lab", de: "Das Klammer-Labor" }
-    intro:
-      en: "Build a sentence. The verb is in position 2 and the prefix is at the end."
-      de: "Baue einen Satz. Das Verb steht auf Position 2. Die Vorsilbe steht am Ende."
+    title: "Das Klammer-Labor"
+    intro: "Baue einen Satz. Das Verb steht auf Position 2. Die Vorsilbe steht am Ende."
     boxLabels:
-      - { en: "Position 1", de: "Position 1" }
-      - { en: "Verb", de: "Verb" }
-      - { en: "Mittelfeld", de: "Mittelfeld" }
-      - { en: "End", de: "Ende" }
-    partLabels: [{ en: "verb", de: "Verb" }, { en: "prefix", de: "Vorsilbe" }]
-    actionLabel: { en: "Verb", de: "Verb" }
+      - "Position 1"
+      - "Verb"
+      - "Mittelfeld"
+      - "Ende"
+    partLabels: [ "Verb", "Vorsilbe" ]
+    actionLabel: "Verb"
     leads: []
     actions:
       - { lead: aufstehen, comp: früh }
@@ -77,80 +68,73 @@ understand:
       - { lead: fernsehen, comp: abends }
       - { lead: aufräumen, comp: das Zimmer }
       - { lead: abholen, comp: die Kinder }
-    starts: [heute, morgen, jetzt]
+    starts: [ heute, morgen, jetzt ]
     modes:
       - id: statement
-        label: { en: "Statement", de: "Aussagesatz" }
-        boxes: [[S], [V], [O], [Z]]
+        label: "Aussagesatz"
+        boxes: [ [ S ], [ V ], [ O ], [ Z ] ]
         end: "."
-        rule:
-          en: "The <v>verb</v> is in position 2. The <s>prefix</s> goes to the end."
-          de: "Das <v>Verb</v> steht auf Position 2. Die <s>Vorsilbe</s> steht am Ende."
+        rule: "Das <v>Verb</v> steht auf Position 2. Die <s>Vorsilbe</s> steht am Ende."
       - id: time-first
-        label: { en: "Time word first", de: "Zeitwort zuerst" }
-        boxes: [[T], [V], [S, O], [Z]]
+        label: "Zeitwort zuerst"
+        boxes: [ [ T ], [ V ], [ S, O ], [ Z ] ]
         end: "."
-        rule:
-          en: "The <v>verb</v> is still in position 2. The subject now stands in the Mittelfeld. The <s>prefix</s> stays at the end."
-          de: "Das <v>Verb</v> bleibt auf Position 2. Das Subjekt steht jetzt im Mittelfeld. Die <s>Vorsilbe</s> bleibt am Ende."
+        rule: "Das <v>Verb</v> bleibt auf Position 2. Das Subjekt steht jetzt im Mittelfeld. Die <s>Vorsilbe</s> bleibt am Ende."
       - id: yes-no
-        label: { en: "Yes/no question", de: "Ja/Nein-Frage" }
-        boxes: [[], [V], [S, O], [Z]]
+        label: "Ja/Nein-Frage"
+        boxes: [ [], [ V ], [ S, O ], [ Z ] ]
         end: "?"
-        rule:
-          en: "In a yes/no question the <v>verb</v> comes first. The <s>prefix</s> is still at the end."
-          de: "In der Ja/Nein-Frage steht das <v>Verb</v> vorne. Die <s>Vorsilbe</s> bleibt am Ende."
+        rule: "In der Ja/Nein-Frage steht das <v>Verb</v> vorne. Die <s>Vorsilbe</s> bleibt am Ende."
 
   - type: rule
-    title: { en: "With a modal verb the verb stays together", de: "Mit Modalverb bleibt das Verb zusammen" }
+    title: "Mit Modalverb bleibt das Verb zusammen"
     body:
-      - { en: "Ich <v>muss</v> früh <s>aufstehen</s>.", de: "Ich <v>muss</v> früh <s>aufstehen</s>." }
-      - { en: "<v>Kannst</v> du heute <s>einkaufen</s>?", de: "<v>Kannst</v> du heute <s>einkaufen</s>?" }
-      - en: "The modal verb is in position 2. The separable verb is in the infinitive at the end and is one word again."
-        de: "Das Modalverb steht auf Position 2. Das trennbare Verb steht im Infinitiv am Ende und ist wieder ein Wort."
+      - "Ich <v>muss</v> früh <s>aufstehen</s>."
+      - "<v>Kannst</v> du heute <s>einkaufen</s>?"
+      - "Das Modalverb steht auf Position 2. Das trennbare Verb steht im Infinitiv am Ende und ist wieder ein Wort."
 
   - type: rule
-    title: { en: "Watch out!", de: "Achtung!" }
+    title: "Achtung!"
     body:
-      - { en: "<x>Ich aufstehe um sieben Uhr.</x> ✗ Ich <v>stehe</v> um sieben Uhr <s>auf</s>. ✓", de: "<x>Ich aufstehe um sieben Uhr.</x> ✗ Ich <v>stehe</v> um sieben Uhr <s>auf</s>. ✓" }
-      - { en: "<x>Wann ankommst du?</x> ✗ Wann <v>kommst</v> du <s>an</s>? ✓", de: "<x>Wann ankommst du?</x> ✗ Wann <v>kommst</v> du <s>an</s>? ✓" }
+      - "<x>Ich aufstehe um sieben Uhr.</x> ✗ Ich <v>stehe</v> um sieben Uhr <s>auf</s>. ✓"
+      - "<x>Wann ankommst du?</x> ✗ Wann <v>kommst</v> du <s>an</s>? ✓"
 
 practice:
   - id: build
-    title: { en: "Build sentences", de: "Sätze bauen" }
+    title: "Sätze bauen"
     count: 8
-    instruction: { en: "Build the sentence. Start with the subject. Build the verb from stem + ending, and do not forget the prefix.", de: "Baue den Satz. Beginne mit dem Subjekt. Baue das Verb aus Stamm + Endung und vergiss die Vorsilbe nicht." }
-    explanation: { en: "The verb is in position 2 and the prefix is at the end.", de: "Das Verb steht auf Position 2 und die Vorsilbe steht am Ende." }
+    instruction: "Baue den Satz. Beginne mit dem Subjekt. Baue das Verb aus Stamm + Endung und vergiss die Vorsilbe nicht."
+    explanation: "Das Verb steht auf Position 2 und die Vorsilbe steht am Ende."
     items:
       - type: forms-sentence
-        verbs: [aufstehen, einkaufen, anrufen, mitkommen, ankommen, aufräumen, abholen]
-        concepts: [separable.forms, separable.prefix-end]
-        hint: { en: "Tap the subject, then the verb parts (stem + ending), then the rest, and the prefix last.", de: "Tippe zuerst das Subjekt an, dann die Verbteile (Stamm + Endung), dann den Rest und zuletzt die Vorsilbe." }
+        verbs: [ aufstehen, einkaufen, anrufen, mitkommen, ankommen, aufräumen, abholen ]
+        concepts: [ separable.forms, separable.prefix-end ]
+        hint: "Tippe zuerst das Subjekt an, dann die Verbteile (Stamm + Endung), dann den Rest und zuletzt die Vorsilbe."
       - type: forms-sentence
-        verbs: [fernsehen, einladen, anfangen]
-        concepts: [separable.vowel-change, separable.prefix-end]
-        hint: { en: "du and er/sie/es have a vowel change. The prefix is last.", de: "du und er/sie/es haben einen Vokalwechsel. Die Vorsilbe steht zuletzt." }
+        verbs: [ fernsehen, einladen, anfangen ]
+        concepts: [ separable.vowel-change, separable.prefix-end ]
+        hint: "du und er/sie/es haben einen Vokalwechsel. Die Vorsilbe steht zuletzt."
 
   - id: pick
-    title: { en: "Which form?", de: "Welche Form?" }
+    title: "Welche Form?"
     count: 10
-    instruction: { en: "Which form is right? Tap it.", de: "Welche Form ist richtig? Tippe sie an." }
+    instruction: "Welche Form ist richtig? Tippe sie an."
     items:
       - type: forms-pick
-        verbs: [aufstehen, einkaufen, anrufen, mitkommen, ankommen, aufräumen, abholen]
-        concepts: [separable.forms]
-        explanation: { en: "The verb part is conjugated. The prefix stays the same and goes to the end.", de: "Der Verbteil ändert sich. Die Vorsilbe bleibt gleich und steht am Ende." }
+        verbs: [ aufstehen, einkaufen, anrufen, mitkommen, ankommen, aufräumen, abholen ]
+        concepts: [ separable.forms ]
+        explanation: "Der Verbteil ändert sich. Die Vorsilbe bleibt gleich und steht am Ende."
       - type: forms-pick
-        verbs: [fernsehen, einladen, anfangen]
-        concepts: [separable.vowel-change]
-        explanation: { en: "du and er/sie/es change the vowel. The prefix goes to the end.", de: "du und er/sie/es ändern den Vokal. Die Vorsilbe steht am Ende." }
+        verbs: [ fernsehen, einladen, anfangen ]
+        concepts: [ separable.vowel-change ]
+        explanation: "du und er/sie/es ändern den Vokal. Die Vorsilbe steht am Ende."
 
   - id: sentences
-    title: { en: "In sentences", de: "Im Satz" }
+    title: "Im Satz"
     count: 10
-    concepts: [separable.forms, separable.prefix-end]
-    instruction: { en: "Choose the right verb form. The prefix is already at the end.", de: "Wähle die richtige Verbform. Die Vorsilbe steht schon am Ende." }
-    explanation: { en: "Look at the subject. It tells you the form of the verb part.", de: "Schau auf das Subjekt. Es zeigt die Form vom Verbteil." }
+    concepts: [ separable.forms, separable.prefix-end ]
+    instruction: "Wähle die richtige Verbform. Die Vorsilbe steht schon am Ende."
+    explanation: "Schau auf das Subjekt. Es zeigt die Form vom Verbteil."
     items:
       - { type: pick-form, verb: aufstehen, person: 0, sentence: "Ich ___ um sieben Uhr auf." }
       - { type: pick-form, verb: einkaufen, person: 1, sentence: "Du ___ heute Brot ein." }
@@ -159,133 +143,133 @@ practice:
       - { type: pick-form, verb: mitkommen, person: 4, sentence: "Ihr ___ gern mit, oder?" }
       - { type: pick-form, verb: aufräumen, person: 5, sentence: "Die Kinder ___ das Zimmer auf." }
       - { type: pick-form, verb: abholen, person: 0, sentence: "Ich ___ dich um acht Uhr ab." }
-      - { type: pick-form, verb: fernsehen, person: 2, sentence: "Er ___ abends fern.", concepts: [separable.vowel-change] }
-      - { type: pick-form, verb: fernsehen, person: 1, sentence: "Du ___ viel fern.", concepts: [separable.vowel-change] }
-      - { type: pick-form, verb: einladen, person: 2, sentence: "Meine Freundin ___ mich zur Party ein.", concepts: [separable.vowel-change] }
-      - { type: pick-form, verb: anfangen, person: 2, sentence: "Der Film ___ um acht Uhr an.", concepts: [separable.vowel-change] }
+      - { type: pick-form, verb: fernsehen, person: 2, sentence: "Er ___ abends fern.", concepts: [ separable.vowel-change ] }
+      - { type: pick-form, verb: fernsehen, person: 1, sentence: "Du ___ viel fern.", concepts: [ separable.vowel-change ] }
+      - { type: pick-form, verb: einladen, person: 2, sentence: "Meine Freundin ___ mich zur Party ein.", concepts: [ separable.vowel-change ] }
+      - { type: pick-form, verb: anfangen, person: 2, sentence: "Der Film ___ um acht Uhr an.", concepts: [ separable.vowel-change ] }
       - { type: pick-form, verb: aufstehen, person: 3, sentence: "Wir ___ jeden Tag um sechs Uhr auf." }
 
   - id: boxes
-    title: { en: "Boxes", de: "Felder" }
+    title: "Felder"
     count: 8
-    concepts: [separable.prefix-end]
+    concepts: [ separable.prefix-end ]
     markLast: true
     boxes:
-      - { en: "Position 1", de: "Position 1" }
-      - { en: "Verb", de: "Verb" }
-      - { en: "Mittelfeld", de: "Mittelfeld" }
-      - { en: "End", de: "Ende" }
-    instruction: { en: "Put the words into the boxes. The verb goes into the verb box, the prefix into the last box.", de: "Lege die Wörter in die Felder. Das Verb kommt in das Verb-Feld, die Vorsilbe in das letzte Feld." }
-    explanation: { en: "The verb is in position 2 (or first in a yes/no question). The prefix is at the end.", de: "Das Verb steht auf Position 2 (in der Ja/Nein-Frage vorne). Die Vorsilbe steht am Ende." }
+      - "Position 1"
+      - "Verb"
+      - "Mittelfeld"
+      - "Ende"
+    instruction: "Lege die Wörter in die Felder. Das Verb kommt in das Verb-Feld, die Vorsilbe in das letzte Feld."
+    explanation: "Das Verb steht auf Position 2 (in der Ja/Nein-Frage vorne). Die Vorsilbe steht am Ende."
     items:
       - type: boxes
-        chunks: [ich, stehe, früh, auf]
+        chunks: [ ich, stehe, früh, auf ]
         solutions:
-          - [[ich], [stehe], [früh], [auf]]
-          - [[früh], [stehe], [ich], [auf]]
+          - [ [ ich ], [ stehe ], [ früh ], [ auf ] ]
+          - [ [ früh ], [ stehe ], [ ich ], [ auf ] ]
       - type: boxes
-        chunks: [wir, kaufen, heute, ein]
+        chunks: [ wir, kaufen, heute, ein ]
         solutions:
-          - [[wir], [kaufen], [heute], [ein]]
-          - [[heute], [kaufen], [wir], [ein]]
+          - [ [ wir ], [ kaufen ], [ heute ], [ ein ] ]
+          - [ [ heute ], [ kaufen ], [ wir ], [ ein ] ]
       - type: boxes
-        chunks: [Mia, ruft, ihre Oma, an]
+        chunks: [ Mia, ruft, ihre Oma, an ]
         solutions:
-          - [[Mia], [ruft], [ihre Oma], [an]]
-          - [[ihre Oma], [ruft], [Mia], [an]]
-      - type: boxes
-        end: "?"
-        instruction: { en: "Put the words into the boxes. It is a yes/no question.", de: "Lege die Wörter in die Felder. Es ist eine Ja/Nein-Frage." }
-        chunks: [kommst, du, gern, mit]
-        solutions:
-          - [[], [kommst], [du, gern], [mit]]
+          - [ [ Mia ], [ ruft ], [ ihre Oma ], [ an ] ]
+          - [ [ ihre Oma ], [ ruft ], [ Mia ], [ an ] ]
       - type: boxes
         end: "?"
-        instruction: { en: "Put the words into the boxes. It is a yes/no question.", de: "Lege die Wörter in die Felder. Es ist eine Ja/Nein-Frage." }
-        chunks: [stehst, du, früh, auf]
+        instruction: "Lege die Wörter in die Felder. Es ist eine Ja/Nein-Frage."
+        chunks: [ kommst, du, gern, mit ]
         solutions:
-          - [[], [stehst], [du, früh], [auf]]
-      - type: boxes
-        instruction: { en: "Put the words into the boxes. Start with “morgen”.", de: "Lege die Wörter in die Felder. Beginne mit „morgen“." }
-        chunks: [morgen, hole, ich, dich, ab]
-        solutions:
-          - [[morgen], [hole], [ich, dich], [ab]]
+          - [ [], [ kommst ], [ du, gern ], [ mit ] ]
       - type: boxes
         end: "?"
-        instruction: { en: "Put the words into the boxes. It is a W-question.", de: "Lege die Wörter in die Felder. Es ist eine W-Frage." }
-        chunks: [wann, fängt, der Film, an]
+        instruction: "Lege die Wörter in die Felder. Es ist eine Ja/Nein-Frage."
+        chunks: [ stehst, du, früh, auf ]
         solutions:
-          - [[wann], [fängt], [der Film], [an]]
+          - [ [], [ stehst ], [ du, früh ], [ auf ] ]
       - type: boxes
-        chunks: [er, sieht, abends, fern]
+        instruction: "Lege die Wörter in die Felder. Beginne mit „morgen“."
+        chunks: [ morgen, hole, ich, dich, ab ]
         solutions:
-          - [[er], [sieht], [abends], [fern]]
-          - [[abends], [sieht], [er], [fern]]
+          - [ [ morgen ], [ hole ], [ ich, dich ], [ ab ] ]
+      - type: boxes
+        end: "?"
+        instruction: "Lege die Wörter in die Felder. Es ist eine W-Frage."
+        chunks: [ wann, fängt, der Film, an ]
+        solutions:
+          - [ [ wann ], [ fängt ], [ der Film ], [ an ] ]
+      - type: boxes
+        chunks: [ er, sieht, abends, fern ]
+        solutions:
+          - [ [ er ], [ sieht ], [ abends ], [ fern ] ]
+          - [ [ abends ], [ sieht ], [ er ], [ fern ] ]
 
   - id: correct
-    title: { en: "Which is right?", de: "Was ist richtig?" }
+    title: "Was ist richtig?"
     count: 8
-    concepts: [separable.prefix-end]
-    instruction: { en: "Tap the correct sentence.", de: "Tippe den richtigen Satz an." }
+    concepts: [ separable.prefix-end ]
+    instruction: "Tippe den richtigen Satz an."
     items:
       - type: pick
-        options: ["Ich stehe um sechs Uhr auf.", "Ich aufstehe um sechs Uhr.", "Ich auf stehe um sechs Uhr."]
+        options: [ "Ich stehe um sechs Uhr auf.", "Ich aufstehe um sechs Uhr.", "Ich auf stehe um sechs Uhr." ]
         answer: "Ich stehe um sechs Uhr auf."
-        explanation: { en: "Verb in position 2, prefix at the end.", de: "Verb auf Position 2, Vorsilbe am Ende." }
+        explanation: "Verb auf Position 2, Vorsilbe am Ende."
       - type: pick
-        options: ["Wann kommst du an?", "Wann ankommst du?", "Wann kommst an du?"]
+        options: [ "Wann kommst du an?", "Wann ankommst du?", "Wann kommst an du?" ]
         answer: "Wann kommst du an?"
-        explanation: { en: "W-question: question word, verb, subject, … prefix.", de: "W-Frage: Fragewort, Verb, Subjekt, … Vorsilbe." }
+        explanation: "W-Frage: Fragewort, Verb, Subjekt, … Vorsilbe."
       - type: pick
-        options: ["Wir kaufen heute ein.", "Wir einkaufen heute.", "Wir ein kaufen heute."]
+        options: [ "Wir kaufen heute ein.", "Wir einkaufen heute.", "Wir ein kaufen heute." ]
         answer: "Wir kaufen heute ein."
-        explanation: { en: "The verb splits: kaufen … ein.", de: "Das Verb teilt sich: kaufen … ein." }
+        explanation: "Das Verb teilt sich: kaufen … ein."
       - type: pick
-        options: ["Ich muss früh aufstehen.", "Ich muss früh stehe auf.", "Ich muss früh auf stehen."]
+        options: [ "Ich muss früh aufstehen.", "Ich muss früh stehe auf.", "Ich muss früh auf stehen." ]
         answer: "Ich muss früh aufstehen."
-        explanation: { en: "With a modal verb the separable verb stays together in the infinitive.", de: "Mit Modalverb bleibt das trennbare Verb im Infinitiv zusammen." }
+        explanation: "Mit Modalverb bleibt das trennbare Verb im Infinitiv zusammen."
       - type: pick
-        options: ["Rufst du mich an?", "Anrufst du mich?", "Rufst an du mich?"]
+        options: [ "Rufst du mich an?", "Anrufst du mich?", "Rufst an du mich?" ]
         answer: "Rufst du mich an?"
-        explanation: { en: "Yes/no question: verb first, prefix at the end.", de: "Ja/Nein-Frage: Verb vorne, Vorsilbe am Ende." }
+        explanation: "Ja/Nein-Frage: Verb vorne, Vorsilbe am Ende."
       - type: pick
-        options: ["Er sieht abends fern.", "Er fernsieht abends.", "Er fern sieht abends."]
+        options: [ "Er sieht abends fern.", "Er fernsieht abends.", "Er fern sieht abends." ]
         answer: "Er sieht abends fern."
-        explanation: { en: "sehen changes the vowel (sieht), and fern goes to the end.", de: "„sehen“ hat Vokalwechsel (sieht). „fern“ steht am Ende." }
+        explanation: "„sehen“ hat Vokalwechsel (sieht). „fern“ steht am Ende."
       - type: pick
-        options: ["Kommst du mit?", "Mitkommst du?", "Kommst mit du?"]
+        options: [ "Kommst du mit?", "Mitkommst du?", "Kommst mit du?" ]
         answer: "Kommst du mit?"
-        explanation: { en: "The prefix mit goes to the end.", de: "Die Vorsilbe „mit“ steht am Ende." }
+        explanation: "Die Vorsilbe „mit“ steht am Ende."
       - type: pick
-        options: ["Der Film fängt um acht Uhr an.", "Der Film anfängt um acht Uhr.", "Der Film an fängt um acht Uhr."]
+        options: [ "Der Film fängt um acht Uhr an.", "Der Film anfängt um acht Uhr.", "Der Film an fängt um acht Uhr." ]
         answer: "Der Film fängt um acht Uhr an."
-        explanation: { en: "anfangen: er fängt … an.", de: "anfangen: er fängt … an." }
+        explanation: "anfangen: er fängt … an."
 
   - id: puzzle
-    title: { en: "Sentence puzzle", de: "Satzpuzzle" }
+    title: "Satzpuzzle"
     count: 6
-    concepts: [separable.prefix-end]
-    explanation: { en: "The verb is in position 2 and the prefix is at the end.", de: "Das Verb steht auf Position 2 und die Vorsilbe am Ende." }
+    concepts: [ separable.prefix-end ]
+    explanation: "Das Verb steht auf Position 2 und die Vorsilbe am Ende."
     items:
-      - { type: sentence-order, instruction: { en: "Put the words in the right order. Start with the subject.", de: "Bringe die Wörter in die richtige Reihenfolge. Beginne mit dem Subjekt." }, words: "ich stehe um sieben Uhr auf", accept: ["ich stehe um sieben Uhr auf"] }
-      - { type: sentence-order, instruction: { en: "Put the words in the right order. Start with the subject.", de: "Bringe die Wörter in die richtige Reihenfolge. Beginne mit dem Subjekt." }, words: "wir kaufen im Supermarkt ein", accept: ["wir kaufen im Supermarkt ein"] }
-      - { type: sentence-order, instruction: { en: "Put the words in the right order. Start with the subject.", de: "Bringe die Wörter in die richtige Reihenfolge. Beginne mit dem Subjekt." }, words: "Mia ruft ihre Oma an", accept: ["Mia ruft ihre Oma an"] }
-      - { type: sentence-order, instruction: { en: "Put the words in the right order. Start with the subject.", de: "Bringe die Wörter in die richtige Reihenfolge. Beginne mit dem Subjekt." }, words: "ihr räumt das Zimmer auf", accept: ["ihr räumt das Zimmer auf"] }
-      - { type: sentence-order, instruction: { en: "Put the words in the right order. Start with the subject.", de: "Bringe die Wörter in die richtige Reihenfolge. Beginne mit dem Subjekt." }, words: "er holt die Kinder ab", accept: ["er holt die Kinder ab"] }
-      - { type: sentence-order, instruction: { en: "Put the words in the right order. It is a yes/no question.", de: "Bringe die Wörter in die richtige Reihenfolge. Es ist eine Ja/Nein-Frage." }, words: "stehst du früh auf", accept: ["stehst du früh auf"], end: "?" }
-      - { type: sentence-order, instruction: { en: "Put the words in the right order. It is a yes/no question.", de: "Bringe die Wörter in die richtige Reihenfolge. Es ist eine Ja/Nein-Frage." }, words: "rufst du mich an", accept: ["rufst du mich an"], end: "?" }
+      - { type: sentence-order, instruction: "Bringe die Wörter in die richtige Reihenfolge. Beginne mit dem Subjekt.", words: "ich stehe um sieben Uhr auf", accept: [ "ich stehe um sieben Uhr auf" ] }
+      - { type: sentence-order, instruction: "Bringe die Wörter in die richtige Reihenfolge. Beginne mit dem Subjekt.", words: "wir kaufen im Supermarkt ein", accept: [ "wir kaufen im Supermarkt ein" ] }
+      - { type: sentence-order, instruction: "Bringe die Wörter in die richtige Reihenfolge. Beginne mit dem Subjekt.", words: "Mia ruft ihre Oma an", accept: [ "Mia ruft ihre Oma an" ] }
+      - { type: sentence-order, instruction: "Bringe die Wörter in die richtige Reihenfolge. Beginne mit dem Subjekt.", words: "ihr räumt das Zimmer auf", accept: [ "ihr räumt das Zimmer auf" ] }
+      - { type: sentence-order, instruction: "Bringe die Wörter in die richtige Reihenfolge. Beginne mit dem Subjekt.", words: "er holt die Kinder ab", accept: [ "er holt die Kinder ab" ] }
+      - { type: sentence-order, instruction: "Bringe die Wörter in die richtige Reihenfolge. Es ist eine Ja/Nein-Frage.", words: "stehst du früh auf", accept: [ "stehst du früh auf" ], end: "?" }
+      - { type: sentence-order, instruction: "Bringe die Wörter in die richtige Reihenfolge. Es ist eine Ja/Nein-Frage.", words: "rufst du mich an", accept: [ "rufst du mich an" ], end: "?" }
 
   - id: write
-    title: { en: "Writing", de: "Schreiben" }
-    concepts: [writing.simple-sentences, separable.prefix-end]
-    instruction: { en: "Write 5 or more sentences. Use the words.", de: "Schreibe 5 Sätze oder mehr. Benutze die Wörter." }
+    title: "Schreiben"
+    concepts: [ writing.simple-sentences, separable.prefix-end ]
+    instruction: "Schreibe 5 Sätze oder mehr. Benutze die Wörter."
     items:
       - type: free-writing
-        task: { en: "Write about your morning. Use at least three separable verbs.", de: "Schreibe über deinen Morgen. Benutze mindestens drei trennbare Verben." }
-        words: [stehe, kaufe, rufe, räume, sehe, komme]
+        task: "Schreibe über deinen Morgen. Benutze mindestens drei trennbare Verben."
+        words: [ stehe, kaufe, rufe, räume, sehe, komme ]
         minSentences: 5
         checklist:
-          - { en: "The verb is in position 2 and the prefix is at the end.", de: "Das Verb steht auf Position 2 und die Vorsilbe steht am Ende." }
-          - { en: "When a sentence starts with a time word, the subject comes after the verb.", de: "Wenn ein Satz mit einem Zeitwort beginnt, steht das Subjekt nach dem Verb." }
-          - { en: "Every sentence starts with a capital letter and ends with a full stop.", de: "Jeder Satz beginnt mit einem großen Buchstaben und endet mit einem Punkt." }
+          - "Das Verb steht auf Position 2 und die Vorsilbe steht am Ende."
+          - "Wenn ein Satz mit einem Zeitwort beginnt, steht das Subjekt nach dem Verb."
+          - "Jeder Satz beginnt mit einem großen Buchstaben und endet mit einem Punkt."
         model: "Ich stehe um sieben Uhr auf. Dann räume ich mein Zimmer auf. Um zehn Uhr kaufe ich ein. Am Abend rufe ich meine Mutter an. Danach sehe ich fern."

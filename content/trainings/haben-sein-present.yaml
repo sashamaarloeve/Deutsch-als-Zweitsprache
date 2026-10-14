@@ -1,231 +1,224 @@
 # Training: haben and sein in the present tense (A1).
-# Original content. English and German texts are written side by side: { en: "...", de: "..." }.
-# Plain strings (German sentences, words) are the same in both languages.
+# Original content, written in German.
 kind: lesson
 id: haben-sein-present
-title: { en: "haben and sein", de: "haben und sein" }
+title: "haben und sein"
 level: A1
 skill: grammar
 minutes: 15
 status: draft
-description:
-  en: "The two most important verbs in German. Learn their present-tense forms and when to use sein or haben."
-  de: "Die zwei wichtigsten Verben im Deutschen. Lerne die Formen im Präsens und wann du „sein“ oder „haben“ brauchst."
+description: "Die zwei wichtigsten Verben im Deutschen. Lerne die Formen im Präsens und wann du „sein“ oder „haben“ brauchst."
 canDo:
-  - { en: "I can say who I am, where I am from and how I feel with sein.", de: "Ich kann mit „sein“ sagen, wer ich bin, woher ich komme und wie es mir geht." }
-  - { en: "I can say what I have with haben.", de: "Ich kann mit „haben“ sagen, was ich habe." }
-  - { en: "I can choose between sein and haben.", de: "Ich kann „sein“ und „haben“ richtig wählen." }
+  - "Ich kann mit „sein“ sagen, wer ich bin, woher ich komme und wie es mir geht."
+  - "Ich kann mit „haben“ sagen, was ich habe."
+  - "Ich kann „sein“ und „haben“ richtig wählen."
 
 verbs:
-  - { inf: sein, forms: [bin, bist, ist, sind, seid, sind] }
-  - { inf: haben, forms: [habe, hast, hat, haben, habt, haben] }
+  - { inf: sein, forms: [ bin, bist, ist, sind, seid, sind ] }
+  - { inf: haben, forms: [ habe, hast, hat, haben, habt, haben ] }
 
 understand:
   - type: dialogue
-    title: { en: "Two verbs you need every day", de: "Zwei Verben für jeden Tag" }
+    title: "Zwei Verben für jeden Tag"
     lines:
       - { who: Mia, say: "Hallo! Ich <v>bin</v> Mia. Und du? Wer <v>bist</v> du?" }
       - { who: Ben, say: "Hallo, Mia. Ich <v>bin</v> Ben. Ich <v>habe</v> Hunger. <v>Hast</v> du auch Hunger?" }
       - { who: Mia, say: "Nein, ich <v>bin</v> nur müde. Aber ich <v>habe</v> Zeit. Wir <v>haben</v> Zeit!" }
 
   - type: text
-    title: { en: "sein and haben are irregular", de: "„sein“ und „haben“ sind unregelmäßig" }
+    title: "„sein“ und „haben“ sind unregelmäßig"
     body:
-      - en: "These two verbs are the most important verbs in German. They do not follow the normal rules, so you have to learn their forms by heart."
-        de: "Diese zwei Verben sind sehr wichtig. Sie sind unregelmäßig. Du musst die Formen lernen."
-      - en: "Tap a verb in the table below and read all six forms aloud."
-        de: "Tippe unten ein Verb an und lies alle sechs Formen laut."
+      - "Diese zwei Verben sind sehr wichtig. Sie sind unregelmäßig. Du musst die Formen lernen."
+      - "Tippe unten ein Verb an und lies alle sechs Formen laut."
 
   - type: conjugation
-    title: { en: "The forms", de: "Die Formen" }
-    verbs: [sein, haben]
-    irregularNote:
-      en: "Be careful with “sie”: sie ist = she is. sie sind = they are. Sie sind = you are (formal)."
-      de: "Achtung bei „sie“: sie ist = eine Frau. sie sind = mehrere Personen. Sie sind = die höfliche Form."
+    title: "Die Formen"
+    verbs: [ sein, haben ]
+    irregularNote: "Achtung bei „sie“: sie ist = eine Frau. sie sind = mehrere Personen. Sie sind = die höfliche Form."
 
   - type: rule
-    title: { en: "We use sein for …", de: "Wir brauchen „sein“ für …" }
+    title: "Wir brauchen „sein“ für …"
     body:
-      - { en: "name: Ich <v>bin</v> Ana.", de: "Name: Ich <v>bin</v> Ana." }
-      - { en: "country: Ich <v>bin</v> aus Brasilien.", de: "Land: Ich <v>bin</v> aus Brasilien." }
-      - { en: "job: Ich <v>bin</v> Lehrerin.", de: "Beruf: Ich <v>bin</v> Lehrerin." }
-      - { en: "age: Ich <v>bin</v> 25 Jahre alt.", de: "Alter: Ich <v>bin</v> 25 Jahre alt." }
-      - { en: "feelings: Ich <v>bin</v> müde. Wir <v>sind</v> glücklich.", de: "Gefühle: Ich <v>bin</v> müde. Wir <v>sind</v> glücklich." }
+      - "Name: Ich <v>bin</v> Ana."
+      - "Land: Ich <v>bin</v> aus Brasilien."
+      - "Beruf: Ich <v>bin</v> Lehrerin."
+      - "Alter: Ich <v>bin</v> 25 Jahre alt."
+      - "Gefühle: Ich <v>bin</v> müde. Wir <v>sind</v> glücklich."
 
   - type: rule
-    title: { en: "We use haben for …", de: "Wir brauchen „haben“ für …" }
+    title: "Wir brauchen „haben“ für …"
     body:
-      - { en: "things: Ich <v>habe</v> einen Hund. Wir <v>haben</v> ein Auto.", de: "Dinge: Ich <v>habe</v> einen Hund. Wir <v>haben</v> ein Auto." }
-      - { en: "family: Ich <v>habe</v> eine Schwester.", de: "Familie: Ich <v>habe</v> eine Schwester." }
-      - { en: "hunger and thirst: Ich <v>habe</v> Hunger. Er <v>hat</v> Durst.", de: "Hunger und Durst: Ich <v>habe</v> Hunger. Er <v>hat</v> Durst." }
-      - { en: "time: <v>Habt</v> ihr Zeit?", de: "Zeit: <v>Habt</v> ihr Zeit?" }
+      - "Dinge: Ich <v>habe</v> einen Hund. Wir <v>haben</v> ein Auto."
+      - "Familie: Ich <v>habe</v> eine Schwester."
+      - "Hunger und Durst: Ich <v>habe</v> Hunger. Er <v>hat</v> Durst."
+      - "Zeit: <v>Habt</v> ihr Zeit?"
 
   - type: rule
-    title: { en: "Watch out!", de: "Achtung!" }
+    title: "Achtung!"
     body:
-      - { en: "Age: sein, not haben. <x>Ich habe 25 Jahre.</x> ✗ Ich <v>bin</v> 25 Jahre alt. ✓", de: "Alter: „sein“, nicht „haben“. <x>Ich habe 25 Jahre.</x> ✗ Ich <v>bin</v> 25 Jahre alt. ✓" }
-      - { en: "Hunger: haben, not sein. <x>Ich bin Hunger.</x> ✗ Ich <v>habe</v> Hunger. ✓", de: "Hunger: „haben“, nicht „sein“. <x>Ich bin Hunger.</x> ✗ Ich <v>habe</v> Hunger. ✓" }
+      - "Alter: „sein“, nicht „haben“. <x>Ich habe 25 Jahre.</x> ✗ Ich <v>bin</v> 25 Jahre alt. ✓"
+      - "Hunger: „haben“, nicht „sein“. <x>Ich bin Hunger.</x> ✗ Ich <v>habe</v> Hunger. ✓"
 
 practice:
   - id: forms
-    title: { en: "Forms", de: "Formen" }
+    title: "Formen"
     count: 10
-    instruction: { en: "Which form is right? Tap it.", de: "Welche Form ist richtig? Tippe sie an." }
+    instruction: "Welche Form ist richtig? Tippe sie an."
     items:
       - type: forms-pick
-        verbs: [sein]
-        concepts: [present.sein-forms]
-        explanation: { en: "sein is irregular: learn the forms by heart.", de: "„sein“ ist unregelmäßig. Lerne die Formen." }
+        verbs: [ sein ]
+        concepts: [ present.sein-forms ]
+        explanation: "„sein“ ist unregelmäßig. Lerne die Formen."
       - type: forms-pick
-        verbs: [haben]
-        concepts: [present.haben-forms]
-        explanation: { en: "haben is irregular in du and er/sie/es: hast, hat.", de: "„haben“ ist bei du und er/sie/es besonders: hast, hat." }
+        verbs: [ haben ]
+        concepts: [ present.haben-forms ]
+        explanation: "„haben“ ist bei du und er/sie/es besonders: hast, hat."
 
   - id: match
-    title: { en: "Match", de: "Paare" }
+    title: "Paare"
     shuffle: false
-    instruction: { en: "Tap a pronoun, then its verb form.", de: "Tippe ein Pronomen an, dann die passende Form." }
+    instruction: "Tippe ein Pronomen an, dann die passende Form."
     items:
       - type: pairs
-        concepts: [present.sein-forms]
-        pairs: [[ich, bin], [du, bist], [er/sie/es, ist], [wir, sind], [ihr, seid]]
+        concepts: [ present.sein-forms ]
+        pairs: [ [ ich, bin ], [ du, bist ], [ er/sie/es, ist ], [ wir, sind ], [ ihr, seid ] ]
       - type: pairs
-        concepts: [present.haben-forms]
-        pairs: [[ich, habe], [du, hast], [er/sie/es, hat], [wir, haben], [ihr, habt]]
+        concepts: [ present.haben-forms ]
+        pairs: [ [ ich, habe ], [ du, hast ], [ er/sie/es, hat ], [ wir, haben ], [ ihr, habt ] ]
       - type: pairs
-        concepts: [present.sein-forms, present.haben-forms]
-        instruction: { en: "sein and haben are mixed. Tap a pronoun, then its form.", de: "„sein“ und „haben“ sind gemischt. Tippe ein Pronomen an, dann die Form." }
-        pairs: [[ich, bin], [du, hast], [er/sie/es, ist], [wir, haben], [ihr, seid]]
+        concepts: [ present.sein-forms, present.haben-forms ]
+        instruction: "„sein“ und „haben“ sind gemischt. Tippe ein Pronomen an, dann die Form."
+        pairs: [ [ ich, bin ], [ du, hast ], [ er/sie/es, ist ], [ wir, haben ], [ ihr, seid ] ]
 
   - id: sentences
-    title: { en: "In sentences", de: "Im Satz" }
+    title: "Im Satz"
     count: 10
-    instruction: { en: "Choose the right form for the sentence.", de: "Wähle die richtige Form für den Satz." }
-    explanation: { en: "Look at the subject. It tells you which form you need.", de: "Schau auf das Subjekt. Es zeigt die richtige Form." }
+    instruction: "Wähle die richtige Form für den Satz."
+    explanation: "Schau auf das Subjekt. Es zeigt die richtige Form."
     items:
-      - { type: pick-form, verb: sein, person: 0, sentence: "Ich ___ müde.", concepts: [present.sein-forms] }
-      - { type: pick-form, verb: sein, person: 1, sentence: "Du ___ sehr nett.", concepts: [present.sein-forms] }
-      - { type: pick-form, verb: sein, person: 2, sentence: "Lara ___ aus Italien.", concepts: [present.sein-forms] }
-      - { type: pick-form, verb: sein, person: 3, sentence: "Wir ___ in der Schule.", concepts: [present.sein-forms] }
-      - { type: pick-form, verb: sein, person: 4, sentence: "Ihr ___ heute spät.", concepts: [present.sein-forms] }
-      - { type: pick-form, verb: sein, person: 5, sentence: "Mia und Tom ___ Freunde.", concepts: [present.sein-forms] }
-      - { type: pick-form, verb: haben, person: 0, sentence: "Ich ___ einen Bruder.", concepts: [present.haben-forms] }
-      - { type: pick-form, verb: haben, person: 1, sentence: "Du ___ ein neues Handy.", concepts: [present.haben-forms] }
-      - { type: pick-form, verb: haben, person: 2, sentence: "Mein Vater ___ ein Auto.", concepts: [present.haben-forms] }
-      - { type: pick-form, verb: haben, person: 3, sentence: "Wir ___ heute Zeit.", concepts: [present.haben-forms] }
-      - { type: pick-form, verb: haben, person: 4, sentence: "Ihr ___ Durst, oder?", concepts: [present.haben-forms] }
-      - { type: pick-form, verb: haben, person: 5, sentence: "Anna und Max ___ einen Hund.", concepts: [present.haben-forms] }
+      - { type: pick-form, verb: sein, person: 0, sentence: "Ich ___ müde.", concepts: [ present.sein-forms ] }
+      - { type: pick-form, verb: sein, person: 1, sentence: "Du ___ sehr nett.", concepts: [ present.sein-forms ] }
+      - { type: pick-form, verb: sein, person: 2, sentence: "Lara ___ aus Italien.", concepts: [ present.sein-forms ] }
+      - { type: pick-form, verb: sein, person: 3, sentence: "Wir ___ in der Schule.", concepts: [ present.sein-forms ] }
+      - { type: pick-form, verb: sein, person: 4, sentence: "Ihr ___ heute spät.", concepts: [ present.sein-forms ] }
+      - { type: pick-form, verb: sein, person: 5, sentence: "Mia und Tom ___ Freunde.", concepts: [ present.sein-forms ] }
+      - { type: pick-form, verb: haben, person: 0, sentence: "Ich ___ einen Bruder.", concepts: [ present.haben-forms ] }
+      - { type: pick-form, verb: haben, person: 1, sentence: "Du ___ ein neues Handy.", concepts: [ present.haben-forms ] }
+      - { type: pick-form, verb: haben, person: 2, sentence: "Mein Vater ___ ein Auto.", concepts: [ present.haben-forms ] }
+      - { type: pick-form, verb: haben, person: 3, sentence: "Wir ___ heute Zeit.", concepts: [ present.haben-forms ] }
+      - { type: pick-form, verb: haben, person: 4, sentence: "Ihr ___ Durst, oder?", concepts: [ present.haben-forms ] }
+      - { type: pick-form, verb: haben, person: 5, sentence: "Anna und Max ___ einen Hund.", concepts: [ present.haben-forms ] }
 
   - id: which
-    title: { en: "sein or haben?", de: "sein oder haben?" }
+    title: "sein oder haben?"
     count: 8
-    concepts: [present.sein-vs-haben]
-    instruction: { en: "Which verb fits? Tap the right form.", de: "Welches Verb passt? Tippe die richtige Form an." }
+    concepts: [ present.sein-vs-haben ]
+    instruction: "Welches Verb passt? Tippe die richtige Form an."
     items:
       - type: pick
         sentence: "Ich ___ Hunger."
-        options: [habe, bin]
+        options: [ habe, bin ]
         answer: habe
-        explanation: { en: "We say “Hunger haben”.", de: "Wir sagen „Hunger haben“." }
+        explanation: "Wir sagen „Hunger haben“."
       - type: pick
         sentence: "Ich ___ 20 Jahre alt."
-        options: [bin, habe]
+        options: [ bin, habe ]
         answer: bin
-        explanation: { en: "Age: we use sein.", de: "Alter: Wir brauchen „sein“." }
+        explanation: "Alter: Wir brauchen „sein“."
       - type: pick
         sentence: "Wir ___ müde."
-        options: [sind, haben]
+        options: [ sind, haben ]
         answer: sind
-        explanation: { en: "Feelings like müde: we use sein.", de: "Gefühle wie „müde“: Wir brauchen „sein“." }
+        explanation: "Gefühle wie „müde“: Wir brauchen „sein“."
       - type: pick
         sentence: "Er ___ einen Hund."
-        options: [hat, ist]
+        options: [ hat, ist ]
         answer: hat
-        explanation: { en: "Things and animals you own: we use haben.", de: "Dinge und Tiere, die man hat: Wir brauchen „haben“." }
+        explanation: "Dinge und Tiere, die man hat: Wir brauchen „haben“."
       - type: pick
         sentence: "Ana ___ Ärztin."
-        options: [ist, hat]
+        options: [ ist, hat ]
         answer: ist
-        explanation: { en: "Jobs: we use sein.", de: "Berufe: Wir brauchen „sein“." }
+        explanation: "Berufe: Wir brauchen „sein“."
       - type: pick
         sentence: "Ihr ___ Durst."
-        options: [habt, seid]
+        options: [ habt, seid ]
         answer: habt
-        explanation: { en: "We say “Durst haben”.", de: "Wir sagen „Durst haben“." }
+        explanation: "Wir sagen „Durst haben“."
       - type: pick
         sentence: "Frau Bauer ___ aus Wien."
-        options: [ist, hat]
+        options: [ ist, hat ]
         answer: ist
-        explanation: { en: "Where you are from: we use sein.", de: "Woher man kommt: Wir brauchen „sein“." }
+        explanation: "Woher man kommt: Wir brauchen „sein“."
       - type: pick
         sentence: "Meine Eltern ___ zwei Kinder."
-        options: [haben, sind]
+        options: [ haben, sind ]
         answer: haben
-        explanation: { en: "Family: we use haben.", de: "Familie: Wir brauchen „haben“." }
+        explanation: "Familie: Wir brauchen „haben“."
 
   - id: correct
-    title: { en: "Which sentence is right?", de: "Welcher Satz ist richtig?" }
+    title: "Welcher Satz ist richtig?"
     count: 7
-    concepts: [present.sein-vs-haben]
-    instruction: { en: "Tap the correct sentence.", de: "Tippe den richtigen Satz an." }
+    concepts: [ present.sein-vs-haben ]
+    instruction: "Tippe den richtigen Satz an."
     items:
       - type: pick
-        options: ["Ich bin 25 Jahre alt.", "Ich habe 25 Jahre alt.", "Ich habe 25 Jahre."]
+        options: [ "Ich bin 25 Jahre alt.", "Ich habe 25 Jahre alt.", "Ich habe 25 Jahre." ]
         answer: "Ich bin 25 Jahre alt."
-        explanation: { en: "Age: we say “Ich bin … Jahre alt”.", de: "Alter: Wir sagen „Ich bin … Jahre alt“." }
+        explanation: "Alter: Wir sagen „Ich bin … Jahre alt“."
       - type: pick
-        options: ["Ich habe Hunger.", "Ich bin Hunger.", "Ich habe hungrig."]
+        options: [ "Ich habe Hunger.", "Ich bin Hunger.", "Ich habe hungrig." ]
         answer: "Ich habe Hunger."
-        explanation: { en: "We say “Hunger haben”.", de: "Wir sagen „Hunger haben“." }
+        explanation: "Wir sagen „Hunger haben“."
       - type: pick
-        options: ["Wir sind müde.", "Wir haben müde.", "Wir sein müde."]
+        options: [ "Wir sind müde.", "Wir haben müde.", "Wir sein müde." ]
         answer: "Wir sind müde."
-        explanation: { en: "wir → sind. Feelings need sein.", de: "wir → sind. Gefühle brauchen „sein“." }
+        explanation: "wir → sind. Gefühle brauchen „sein“."
       - type: pick
-        options: ["Du bist nett.", "Du hast nett.", "Du bin nett."]
+        options: [ "Du bist nett.", "Du hast nett.", "Du bin nett." ]
         answer: "Du bist nett."
-        explanation: { en: "du → bist.", de: "du → bist." }
+        explanation: "du → bist."
       - type: pick
-        options: ["Meine Eltern haben ein Haus.", "Meine Eltern sind ein Haus.", "Meine Eltern hat ein Haus."]
+        options: [ "Meine Eltern haben ein Haus.", "Meine Eltern sind ein Haus.", "Meine Eltern hat ein Haus." ]
         answer: "Meine Eltern haben ein Haus."
-        explanation: { en: "“Meine Eltern” means they: haben. And you can own a house: haben.", de: "„Meine Eltern“ = sie: haben. Ein Haus hat man: „haben“." }
+        explanation: "„Meine Eltern“ = sie: haben. Ein Haus hat man: „haben“."
       - type: pick
-        options: ["Er ist Lehrer.", "Er hat Lehrer.", "Er bist Lehrer."]
+        options: [ "Er ist Lehrer.", "Er hat Lehrer.", "Er bist Lehrer." ]
         answer: "Er ist Lehrer."
-        explanation: { en: "Jobs need sein. er → ist.", de: "Berufe brauchen „sein“. er → ist." }
+        explanation: "Berufe brauchen „sein“. er → ist."
       - type: pick
-        options: ["Habt ihr einen Hund?", "Seid ihr einen Hund?", "Habe ihr einen Hund?"]
+        options: [ "Habt ihr einen Hund?", "Seid ihr einen Hund?", "Habe ihr einen Hund?" ]
         answer: "Habt ihr einen Hund?"
-        explanation: { en: "ihr → habt. In a question the verb comes first.", de: "ihr → habt. In der Frage steht das Verb vorne." }
+        explanation: "ihr → habt. In der Frage steht das Verb vorne."
 
   - id: puzzle
-    title: { en: "Sentence puzzle", de: "Satzpuzzle" }
+    title: "Satzpuzzle"
     count: 8
-    concepts: [syntax.verb-position-2]
-    instruction: { en: "Put the words in the right order.", de: "Bringe die Wörter in die richtige Reihenfolge." }
-    explanation: { en: "In a statement the verb is in position 2. In a yes/no question it comes first.", de: "Im Aussagesatz steht das Verb auf Position 2. In der Ja/Nein-Frage steht es vorne." }
+    concepts: [ syntax.verb-position-2 ]
+    instruction: "Bringe die Wörter in die richtige Reihenfolge."
+    explanation: "Im Aussagesatz steht das Verb auf Position 2. In der Ja/Nein-Frage steht es vorne."
     items:
-      - { type: sentence-order, words: "ich bin müde", accept: ["ich bin müde"] }
-      - { type: sentence-order, words: "wir haben heute Zeit", accept: ["wir haben heute Zeit", "heute haben wir Zeit"] }
-      - { type: sentence-order, words: "mein Bruder ist 20 Jahre alt", accept: ["mein Bruder ist 20 Jahre alt"] }
-      - { type: sentence-order, words: "Anna hat einen Hund", accept: ["Anna hat einen Hund", "einen Hund hat Anna"] }
-      - { type: sentence-order, words: "bist du müde", accept: ["bist du müde"], end: "?" }
-      - { type: sentence-order, words: "hast du Hunger", accept: ["hast du Hunger"], end: "?" }
-      - { type: sentence-order, words: "wo bist du", accept: ["wo bist du"], end: "?" }
-      - { type: sentence-order, words: "wir sind in Berlin", accept: ["wir sind in Berlin", "in Berlin sind wir"] }
-      - { type: sentence-order, words: "ihr habt einen Hund", accept: ["ihr habt einen Hund", "einen Hund habt ihr"] }
+      - { type: sentence-order, words: "ich bin müde", accept: [ "ich bin müde" ] }
+      - { type: sentence-order, words: "wir haben heute Zeit", accept: [ "wir haben heute Zeit", "heute haben wir Zeit" ] }
+      - { type: sentence-order, words: "mein Bruder ist 20 Jahre alt", accept: [ "mein Bruder ist 20 Jahre alt" ] }
+      - { type: sentence-order, words: "Anna hat einen Hund", accept: [ "Anna hat einen Hund", "einen Hund hat Anna" ] }
+      - { type: sentence-order, words: "bist du müde", accept: [ "bist du müde" ], end: "?" }
+      - { type: sentence-order, words: "hast du Hunger", accept: [ "hast du Hunger" ], end: "?" }
+      - { type: sentence-order, words: "wo bist du", accept: [ "wo bist du" ], end: "?" }
+      - { type: sentence-order, words: "wir sind in Berlin", accept: [ "wir sind in Berlin", "in Berlin sind wir" ] }
+      - { type: sentence-order, words: "ihr habt einen Hund", accept: [ "ihr habt einen Hund", "einen Hund habt ihr" ] }
 
   - id: write
-    title: { en: "Writing", de: "Schreiben" }
-    concepts: [writing.simple-sentences, present.sein-vs-haben]
-    instruction: { en: "Write 3 or more sentences. Use the words.", de: "Schreibe 3 Sätze oder mehr. Benutze die Wörter." }
+    title: "Schreiben"
+    concepts: [ writing.simple-sentences, present.sein-vs-haben ]
+    instruction: "Schreibe 3 Sätze oder mehr. Benutze die Wörter."
     items:
       - type: free-writing
-        task: { en: "Write about yourself: Who are you? Where are you from? What do you have?", de: "Schreibe über dich: Wer bist du? Woher kommst du? Was hast du?" }
-        words: [ich bin, ich habe, aus, Jahre alt, müde, Hunger, Bruder, Schwester]
+        task: "Schreibe über dich: Wer bist du? Woher kommst du? Was hast du?"
+        words: [ ich bin, ich habe, aus, Jahre alt, müde, Hunger, Bruder, Schwester ]
         minSentences: 3
         checklist:
-          - { en: "Every sentence starts with a capital letter and ends with a full stop.", de: "Jeder Satz beginnt mit einem großen Buchstaben und endet mit einem Punkt." }
-          - { en: "I used bin and habe correctly.", de: "Ich habe „bin“ und „habe“ richtig benutzt." }
-          - { en: "For my age I wrote “Ich bin … Jahre alt”.", de: "Für mein Alter habe ich „Ich bin … Jahre alt“ geschrieben." }
+          - "Jeder Satz beginnt mit einem großen Buchstaben und endet mit einem Punkt."
+          - "Ich habe „bin“ und „habe“ richtig benutzt."
+          - "Für mein Alter habe ich „Ich bin … Jahre alt“ geschrieben."
         model: "Hallo! Ich bin Sara. Ich bin 24 Jahre alt und ich bin aus Spanien. Ich habe einen Bruder und eine Schwester. Heute bin ich müde, und ich habe Hunger."
