@@ -489,3 +489,10 @@ describe('start page whiteboard', () => {
     expect(todayInGerman(new Date(2026, 9, 14))).toEqual({ weekday: 'Mittwoch', date: '14. Oktober 2026' });
   });
 });
+
+describe('stylesheet', () => {
+  it('has balanced braces (an unclosed block silently switches off all rules after it)', () => {
+    const css = readFileSync('src/styles.css', 'utf8').replace(/\/\*[\s\S]*?\*\//g, '');
+    expect(css.split('{').length).toBe(css.split('}').length);
+  });
+});
