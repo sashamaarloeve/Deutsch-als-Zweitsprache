@@ -1,4 +1,4 @@
-// Accessibility check (axe) for every screen of the app, in German, on the yellow and the white background.
+// Accessibility check (axe) for every screen of the app, in German.
 // Run with: npm run a11y   (needs the Playwright browser; set CHROMIUM_PATH if it is not found)
 // It builds the app with drafts shown, serves it, opens each screen and lists everything axe finds
 // against WCAG 2.2 level A and AA.
@@ -43,11 +43,11 @@ async function main() {
     page.setDefaultTimeout(5000);
 
     const lang = 'de';
-    for (const theme of ['yellow', 'white'] as const) {
+    {
+      const theme = 'yellow';
       const L = { understand: 'Verstehen', practice: 'Trainieren', areas: ['Lesen', 'Grammatik', 'Wortschatz'] };
       const fresh = async () => {
         await page.goto(`http://localhost:${PORT}`);
-        if (theme === 'white') await page.getByRole('button', { name: 'Weißer Hintergrund' }).click();
       };
 
       // start page
@@ -84,8 +84,7 @@ async function main() {
             await page.locator('.tcard').nth(k).click();
             const tabs = page.locator('.subtabs button');
             const n = await tabs.count();
-            // white background: first task of each training is enough (the colours are the same on every task)
-            for (let t = 0; t < (theme === 'white' ? Math.min(n, 1) : n); t++) {
+            for (let t = 0; t < n; t++) {
               await tabs.nth(t).click();
               await scan(page, `${theme} ${lang} · Practice · ${title} · task ${t + 1}`);
             }

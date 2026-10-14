@@ -80,7 +80,6 @@ function Shell() {
           <div className="prefs" role="group" aria-label={s.prefsLabel}>
             <button type="button" aria-label={`A− ${s.textSmaller}`} disabled={zoomIdx <= 0} onClick={() => changePrefs({ ...prefs, zoom: ZOOMS[zoomIdx - 1] })}>A−</button>
             <button type="button" aria-label={`A+ ${s.textLarger}`} disabled={zoomIdx >= ZOOMS.length - 1} onClick={() => changePrefs({ ...prefs, zoom: ZOOMS[zoomIdx + 1] })}>A+</button>
-            <button type="button" aria-pressed={prefs.theme === 'white'} onClick={() => changePrefs({ ...prefs, theme: prefs.theme === 'white' ? 'yellow' : 'white' })}>{s.whiteBackground}</button>
             <button type="button" aria-pressed={prefs.wide} onClick={() => changePrefs({ ...prefs, wide: !prefs.wide })}>{s.wideSpacing}</button>
           </div>
         </div>

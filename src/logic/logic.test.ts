@@ -478,8 +478,8 @@ describe('flashcards, memory and display settings', () => {
       expect(t.words!.length).toBeGreaterThanOrEqual(6);
     }
   });
-  it('display settings start with a light yellow background, normal size and normal spacing', () => {
-    expect(defaultPrefs()).toEqual({ theme: 'yellow', zoom: 1, wide: false });
+  it('display settings start with normal size and normal spacing', () => {
+    expect(defaultPrefs()).toEqual({ zoom: 1, wide: false });
     expect(ZOOMS).toContain(1);
   });
 });
