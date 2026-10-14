@@ -182,6 +182,18 @@ function validateBlock(b: Block, i: number, bank: Map<string, ConjVerb>, article
       }
       break;
     }
+    case 'clause-lab': {
+      if (b.orders?.length !== 2 || b.rules?.length !== 2) problems.push(`${w}: needs two orders and two rules.`);
+      b.rules?.forEach(rich);
+      if (!b.sentences?.length) problems.push(`${w}: has no sentences.`);
+      for (const s of b.sentences ?? []) {
+        if (!s.conj) problems.push(`${w}: every sentence needs a conjunction (conj).`);
+        for (const t of [s.main, s.mainAfter ?? s.main, s.sub]) rich(t);
+        if (!s.main?.includes('<v>') || (s.mainAfter !== undefined && !s.mainAfter.includes('<v>'))) problems.push(`${w}: "${s.main}" needs its verb marked with <v>.`);
+        if (!s.sub?.includes('<s>')) problems.push(`${w}: "${s.sub}" needs its verb at the end marked with <s>.`);
+      }
+      break;
+    }
     case 'parts-lab': {
       for (const s of b.sentences ?? []) {
         const text = s.parts.map((p) => p.t).join(' ');

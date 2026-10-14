@@ -10,6 +10,8 @@ import { CatSelect, Memory, Sprint, Writing, type Cat } from './Games';
 interface Props {
   t: PerfektTraining;
   onBack: () => void;
+  /** Text of the back button; default is the way back to the practice menu. */
+  backLabel?: string;
   onResult: (item: Item, outcome: Outcome) => void;
   onFinish: (percent: number) => void;
   onPoints: (n: number) => void;
@@ -83,7 +85,7 @@ function ReadingText({ t, id }: { t: LessonTraining; id?: string }) {
 }
 
 // Practice for lesson trainings: one tab per practice set written in the content file.
-export function LessonPractice({ t, onBack, onResult, onFinish }: Omit<Props, 't' | 'onPoints'> & { t: LessonTraining }) {
+export function LessonPractice({ t, onBack, backLabel, onResult, onFinish }: Omit<Props, 't' | 'onPoints'> & { t: LessonTraining }) {
   const { s } = useLang();
   const [setId, setSetId] = useState(t.sets[0]?.id);
   const set = t.sets.find((x) => x.id === setId) ?? t.sets[0];
@@ -92,7 +94,7 @@ export function LessonPractice({ t, onBack, onResult, onFinish }: Omit<Props, 't
   if (!set) return null;
   return (
     <div>
-      <button className="btn ghost" onClick={onBack}>{s.backToPractice}</button>
+      <button className="btn ghost" onClick={onBack}>{backLabel ?? s.backToPractice}</button>
       <h2 className="tt">{t.title}</h2>
       <p className="tasklabel" id="tasklabel">{s.chooseTask}</p>
       <div className="subtabs tasks" role="group" aria-labelledby="tasklabel">

@@ -15,7 +15,7 @@ The owner is a German teacher (DaZ) and **not a programmer**. Explain in plain l
 - **No read-aloud, no sounds.**
 - **Dyslexia-friendly** (see `docs/STYLE.md`): butter-yellow squared notebook page on a cream-white background, white cards with navy outlines, handwriting headings (Patrick Hand), clear sans-serif text (see the style guide), generous spacing, left-aligned text, short sentences, one task at a time, no italics, no time pressure, no error-hunting tasks (sentence ordering over finding mistakes), encouraging feedback only. Colour is never the only signal.
 - **Tablet and phone first**, large tap targets. Accessible (axe passes).
-- **Tabs:** Aktuell, Verstehen, Trainieren. "Aktuell" shows the trainings listed in `content/aktuell.yaml` (what the pupils work on right now); the owner edits that list, the ids must exist (`npm run check-content` checks it).
+- **Tabs:** Aktuell, Verstehen, Trainieren. "Aktuell" shows the trainings listed in `content/aktuell.yaml` (what the pupils work on right now); the owner edits that list, the ids must exist (`npm run check-content` checks it). A training with `aktuellOnly: true` appears only there, not under Verstehen, Trainieren or Quick practice. New content that the owner wants "only under Aktuell" gets this flag.
 - Nothing is locked. Pupils can open any training. Levels are labels only.
 - Privacy: the pupils are minors. No third-party scripts, fonts or embeds; no personal data of any kind.
 

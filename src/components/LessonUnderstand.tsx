@@ -32,7 +32,7 @@ function ConjugationLab({ t, block }: { t: LessonTraining; block: Extract<Block,
       <h2>{block.title}</h2>
       {block.intro && <p><Rich text={block.intro} /></p>}
       <Chips label={s.tapVerb} items={verbs.map((v) => v.inf)} current={i} onPick={setI} />
-      <div className="tblwrap">
+      <div className="tblwrap" tabIndex={0} role="region" aria-label={block.title}>
         <table className="conjtable">
           <caption className="sr-only">{s.conjCaption(verb.inf)}</caption>
           <thead>
@@ -193,7 +193,7 @@ function ArticleTable({ t, block }: { t: LessonTraining; block: Extract<Block, {
     <div className="card">
       <h2>{block.title}</h2>
       {block.intro && <p><Rich text={block.intro} /></p>}
-      <div className="tblwrap">
+      <div className="tblwrap" tabIndex={0} role="region" aria-label={block.title}>
         <table className="arttable">
           <caption className="sr-only">{s.tableCaption}</caption>
           <thead>
@@ -311,7 +311,7 @@ function PlainTable({ block }: { block: Extract<Block, { type: 'table' }> }) {
     <div className="card">
       <h2>{block.title}</h2>
       {block.intro && <p><Rich text={block.intro} /></p>}
-      <div className="tblwrap">
+      <div className="tblwrap" tabIndex={0} role="region" aria-label={block.title}>
         <table className="arttable plain">
           <thead>
             <tr>{block.head.map((h, i) => <th key={i} scope="col">{h}</th>)}</tr>
@@ -399,6 +399,47 @@ function PartsLab({ block }: { block: Extract<Block, { type: 'parts-lab' }> }) {
   );
 }
 
+/* ---- clause lab: a main clause and a subordinate clause, in both orders ---- */
+const capRich = (text: string) => text.replace(/^((?:<\w+>)?)(.)/, (_m, t: string, c: string) => t + c.toUpperCase());
+function ClauseLab({ block }: { block: Extract<Block, { type: 'clause-lab' }> }) {
+  const { s } = useLang();
+  const [si, setSi] = useState(0);
+  const [orderPick, setOrder] = useState(0);
+  const x = block.sentences[si];
+  // sentences without a second order (dass, ob) are always shown main clause first
+  const order = x.mainAfter ? orderPick : 0;
+  // "weil 1", "weil 2" when a word is used for several sentences
+  const sentenceLabels = block.sentences.map((y, i) => {
+    const same = block.sentences.filter((z) => z.conj === y.conj);
+    return same.length > 1 ? `${y.conj} ${same.indexOf(y) + 1}` : y.conj;
+  });
+  const conj = `<p>${x.conj}</p>`;
+  // order 0: main clause, comma, conjunction + subordinate clause. order 1: the other way round.
+  const parts =
+    order === 0
+      ? [{ key: 'main', label: block.mainLabel, text: capRich(x.main) }, { key: 'sub', label: block.subLabel, text: `${conj} ${x.sub}` }]
+      : [{ key: 'sub', label: block.subLabel, text: capRich(`${conj} ${x.sub}`) }, { key: 'main', label: block.mainLabel, text: x.mainAfter! }];
+  const sentence = parts.map((p) => p.text).join(', ') + '.';
+  return (
+    <div className="card">
+      <h2>{block.title}</h2>
+      <p><Rich text={block.intro} /></p>
+      <Chips label={s.what} items={sentenceLabels} current={si} onPick={setSi} />
+      {x.mainAfter && <Chips label={s.order} items={block.orders} current={order} onPick={setOrder} />}
+      <div className="parts" role="group" aria-label={s.roleLegend}>
+        {parts.map((p) => (
+          <span key={p.key} className={'sentpart clause-' + p.key}>
+            <span className="sentpartlabel">{p.label}</span>
+            <span className="sentparttext"><Rich text={p.text} /></span>
+          </span>
+        ))}
+      </div>
+      <p className="big-word sentence" aria-live="polite"><Rich text={sentence} /></p>
+      <p className="how"><Rich text={block.rules[order]} /></p>
+    </div>
+  );
+}
+
 export function LessonUnderstand({ t, onPractise }: { t: LessonTraining; onPractise: () => void }) {
   const { s } = useLang();
   return (
@@ -455,6 +496,8 @@ export function LessonUnderstand({ t, onPractise }: { t: LessonTraining; onPract
             return <CaseLab key={i} t={t} block={b} />;
           case 'parts-lab':
             return <PartsLab key={i} block={b} />;
+          case 'clause-lab':
+            return <ClauseLab key={i} block={b} />;
         }
       })}
       <p className="center" style={{ marginTop: 28 }}>

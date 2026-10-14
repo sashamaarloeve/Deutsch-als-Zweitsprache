@@ -463,3 +463,32 @@ describe('Aktuell tab', () => {
     for (const id of parseAktuell(real).ids) expect(existsSync(`content/trainings/${id}.yaml`)).toBe(true);
   });
 });
+
+describe('trainings for the Aktuell tab', () => {
+  const hn = lessonOf('hauptsatz-nebensatz.yaml');
+  const fw = lessonOf('faelle-wiederholen.yaml');
+  const concepts = parse(readFileSync('content/concepts.yaml', 'utf8'));
+  it('are marked as Aktuell-only, so they are not listed under Verstehen or Trainieren', () => {
+    expect(hn.aktuellOnly).toBe(true);
+    expect(fw.aktuellOnly).toBe(true);
+    expect(lessonOf('haben-sein-present.yaml').aktuellOnly).toBeUndefined();
+  });
+  it('Hauptsatz und Nebensatz has the labs and never shows wrong sentences', () => {
+    const types = hn.understand.map((b) => b.type);
+    expect(types).toEqual(expect.arrayContaining(['parts-lab', 'bracket-lab', 'clause-lab']));
+    const text = readFileSync('content/trainings/hauptsatz-nebensatz.yaml', 'utf8');
+    expect(text).not.toContain('<x>');
+    expect(text).not.toContain('✗');
+  });
+  it('Fälle wiederholen has the sentence-part lab, the case lab and the verb and preposition tables', () => {
+    const types = fw.understand.map((b) => b.type);
+    expect(types).toEqual(expect.arrayContaining(['detective', 'parts-lab', 'case-lab', 'article-table', 'table']));
+    expect(fw.sets.map((x) => x.id)).toEqual(expect.arrayContaining(['verbs', 'prepositions', 'umstell']));
+  });
+  it('the clause lab checker finds a subordinate clause without its verb marked', () => {
+    const block = hn.understand.find((b) => b.type === 'clause-lab')!;
+    const bad = { ...hn, understand: [{ ...block, sentences: [{ conj: 'weil', main: 'ich <v>bleibe</v> hier', sub: 'es regnet' }] }] } as LessonTraining;
+    expect(validateTraining(bad, concepts).join(' ')).toContain('marked with <s>');
+  });
+});
+

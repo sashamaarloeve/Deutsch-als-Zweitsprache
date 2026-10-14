@@ -172,6 +172,8 @@ const de = {
   legendIrregular: 'unregelmäßige Form',
   legendChanged: 'Vokalwechsel',
   startWith: 'Beginne mit',
+  order: 'Reihenfolge',
+  backToCurrent: '← Aktuell',
   verbPosition: 'Position 2',
   sentenceLabAria: 'Satz in Feldern',
   chooseVerbToSee: 'Wähle ein Verb …',

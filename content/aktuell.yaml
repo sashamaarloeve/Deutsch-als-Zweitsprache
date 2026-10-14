@@ -1,7 +1,7 @@
 # The "Aktuell" tab: what we are working on right now.
 # Change the list whenever the topic changes. Use the id of a training (the file name without .yaml).
-# Example below: replace it with the topics of the current weeks.
+# A training with "aktuellOnly: true" is shown only here, not under Verstehen or Trainieren.
 intro: Das üben wir gerade.
 trainings:
-  - perfekt
-  - haben-sein-present
+  - hauptsatz-nebensatz
+  - faelle-wiederholen

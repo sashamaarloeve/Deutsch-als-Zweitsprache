@@ -160,6 +160,8 @@ export interface TrainingMeta {
   skill: Skill;
   minutes: number;
   status: 'draft' | 'reviewed';
+  /** Only reachable from the Aktuell tab, not listed under Verstehen, Trainieren or Quick practice. */
+  aktuellOnly?: boolean;
   description: string;
   canDo: string[];
   /** Built from the data below when the file is loaded. */
@@ -252,6 +254,17 @@ export type Block =
       /** frame: a sentence with ___ ; a pair is [singular, plural] */
       cases: { id: CaseId; label: string; frame: string | [string, string]; rule: string }[];
       nouns: { g: Gender; noun: string; dat?: string; gen?: string }[];
+    }
+  | {
+      /** A main clause and a subordinate clause (weil, dass, wenn, ob), in both orders. main: verb in position 2 marked <v>; mainAfter (optional): the same main clause when the subordinate clause comes first (verb first); leave it out when that order sounds odd (dass, ob), then only the first order is offered; sub: the subordinate clause without its conjunction, verb at the end marked <s>. */
+      type: 'clause-lab';
+      title: string;
+      intro: string;
+      mainLabel: string;
+      subLabel: string;
+      orders: [string, string];
+      rules: [string, string];
+      sentences: { conj: string; main: string; mainAfter?: string; sub: string }[];
     }
   | {
       type: 'parts-lab';

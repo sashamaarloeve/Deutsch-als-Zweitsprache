@@ -63,8 +63,16 @@ function Shell() {
     setTab(next);
     window.scrollTo({ top: 0 });
   };
+  // leaving an Aktuell-only training: close it everywhere, so the Verstehen and Trainieren tabs show their lists again
+  const backToCurrent = () => {
+    setTopicId(null);
+    setPractice({ name: 'menu' });
+    goTab('aktuell');
+  };
 
-  const shown = trainings.filter((t) => t.skill === area && ((area !== 'reading' && area !== 'vocabulary') || t.level === readLevel));
+  // trainings marked aktuellOnly are reached from the Aktuell tab only
+  const listed = trainings.filter((t) => !t.aktuellOnly);
+  const shown = listed.filter((t) => t.skill === area && ((area !== 'reading' && area !== 'vocabulary') || t.level === readLevel));
   const topic = trainings.find((t) => t.id === topicId);
   const practiceTopic = practice.name === 'topic' ? trainings.find((t) => t.id === practice.id) : undefined;
   const quickItems = practice.name === 'quick' ? practice.ids.map((id) => itemById.get(id)).filter((i): i is Item => !!i) : [];
@@ -112,7 +120,7 @@ function Shell() {
           <>
             <h2>{s.topicsTitle}</h2>
             <p className="how">{s.topicsHint}</p>
-            {trainings.map((t) => (
+            {listed.map((t) => (
               <TopicCard key={t.id} t={t} onClick={() => { setTopicId(t.id); window.scrollTo({ top: 0 }); }} />
             ))}
           </>
@@ -120,7 +128,7 @@ function Shell() {
 
         {tab === 'understand' && topic && (
           <>
-            <button className="btn ghost" onClick={() => setTopicId(null)}>{s.backToTopics}</button>
+            <button className="btn ghost" onClick={() => (topic.aktuellOnly ? backToCurrent() : setTopicId(null))}>{topic.aktuellOnly ? s.backToCurrent : s.backToTopics}</button>
             <h2 className="tt">{topic.title}</h2>
             {topic.kind === 'perfekt' ? (
               <Understand t={topic} onTrain={() => goPractice(topic.id)} />
@@ -137,7 +145,7 @@ function Shell() {
             <div className="card merke">
               <h3>{s.quickTitle}</h3>
               <p>{s.quickText}</p>
-              <button className="btn big" onClick={() => setPractice({ name: 'quick', ids: pickQuickPractice(trainings, progress).map((i) => i.id) })}>
+              <button className="btn big" onClick={() => setPractice({ name: 'quick', ids: pickQuickPractice(listed, progress).map((i) => i.id) })}>
                 {s.quickButton}
               </button>
             </div>
@@ -195,7 +203,7 @@ function Shell() {
           />
         )}
         {tab === 'practice' && practiceTopic?.kind === 'lesson' && (
-          <LessonPractice t={practiceTopic} onBack={() => setPractice({ name: 'menu' })} onResult={onResult} onFinish={onFinish(practiceTopic.id)} />
+          <LessonPractice t={practiceTopic} backLabel={practiceTopic.aktuellOnly ? s.backToCurrent : undefined} onBack={() => (practiceTopic.aktuellOnly ? backToCurrent() : setPractice({ name: 'menu' }))} onResult={onResult} onFinish={onFinish(practiceTopic.id)} />
         )}
       </main>
     </div>

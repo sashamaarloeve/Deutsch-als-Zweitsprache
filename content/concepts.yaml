@@ -65,3 +65,6 @@ vocab.family: Family and friends (Mutter, Vater, Bruder, Freundin …)
 vocab.food: Food and drink (Brot, Käse, Wasser, essen, trinken …)
 vocab.work: Work and jobs (Beruf, Büro, Termin, Gehalt …)
 vocab.noun-article: Learn every noun with its article and its plural
+syntax.subordinate-verb-end: "Subordinate clauses (weil, dass, wenn, ob): the verb goes to the end"
+syntax.subordinate-first: "A subordinate clause in position 1: the verb of the main clause follows right after the comma"
+syntax.subordinate-conjunctions: "Choosing the right word: weil, dass, wenn or ob"

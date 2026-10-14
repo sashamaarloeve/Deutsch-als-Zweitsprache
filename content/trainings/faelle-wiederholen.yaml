@@ -1,0 +1,367 @@
+# Training: Fälle wiederholen, a revision for 5th graders. Only reachable from the "Aktuell" tab.
+# Focus: what cases are, sentence parts (Satzteile) and the Umstelltest, typical verbs and prepositions with Akkusativ and Dativ.
+# Original content, written in German.
+kind: lesson
+id: faelle-wiederholen
+title: "Fälle wiederholen"
+level: A2
+skill: grammar
+minutes: 35
+status: draft
+aktuellOnly: true
+description: "Wiederholung: Was sind Fälle? Du findest Satzteile (Subjekt, Prädikat, Akkusativ- und Dativobjekt, Zeit- und Ortsangabe), stellst Sätze um und lernst typische Verben und Präpositionen mit Akkusativ und Dativ."
+canDo:
+  - "Ich weiß, was Fälle sind: Der Fall zeigt, welche Aufgabe ein Nomen im Satz hat."
+  - "Ich finde im Satz Subjekt, Prädikat, Akkusativobjekt, Dativobjekt sowie Zeit- und Ortsangaben."
+  - "Ich kann Sätze umstellen und sehe, welche Wörter zusammengehören."
+  - "Ich kenne typische Verben und Präpositionen mit Akkusativ und mit Dativ."
+
+articles:
+  definite:
+    label: "der, die, das"
+    nom: [ der, die, das, die ]
+    akk: [ den, die, das, die ]
+    dat: [ dem, der, dem, den ]
+  indefinite:
+    label: "ein, eine"
+    nom: [ ein, eine, ein, "" ]
+    akk: [ einen, eine, ein, "" ]
+    dat: [ einem, einer, einem, "" ]
+
+understand:
+  - type: text
+    title: "Was sind Fälle?"
+    body:
+      - "Jedes Nomen hat im Satz eine Aufgabe. Wer macht etwas? Wen oder was gibt man? Wem gibt man etwas?"
+      - "Wegen dieser Aufgabe ändert sich oft der Artikel. Die Aufgabe heißt <c>Fall</c>."
+      - "<p>Der Mann</p> <v>gibt</v> dem Kind einen Ball."
+      - "„der Mann“ macht etwas: Subjekt, Nominativ. Frage: Wer?"
+      - "„einen Ball“ wird gegeben: Akkusativobjekt. Frage: Was? oder Wen?"
+      - "„dem Kind“ bekommt etwas: Dativobjekt. Frage: Wem?"
+
+  - type: detective
+    title: "Satz-Detektiv"
+    intro: "Tippe einen Teil an. Du siehst die Frage, die ihn findet, und seine Rolle."
+    roles:
+      S: "Subjekt (wer?)"
+      V: "Prädikat (Verb)"
+      T: "Zeit (wann?)"
+      D: "Dativobjekt (wem?)"
+      A: "Akkusativobjekt (was? wen?)"
+      L: "Ort (wo?)"
+      E: "Verbende"
+    sentences:
+      - parts: [ { t: Der Lehrer, r: S, q: "Wer gibt etwas?" }, { t: gibt, r: V, q: "Was passiert? Das Verb steht auf Position 2." }, { t: heute, r: T, q: "Wann gibt der Lehrer die Hefte?" }, { t: den Kindern, r: D, q: "Wem gibt der Lehrer die Hefte?" }, { t: die Hefte, r: A, q: "Was gibt der Lehrer?" }, { t: in der Klasse, r: L, q: "Wo gibt der Lehrer die Hefte?" } ]
+      - parts: [ { t: Wir, r: S, q: "Wer hat den Film gesehen?" }, { t: haben, r: V, q: "Welches Verb steht auf Position 2?" }, { t: gestern, r: T, q: "Wann haben wir den Film gesehen?" }, { t: den Film, r: A, q: "Was haben wir gesehen?" }, { t: gesehen, r: E, q: "Welcher Verbteil steht am Ende?" } ]
+
+  - type: text
+    title: "Der Umstelltest"
+    body:
+      - "So findest du die Teile eines Satzes: Schiebe Wörter an eine andere Stelle! Was immer zusammenbleibt, ist ein Satzteil."
+      - "Ich gebe heute dem Kind einen Apfel."
+      - "<p>Heute</p> <v>gebe</v> ich dem Kind einen Apfel."
+      - "<p>Dem Kind</p> <v>gebe</v> ich heute einen Apfel."
+      - "<p>Einen Apfel</p> <v>gebe</v> ich heute dem Kind."
+      - "„dem Kind“ und „einen Apfel“ bleiben immer zusammen. Jedes ist ein Satzteil. Das Verb bleibt auf Position 2."
+
+  - type: parts-lab
+    title: "Das Umstell-Labor"
+    intro: "Wähle einen Satz und einen Teil für Position 1. Das <v>Verb</v> bleibt auf Position 2. Ein zweiter Verbteil bleibt am Ende."
+    roles:
+      S: "Subjekt (wer?)"
+      V: "Prädikat (Verb)"
+      T: "Zeit (wann?)"
+      D: "Dativobjekt (wem?)"
+      A: "Akkusativobjekt (was?)"
+      L: "Ort (wo?)"
+      E: "Ende"
+    sentences:
+      - { parts: [ { t: ich, r: S }, { t: gebe, r: V }, { t: heute, r: T }, { t: dem Kind, r: D }, { t: einen Apfel, r: A } ], starts: [ S, T, D, A ] }
+      - { parts: [ { t: Mia, r: S }, { t: schenkt, r: V }, { t: zum Geburtstag, r: T }, { t: ihrer Oma, r: D }, { t: eine Blume, r: A } ], starts: [ S, T, D, A ] }
+      - { parts: [ { t: Yusuf, r: S }, { t: hilft, r: V }, { t: heute, r: T }, { t: seiner Schwester, r: D }, { t: im Garten, r: L } ], starts: [ S, T, D, L ] }
+      - { parts: [ { t: wir, r: S }, { t: haben, r: V }, { t: gestern, r: T }, { t: den Film, r: A }, { t: im Kino, r: L }, { t: gesehen, r: E } ], starts: [ S, T, A, L ] }
+      - { parts: [ { t: ich, r: S }, { t: muss, r: V }, { t: morgen, r: T }, { t: meiner Mutter, r: D }, { t: helfen, r: E } ], starts: [ S, T, D ] }
+
+  - type: rule
+    title: "Die Fragen helfen"
+    body:
+      - "Nominativ (Subjekt): Wer? Was? – <c>Der Hund</c> schläft."
+      - "Akkusativ (Objekt): Wen? Was? – Ich sehe <c>den Hund</c>."
+      - "Dativ (Objekt): Wem? – Ich helfe <c>dem Hund</c>."
+      - "Tipp: Das Verb entscheidet, welchen Fall das Objekt hat. Lerne ein neues Verb immer mit seinem Fall."
+
+  - type: case-lab
+    title: "Das Fall-Labor"
+    intro: "Wähle einen Artikel, einen Fall und ein Nomen. Der Artikel, der sich ändert, ist markiert."
+    kinds: [ definite, indefinite ]
+    cases:
+      - id: nom
+        label: Nominativ
+        frame: [ "___ ist hier.", "___ sind hier." ]
+        rule: "Nominativ: Wer? oder Was? – das Subjekt."
+      - id: akk
+        label: Akkusativ
+        frame: "Ich sehe ___."
+        rule: "Akkusativ: Wen? oder Was? – Nur der maskuline Artikel ändert sich."
+      - id: dat
+        label: Dativ
+        frame: "Ich helfe ___."
+        rule: "Dativ: Wem? – Jeder Artikel ändert sich. Plural-Nomen bekommen -n."
+    nouns:
+      - { g: m, noun: Hund }
+      - { g: m, noun: Freund }
+      - { g: f, noun: Katze }
+      - { g: f, noun: Lehrerin }
+      - { g: n, noun: Kind }
+      - { g: n, noun: Baby }
+      - { g: pl, noun: Kinder, dat: Kindern }
+      - { g: pl, noun: Freunde, dat: Freunden }
+
+  - type: article-table
+    title: "Die Artikel: der, die, das"
+    intro: "Markierte Formen sind anders als im Nominativ."
+    kinds: [ definite ]
+    cases:
+      - { id: nom, label: Nominativ }
+      - { id: akk, label: Akkusativ }
+      - { id: dat, label: Dativ }
+    note: |-
+      Akkusativ: Nur das Maskulinum ändert sich (der → <der>den</der>).
+      Dativ: Alles ändert sich.
+
+  - type: article-table
+    title: "Die Artikel: ein, eine"
+    kinds: [ indefinite ]
+    cases:
+      - { id: nom, label: Nominativ }
+      - { id: akk, label: Akkusativ }
+      - { id: dat, label: Dativ }
+    note: "„mein“, „dein“, „kein“ … funktionieren wie „ein“."
+
+  - type: rule
+    title: "Typische Verben mit Akkusativ"
+    body:
+      - "sehen, haben, kaufen, brauchen, essen, lesen, finden, besuchen"
+      - "Ich sehe <c>den Hund</c>."
+      - "Wir kaufen <c>einen Tisch</c>."
+      - "Mia liest <c>ein Buch</c>."
+
+  - type: rule
+    title: "Typische Verben mit Dativ"
+    body:
+      - "helfen, danken, gefallen, gehören, schmecken, antworten, passen, zuhören"
+      - "Ich helfe <c>dem Kind</c>."
+      - "Das Auto gehört <c>meiner Mutter</c>."
+      - "Der Film gefällt <c>mir</c>."
+
+  - type: rule
+    title: "Verben mit Dativ und Akkusativ"
+    body:
+      - "geben, schenken, zeigen, schicken, erklären, bringen, leihen, erzählen"
+      - "Ich gebe <c>dem Kind</c> <c>einen Ball</c>."
+      - "Mia schenkt <c>ihrer Oma</c> <c>eine Blume</c>."
+      - "Die Person (Dativ) steht meistens vor der Sache (Akkusativ)."
+
+  - type: table
+    title: "Die Verben im Überblick"
+    head: [ Akkusativ, Dativ, "Dativ + Akkusativ" ]
+    rows:
+      - [ sehen, helfen, geben ]
+      - [ haben, danken, schenken ]
+      - [ kaufen, gefallen, zeigen ]
+      - [ brauchen, gehören, schicken ]
+      - [ essen, schmecken, erklären ]
+      - [ lesen, antworten, bringen ]
+      - [ finden, passen, leihen ]
+      - [ besuchen, zuhören, erzählen ]
+
+  - type: rule
+    title: "Präpositionen mit Akkusativ"
+    body:
+      - "durch, für, gegen, ohne, um"
+      - "Wir gehen durch <c>den Park</c>."
+      - "Das Geschenk ist für <c>meinen Bruder</c>."
+      - "Sie kommt ohne <c>ihren Hund</c>."
+
+  - type: rule
+    title: "Präpositionen mit Dativ"
+    body:
+      - "aus, bei, mit, nach, seit, von, zu"
+      - "Ich fahre mit <c>dem Bus</c>."
+      - "Sie wohnt bei <c>ihrer Oma</c>."
+      - "Er kommt aus <c>dem Haus</c>."
+      - "Einige Präpositionen (in, an, auf …) können beides. Die lernst du später."
+
+practice:
+  - id: parts
+    title: "Welcher Satzteil?"
+    count: 8
+    shuffle: true
+    concepts: [ syntax.parts, case.question-wen-was, case.question-wem ]
+    items:
+      - { type: pick, instruction: "Welcher Teil ist das Subjekt? Frage: Wer?", prompt: "Heute gibt der Lehrer den Kindern die Hefte.", options: [ Heute, gibt, der Lehrer, den Kindern, die Hefte ], answer: der Lehrer, explanation: "Wer gibt? – der Lehrer." }
+      - { type: pick, instruction: "Welcher Teil ist das Prädikat (das Verb)?", prompt: "Heute gibt der Lehrer den Kindern die Hefte.", options: [ Heute, gibt, der Lehrer, den Kindern, die Hefte ], answer: gibt, explanation: "Das Verb steht auf Position 2." }
+      - { type: pick, instruction: "Welcher Teil ist das Dativobjekt? Frage: Wem?", prompt: "Heute gibt der Lehrer den Kindern die Hefte.", options: [ Heute, gibt, der Lehrer, den Kindern, die Hefte ], answer: den Kindern, explanation: "Wem gibt der Lehrer die Hefte? – den Kindern." }
+      - { type: pick, instruction: "Welcher Teil ist das Akkusativobjekt? Frage: Was?", prompt: "Heute gibt der Lehrer den Kindern die Hefte.", options: [ Heute, gibt, der Lehrer, den Kindern, die Hefte ], answer: die Hefte, explanation: "Was gibt der Lehrer? – die Hefte." }
+      - { type: pick, instruction: "Welcher Teil sagt wann? Frage: Wann?", prompt: "Mia schenkt zum Geburtstag ihrer Oma eine Blume.", options: [ Mia, zum Geburtstag, ihrer Oma, eine Blume ], answer: zum Geburtstag, explanation: "Wann schenkt Mia eine Blume? – zum Geburtstag." }
+      - { type: pick, instruction: "Welcher Teil sagt wo? Frage: Wo?", prompt: "Yusuf hilft heute seiner Schwester im Garten.", options: [ Yusuf, heute, seiner Schwester, im Garten ], answer: im Garten, explanation: "Wo hilft Yusuf? – im Garten." }
+      - { type: pick, instruction: "Welcher Teil ist das Dativobjekt? Frage: Wem?", prompt: "Yusuf hilft heute seiner Schwester im Garten.", options: [ Yusuf, heute, seiner Schwester, im Garten ], answer: seiner Schwester, explanation: "Wem hilft Yusuf? – seiner Schwester." }
+      - { type: pick, instruction: "Welcher Teil ist das Akkusativobjekt? Frage: Wen oder was?", prompt: "Wir haben gestern den Film im Kino gesehen.", options: [ Wir, gestern, den Film, im Kino, gesehen ], answer: den Film, explanation: "Was haben wir gesehen? – den Film." }
+
+  - id: boxes
+    title: "Felder"
+    count: 6
+    boxes:
+      - "Position 1"
+      - "Verb"
+      - "Mittelfeld"
+      - "Ende"
+    roleLabels:
+      S: "wer"
+      V: "Verb"
+      T: "wann"
+      D: "wem"
+      A: "was/wen"
+      L: "wo"
+      E: "Ende"
+    concepts: [ syntax.parts, syntax.mittelfeld-order, syntax.klammer-with-objects ]
+    instruction: "Lege die Teile in die Felder. Es gibt mehrere Lösungen: Jeder Teil kann zuerst stehen (außer dem Ende)."
+    explanation: "Das Verb steht auf Position 2. Im Mittelfeld: Subjekt, Zeit, Dativ, Akkusativ, Ort. Ein zweiter Verbteil steht am Ende."
+    markLast: true
+    items:
+      - { type: parts-boxes, parts: "ich/S gebe/V heute/T dem_Kind/D einen_Apfel/A" }
+      - { type: parts-boxes, parts: "Mia/S schenkt/V zum_Geburtstag/T ihrer_Oma/D eine_Blume/A" }
+      - { type: parts-boxes, parts: "Yusuf/S hilft/V heute/T seiner_Schwester/D im_Garten/L" }
+      - { type: parts-boxes, parts: "wir/S haben/V gestern/T den_Film/A im_Kino/L gesehen/E" }
+      - { type: parts-boxes, parts: "ich/S muss/V morgen/T meiner_Mutter/D helfen/E" }
+      - { type: parts-boxes, parts: "Ben/S zeigt/V heute/T dem_Gast/D die_Stadt/A" }
+
+  - id: umstell
+    title: "Umstell-Test"
+    count: 6
+    concepts: [ syntax.parts, syntax.mittelfeld-order, case.dat-before-akk ]
+    instruction: "Bringe die Teile in die richtige Reihenfolge. Beginne mit dem Subjekt."
+    explanation: "Das Verb steht auf Position 2. Danach kommt das Mittelfeld: Subjekt, Zeit, Dativ, Akkusativ, Ort. Ein zweiter Verbteil steht am Ende."
+    items:
+      - { type: parts-order, parts: "ich/S gebe/V heute/T dem_Kind/D einen_Apfel/A" }
+      - { type: parts-order, parts: "Mia/S schenkt/V zum_Geburtstag/T ihrer_Oma/D eine_Blume/A" }
+      - { type: parts-order, parts: "wir/S haben/V gestern/T den_Film/A im_Kino/L gesehen/E" }
+      - { type: parts-order, parts: "heute/T gebe/V ich/S dem_Kind/D einen_Apfel/A", start: T, instruction: "Bringe die Teile in die richtige Reihenfolge. Beginne mit „heute“.", explanation: "Auf Position 1 steht „heute“. Danach kommt das Verb, dann das Subjekt." }
+      - { type: parts-order, parts: "dem_Kind/D gebe/V ich/S heute/T einen_Apfel/A", start: D, instruction: "Bringe die Teile in die richtige Reihenfolge. Beginne mit „dem Kind“.", explanation: "Auf Position 1 steht „dem Kind“. Danach kommt das Verb, dann das Subjekt." }
+      - { type: parts-order, parts: "einen_Apfel/A gebe/V ich/S heute/T dem_Kind/D", start: A, instruction: "Bringe die Teile in die richtige Reihenfolge. Beginne mit „einen Apfel“.", explanation: "Auf Position 1 steht „einen Apfel“. Danach kommt das Verb, dann das Subjekt." }
+
+  - id: which-case
+    title: "Welcher Fall?"
+    count: 8
+    shuffle: true
+    concepts: [ case.overview, case.question-wen-was, case.question-wem ]
+    items:
+      - { type: pick, instruction: "Welcher Fall ist „der Hund“?", prompt: "Der Hund schläft.", options: [ Nominativ, Akkusativ, Dativ ], answer: Nominativ, explanation: "Das Subjekt steht im Nominativ. Wer schläft? – der Hund." }
+      - { type: pick, instruction: "Welcher Fall ist „den Hund“?", prompt: "Ich sehe den Hund.", options: [ Nominativ, Akkusativ, Dativ ], answer: Akkusativ, explanation: "Wen sehe ich? – den Hund." }
+      - { type: pick, instruction: "Welcher Fall ist „dem Hund“?", prompt: "Ich gebe dem Hund Wasser.", options: [ Nominativ, Akkusativ, Dativ ], answer: Dativ, explanation: "Wem gebe ich Wasser? – dem Hund." }
+      - { type: pick, instruction: "Welcher Fall ist „Wasser“?", prompt: "Ich gebe dem Hund Wasser.", options: [ Nominativ, Akkusativ, Dativ ], answer: Akkusativ, explanation: "Was gebe ich? – Wasser." }
+      - { type: pick, instruction: "Welcher Fall ist „die Lehrerin“?", prompt: "Die Lehrerin liest ein Buch.", options: [ Nominativ, Akkusativ, Dativ ], answer: Nominativ, explanation: "Wer liest? – die Lehrerin." }
+      - { type: pick, instruction: "Welcher Fall ist „der Lehrerin“?", prompt: "Wir danken der Lehrerin.", options: [ Nominativ, Akkusativ, Dativ ], answer: Dativ, explanation: "Wem danken wir? – der Lehrerin." }
+      - { type: pick, instruction: "Welcher Fall ist „einen Ball“?", prompt: "Ben kauft einen Ball.", options: [ Nominativ, Akkusativ, Dativ ], answer: Akkusativ, explanation: "Was kauft Ben? – einen Ball." }
+      - { type: pick, instruction: "Welcher Fall ist „meiner Schwester“?", prompt: "Das Fahrrad gehört meiner Schwester.", options: [ Nominativ, Akkusativ, Dativ ], answer: Dativ, explanation: "Wem gehört das Fahrrad? – meiner Schwester." }
+
+  - id: verbs
+    title: "Verben"
+    count: 10
+    shuffle: true
+    concepts: [ case.verbs-decide, case.akk-verbs, case.dat-verbs ]
+    instruction: "Welchen Fall braucht das Verb?"
+    items:
+      - { type: pick, prompt: sehen, options: [ Akkusativ, Dativ, Dativ + Akkusativ ], answer: Akkusativ, explanation: "Ich sehe den Hund." }
+      - { type: pick, prompt: helfen, options: [ Akkusativ, Dativ, Dativ + Akkusativ ], answer: Dativ, explanation: "Ich helfe dem Kind." }
+      - { type: pick, prompt: kaufen, options: [ Akkusativ, Dativ, Dativ + Akkusativ ], answer: Akkusativ, explanation: "Ich kaufe einen Tisch." }
+      - { type: pick, prompt: danken, options: [ Akkusativ, Dativ, Dativ + Akkusativ ], answer: Dativ, explanation: "Ich danke dir." }
+      - { type: pick, prompt: gehören, options: [ Akkusativ, Dativ, Dativ + Akkusativ ], answer: Dativ, explanation: "Das Buch gehört mir." }
+      - { type: pick, prompt: brauchen, options: [ Akkusativ, Dativ, Dativ + Akkusativ ], answer: Akkusativ, explanation: "Ich brauche einen Stift." }
+      - { type: pick, prompt: geben, options: [ Akkusativ, Dativ, Dativ + Akkusativ ], answer: Dativ + Akkusativ, explanation: "Ich gebe dem Kind einen Ball." }
+      - { type: pick, prompt: gefallen, options: [ Akkusativ, Dativ, Dativ + Akkusativ ], answer: Dativ, explanation: "Der Film gefällt mir." }
+      - { type: pick, prompt: schenken, options: [ Akkusativ, Dativ, Dativ + Akkusativ ], answer: Dativ + Akkusativ, explanation: "Ich schenke meiner Oma eine Blume." }
+      - { type: pick, prompt: besuchen, options: [ Akkusativ, Dativ, Dativ + Akkusativ ], answer: Akkusativ, explanation: "Ich besuche meine Oma." }
+      - { type: pick, prompt: antworten, options: [ Akkusativ, Dativ, Dativ + Akkusativ ], answer: Dativ, explanation: "Ich antworte der Lehrerin." }
+      - { type: pick, prompt: zeigen, options: [ Akkusativ, Dativ, Dativ + Akkusativ ], answer: Dativ + Akkusativ, explanation: "Wir zeigen dem Gast die Stadt." }
+
+  - id: prepositions
+    title: "Präpositionen"
+    count: 10
+    shuffle: true
+    concepts: [ case.prepositions-overview, case.dat-prepositions ]
+    instruction: "Welchen Fall braucht die Präposition?"
+    items:
+      - { type: pick, prompt: für, options: [ Akkusativ, Dativ ], answer: Akkusativ, explanation: "für den Mann" }
+      - { type: pick, prompt: mit, options: [ Akkusativ, Dativ ], answer: Dativ, explanation: "mit dem Mann" }
+      - { type: pick, prompt: ohne, options: [ Akkusativ, Dativ ], answer: Akkusativ, explanation: "ohne den Hund" }
+      - { type: pick, prompt: bei, options: [ Akkusativ, Dativ ], answer: Dativ, explanation: "bei der Oma" }
+      - { type: pick, prompt: durch, options: [ Akkusativ, Dativ ], answer: Akkusativ, explanation: "durch den Park" }
+      - { type: pick, prompt: von, options: [ Akkusativ, Dativ ], answer: Dativ, explanation: "von dem Lehrer" }
+      - { type: pick, prompt: gegen, options: [ Akkusativ, Dativ ], answer: Akkusativ, explanation: "gegen die Wand" }
+      - { type: pick, prompt: nach, options: [ Akkusativ, Dativ ], answer: Dativ, explanation: "nach dem Essen" }
+      - { type: pick, prompt: um, options: [ Akkusativ, Dativ ], answer: Akkusativ, explanation: "um den Tisch" }
+      - { type: pick, prompt: aus, options: [ Akkusativ, Dativ ], answer: Dativ, explanation: "aus dem Haus" }
+      - { type: pick, prompt: zu, options: [ Akkusativ, Dativ ], answer: Dativ, explanation: "zu der Schule" }
+      - { type: pick, prompt: seit, options: [ Akkusativ, Dativ ], answer: Dativ, explanation: "seit dem Sommer" }
+
+  - id: articles
+    title: "Artikel"
+    count: 8
+    concepts: [ case.akk-articles, case.dat-articles ]
+    instruction: "Welche Form ist richtig? Der Artikel vom Nomen steht in seiner Farbe."
+    explanation: "Akkusativ: Nur Maskulin ändert sich. Dativ: Alles ändert sich."
+    items:
+      - type: article-pick
+        kind: definite
+        case: akk
+        items:
+          - { g: m, noun: Hund, frame: "Ich sehe ___ Hund." }
+          - { g: f, noun: Katze, frame: "Wir suchen ___ Katze." }
+          - { g: n, noun: Buch, frame: "Mia liest ___ Buch." }
+      - type: article-pick
+        kind: definite
+        case: dat
+        items:
+          - { g: m, noun: Freund, frame: "Ich helfe ___ Freund." }
+          - { g: f, noun: Lehrerin, frame: "Wir danken ___ Lehrerin." }
+          - { g: n, noun: Kind, frame: "Das Eis schmeckt ___ Kind." }
+      - type: article-pick
+        kind: indefinite
+        case: akk
+        items:
+          - { g: m, noun: Ball, frame: "Ben kauft ___ Ball." }
+          - { g: f, noun: Tasche, frame: "Ich brauche ___ Tasche." }
+      - type: article-pick
+        kind: indefinite
+        case: dat
+        items:
+          - { g: f, noun: Freundin, frame: "Ich schreibe ___ Freundin." }
+          - { g: m, noun: Lehrer, frame: "Ich antworte ___ Lehrer." }
+
+  - id: gaps
+    title: "Dativ und Akkusativ"
+    count: 5
+    concepts: [ case.dat-before-akk, case.akk-articles, case.dat-articles ]
+    instruction: "Tippe in jeder Lücke die richtige Form an."
+    items:
+      - { type: gaps, sentence: "Ich gebe {0} Kind {1} Apfel.", gaps: [ { options: [ dem, den, das ], answer: dem }, { options: [ ein, einen, einem ], answer: einen } ], explanation: "Dativ Neutrum: dem Kind. Akkusativ maskulin: einen Apfel." }
+      - { type: gaps, sentence: "Mia schenkt {0} Oma {1} Blume.", gaps: [ { options: [ ihrer, ihre, ihrem ], answer: ihrer }, { options: [ ein, eine, einen ], answer: eine } ], explanation: "Dativ feminin: ihrer Oma. Akkusativ feminin: eine Blume." }
+      - { type: gaps, sentence: "Wir zeigen {0} Gast {1} Stadt.", gaps: [ { options: [ dem, den, der ], answer: dem }, { options: [ die, der, das ], answer: die } ], explanation: "Dativ maskulin: dem Gast. Akkusativ feminin: die Stadt." }
+      - { type: gaps, sentence: "Der Lehrer erklärt {0} Kindern {1} Regel.", gaps: [ { options: [ die, den, der ], answer: den }, { options: [ die, der, den ], answer: die } ], explanation: "Dativ Plural: den Kindern. Akkusativ feminin: die Regel." }
+      - { type: gaps, sentence: "Ich schicke {0} Freund {1} Brief.", gaps: [ { options: [ meinem, meinen, mein ], answer: meinem }, { options: [ ein, einen, einem ], answer: einen } ], explanation: "Dativ maskulin: meinem Freund. Akkusativ maskulin: einen Brief." }
+
+  - id: write
+    title: "Schreiben"
+    concepts: [ writing.simple-sentences, case.dat-before-akk ]
+    instruction: "Schreibe 4 Sätze oder mehr. Benutze die Wörter."
+    items:
+      - type: free-writing
+        task: "Schreibe über Geschenke und Hilfe: Was schenkst du? Wem hilfst du? Was zeigst du Freunden?"
+        words: [ ich schenke, ich helfe, ich zeige, ich gebe, meinem, meiner ]
+        minSentences: 4
+        checklist:
+          - "Das Verb steht auf Position 2."
+          - "Das Dativobjekt (wem?) steht vor dem Akkusativobjekt (was?)."
+          - "Ich habe mindestens ein Verb mit Dativ benutzt (zum Beispiel helfen)."
+        model: "Ich schenke meiner Oma eine Blume. Heute helfe ich meinem Bruder im Garten. Ich zeige meiner Freundin mein Zimmer. Am Samstag gebe ich dem Hund einen Knochen."

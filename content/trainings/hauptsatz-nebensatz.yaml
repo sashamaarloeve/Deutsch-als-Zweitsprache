@@ -1,0 +1,274 @@
+# Training: Hauptsatz und Nebensatz, a revision for 5th graders. Only reachable from the "Aktuell" tab.
+# Original content, written in German. No wrong sentences are shown or corrected.
+kind: lesson
+id: hauptsatz-nebensatz
+title: "Hauptsatz und Nebensatz"
+level: A2
+skill: grammar
+minutes: 30
+status: draft
+aktuellOnly: true
+description: "Wiederholung: Im Hauptsatz steht das Verb auf Position 2, manchmal mit Klammer am Ende. Im Nebensatz mit weil, dass, wenn und ob steht das Verb am Ende. Mit Laboren zum Umstellen."
+canDo:
+  - "Ich kann im Hauptsatz das Verb auf Position 2 setzen."
+  - "Ich kann Sätze mit Klammer bauen: Das zweite Verbteil steht am Ende."
+  - "Ich kann Nebensätze mit weil, dass, wenn und ob bauen: Das Verb steht am Ende."
+  - "Ich kann Haupt- und Nebensatz umstellen."
+
+verbs:
+  - { inf: können, forms: [ kann, kannst, kann, können, könnt, können ] }
+  - { inf: müssen, forms: [ muss, musst, muss, müssen, müsst, müssen ] }
+  - { inf: wollen, forms: [ will, willst, will, wollen, wollt, wollen ] }
+  - { inf: möchten, forms: [ möchte, möchtest, möchte, möchten, möchtet, möchten ] }
+  - { inf: dürfen, forms: [ darf, darfst, darf, dürfen, dürft, dürfen ] }
+  - { inf: sollen, forms: [ soll, sollst, soll, sollen, sollt, sollen ] }
+
+understand:
+  - type: dialogue
+    title: "Hör zu: Haupt- und Nebensätze"
+    lines:
+      - { who: Mia, say: "Ich <v>bleibe</v> heute zu Hause, <p>weil</p> ich krank <s>bin</s>." }
+      - { who: Yusuf, say: "Oh nein! Ich <v>glaube</v>, <p>dass</p> du bald wieder gesund <s>bist</s>." }
+      - { who: Mia, say: "<p>Wenn</p> es mir morgen besser <s>geht</s>, <v>komme</v> ich in die Schule." }
+      - { who: Yusuf, say: "Super! Ich <v>weiß</v> aber nicht, <p>ob</p> wir morgen einen Test <s>schreiben</s>." }
+
+  - type: rule
+    title: "Die Farben in diesem Training"
+    body:
+      - "<v>Verb</v> = das Verb auf Position 2 im Hauptsatz"
+      - "<s>Verb</s> = das Verb am Ende (Klammer oder Nebensatz)"
+      - "<p>Wort</p> = der Anfang: Position 1 oder das Nebensatz-Wort (weil, dass, wenn, ob)"
+
+  - type: text
+    title: "Der Hauptsatz: Das Verb steht auf Position 2"
+    body:
+      - "Ein Hauptsatz kann allein stehen. Das <v>Verb</v> steht immer auf Position 2."
+      - "<p>Ich</p> <v>spiele</v> heute Fußball."
+      - "<p>Heute</p> <v>spiele</v> ich Fußball."
+      - "<p>Fußball</p> <v>spiele</v> ich heute."
+      - "Auf Position 1 kann jeder Teil stehen. Das Verb bleibt auf Position 2. Das Subjekt steht dann hinter dem Verb."
+
+  - type: parts-lab
+    title: "Das Satzteile-Labor"
+    intro: "Wähle einen Satz und einen Teil für Position 1. Das <v>Verb</v> bleibt auf Position 2. Ein zweiter Verbteil bleibt am Ende."
+    roles:
+      S: "wer (Subjekt)"
+      V: "Verb"
+      T: "wann (Zeit)"
+      D: "wem (Dativ)"
+      A: "was (Akkusativ)"
+      L: "wo (Ort)"
+      E: "Ende"
+    sentences:
+      - { parts: [ { t: ich, r: S }, { t: spiele, r: V }, { t: heute, r: T }, { t: Fußball, r: A } ], starts: [ S, T, A ] }
+      - { parts: [ { t: Mia, r: S }, { t: trinkt, r: V }, { t: morgens, r: T }, { t: Tee, r: A } ], starts: [ S, T, A ] }
+      - { parts: [ { t: wir, r: S }, { t: spielen, r: V }, { t: am Samstag, r: T }, { t: Fußball, r: A }, { t: im Park, r: L } ], starts: [ S, T, A, L ] }
+      - { parts: [ { t: ich, r: S }, { t: habe, r: V }, { t: gestern, r: T }, { t: Fußball, r: A }, { t: gespielt, r: E } ], starts: [ S, T, A ] }
+      - { parts: [ { t: ich, r: S }, { t: muss, r: V }, { t: heute, r: T }, { t: meiner Mutter, r: D }, { t: helfen, r: E } ], starts: [ S, T, D ] }
+      - { parts: [ { t: Mia, r: S }, { t: ruft, r: V }, { t: heute, r: T }, { t: ihre Oma, r: A }, { t: an, r: E } ], starts: [ S, T, A ] }
+
+  - type: text
+    title: "Die Satzklammer"
+    body:
+      - "Manchmal hat ein Satz zwei Verbteile. Der erste Teil steht auf Position 2. Der zweite Teil steht ganz am Ende. Dazwischen steht das Mittelfeld. Das ist die Satzklammer."
+      - "Modalverb + Infinitiv: Ich <v>muss</v> heute meiner Mutter <s>helfen</s>."
+      - "Perfekt: Ich <v>habe</v> gestern Fußball <s>gespielt</s>."
+      - "Trennbares Verb: Mia <v>ruft</v> heute ihre Oma <s>an</s>."
+      - "So sieht ein Satz mit Klammer aus: Position 1 – <v>Verb</v> – Mittelfeld – <s>Ende</s>."
+
+  - type: bracket-lab
+    title: "Das Klammer-Labor"
+    intro: "Baue einen Satz. Das Modalverb steht auf Position 2. Der Infinitiv steht am Ende."
+    boxLabels:
+      - "Position 1"
+      - "Verb"
+      - "Mittelfeld"
+      - "Ende"
+    partLabels: [ "Modalverb", "Infinitiv" ]
+    leadLabel: "Modalverb"
+    actionLabel: "Verb"
+    leads: [ können, müssen, wollen, möchten, dürfen, sollen ]
+    actions:
+      - { inf: spielen, comp: Fußball }
+      - { inf: kochen, comp: Suppe }
+      - { inf: lernen, comp: Deutsch }
+      - { inf: kaufen, comp: Brot }
+      - { inf: hören, comp: Musik }
+    starts: [ heute, morgen, jetzt ]
+    modes:
+      - id: statement
+        label: "Aussagesatz"
+        boxes: [ [ S ], [ V ], [ O ], [ Z ] ]
+        end: "."
+        rule: "Das <v>Modalverb</v> steht auf Position 2. Der <s>Infinitiv</s> steht am Ende. Dazwischen steht das Mittelfeld."
+      - id: time-first
+        label: "Zeitwort zuerst"
+        boxes: [ [ T ], [ V ], [ S, O ], [ Z ] ]
+        end: "."
+        rule: "Das <v>Modalverb</v> bleibt auf Position 2. Das Subjekt steht jetzt im Mittelfeld. Der <s>Infinitiv</s> bleibt am Ende."
+
+  - type: text
+    title: "Der Nebensatz: Das Verb steht am Ende"
+    body:
+      - "Ein Nebensatz kann nicht allein stehen. Er gehört zu einem Hauptsatz. Er beginnt mit einem besonderen Wort. Zwischen Hauptsatz und Nebensatz steht ein Komma."
+      - "Ich bleibe zu Hause, <p>weil</p> es <s>regnet</s>."
+      - "Im Nebensatz steht das <s>Verb</s> ganz am Ende."
+
+  - type: rule
+    title: "Vier Wörter für den Nebensatz"
+    body:
+      - "<p>weil</p> nennt einen Grund: Ich lache, <p>weil</p> der Film lustig <s>ist</s>."
+      - "<p>dass</p> sagt, was jemand denkt oder sagt: Ich glaube, <p>dass</p> du recht <s>hast</s>."
+      - "<p>wenn</p> nennt eine Bedingung: Wir gehen schwimmen, <p>wenn</p> die Sonne <s>scheint</s>."
+      - "<p>ob</p> gibt eine Ja/Nein-Frage weiter: Ich frage dich, <p>ob</p> du Zeit <s>hast</s>."
+
+  - type: clause-lab
+    title: "Das Nebensatz-Labor"
+    intro: "Wähle einen Satz und eine Reihenfolge. Schau, wo das Verb steht."
+    mainLabel: "Hauptsatz"
+    subLabel: "Nebensatz"
+    orders: [ "Hauptsatz zuerst", "Nebensatz zuerst" ]
+    rules:
+      - "Der <v>Hauptsatz</v> steht vorne: Das Verb steht auf Position 2. Im Nebensatz steht das <s>Verb</s> am Ende."
+      - "Der Nebensatz steht vorne. Danach kommt sofort das <v>Verb</v> vom Hauptsatz."
+    sentences:
+      - { conj: weil, main: "ich <v>bleibe</v> heute zu Hause", mainAfter: "<v>bleibe</v> ich heute zu Hause", sub: "ich krank <s>bin</s>" }
+      - { conj: weil, main: "Mia <v>lacht</v>", mainAfter: "<v>lacht</v> Mia", sub: "der Film so lustig <s>ist</s>" }
+      - { conj: weil, main: "wir <v>bleiben</v> drinnen", mainAfter: "<v>bleiben</v> wir drinnen", sub: "es <s>regnet</s>" }
+      - { conj: wenn, main: "wir <v>gehen</v> schwimmen", mainAfter: "<v>gehen</v> wir schwimmen", sub: "die Sonne <s>scheint</s>" }
+      - { conj: wenn, main: "ich <v>helfe</v> dir", mainAfter: "<v>helfe</v> ich dir", sub: "du Hilfe <s>brauchst</s>" }
+      - { conj: dass, main: "ich <v>glaube</v>", sub: "du recht <s>hast</s>" }
+      - { conj: dass, main: "Yusuf <v>sagt</v>", sub: "er heute keine Zeit <s>hat</s>" }
+      - { conj: ob, main: "ich <v>frage</v> dich", sub: "du Zeit <s>hast</s>" }
+      - { conj: ob, main: "Mia <v>weiß</v> nicht", sub: "es morgen <s>regnet</s>" }
+
+  - type: rule
+    title: "Der Nebensatz steht vorne"
+    body:
+      - "Ein Nebensatz kann auch am Anfang stehen. Dann ist der ganze Nebensatz auf Position 1."
+      - "Das <v>Verb</v> vom Hauptsatz kommt danach sofort, gleich nach dem Komma."
+      - "<p>Weil</p> es <s>regnet</s>, <v>bleiben</v> wir drinnen."
+      - "<p>Wenn</p> die Sonne <s>scheint</s>, <v>gehen</v> wir schwimmen."
+      - "Tipp: Nach dem Komma kommt zuerst ein Verb."
+
+  - type: table
+    title: "Das Wichtigste auf einen Blick"
+    head: [ Satz, "Wo steht das Verb?", Beispiel ]
+    rows:
+      - [ Hauptsatz, "Position 2", "Ich spiele heute Fußball." ]
+      - [ Klammer, "Position 2 und am Ende", "Ich habe gestern Fußball gespielt." ]
+      - [ Nebensatz, "am Ende", "…, weil es regnet." ]
+      - [ "Nebensatz zuerst", "Hauptsatz-Verb direkt nach dem Komma", "Weil es regnet, bleiben wir drinnen." ]
+
+practice:
+  - id: which
+    title: "Welches Wort?"
+    count: 7
+    shuffle: true
+    concepts: [ syntax.verb-position-2, syntax.klammer-with-objects, syntax.subordinate-verb-end ]
+    items:
+      - { type: pick, instruction: "Welches Wort ist das Verb?", prompt: "Mia trinkt morgens Tee.", options: [ Mia, trinkt, morgens, Tee ], answer: trinkt, explanation: "Das Verb sagt, was jemand tut: trinkt." }
+      - { type: pick, instruction: "Welcher Teil steht auf Position 1?", prompt: "Heute spiele ich Fußball.", options: [ Heute, spiele, ich, Fußball ], answer: Heute, explanation: "Der erste Teil ist „Heute“. Danach kommt das Verb." }
+      - { type: pick, instruction: "Welches Wort steht auf Position 2?", prompt: "Morgen kocht Yusuf Suppe.", options: [ Morgen, kocht, Yusuf, Suppe ], answer: kocht, explanation: "Das Verb steht immer auf Position 2." }
+      - { type: pick, instruction: "Welches Wort ist der zweite Verbteil am Ende?", prompt: "Ich habe gestern Fußball gespielt.", options: [ habe, gestern, Fußball, gespielt ], answer: gespielt, explanation: "„habe“ und „gespielt“ gehören zusammen: das ist die Klammer." }
+      - { type: pick, instruction: "Welches Wort ist der zweite Verbteil am Ende?", prompt: "Mia ruft heute ihre Oma an.", options: [ ruft, heute, Oma, an ], answer: an, explanation: "„anrufen“ ist ein trennbares Verb: „ruft“ auf Position 2, „an“ am Ende." }
+      - { type: pick, instruction: "Welches Wort ist das Verb am Ende des Nebensatzes?", prompt: "Ich bleibe zu Hause, weil es regnet.", options: [ bleibe, weil, es, regnet ], answer: regnet, explanation: "Im Nebensatz steht das Verb am Ende." }
+      - { type: pick, instruction: "Welches Wort beginnt den Nebensatz?", prompt: "Ich glaube, dass du recht hast.", options: [ glaube, dass, du, hast ], answer: dass, explanation: "„dass“ beginnt den Nebensatz." }
+
+  - id: boxes
+    title: "Felder"
+    count: 6
+    boxes:
+      - "Position 1"
+      - "Verb"
+      - "Mittelfeld"
+      - "Ende"
+    roleLabels:
+      S: "wer"
+      V: "Verb"
+      T: "wann"
+      D: "wem"
+      A: "was"
+      L: "wo"
+      E: "Ende"
+    concepts: [ syntax.parts, syntax.verb-position-2, syntax.inversion, syntax.klammer-with-objects ]
+    instruction: "Lege die Teile in die Felder. Es gibt mehrere Lösungen: Jeder Teil kann zuerst stehen."
+    explanation: "Das Verb steht auf Position 2. Ein zweiter Verbteil steht am Ende."
+    markLast: true
+    items:
+      - { type: parts-boxes, parts: "ich/S spiele/V heute/T Fußball/A" }
+      - { type: parts-boxes, parts: "Mia/S trinkt/V morgens/T Tee/A" }
+      - { type: parts-boxes, parts: "wir/S haben/V gestern/T Fußball/A gespielt/E" }
+      - { type: parts-boxes, parts: "ich/S muss/V heute/T meiner_Mutter/D helfen/E" }
+      - { type: parts-boxes, parts: "Mia/S ruft/V heute/T ihre_Oma/A an/E" }
+      - { type: parts-boxes, parts: "wir/S spielen/V am_Samstag/T Fußball/A im_Park/L" }
+
+  - id: puzzle
+    title: "Satzpuzzle"
+    count: 6
+    concepts: [ syntax.mittelfeld-order, syntax.verb-position-2, syntax.klammer-with-objects ]
+    instruction: "Bringe die Teile in die richtige Reihenfolge. Beginne mit dem Subjekt."
+    explanation: "Subjekt, Verb, dann das Mittelfeld. Ein zweiter Verbteil steht am Ende."
+    items:
+      - { type: parts-order, parts: "ich/S spiele/V heute/T Fußball/A" }
+      - { type: parts-order, parts: "Mia/S trinkt/V morgens/T Tee/A" }
+      - { type: parts-order, parts: "ich/S habe/V gestern/T Fußball/A gespielt/E" }
+      - { type: parts-order, parts: "ich/S muss/V heute/T meiner_Mutter/D helfen/E" }
+      - { type: parts-order, parts: "Mia/S ruft/V heute/T ihre_Oma/A an/E" }
+      - { type: parts-order, parts: "heute/T spiele/V ich/S Fußball/A", start: T, instruction: "Bringe die Teile in die richtige Reihenfolge. Beginne mit „heute“.", explanation: "Auf Position 1 steht „heute“. Danach kommt das Verb, dann das Subjekt." }
+
+  - id: halves
+    title: "Passt zusammen"
+    shuffle: false
+    items:
+      - type: pairs
+        concepts: [ syntax.subordinate-verb-end, syntax.subordinate-conjunctions ]
+        instruction: "Tippe die erste Hälfte an, dann die passende zweite Hälfte."
+        pairs: [ [ "Ich gehe zum Arzt,", "weil ich Fieber habe." ], [ "Mia lacht,", "weil der Film lustig ist." ], [ "Wir essen Eis,", "weil es heiß ist." ], [ "Ben geht früh ins Bett,", "weil er müde ist." ], [ "Ich nehme einen Schirm,", "weil es regnet." ] ]
+      - type: pairs
+        concepts: [ syntax.subordinate-verb-end, syntax.subordinate-conjunctions ]
+        instruction: "Tippe die erste Hälfte an, dann die passende zweite Hälfte."
+        pairs: [ [ "Ich hoffe,", "dass du bald kommst." ], [ "Ich frage mich,", "ob es morgen schneit." ], [ "Ich gehe spazieren,", "wenn die Sonne scheint." ], [ "Ich nehme einen Schirm,", "weil es regnet." ] ]
+
+  - id: conj
+    title: "Welches Wort passt?"
+    count: 6
+    shuffle: true
+    concepts: [ syntax.subordinate-conjunctions ]
+    instruction: "Welches Wort passt in den Satz?"
+    items:
+      - { type: pick, sentence: "Ich lache, ___ der Film so lustig ist.", options: [ weil, dass, ob ], answer: weil, explanation: "„weil“ nennt einen Grund." }
+      - { type: pick, sentence: "Ich hoffe, ___ du bald kommst.", options: [ dass, weil, ob ], answer: dass, explanation: "Nach „ich hoffe“ kommt „dass“." }
+      - { type: pick, sentence: "Ich frage mich, ___ es morgen schneit.", options: [ ob, weil, dass ], answer: ob, explanation: "„ob“ gibt eine Ja/Nein-Frage weiter: Schneit es morgen?" }
+      - { type: pick, sentence: "Wir gehen schwimmen, ___ die Sonne scheint.", options: [ wenn, ob, dass ], answer: wenn, explanation: "„wenn“ nennt eine Bedingung." }
+      - { type: pick, sentence: "Ich nehme einen Schirm, ___ es regnet.", options: [ weil, ob, dass ], answer: weil, explanation: "„weil“ nennt einen Grund." }
+      - { type: pick, sentence: "Mia sagt, ___ sie Hunger hat.", options: [ dass, ob, wenn ], answer: dass, explanation: "Nach „sagen“ kommt „dass“." }
+
+  - id: sub-puzzle
+    title: "Nebensatz-Puzzle"
+    count: 8
+    concepts: [ syntax.subordinate-verb-end, syntax.subordinate-first, syntax.subordinate-conjunctions ]
+    items:
+      - { type: sentence-order, instruction: "Bilde den Satz. Beginne mit „Ich“.", words: "ich bleibe zu_Hause, weil es regnet", accept: [ "ich bleibe zu_Hause, weil es regnet" ], explanation: "Hauptsatz, Komma, Nebensatz. Im Nebensatz steht das Verb am Ende." }
+      - { type: sentence-order, instruction: "Bilde den Satz. Beginne mit „Weil“.", words: "weil es regnet, bleiben wir drinnen", accept: [ "weil es regnet, bleiben wir drinnen" ], explanation: "Der Nebensatz steht vorne. Nach dem Komma kommt sofort das Verb vom Hauptsatz." }
+      - { type: sentence-order, instruction: "Bilde den Satz. Beginne mit „Mia“.", words: "Mia lacht, weil der Film lustig ist", accept: [ "Mia lacht, weil der Film lustig ist" ], explanation: "Im Nebensatz steht „ist“ am Ende." }
+      - { type: sentence-order, instruction: "Bilde den Satz. Beginne mit „Ich“.", words: "ich glaube, dass du recht hast", accept: [ "ich glaube, dass du recht hast" ], explanation: "Nach dem Komma beginnt der Nebensatz mit „dass“. Das Verb „hast“ steht am Ende." }
+      - { type: sentence-order, instruction: "Bilde den Satz. Beginne mit „Wir“.", words: "wir gehen schwimmen, wenn die Sonne scheint", accept: [ "wir gehen schwimmen, wenn die Sonne scheint" ], explanation: "„wenn“ beginnt den Nebensatz. „scheint“ steht am Ende." }
+      - { type: sentence-order, instruction: "Bilde den Satz. Beginne mit „Wenn“.", words: "wenn die Sonne scheint, gehen wir schwimmen", accept: [ "wenn die Sonne scheint, gehen wir schwimmen" ], explanation: "Nebensatz zuerst: Nach dem Komma kommt das Verb „gehen“." }
+      - { type: sentence-order, instruction: "Bilde den Satz. Beginne mit „Ich“.", words: "ich frage dich, ob du Zeit hast", accept: [ "ich frage dich, ob du Zeit hast" ], explanation: "„ob“ gibt eine Ja/Nein-Frage weiter. „hast“ steht am Ende." }
+      - { type: sentence-order, instruction: "Bilde den Satz. Beginne mit „Yusuf“.", words: "Yusuf sagt, dass er heute keine Zeit hat", accept: [ "Yusuf sagt, dass er heute keine Zeit hat" ], explanation: "Nach „sagt“ kommt „dass“. Das Verb „hat“ steht am Ende." }
+
+  - id: write
+    title: "Schreiben"
+    concepts: [ writing.simple-sentences, syntax.subordinate-verb-end ]
+    instruction: "Schreibe 3 Sätze oder mehr. Benutze die Wörter."
+    items:
+      - type: free-writing
+        task: "Schreibe über dich: Was machst du und warum? Was glaubst du? Was machst du, wenn das Wetter schön ist?"
+        words: [ weil, dass, wenn, ob ]
+        minSentences: 3
+        checklist:
+          - "Vor weil, dass, wenn oder ob steht ein Komma."
+          - "Im Nebensatz steht das Verb am Ende."
+          - "Ich habe mindestens zwei verschiedene Wörter (weil, dass, wenn, ob) benutzt."
+        model: "Ich spiele gern Fußball, weil das Spaß macht. Ich glaube, dass wir morgen schönes Wetter haben. Wenn die Sonne scheint, gehe ich in den Park."

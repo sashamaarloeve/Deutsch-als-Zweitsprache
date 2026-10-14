@@ -312,3 +312,7 @@ button.sentpart.sel { outline: 3px solid var(--ink); outline-offset: 2px; }
 .mk { display: block; width: 46px; height: 12px; border-radius: 6px; border: 2px solid #27343b; }
 .mk.blue { background: #1f5fbf; } .mk.green { background: #1a6b3c; } .mk.red { background: #b02a1e; }
 .eraser { display: block; width: 30px; height: 16px; border-radius: 3px; background: #f2c94c; border: 2px solid #27343b; }
+
+/* clause lab: main clause and subordinate clause */
+.clause-main { --rc: var(--aqua-ink); }
+.clause-sub { --rc: var(--violet-ink); }

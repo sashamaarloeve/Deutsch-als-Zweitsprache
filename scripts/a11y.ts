@@ -59,6 +59,28 @@ async function main() {
       await page.getByRole('button', { name: 'Aktuell', exact: true }).first().click();
       await scan(page, `${theme} ${lang} · Aktuell`);
 
+      // trainings that are only reachable from Aktuell: the explanation and every task
+      const openAktuell = async () => {
+        await fresh();
+        await page.getByRole('button', { name: 'Aktuell', exact: true }).first().click();
+      };
+      await openAktuell();
+      const aktuellCount = await page.locator('main .card h3').count();
+      for (let k = 0; k < aktuellCount; k++) {
+        await openAktuell();
+        const title = (await page.locator('main .card h3').nth(k).textContent()) ?? String(k);
+        await page.locator('main .card').nth(k).getByRole('button', { name: 'Verstehen', exact: true }).click();
+        await scan(page, `${theme} ${lang} · Aktuell · Understand · ${title}`);
+        await openAktuell();
+        await page.locator('main .card').nth(k).getByRole('button', { name: 'Trainieren', exact: true }).click();
+        const tabs = page.locator('.subtabs button');
+        const n = await tabs.count();
+        for (let t = 0; t < n; t++) {
+          await tabs.nth(t).click();
+          await scan(page, `${theme} ${lang} · Aktuell · Practice · ${title} · task ${t + 1}`);
+        }
+      }
+
       // Understand: the list and every topic
       await fresh();
       await page.getByRole('button', { name: L.understand, exact: true }).first().click();
