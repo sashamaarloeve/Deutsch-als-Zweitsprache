@@ -13,11 +13,13 @@ for (const f of files) {
   const t = parseTraining(readFileSync(`${dir}/${f}`, 'utf8'));
   problems.push(...validateTraining(t, concepts).map((p) => `${f}: ${p}`));
 }
-// every id in content/aktuell.yaml must be a real training
+// every id in content/aktuell.yaml and content/archiv.yaml must be a real training, and none may be in both lists
 const known = new Set(files.map((f) => f.replace(/\.yaml$/, '')));
-for (const id of parseAktuell(readFileSync('content/aktuell.yaml', 'utf8')).ids) {
-  if (!known.has(id)) problems.push(`aktuell.yaml: there is no training called "${id}".`);
+const lists = (['aktuell', 'archiv'] as const).map((name) => ({ name, ids: parseAktuell(readFileSync(`content/${name}.yaml`, 'utf8')).ids }));
+for (const { name, ids } of lists) {
+  for (const id of ids) if (!known.has(id)) problems.push(`${name}.yaml: there is no training called "${id}".`);
 }
+for (const id of lists[0].ids) if (lists[1].ids.includes(id)) problems.push(`"${id}" is in aktuell.yaml and in archiv.yaml. Put it in only one of them.`);
 if (problems.length) {
   console.error('Content problems found:\n- ' + problems.join('\n- '));
   process.exit(1);

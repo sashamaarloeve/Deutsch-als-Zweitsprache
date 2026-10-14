@@ -81,6 +81,11 @@ async function main() {
         }
       }
 
+      // Archiv
+      await fresh();
+      await page.getByRole('button', { name: 'Archiv', exact: true }).first().click();
+      await scan(page, `${theme} ${lang} · Archiv`);
+
       // Understand: the list and every topic
       await fresh();
       await page.getByRole('button', { name: L.understand, exact: true }).first().click();

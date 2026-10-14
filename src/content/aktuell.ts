@@ -1,7 +1,7 @@
 import { parse } from 'yaml';
 
-// The "Aktuell" tab is filled from content/aktuell.yaml: a short intro and the ids of the trainings
-// the pupils are working on right now.
+// The "Aktuell" and "Archiv" tabs are filled from content/aktuell.yaml and content/archiv.yaml: a short intro and
+// the ids of the trainings to show (right now / already done).
 export interface Aktuell {
   intro: string;
   ids: string[];

@@ -1,18 +1,18 @@
 import { useMemo, useState } from 'react';
-import { trainings } from './content/load';
+import { aktuell, archiv, trainings } from './content/load';
 import type { Item, Training } from './content/types';
 import { LangProvider, useLang } from './i18n';
 import { Runner } from './components/Runner';
 import { LessonPractice, TopicPractice } from './components/TopicPractice';
 import { LessonUnderstand } from './components/LessonUnderstand';
 import { Whiteboard } from './components/Whiteboard';
-import { AktuellView } from './components/Aktuell';
+import { TrainingCards } from './components/Aktuell';
 import { Understand } from './components/Understand';
 import { addPoints, emptyProgress, recordResult, recordTraining, type Outcome } from './logic/progress';
 import { pickQuickPractice } from './logic/practice';
 import { applyPrefs, defaultPrefs, ZOOMS } from './logic/prefs';
 
-type Tab = 'home' | 'aktuell' | 'understand' | 'practice';
+type Tab = 'home' | 'aktuell' | 'archiv' | 'understand' | 'practice';
 const READ_LEVELS = ['A1', 'A2', 'B1'] as const;
 const AREAS = ['reading', 'grammar', 'vocabulary'] as const; // the three areas of the Practice menu
 // What is open inside each tab. Ids (not objects) so a language switch shows the right texts.
@@ -39,6 +39,7 @@ function Shell() {
   const { s } = useLang();
   const [tab, setTab] = useState<Tab>('home');
   const [topicId, setTopicId] = useState<string | null>(null); // open topic in "Understand"
+  const [cardsFrom, setCardsFrom] = useState<'aktuell' | 'archiv' | null>(null); // set when a training was opened from the Aktuell or Archiv tab
   const [practice, setPractice] = useState<PracticeView>({ name: 'menu' });
   const [progress, setProgress] = useState(emptyProgress);
   const [prefs, setPrefs] = useState(defaultPrefs);
@@ -64,13 +65,22 @@ function Shell() {
     window.scrollTo({ top: 0 });
   };
   // leaving an Aktuell-only training: close it everywhere, so the Verstehen and Trainieren tabs show their lists again
-  const backToCurrent = () => {
+  const backToCards = () => {
     setTopicId(null);
     setPractice({ name: 'menu' });
-    goTab('aktuell');
+    goTab(cardsFrom ?? 'aktuell');
+  };
+  const backLabelCards = cardsFrom === 'archiv' ? s.backToArchive : s.backToCurrent;
+  // open a training from one of the card tabs (Aktuell, Archiv)
+  const openFromCards = (from: 'aktuell' | 'archiv', id: string, to: 'understand' | 'practice') => {
+    setCardsFrom(from);
+    if (to === 'understand') {
+      setTopicId(id);
+      goTab('understand');
+    } else goPractice(id);
   };
 
-  // trainings marked aktuellOnly are reached from the Aktuell tab only
+  // trainings marked aktuellOnly are reached from the Aktuell or Archiv tab only
   const listed = trainings.filter((t) => !t.aktuellOnly);
   const shown = listed.filter((t) => t.skill === area && ((area !== 'reading' && area !== 'vocabulary') || t.level === readLevel));
   const topic = trainings.find((t) => t.id === topicId);
@@ -103,16 +113,33 @@ function Shell() {
         <button className={'btn' + (tab === 'practice' ? ' on' : ' ghost')} aria-pressed={tab === 'practice'} onClick={() => goTab('practice')}>
           {s.navPractice}
         </button>
+        <button className={'btn' + (tab === 'archiv' ? ' on' : ' ghost')} aria-pressed={tab === 'archiv'} onClick={() => goTab('archiv')}>
+          {s.navArchive}
+        </button>
       </nav>
 
       <main>
         {tab === 'home' && <Whiteboard />}
 
         {tab === 'aktuell' && (
-          <AktuellView
+          <TrainingCards
+            title={s.navCurrent}
+            list={aktuell}
             trainings={trainings}
-            onUnderstand={(id) => { setTopicId(id); goTab('understand'); }}
-            onPractice={goPractice}
+            emptyText={s.currentEmpty}
+            onUnderstand={(id) => openFromCards('aktuell', id, 'understand')}
+            onPractice={(id) => openFromCards('aktuell', id, 'practice')}
+          />
+        )}
+
+        {tab === 'archiv' && (
+          <TrainingCards
+            title={s.navArchive}
+            list={archiv}
+            trainings={trainings}
+            emptyText={s.archiveEmpty}
+            onUnderstand={(id) => openFromCards('archiv', id, 'understand')}
+            onPractice={(id) => openFromCards('archiv', id, 'practice')}
           />
         )}
 
@@ -121,14 +148,14 @@ function Shell() {
             <h2>{s.topicsTitle}</h2>
             <p className="how">{s.topicsHint}</p>
             {listed.map((t) => (
-              <TopicCard key={t.id} t={t} onClick={() => { setTopicId(t.id); window.scrollTo({ top: 0 }); }} />
+              <TopicCard key={t.id} t={t} onClick={() => { setCardsFrom(null); setTopicId(t.id); window.scrollTo({ top: 0 }); }} />
             ))}
           </>
         )}
 
         {tab === 'understand' && topic && (
           <>
-            <button className="btn ghost" onClick={() => (topic.aktuellOnly ? backToCurrent() : setTopicId(null))}>{topic.aktuellOnly ? s.backToCurrent : s.backToTopics}</button>
+            <button className="btn ghost" onClick={() => (cardsFrom ? backToCards() : setTopicId(null))}>{cardsFrom ? backLabelCards : s.backToTopics}</button>
             <h2 className="tt">{topic.title}</h2>
             {topic.kind === 'perfekt' ? (
               <Understand t={topic} onTrain={() => goPractice(topic.id)} />
@@ -177,7 +204,7 @@ function Shell() {
                     ? s.exercisesOf(7) + ': ' + [s.exBau, s.exHs, s.exConv, s.exPuz, s.exMem, s.exSprint, s.exWri].join(' · ')
                     : s.exercisesOf(t.sets.length) + ': ' + t.sets.map((x) => x.title).join(' · ')
                 }
-                onClick={() => setPractice({ name: 'topic', id: t.id })}
+                onClick={() => { setCardsFrom(null); setPractice({ name: 'topic', id: t.id }); }}
               />
             ))}
           </>
@@ -203,7 +230,7 @@ function Shell() {
           />
         )}
         {tab === 'practice' && practiceTopic?.kind === 'lesson' && (
-          <LessonPractice t={practiceTopic} backLabel={practiceTopic.aktuellOnly ? s.backToCurrent : undefined} onBack={() => (practiceTopic.aktuellOnly ? backToCurrent() : setPractice({ name: 'menu' }))} onResult={onResult} onFinish={onFinish(practiceTopic.id)} />
+          <LessonPractice t={practiceTopic} backLabel={cardsFrom ? backLabelCards : undefined} onBack={() => (cardsFrom ? backToCards() : setPractice({ name: 'menu' }))} onResult={onResult} onFinish={onFinish(practiceTopic.id)} />
         )}
       </main>
     </div>

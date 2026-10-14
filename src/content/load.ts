@@ -23,3 +23,5 @@ export const trainings: Training[] = Object.values(mainFiles).map((raw) => parse
 
 const aktuellFile = import.meta.glob('../../content/aktuell.yaml', { query: '?raw', import: 'default', eager: true }) as Record<string, string>;
 export const aktuell: Aktuell = parseAktuell(Object.values(aktuellFile)[0] ?? '');
+const archivFile = import.meta.glob('../../content/archiv.yaml', { query: '?raw', import: 'default', eager: true }) as Record<string, string>;
+export const archiv: Aktuell = parseAktuell(Object.values(archivFile)[0] ?? '');

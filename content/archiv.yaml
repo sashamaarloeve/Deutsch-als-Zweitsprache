@@ -1,0 +1,5 @@
+# The "Archiv" tab: trainings we have already worked on.
+# Move a training here by taking its id out of aktuell.yaml and adding it below (the id is the file name without .yaml).
+# Same rule as in aktuell.yaml: a training with "aktuellOnly: true" is shown only in Aktuell or Archiv, nowhere else.
+intro: Das haben wir schon geübt.
+trainings: []

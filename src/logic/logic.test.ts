@@ -492,3 +492,12 @@ describe('trainings for the Aktuell tab', () => {
   });
 });
 
+describe('Archiv tab', () => {
+  const read = (name: string) => parseAktuell(readFileSync(`content/${name}.yaml`, 'utf8'));
+  it('lists only trainings that exist, and none that is also in Aktuell', () => {
+    const { ids } = read('archiv');
+    for (const id of ids) expect(existsSync(`content/trainings/${id}.yaml`)).toBe(true);
+    for (const id of ids) expect(read('aktuell').ids).not.toContain(id);
+  });
+});
+
