@@ -50,6 +50,10 @@ async function main() {
         if (theme === 'white') await page.getByRole('button', { name: 'Weißer Hintergrund' }).click();
       };
 
+      // start page
+      await fresh();
+      await scan(page, `${theme} ${lang} · Start`);
+
       // Understand: the list and every topic
       await fresh();
       await page.getByRole('button', { name: L.understand, exact: true }).first().click();

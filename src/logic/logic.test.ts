@@ -11,6 +11,7 @@ import { boxesSentence, buildSentenceText, checkBoxes, checkBuild, checkChoice, 
 import { emptyProgress, recordResult } from './progress';
 import { pickQuickPractice, priority } from './practice';
 import { defaultPrefs, ZOOMS } from './prefs';
+import { todayInGerman } from './today';
 
 // Helpers that tell TypeScript which kind of training a file is.
 const perfektOf = (yamlText: string, overlay?: string, problems: string[] = []): PerfektTraining => {
@@ -480,5 +481,11 @@ describe('flashcards, memory and display settings', () => {
   it('display settings start with a light yellow background, normal size and normal spacing', () => {
     expect(defaultPrefs()).toEqual({ theme: 'yellow', zoom: 1, wide: false });
     expect(ZOOMS).toContain(1);
+  });
+});
+
+describe('start page whiteboard', () => {
+  it('writes weekday and date in German', () => {
+    expect(todayInGerman(new Date(2026, 9, 14))).toEqual({ weekday: 'Mittwoch', date: '14. Oktober 2026' });
   });
 });

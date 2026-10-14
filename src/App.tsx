@@ -5,12 +5,13 @@ import { LangProvider, useLang } from './i18n';
 import { Runner } from './components/Runner';
 import { LessonPractice, TopicPractice } from './components/TopicPractice';
 import { LessonUnderstand } from './components/LessonUnderstand';
+import { Whiteboard } from './components/Whiteboard';
 import { Understand } from './components/Understand';
 import { addPoints, emptyProgress, recordResult, recordTraining, type Outcome } from './logic/progress';
 import { pickQuickPractice } from './logic/practice';
 import { applyPrefs, defaultPrefs, ZOOMS } from './logic/prefs';
 
-type Tab = 'understand' | 'practice';
+type Tab = 'home' | 'understand' | 'practice';
 const READ_LEVELS = ['A1', 'A2', 'B1'] as const;
 const AREAS = ['reading', 'grammar', 'vocabulary'] as const; // the three areas of the Practice menu
 // What is open inside each tab. Ids (not objects) so a language switch shows the right texts.
@@ -36,7 +37,7 @@ function TopicCard({ t, done, onClick, extra }: { t: Training; done?: { best: nu
 function Shell() {
   const { lang, s } = useLang();
   const trainings = trainingsByLang[lang];
-  const [tab, setTab] = useState<Tab>('understand');
+  const [tab, setTab] = useState<Tab>('home');
   const [topicId, setTopicId] = useState<string | null>(null); // open topic in "Understand"
   const [practice, setPractice] = useState<PracticeView>({ name: 'menu' });
   const [progress, setProgress] = useState(emptyProgress);
@@ -73,7 +74,7 @@ function Shell() {
       <header className="top">
         <div>
           <span className="kicker">{s.brandKicker}</span>
-          <h1>DaZ-<span className="u">Alex</span></h1>
+          <h1><button type="button" className="homelink" aria-label={`DaZ-Alex – ${s.toStart}`} onClick={() => goTab('home')}>DaZ-<span className="u">Alex</span></button></h1>
         </div>
         <div className="topright">
           <div className="prefs" role="group" aria-label={s.prefsLabel}>
@@ -95,6 +96,8 @@ function Shell() {
       </nav>
 
       <main>
+        {tab === 'home' && <Whiteboard />}
+
         {tab === 'understand' && !topic && (
           <>
             <h2>{s.topicsTitle}</h2>

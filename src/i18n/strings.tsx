@@ -8,6 +8,10 @@ const en = {
   navUnderstand: 'Understand',
   navPractice: 'Practice',
   sections: 'Sections',
+  homeHello: 'Welcome!',
+  homeText: 'Today we practise German together.',
+  homeHint: 'Choose Understand or Practice above.',
+  toStart: 'Back to the start page',
 
   topicsTitle: 'Topics',
   topicsHint: 'Pick a topic to understand it.',
@@ -201,6 +205,10 @@ const de: Strings = {
   navUnderstand: 'Verstehen',
   navPractice: 'Trainieren',
   sections: 'Bereiche',
+  homeHello: 'Herzlich willkommen!',
+  homeText: 'Heute üben wir zusammen Deutsch.',
+  homeHint: 'Wähle oben: Verstehen oder Trainieren.',
+  toStart: 'Zurück zur Startseite',
 
   topicsTitle: 'Themen',
   topicsHint: 'Wähle ein Thema, um es zu verstehen.',
