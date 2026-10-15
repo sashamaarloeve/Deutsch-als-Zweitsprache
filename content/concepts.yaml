@@ -68,3 +68,7 @@ vocab.noun-article: Learn every noun with its article and its plural
 syntax.subordinate-verb-end: "Subordinate clauses (weil, dass, wenn, ob): the verb goes to the end"
 syntax.subordinate-first: "A subordinate clause in position 1: the verb of the main clause follows right after the comma"
 syntax.subordinate-conjunctions: "Choosing the right word: weil, dass, wenn or ob"
+adj.basics: "An adjective before a noun gets an ending that shows gender, case and number"
+adj.after-definite: "Adjective endings after der, die, das: only -e and -en"
+adj.after-ein: "Adjective endings after ein, kein, mein …: -er, -e, -es, -en"
+adj.without-article: "Adjective endings without an article: almost the ending of the article (-er, -e, -es, -em, -en)"

@@ -501,3 +501,40 @@ describe('Archiv tab', () => {
   });
 });
 
+describe('Adjektive deklinieren', () => {
+  const adj = lessonOf('adjektiv-endungen.yaml');
+  const concepts = parse(readFileSync('content/concepts.yaml', 'utf8'));
+  const e = adj.adjectiveEndings!;
+  it('has the standard endings after der/die/das (only -e and -en), ein-words and without an article', () => {
+    expect(e.definite.nom).toEqual(['e', 'e', 'e', 'en']);
+    expect(e.definite.akk).toEqual(['en', 'e', 'e', 'en']);
+    expect(e.definite.dat).toEqual(['en', 'en', 'en', 'en']);
+    expect(e.indefinite.nom!.slice(0, 3)).toEqual(['er', 'e', 'es']);
+    expect(e.indefinite.akk!.slice(0, 3)).toEqual(['en', 'e', 'es']);
+    expect(e.none.nom).toEqual(['er', 'e', 'es', 'e']);
+    expect(e.none.dat).toEqual(['em', 'er', 'em', 'en']);
+  });
+  it('after der/die/das the ending -e stands in exactly five places', () => {
+    const cells = [e.definite.nom, e.definite.akk, e.definite.dat].flat();
+    expect(cells.filter((x) => x === 'e')).toHaveLength(5);
+  });
+  it('is valid and Aktuell-only', () => {
+    expect(validateTraining(adj, concepts)).toEqual([]);
+    expect(adj.aktuellOnly).toBe(true);
+    expect(adj.understand.some((b) => b.type === 'adjective-lab')).toBe(true);
+  });
+  it('builds picks with the right ending from the tables, and the wrong options are never right', () => {
+    const picks = adj.items.filter((i) => i.type === 'pick') as { sentence: string; options: string[]; answer: string; explanation: string }[];
+    const akkM = picks.find((p) => p.sentence === 'Ich sehe den ___ Hund.')!;
+    expect(akkM.answer).toBe('kleinen');
+    expect(akkM.options).toEqual(['kleinen', 'kleine', 'kleiner']);
+    expect(akkM.explanation).toContain('Akkusativ maskulin, nach „den“: Endung -en.');
+    const nomN = picks.find((p) => p.sentence === 'Das ist ein ___ Auto.')!;
+    expect(nomN.answer).toBe('neues');
+    const none = picks.find((p) => p.sentence === 'Ich komme mit ___ Brot.')!;
+    expect(none.answer).toBe('frischem');
+    expect(none.explanation).toContain('ohne Artikel');
+    for (const p of picks) expect(new Set(p.options).size).toBe(p.options.length);
+  });
+});
+

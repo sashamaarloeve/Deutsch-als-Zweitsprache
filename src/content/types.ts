@@ -267,6 +267,16 @@ export type Block =
       sentences: { conj: string; main: string; mainAfter?: string; sub: string }[];
     }
   | {
+      /** An article, an adjective with its ending and a noun. Kinds are keys of the articles list; `free` nouns may stand without an article. */
+      type: 'adjective-lab';
+      title: string;
+      intro: string;
+      kinds: string[];
+      cases: { id: CaseId; label: string; frame: string | [string, string]; rule: string }[];
+      adjectives: string[];
+      nouns: { g: Gender; noun: string; dat?: string; free?: boolean }[];
+    }
+  | {
       type: 'parts-lab';
       title: string;
       intro: string;
@@ -326,6 +336,8 @@ export interface LessonTraining extends TrainingMeta {
   words?: VocabWord[];
   understand: Block[];
   articles?: Articles;
+  /** Adjective endings by article kind and case; each list is [masculine, feminine, neuter, plural]. */
+  adjectiveEndings?: Record<string, Partial<Record<CaseId, string[]>>>;
   verbs: ConjVerb[];
   sets: LessonSet[];
 }

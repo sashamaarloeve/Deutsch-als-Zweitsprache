@@ -1,6 +1,6 @@
 import { buildPieces, parseBuildSolution } from '../logic/check';
 import { richProblems } from './rich';
-import type { Articles, Block, ConjVerb, Item, LessonTraining, PerfektTraining, Training } from './types';
+import type { Articles, Block, CaseId, ConjVerb, Item, LessonTraining, PerfektTraining, Training } from './types';
 
 const sorted = (a: string[]) => [...a].sort().join('|');
 
@@ -135,7 +135,7 @@ function validateArticles(articles: Articles | undefined): string[] {
   return problems;
 }
 
-function validateBlock(b: Block, i: number, bank: Map<string, ConjVerb>, articles: Articles | undefined, wordIds: Set<string> = new Set()): string[] {
+function validateBlock(b: Block, i: number, bank: Map<string, ConjVerb>, articles: Articles | undefined, wordIds: Set<string> = new Set(), endings?: Record<string, Partial<Record<CaseId, string[]>>>): string[] {
   const w = `Understand block ${i + 1} (${b.type})`;
   const problems: string[] = [];
   const rich = (t: string) => problems.push(...richProblems(t).map((p) => `${w}: ${p}`));
@@ -192,6 +192,23 @@ function validateBlock(b: Block, i: number, bank: Map<string, ConjVerb>, article
         if (!s.main?.includes('<v>') || (s.mainAfter !== undefined && !s.mainAfter.includes('<v>'))) problems.push(`${w}: "${s.main}" needs its verb marked with <v>.`);
         if (!s.sub?.includes('<s>')) problems.push(`${w}: "${s.sub}" needs its verb at the end marked with <s>.`);
       }
+      break;
+    }
+    case 'adjective-lab': {
+      for (const k of b.kinds ?? []) {
+        if (!articles?.[k]) problems.push(`${w}: article kind "${k}" is not in the articles list.`);
+        for (const c of b.cases ?? []) {
+          if (!articles?.[k]?.[c.id]) problems.push(`${w}: "${k}" has no articles for the case "${c.id}".`);
+          if (endings?.[k]?.[c.id]?.length !== 4) problems.push(`${w}: "${k}" needs four adjective endings for the case "${c.id}".`);
+        }
+      }
+      for (const c of b.cases ?? []) {
+        for (const f of Array.isArray(c.frame) ? c.frame : [c.frame]) if (!f.includes('___')) problems.push(`${w}: frame "${f}" needs a gap written as ___.`);
+        rich(c.rule);
+      }
+      if (!b.adjectives?.length) problems.push(`${w}: has no adjectives.`);
+      for (const n of b.nouns ?? []) if (!GENDER_IDS.includes(n.g)) problems.push(`${w}: noun "${n.noun}" has an unknown gender "${n.g}".`);
+      if (b.kinds?.includes('none') && !b.nouns?.some((n) => n.free)) problems.push(`${w}: "none" (no article) needs nouns marked free: true.`);
       break;
     }
     case 'parts-lab': {
@@ -267,7 +284,7 @@ function validateLesson(t: LessonTraining, concepts: Record<string, string>): st
     if (!x.paragraphs?.length) problems.push(`Reading text "${x.id}": has no paragraphs.`);
     textMap.set(x.id, (x.paragraphs ?? []).join(' ').replace(/\s+/g, ' '));
   }
-  (t.understand ?? []).forEach((b, i) => problems.push(...validateBlock(b, i, bank, t.articles, wordIds)));
+  (t.understand ?? []).forEach((b, i) => problems.push(...validateBlock(b, i, bank, t.articles, wordIds, t.adjectiveEndings)));
   if (!t.sets?.length) problems.push(`Training "${t.id}": has no practice sets.`);
   for (const s of t.sets ?? []) {
     if (!s.title) problems.push(`Practice set "${s.id}": needs a title.`);

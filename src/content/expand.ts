@@ -154,6 +154,10 @@ export const TONES: Tone[] = ['der', 'die', 'das', 'pl'];
 export const wordText = (w: VocabWord) => (w.art ? `${w.art === 'pl' ? 'die' : w.art} ${w.word}` : w.word);
 
 export const gi = (g: Gender) => GENDERS.indexOf(g);
+// wrong endings offered in adjective exercises, most typical first (never the right one)
+const ADJ_ENDING_POOL = ['en', 'e', 'er', 'es', 'em'];
+const CASE_NAMES: Record<string, string> = { nom: 'Nominativ', akk: 'Akkusativ', dat: 'Dativ', gen: 'Genitiv' };
+const GENDER_NAMES: Record<Gender, string> = { m: 'maskulin', f: 'feminin', n: 'Neutrum', pl: 'Plural' };
 const CASES: CaseId[] = ['nom', 'akk', 'dat', 'gen'];
 
 // The answer first, then up to three wrong options. Definite articles: the forms of the SAME gender
@@ -265,6 +269,29 @@ export function expandLesson(raw: any): LessonTraining {
             answer: set0[spec.case as CaseId]![gi(it.g)],
             explanation: it.explanation ?? spec.explanation ?? set.explanation ?? '',
             tone,
+          } as PickItem);
+        }
+      } else if (spec.type === 'adj-pick') {
+        const arts = raw.articles as Articles;
+        const endings = raw.adjectiveEndings as Record<string, Record<string, string[]>>;
+        const forms = endings?.[spec.kind]?.[spec.case];
+        if (!forms || !arts?.[spec.kind]?.[spec.case as CaseId]) throw new Error(`adj-pick in "${set.id}": no articles or endings for ${spec.kind} / ${spec.case}.`);
+        for (const it of spec.items as { g: Gender; adj: string; noun: string; frame: string; explanation?: string }[]) {
+          const e = forms[gi(it.g)];
+          const art = arts[spec.kind][spec.case as CaseId]![gi(it.g)];
+          const phrase = `${art ? art + ' ' : ''}___ ${it.noun}`;
+          const wrong = ADJ_ENDING_POOL.filter((x) => x !== e).slice(0, 2);
+          add({
+            id: nextId(),
+            type: 'pick',
+            concepts,
+            instruction,
+            prompt: `(${it.adj})`,
+            sentence: it.frame.replace('{}', phrase),
+            options: [it.adj + e, ...wrong.map((x) => it.adj + x)],
+            answer: it.adj + e,
+            explanation: `${CASE_NAMES[spec.case] ?? spec.case} ${GENDER_NAMES[it.g]}, ${art ? `nach „${art}“` : 'ohne Artikel'}: Endung -${e}.${it.explanation ? ' ' + it.explanation : ''}`,
+            tone: TONES[gi(it.g)],
           } as PickItem);
         }
       } else if (spec.type === 'parts-boxes') {

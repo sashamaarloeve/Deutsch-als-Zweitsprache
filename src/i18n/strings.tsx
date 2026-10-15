@@ -190,6 +190,8 @@ const de = {
   nounLabel: 'Nomen',
   caseLabel: 'Fall',
   kindLabel: 'Artikel',
+  adjectiveLabel: 'Adjektiv',
+  endingLabel: 'Endung',
   tableCaption: 'Artikel nach Fall und Genus',
   nominativ: 'Nominativ',
   roleAria: 'Satzteil',

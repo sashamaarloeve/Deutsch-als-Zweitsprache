@@ -90,7 +90,7 @@ header.top { padding: 20px 0 8px; display: flex; justify-content: space-between;
 
 /* ---- Perfekt training (ported from the owner's prototype) ---- */
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-.en { color: var(--muted); font-style: italic; }
+.en { color: var(--muted); } /* small hints; no italics (dyslexia-friendly) */
 h1.tt, h2.tt { font-size: clamp(2rem, 7vw, 3rem); margin: 10px 0 6px; }
 .maintabs, .subtabs { display: flex; gap: 8px; padding: 4px 2px 12px; }
 .maintabs { position: sticky; top: 0; z-index: 20; background: var(--paper); border-bottom: 2px solid var(--ink); padding: 10px 2px; margin: 0 0 18px; }

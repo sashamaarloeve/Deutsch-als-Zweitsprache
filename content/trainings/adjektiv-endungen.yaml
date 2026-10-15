@@ -1,0 +1,368 @@
+# Training: Adjektivdeklination (adjective endings), a revision for 5th graders. Only reachable from the "Aktuell" tab.
+# Nominativ, Akkusativ, Dativ; after der/die/das, after ein/kein, and without an article.
+# Original content, written in German. The grammar tables below are standard facts, the sentences are our own.
+kind: lesson
+id: adjektiv-endungen
+title: "Adjektive deklinieren"
+level: A2
+skill: grammar
+minutes: 35
+status: draft
+aktuellOnly: true
+description: "Wiederholung: Das Adjektiv vor dem Nomen bekommt eine Endung. Du übst die Endungen nach der, die, das, nach ein, kein und ohne Artikel im Nominativ, Akkusativ und Dativ."
+canDo:
+  - "Ich weiß, dass ein Adjektiv vor dem Nomen eine Endung bekommt."
+  - "Ich kenne die Endungen nach „der, die, das“: nur -e und -en."
+  - "Ich kenne die Endungen nach „ein, kein, mein“ und ohne Artikel."
+  - "Ich kann Sätze mit Adjektiven bauen und die richtige Endung wählen."
+
+articles:
+  definite:
+    label: "der, die, das"
+    nom: [ der, die, das, die ]
+    akk: [ den, die, das, die ]
+    dat: [ dem, der, dem, den ]
+  indefinite:
+    label: "ein, eine"
+    nom: [ ein, eine, ein, "" ]
+    akk: [ einen, eine, ein, "" ]
+    dat: [ einem, einer, einem, "" ]
+  negative:
+    label: "kein, keine"
+    nom: [ kein, keine, kein, keine ]
+    akk: [ keinen, keine, kein, keine ]
+    dat: [ keinem, keiner, keinem, keinen ]
+  none:
+    label: "ohne Artikel"
+    nom: [ "", "", "", "" ]
+    akk: [ "", "", "", "" ]
+    dat: [ "", "", "", "" ]
+
+# Endings: [maskulin, feminin, Neutrum, Plural]. "ein" has no plural: the last entry is not used.
+adjectiveEndings:
+  definite:
+    nom: [ e, e, e, en ]
+    akk: [ en, e, e, en ]
+    dat: [ en, en, en, en ]
+  indefinite:
+    nom: [ er, e, es, en ]
+    akk: [ en, e, es, en ]
+    dat: [ en, en, en, en ]
+  negative:
+    nom: [ er, e, es, en ]
+    akk: [ en, e, es, en ]
+    dat: [ en, en, en, en ]
+  none:
+    nom: [ er, e, es, e ]
+    akk: [ en, e, es, e ]
+    dat: [ em, er, em, en ]
+
+understand:
+  - type: dialogue
+    title: "Hör zu: Adjektive mit Endungen"
+    lines:
+      - { who: Mia, say: "Schau mal, da ist ein <st>klein</st><en>er</en> Hund!" }
+      - { who: Ben, say: "Ich sehe den <st>klein</st><en>en</en> Hund. Er spielt mit dem <st>rot</st><en>en</en> Ball." }
+      - { who: Mia, say: "Und die <st>klein</st><en>e</en> Katze schläft in einem <st>weich</st><en>en</en> Bett." }
+      - { who: Ben, say: "Haben wir auch so ein <st>süß</st><en>es</en> Tier?" }
+
+  - type: text
+    title: "Was ist ein Adjektiv?"
+    body:
+      - "Ein Adjektiv sagt, wie etwas ist: klein, groß, neu, alt, schön."
+      - "Steht das Adjektiv vor dem Nomen, bekommt es eine Endung: der <st>klein</st><en>e</en> Hund."
+      - "Die Endung hängt von drei Dingen ab: vom Genus (der, die, das), vom Fall (Nominativ, Akkusativ, Dativ) und vom Artikel."
+      - "Steht das Adjektiv nach „sein“, bekommt es keine Endung: Der Hund ist <st>klein</st>."
+
+  - type: rule
+    title: "Die Farben in diesem Training"
+    body:
+      - "<st>klein</st> = das Adjektiv (der Stamm)"
+      - "<en>e</en> = die Endung"
+      - "Die Artikel haben ihre Genus-Farben: <der>der</der> Hund, <die>die</die> Katze, <das>das</das> Pferd, <pl>die</pl> Hunde."
+
+  - type: adjective-lab
+    title: "Das Adjektiv-Labor"
+    intro: "Wähle einen Artikel, einen Fall, ein Adjektiv und ein Nomen. Die Endung ist markiert."
+    kinds: [ definite, indefinite, negative, none ]
+    cases:
+      - id: nom
+        label: Nominativ
+        frame: [ "Das ist ___.", "Das sind ___." ]
+        rule: "Nominativ: Wer? oder Was? – das Subjekt."
+      - id: akk
+        label: Akkusativ
+        frame: "Ich sehe ___."
+        rule: "Akkusativ: Wen? oder Was? – Nur beim Maskulinum ändert sich etwas gegenüber dem Nominativ."
+      - id: dat
+        label: Dativ
+        frame: "Ich bin mit ___ zufrieden."
+        rule: "Dativ: Wem? – Mit Artikel endet das Adjektiv immer auf -en. Ohne Artikel hat es fast die Endung vom Artikel (dem → -em, der → -er, den → -en)."
+    adjectives: [ klein, groß, neu, alt, schön ]
+    nouns:
+      - { g: m, noun: Hund }
+      - { g: m, noun: Ball }
+      - { g: f, noun: Katze }
+      - { g: f, noun: Tasche }
+      - { g: n, noun: Pferd }
+      - { g: n, noun: Auto }
+      - { g: pl, noun: Hunde, dat: Hunden, free: true }
+      - { g: pl, noun: Bälle, dat: Bällen, free: true }
+      - { g: m, noun: Kaffee, free: true }
+      - { g: f, noun: Milch, free: true }
+      - { g: n, noun: Brot, free: true }
+
+  - type: table
+    title: "Nach „der, die, das“"
+    intro: "Es gibt nur zwei Endungen: -e und -en."
+    head: [ Fall, maskulin, feminin, Neutrum, Plural ]
+    rows:
+      - [ Nominativ, "der kleine Hund", "die kleine Katze", "das kleine Pferd", "die kleinen Hunde" ]
+      - [ Akkusativ, "den kleinen Hund", "die kleine Katze", "das kleine Pferd", "die kleinen Hunde" ]
+      - [ Dativ, "dem kleinen Hund", "der kleinen Katze", "dem kleinen Pferd", "den kleinen Hunden" ]
+
+  - type: rule
+    title: "Merke: -e oder -en?"
+    body:
+      - "Nach „der, die, das“ steht -e nur an fünf Stellen: Nominativ maskulin, feminin und Neutrum, und Akkusativ feminin und Neutrum."
+      - "Überall sonst steht -en. Im Dativ und im Plural also immer -en."
+      - "der klein<en>e</en> Hund · die klein<en>e</en> Katze · das klein<en>e</en> Pferd"
+      - "den klein<en>en</en> Hund · mit dem klein<en>en</en> Hund · die klein<en>en</en> Hunde"
+
+  - type: table
+    title: "Nach „ein, eine, kein, mein …“"
+    intro: "Fast wie nach „der, die, das“. Nur an drei Stellen ist es anders."
+    head: [ Fall, maskulin, feminin, Neutrum, Plural ]
+    rows:
+      - [ Nominativ, "ein kleiner Hund", "eine kleine Katze", "ein kleines Pferd", "keine kleinen Hunde" ]
+      - [ Akkusativ, "einen kleinen Hund", "eine kleine Katze", "ein kleines Pferd", "keine kleinen Hunde" ]
+      - [ Dativ, "einem kleinen Hund", "einer kleinen Katze", "einem kleinen Pferd", "keinen kleinen Hunden" ]
+
+  - type: rule
+    title: "Merke: Das Adjektiv zeigt das Genus"
+    body:
+      - "„ein Hund“ und „ein Pferd“: Das Wort „ein“ hat keine Endung und zeigt das Genus nicht. Deshalb zeigt es das Adjektiv: ein klein<en>er</en> Hund (wie „der“), ein klein<en>es</en> Pferd (wie „das“)."
+      - "Das passiert nur im Nominativ maskulin (-er) und im Nominativ und Akkusativ Neutrum (-es). Alle anderen Endungen sind wie nach „der, die, das“."
+
+  - type: table
+    title: "Ohne Artikel"
+    intro: "Ohne Artikel steht oft ein Nomen im Plural oder ein Nomen wie Kaffee, Milch oder Brot."
+    head: [ Fall, maskulin, feminin, Neutrum, Plural ]
+    rows:
+      - [ Nominativ, "kalter Kaffee", "kalte Milch", "frisches Brot", "frische Brötchen" ]
+      - [ Akkusativ, "kalten Kaffee", "kalte Milch", "frisches Brot", "frische Brötchen" ]
+      - [ Dativ, "kaltem Kaffee", "kalter Milch", "frischem Brot", "frischen Brötchen" ]
+
+  - type: rule
+    title: "Merke: Ohne Artikel"
+    body:
+      - "Ohne Artikel zeigt das Adjektiv Genus und Fall selbst. Es bekommt fast die Endung, die der Artikel hätte: der → -er, die → -e, das → -es, dem → -em, der → -er, den → -en."
+      - "Beispiele: kalt<en>er</en> Kaffee (wie „der“), mit kalt<en>em</en> Kaffee (wie „dem“), mit frisch<en>en</en> Brötchen (wie „den“)."
+
+  - type: table
+    title: "Alles auf einen Blick: die Endungen"
+    head: [ Artikel, maskulin, feminin, Neutrum, Plural ]
+    rows:
+      - [ "der, die, das (Nom.)", "-e", "-e", "-e", "-en" ]
+      - [ "der, die, das (Akk.)", "-en", "-e", "-e", "-en" ]
+      - [ "der, die, das (Dat.)", "-en", "-en", "-en", "-en" ]
+      - [ "ein, kein (Nom.)", "-er", "-e", "-es", "-en" ]
+      - [ "ein, kein (Akk.)", "-en", "-e", "-es", "-en" ]
+      - [ "ein, kein (Dat.)", "-en", "-en", "-en", "-en" ]
+      - [ "ohne Artikel (Nom.)", "-er", "-e", "-es", "-e" ]
+      - [ "ohne Artikel (Akk.)", "-en", "-e", "-es", "-e" ]
+      - [ "ohne Artikel (Dat.)", "-em", "-er", "-em", "-en" ]
+
+practice:
+  - id: nom-def
+    title: "Nach der, die, das: Nominativ"
+    count: 6
+    shuffle: true
+    concepts: [ adj.basics, adj.after-definite ]
+    instruction: "Welche Form passt in die Lücke?"
+    items:
+      - type: adj-pick
+        kind: definite
+        case: nom
+        items:
+          - { g: m, adj: klein, noun: Hund, frame: "Das ist {}." }
+          - { g: f, adj: groß, noun: Katze, frame: "Das ist {}." }
+          - { g: n, adj: neu, noun: Auto, frame: "Das ist {}." }
+          - { g: pl, adj: alt, noun: Bücher, frame: "Das sind {}." }
+          - { g: m, adj: schön, noun: Garten, frame: "Hier ist {}." }
+          - { g: f, adj: neu, noun: Lehrerin, frame: "Dort ist {}." }
+
+  - id: akk-def
+    title: "Nach der, die, das: Akkusativ"
+    count: 6
+    shuffle: true
+    concepts: [ adj.basics, adj.after-definite ]
+    instruction: "Welche Form passt in die Lücke?"
+    items:
+      - type: adj-pick
+        kind: definite
+        case: akk
+        items:
+          - { g: m, adj: klein, noun: Hund, frame: "Ich sehe {}." }
+          - { g: f, adj: groß, noun: Katze, frame: "Ich streichle {}." }
+          - { g: n, adj: neu, noun: Auto, frame: "Wir kaufen {}." }
+          - { g: pl, adj: alt, noun: Bücher, frame: "Ich lese {}." }
+          - { g: m, adj: rot, noun: Ball, frame: "Ben wirft {}." }
+          - { g: f, adj: gelb, noun: Tasche, frame: "Mia braucht {}." }
+
+  - id: dat-def
+    title: "Nach der, die, das: Dativ"
+    count: 6
+    shuffle: true
+    concepts: [ adj.basics, adj.after-definite ]
+    instruction: "Welche Form passt in die Lücke?"
+    items:
+      - type: adj-pick
+        kind: definite
+        case: dat
+        items:
+          - { g: m, adj: klein, noun: Hund, frame: "Ich spiele mit {}." }
+          - { g: f, adj: groß, noun: Katze, frame: "Ich spiele mit {}." }
+          - { g: n, adj: neu, noun: Auto, frame: "Wir fahren mit {}." }
+          - { g: pl, adj: alt, noun: Büchern, frame: "Ich lerne mit {}." }
+          - { g: m, adj: nett, noun: Lehrer, frame: "Ich helfe {}." }
+          - { g: f, adj: nett, noun: Lehrerin, frame: "Wir danken {}." }
+
+  - id: indef
+    title: "Nach ein, eine, kein"
+    count: 8
+    shuffle: true
+    concepts: [ adj.basics, adj.after-ein ]
+    instruction: "Welche Form passt in die Lücke?"
+    items:
+      - type: adj-pick
+        kind: indefinite
+        case: nom
+        explanation: "Nach „ein“ zeigt das Adjektiv das Genus."
+        items:
+          - { g: m, adj: klein, noun: Hund, frame: "Das ist {}." }
+          - { g: f, adj: groß, noun: Katze, frame: "Das ist {}." }
+          - { g: n, adj: neu, noun: Auto, frame: "Das ist {}." }
+      - type: adj-pick
+        kind: indefinite
+        case: akk
+        items:
+          - { g: m, adj: klein, noun: Hund, frame: "Ich sehe {}." }
+          - { g: f, adj: schön, noun: Blume, frame: "Mia kauft {}." }
+          - { g: n, adj: neu, noun: Handy, frame: "Ben braucht {}." }
+      - type: adj-pick
+        kind: indefinite
+        case: dat
+        items:
+          - { g: m, adj: alt, noun: Hund, frame: "Ich spiele mit {}." }
+          - { g: f, adj: nett, noun: Freundin, frame: "Ich spiele mit {}." }
+          - { g: n, adj: klein, noun: Kind, frame: "Ich helfe {}." }
+      - type: adj-pick
+        kind: negative
+        case: nom
+        items:
+          - { g: pl, adj: alt, noun: Bücher, frame: "Das sind {}." }
+      - type: adj-pick
+        kind: negative
+        case: akk
+        items:
+          - { g: pl, adj: neu, noun: Hefte, frame: "Ich habe {}." }
+
+  - id: none
+    title: "Ohne Artikel"
+    count: 8
+    shuffle: true
+    concepts: [ adj.basics, adj.without-article ]
+    instruction: "Welche Form passt in die Lücke?"
+    items:
+      - type: adj-pick
+        kind: none
+        case: nom
+        items:
+          - { g: m, adj: kalt, noun: Kaffee, frame: "Das ist {}." }
+          - { g: f, adj: frisch, noun: Milch, frame: "Das ist {}." }
+          - { g: n, adj: frisch, noun: Brot, frame: "Das ist {}." }
+          - { g: pl, adj: frisch, noun: Brötchen, frame: "Das sind {}." }
+      - type: adj-pick
+        kind: none
+        case: akk
+        items:
+          - { g: m, adj: kalt, noun: Kaffee, frame: "Ich trinke {}." }
+          - { g: f, adj: warm, noun: Milch, frame: "Ich trinke {}." }
+          - { g: n, adj: frisch, noun: Brot, frame: "Ich esse {}." }
+          - { g: pl, adj: frisch, noun: Brötchen, frame: "Ich esse {}." }
+      - type: adj-pick
+        kind: none
+        case: dat
+        items:
+          - { g: m, adj: heiß, noun: Kaffee, frame: "Ich komme mit {}." }
+          - { g: f, adj: frisch, noun: Milch, frame: "Ich komme mit {}." }
+          - { g: n, adj: frisch, noun: Brot, frame: "Ich komme mit {}." }
+          - { g: pl, adj: frisch, noun: Brötchen, frame: "Ich komme mit {}." }
+
+  - id: build
+    title: "Baue den Satz"
+    count: 7
+    concepts: [ adj.basics, adj.after-definite, adj.after-ein, adj.without-article ]
+    instruction: "Baue den Satz. Die Endung ist ein eigenes Teil."
+    items:
+      - { type: sentence-build, accept: [ "ich sehe den klein|en Hund" ], extras: [ e, er ], explanation: "Akkusativ maskulin nach „den“: Endung -en." }
+      - { type: sentence-build, accept: [ "die klein|e Katze schläft" ], extras: [ en, es ], explanation: "Nominativ feminin nach „die“: Endung -e." }
+      - { type: sentence-build, accept: [ "wir spielen mit dem rot|en Ball" ], extras: [ e, er ], explanation: "Dativ nach „dem“: Endung -en." }
+      - { type: sentence-build, accept: [ "ich habe einen groß|en Bruder" ], extras: [ e, er ], explanation: "Akkusativ maskulin nach „einen“: Endung -en." }
+      - { type: sentence-build, accept: [ "das ist ein schön|es Haus" ], extras: [ er, e ], explanation: "Nominativ Neutrum nach „ein“: Endung -es." }
+      - { type: sentence-build, accept: [ "Mia trinkt kalt|e Milch" ], extras: [ er, en ], explanation: "Akkusativ feminin ohne Artikel: Endung -e." }
+      - { type: sentence-build, accept: [ "ich esse frisch|es Brot" ], extras: [ e, er ], explanation: "Akkusativ Neutrum ohne Artikel: Endung -es." }
+
+  - id: mix
+    title: "Alles gemischt"
+    count: 10
+    shuffle: true
+    concepts: [ adj.basics, adj.after-definite, adj.after-ein, adj.without-article ]
+    instruction: "Welche Form passt in die Lücke?"
+    items:
+      - type: adj-pick
+        kind: definite
+        case: nom
+        items:
+          - { g: n, adj: klein, noun: Pferd, frame: "Das ist {}." }
+          - { g: m, adj: alt, noun: Lehrer, frame: "Dort steht {}." }
+      - type: adj-pick
+        kind: definite
+        case: akk
+        items:
+          - { g: m, adj: neu, noun: Rucksack, frame: "Ich brauche {}." }
+          - { g: f, adj: schön, noun: Blume, frame: "Mia kauft {}." }
+      - type: adj-pick
+        kind: definite
+        case: dat
+        items:
+          - { g: f, adj: neu, noun: Freundin, frame: "Ich gehe mit {} spazieren." }
+          - { g: pl, adj: nett, noun: Kindern, frame: "Ich spiele mit {}." }
+      - type: adj-pick
+        kind: indefinite
+        case: akk
+        items:
+          - { g: m, adj: klein, noun: Hund, frame: "Wir haben {}." }
+          - { g: n, adj: groß, noun: Zimmer, frame: "Ich habe {}." }
+      - type: adj-pick
+        kind: none
+        case: akk
+        items:
+          - { g: m, adj: heiß, noun: Tee, frame: "Ich trinke {}." }
+          - { g: pl, adj: bunt, noun: Stifte, frame: "Ich brauche {}." }
+
+  - id: write
+    title: "Schreiben"
+    concepts: [ adj.basics, writing.simple-sentences ]
+    instruction: "Schreibe 4 Sätze oder mehr. Benutze die Wörter."
+    items:
+      - type: free-writing
+        task: "Beschreibe dein Zimmer oder dein Lieblingstier: Was gibt es dort? Wie sieht es aus?"
+        words: [ ein, eine, einen, der, die, das, klein, groß, schön ]
+        minSentences: 4
+        checklist:
+          - "Jedes Adjektiv vor einem Nomen hat eine Endung."
+          - "Ich habe mindestens drei Adjektive benutzt."
+          - "Ich habe nach „ein“ und nach „der, die, das“ geschrieben."
+        model: "In meinem Zimmer steht ein großes Bett. Ich habe einen kleinen Schreibtisch. Auf dem Schreibtisch liegt ein neues Buch. Die bunte Lampe ist mein Lieblingsstück."

@@ -366,6 +366,52 @@ function CaseLab({ t, block }: { t: LessonTraining; block: Extract<Block, { type
   );
 }
 
+/* ---- adjective lab: article + adjective with its ending + noun ---- */
+function AdjectiveLab({ t, block }: { t: LessonTraining; block: Extract<Block, { type: 'adjective-lab' }> }) {
+  const { s } = useLang();
+  const arts = t.articles!;
+  const ends = t.adjectiveEndings!;
+  const [k, setK] = useState(0);
+  const [c, setC] = useState(block.cases.length > 1 ? 1 : 0);
+  const [a, setA] = useState(0);
+  const [n, setN] = useState(0);
+  const kind = block.kinds[k];
+  const cs = block.cases[c];
+  // "ein, eine" has no plural, and nouns without an article only work for nouns marked free (plural, Milch, Brot …)
+  const nouns = block.nouns.filter((x) => (kind === 'indefinite' ? x.g !== 'pl' : kind === 'none' ? x.free : true));
+  const noun = nouns[Math.min(n, nouns.length - 1)];
+  const g = gi(noun.g);
+  const art = arts[kind][cs.id]![g];
+  const ending = ends[kind][cs.id]![g];
+  const adj = block.adjectives[a];
+  const nounText = cs.id === 'dat' && noun.g === 'pl' && noun.dat ? noun.dat : noun.noun;
+  const frame = Array.isArray(cs.frame) ? (noun.g === 'pl' ? cs.frame[1] : cs.frame[0]) : cs.frame;
+  const [before, after] = frame.split('___');
+  const nomArt = arts[kind].nom[g];
+  const changed = cs.id !== 'nom' && art !== '' && art !== nomArt;
+  return (
+    <div className="card">
+      <h2>{block.title}</h2>
+      <p><Rich text={block.intro} /></p>
+      <Chips label={s.kindLabel} items={block.kinds.map((x) => arts[x].label)} current={k} onPick={setK} />
+      <Chips label={s.caseLabel} items={block.cases.map((x) => x.label)} current={c} onPick={setC} />
+      <Chips label={s.adjectiveLabel} items={block.adjectives} current={a} onPick={setA} />
+      <Chips label={s.nounLabel} items={nouns.map((x) => `${arts.definite.nom[gi(x.g)]} ${x.noun}`)} current={Math.min(n, nouns.length - 1)} onPick={setN} />
+      <p className="big-word sentence" aria-live="polite">
+        {before}
+        {art && <span className={'t-' + TONES[g] + (changed ? ' chg' : '')}>{before.trim() === '' ? art.charAt(0).toUpperCase() + art.slice(1) : art}</span>}
+        {art ? ' ' : ''}
+        <span className={'t-' + TONES[g]}>{art || before.trim() !== '' ? adj : adj.charAt(0).toUpperCase() + adj.slice(1)}<span className="chg">{ending}</span></span>
+        {' '}
+        {nounText}
+        {after}
+      </p>
+      <p className="how">{s.endingLabel}: <b>-{ending}</b></p>
+      <div className="rule"><Rich text={cs.rule} /></div>
+    </div>
+  );
+}
+
 /* ---- parts lab: the sentence parts (Satzteile); the verb stays in position 2 ---- */
 function PartsLab({ block }: { block: Extract<Block, { type: 'parts-lab' }> }) {
   const { s } = useLang();
@@ -496,6 +542,8 @@ export function LessonUnderstand({ t, onPractise }: { t: LessonTraining; onPract
             return <CaseLab key={i} t={t} block={b} />;
           case 'parts-lab':
             return <PartsLab key={i} block={b} />;
+          case 'adjective-lab':
+            return <AdjectiveLab key={i} t={t} block={b} />;
           case 'clause-lab':
             return <ClauseLab key={i} block={b} />;
         }
