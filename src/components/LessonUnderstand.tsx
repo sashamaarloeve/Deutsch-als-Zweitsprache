@@ -307,19 +307,22 @@ function WordList({ t, block }: { t: LessonTraining; block: Extract<Block, { typ
 }
 
 function PlainTable({ block }: { block: Extract<Block, { type: 'table' }> }) {
+  // On narrow screens a table with long cells shows one card per row (CSS), so the ARIA roles keep it a table for screen readers.
+  const stacked = !block.compact;
+  const roles = stacked ? { table: 'table', rowgroup: 'rowgroup', row: 'row', rowheader: 'rowheader', cell: 'cell' } as const : undefined;
   return (
     <div className="card">
       <h2>{block.title}</h2>
       {block.intro && <p><Rich text={block.intro} /></p>}
       <div className="tblwrap" tabIndex={0} role="region" aria-label={block.title}>
-        <table className="arttable plain">
+        <table className={'arttable plain' + (block.compact ? ' compact' : '')} role={roles?.table}>
           <thead>
-            <tr>{block.head.map((h, i) => <th key={i} scope="col">{h}</th>)}</tr>
+            <tr role={roles?.row}>{block.head.map((h, i) => <th key={i} scope="col" role={roles ? 'columnheader' : undefined}>{h}</th>)}</tr>
           </thead>
-          <tbody>
+          <tbody role={roles?.rowgroup}>
             {block.rows.map((r, i) => (
-              <tr key={i}>
-                {r.map((c, j) => (j === 0 ? <th key={j} scope="row">{c}</th> : <td key={j}>{c}</td>))}
+              <tr key={i} role={roles?.row}>
+                {r.map((c, j) => (j === 0 ? <th key={j} scope="row" role={roles?.rowheader}>{c}</th> : <td key={j} data-label={block.head[j]} role={roles?.cell}>{c}</td>))}
               </tr>
             ))}
           </tbody>

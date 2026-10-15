@@ -319,3 +319,21 @@ button.sentpart.sel { outline: 3px solid var(--ink); outline-offset: 2px; }
 /* clause lab: main clause and subordinate clause */
 .clause-main { --rc: var(--aqua-ink); }
 .clause-sub { --rc: var(--violet-ink); }
+
+/* plain tables: short ones stay tables, long ones become one card per row (no words stacked in narrow columns) */
+table.arttable.plain.compact { table-layout: auto; }
+table.arttable.plain.compact tbody td, table.arttable.plain.compact tbody th { white-space: normal; overflow-wrap: break-word; }
+table.arttable.plain:not(.compact) { display: block; table-layout: auto; }
+table.arttable.plain:not(.compact) thead { display: none; }
+table.arttable.plain:not(.compact) tbody { display: block; }
+table.arttable.plain:not(.compact) tr { display: block; border: 2px solid var(--ink); border-radius: 12px; background: var(--card-soft); padding: 6px 12px 8px; margin: 10px 0; }
+table.arttable.plain:not(.compact) tbody th { display: block; border: 0; padding: 4px 0; text-align: left; font-family: var(--hand); font-weight: 400; font-size: 1.3rem; }
+table.arttable.plain:not(.compact) tbody td { display: flex; gap: 12px; border: 0; padding: 3px 0; text-align: left; white-space: normal; font-size: 1rem; }
+table.arttable.plain:not(.compact) tbody td::before { content: attr(data-label); flex: 0 0 6.5em; color: var(--muted); font-size: .9rem; }
+@media (min-width: 640px) {
+  table.arttable.plain:not(.compact) tbody { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 12px; }
+}
+h1, h2, h3 { line-height: 1.25; }
+table.arttable.plain.compact thead th:first-child { width: 36%; }
+table.arttable.plain.compact thead th { font-size: .8rem; }
+table.arttable.plain.compact tbody th { font-size: .85rem; line-height: 1.3; }

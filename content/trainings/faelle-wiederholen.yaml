@@ -164,6 +164,7 @@ understand:
 
   - type: table
     title: "Die Verben im Überblick"
+    compact: true
     head: [ Akkusativ, Dativ, "Dativ + Akkusativ" ]
     rows:
       - [ sehen, helfen, geben ]

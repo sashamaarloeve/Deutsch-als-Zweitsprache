@@ -161,17 +161,18 @@ understand:
 
   - type: table
     title: "Alles auf einen Blick: die Endungen"
+    compact: true
     head: [ Artikel, maskulin, feminin, Neutrum, Plural ]
     rows:
-      - [ "der, die, das (Nom.)", "-e", "-e", "-e", "-en" ]
-      - [ "der, die, das (Akk.)", "-en", "-e", "-e", "-en" ]
-      - [ "der, die, das (Dat.)", "-en", "-en", "-en", "-en" ]
-      - [ "ein, kein (Nom.)", "-er", "-e", "-es", "-en" ]
-      - [ "ein, kein (Akk.)", "-en", "-e", "-es", "-en" ]
-      - [ "ein, kein (Dat.)", "-en", "-en", "-en", "-en" ]
-      - [ "ohne Artikel (Nom.)", "-er", "-e", "-es", "-e" ]
-      - [ "ohne Artikel (Akk.)", "-en", "-e", "-es", "-e" ]
-      - [ "ohne Artikel (Dat.)", "-em", "-er", "-em", "-en" ]
+      - [ "der, die, das · Nom.", "-e", "-e", "-e", "-en" ]
+      - [ "der, die, das · Akk.", "-en", "-e", "-e", "-en" ]
+      - [ "der, die, das · Dat.", "-en", "-en", "-en", "-en" ]
+      - [ "ein, kein · Nom.", "-er", "-e", "-es", "-en" ]
+      - [ "ein, kein · Akk.", "-en", "-e", "-es", "-en" ]
+      - [ "ein, kein · Dat.", "-en", "-en", "-en", "-en" ]
+      - [ "ohne Artikel · Nom.", "-er", "-e", "-es", "-e" ]
+      - [ "ohne Artikel · Akk.", "-en", "-e", "-es", "-e" ]
+      - [ "ohne Artikel · Dat.", "-em", "-er", "-em", "-en" ]
 
 practice:
   - id: nom-def

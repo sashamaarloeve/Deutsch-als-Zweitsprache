@@ -243,7 +243,8 @@ export type Block =
   | { type: 'rule'; title: string; body: string[] }
   | { type: 'detective'; title: string; intro?: string; roles: Record<string, string>; sentences: { parts: { t: string; r: string; q: string }[] }[] }
   | { type: 'word-list'; title: string; intro?: string; words: string[] }
-  | { type: 'table'; title: string; intro?: string; head: string[]; rows: string[][] }
+  /** compact: short cells, stays a table on phones. Otherwise every row becomes its own card on narrow screens. */
+  | { type: 'table'; title: string; intro?: string; head: string[]; rows: string[][]; compact?: boolean }
   | { type: 'conjugation'; title: string; intro?: string; verbs: string[]; irregularNote?: string }
   | { type: 'article-table'; title: string; intro?: string; kinds: string[]; cases: { id: CaseId; label: string }[]; note?: string }
   | {

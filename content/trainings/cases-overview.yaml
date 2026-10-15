@@ -71,6 +71,7 @@ understand:
 
   - type: table
     title: "Pronomen"
+    compact: true
     intro: "Auch die Personalpronomen ändern sich mit dem Fall."
     head: [ Nominativ, Akkusativ, Dativ ]
     rows:
