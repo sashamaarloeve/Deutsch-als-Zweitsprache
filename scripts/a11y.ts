@@ -32,7 +32,7 @@ async function scan(page: Page, screen: string) {
 async function main() {
   const build = spawnSync('npx', ['vite', 'build', '--outDir', OUT, '--emptyOutDir'], { env: { ...process.env, VITE_SHOW_DRAFTS: '1' }, stdio: 'ignore' });
   if (build.status !== 0) throw new Error('The build failed. Run npm run build to see why.');
-  const server = spawn('npx', ['vite', 'preview', '--outDir', OUT, '--port', String(PORT), '--strictPort'], { stdio: 'ignore' });
+  const server = spawn('npx', ['vite', 'preview', '--outDir', OUT, '--port', String(PORT), '--strictPort'], { stdio: 'ignore', detached: true });
   try {
     for (let i = 0; i < 60; i++) {
       try { if ((await fetch(`http://localhost:${PORT}`)).ok) break; } catch { /* not ready yet */ }
@@ -133,7 +133,7 @@ async function main() {
     }
     await browser.close();
   } finally {
-    server.kill();
+    try { process.kill(-server.pid!); } catch { server.kill(); } // the whole process group: npx and vite
   }
 
   // Report: one line per rule, with the screens it appears on
@@ -149,4 +149,4 @@ async function main() {
   process.exitCode = 1;
 }
 
-main().catch((e) => { console.error(e); process.exitCode = 1; });
+main().catch((e) => { console.error(e); process.exitCode = 1; }).finally(() => process.exit());

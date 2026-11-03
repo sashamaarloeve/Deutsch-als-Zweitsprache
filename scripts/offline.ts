@@ -6,7 +6,7 @@ import { chromium } from 'playwright';
 const PORT = 5197;
 
 async function main() {
-  const server = spawn('npx', ['vite', 'preview', '--outDir', 'dist', '--port', String(PORT), '--strictPort'], { stdio: 'ignore' });
+  const server = spawn('npx', ['vite', 'preview', '--outDir', 'dist', '--port', String(PORT), '--strictPort'], { stdio: 'ignore', detached: true });
   try {
     for (let i = 0; i < 60; i++) {
       try { if ((await fetch(`http://localhost:${PORT}`)).ok) break; } catch { /* not ready yet */ }
@@ -25,8 +25,8 @@ async function main() {
     console.log('The app opens offline.');
     await browser.close();
   } finally {
-    server.kill();
+    try { process.kill(-server.pid!); } catch { server.kill(); } // the whole process group: npx and vite
   }
 }
 
-main().catch((e) => { console.error('The app does NOT open offline.', e); process.exitCode = 1; });
+main().catch((e) => { console.error('The app does NOT open offline.', e); process.exitCode = 1; }).finally(() => process.exit());
