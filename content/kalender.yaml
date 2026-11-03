@@ -1,0 +1,9 @@
+# The "Kalender" tab: a loose lesson plan. Connect a day with trainings and an optional note.
+# Write the date as year-month-day (2026-11-10). Use the id of a training (the file name without .yaml).
+# A day can appear only once. Example (remove the # to use it):
+#
+# - date: 2026-11-10
+#   note: Wiederholung vor dem Test
+#   trainings:
+#     - hauptsatz-nebensatz
+#     - abschreiben

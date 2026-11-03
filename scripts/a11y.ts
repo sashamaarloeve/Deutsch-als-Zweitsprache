@@ -88,6 +88,11 @@ async function main() {
         }
       }
 
+      // Kalender
+      await fresh();
+      await page.getByRole('button', { name: 'Kalender', exact: true }).first().click();
+      await scan(page, `${theme} ${lang} · Kalender`);
+
       // Archiv
       await fresh();
       await page.getByRole('button', { name: 'Archiv', exact: true }).first().click();

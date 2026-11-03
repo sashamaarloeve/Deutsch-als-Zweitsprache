@@ -2,6 +2,7 @@ import { parse } from 'yaml';
 import { parseTraining } from './expand';
 import type { Training } from './types';
 import { parseAktuell, type Aktuell } from './aktuell';
+import { parsePlan, type PlanEntry } from './kalender';
 
 const mainFiles = import.meta.glob('../../content/trainings/*.yaml', { query: '?raw', import: 'default', eager: true }) as Record<string, string>;
 const conceptFile = import.meta.glob('../../content/concepts.yaml', {
@@ -25,3 +26,5 @@ const aktuellFile = import.meta.glob('../../content/aktuell.yaml', { query: '?ra
 export const aktuell: Aktuell = parseAktuell(Object.values(aktuellFile)[0] ?? '');
 const archivFile = import.meta.glob('../../content/archiv.yaml', { query: '?raw', import: 'default', eager: true }) as Record<string, string>;
 export const archiv: Aktuell = parseAktuell(Object.values(archivFile)[0] ?? '');
+const kalenderFile = import.meta.glob('../../content/kalender.yaml', { query: '?raw', import: 'default', eager: true }) as Record<string, string>;
+export const plan: PlanEntry[] = parsePlan(Object.values(kalenderFile)[0] ?? '');

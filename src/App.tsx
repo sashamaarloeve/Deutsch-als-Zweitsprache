@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { aktuell, archiv, trainings } from './content/load';
+import { aktuell, archiv, plan, trainings } from './content/load';
 import type { Item, Training } from './content/types';
 import { LangProvider, useLang } from './i18n';
 import { Runner } from './components/Runner';
@@ -7,6 +7,7 @@ import { LessonPractice, TopicPractice } from './components/TopicPractice';
 import { LessonUnderstand } from './components/LessonUnderstand';
 import { Whiteboard } from './components/Whiteboard';
 import { TrainingCards } from './components/Aktuell';
+import { CalendarView } from './components/Calendar';
 import { Understand } from './components/Understand';
 import { LinkButton } from './components/LinkButton';
 import { ReadingRuler } from './components/ReadingRuler';
@@ -15,8 +16,10 @@ import { addPoints, emptyProgress, recordResult, recordTraining, type Outcome } 
 import { pickQuickPractice } from './logic/practice';
 import { applyPrefs, defaultPrefs, ZOOMS } from './logic/prefs';
 import { parseTrainingHash, trainingHash } from './logic/links';
+import { dayKey } from './logic/calendar';
 
-type Tab = 'home' | 'aktuell' | 'archiv' | 'understand' | 'practice' | 'wrapup';
+type Tab = 'home' | 'aktuell' | 'archiv' | 'kalender' | 'understand' | 'practice' | 'wrapup';
+type CardsFrom = 'aktuell' | 'archiv' | 'kalender';
 const READ_LEVELS = ['A1', 'A2', 'B1'] as const;
 const AREAS = ['reading', 'grammar', 'vocabulary'] as const; // the three areas of the Practice menu
 // What is open inside each tab. Ids (not objects) so a language switch shows the right texts.
@@ -55,7 +58,7 @@ function Shell() {
   const start = useMemo(() => fromHash(window.location.hash), []);
   const [tab, setTab] = useState<Tab>(start.tab);
   const [topicId, setTopicId] = useState<string | null>(start.topicId); // open topic in "Understand"
-  const [cardsFrom, setCardsFrom] = useState<'aktuell' | 'archiv' | null>(start.cardsFrom); // set when a training was opened from the Aktuell or Archiv tab
+  const [cardsFrom, setCardsFrom] = useState<CardsFrom | null>(start.cardsFrom); // set when a training was opened from the Aktuell or Archiv tab
   const [practice, setPractice] = useState<PracticeView>(start.practice);
   const [quickFrom, setQuickFrom] = useState<'aktuell' | null>(null); // the quick practice was started in the Aktuell tab
   const [progress, setProgress] = useState(emptyProgress);
@@ -82,6 +85,8 @@ function Shell() {
     window.addEventListener('hashchange', follow);
     return () => window.removeEventListener('hashchange', follow);
   }, []);
+  // trainings planned in the calendar for today (shown on the start page)
+  const plannedToday = (plan.find((e) => e.date === dayKey(new Date()))?.ids ?? []).map((id) => trainings.find((t) => t.id === id)?.title).filter((x): x is string => !!x);
   const aktuellTrainings = aktuell.ids.map((id) => trainings.find((t) => t.id === id)).filter((t): t is Training => !!t);
   const startQuickCurrent = () => {
     setPractice({ name: 'quick', ids: pickQuickPractice(aktuellTrainings, progress).map((i) => i.id) });
@@ -110,9 +115,9 @@ function Shell() {
     setPractice({ name: 'menu' });
     goTab(cardsFrom ?? 'aktuell');
   };
-  const backLabelCards = cardsFrom === 'archiv' ? s.backToArchive : s.backToCurrent;
+  const backLabelCards = cardsFrom === 'archiv' ? s.backToArchive : cardsFrom === 'kalender' ? s.backToCalendar : s.backToCurrent;
   // open a training from one of the card tabs (Aktuell, Archiv)
-  const openFromCards = (from: 'aktuell' | 'archiv', id: string, to: 'understand' | 'practice') => {
+  const openFromCards = (from: CardsFrom, id: string, to: 'understand' | 'practice') => {
     setCardsFrom(from);
     if (to === 'understand') {
       setTopicId(id);
@@ -159,10 +164,13 @@ function Shell() {
         <button className={'btn' + (tab === 'archiv' ? ' on' : ' ghost')} aria-pressed={tab === 'archiv'} onClick={() => goTab('archiv')}>
           {s.navArchive}
         </button>
+        <button className={'btn' + (tab === 'kalender' ? ' on' : ' ghost')} aria-pressed={tab === 'kalender'} onClick={() => goTab('kalender')}>
+          {s.navCalendar}
+        </button>
       </nav>
 
       <main>
-        {tab === 'home' && <Whiteboard onFinish={() => goTab('wrapup')} />}
+        {tab === 'home' && <Whiteboard onFinish={() => goTab('wrapup')} planned={plannedToday} />}
 
         {tab === 'wrapup' && <WrapUp progress={progress} trainings={trainings} onBack={() => goTab('home')} />}
 
@@ -175,6 +183,15 @@ function Shell() {
             onUnderstand={(id) => openFromCards('aktuell', id, 'understand')}
             onPractice={(id) => openFromCards('aktuell', id, 'practice')}
             onQuick={startQuickCurrent}
+          />
+        )}
+
+        {tab === 'kalender' && (
+          <CalendarView
+            plan={plan}
+            trainings={trainings}
+            onUnderstand={(id) => openFromCards('kalender', id, 'understand')}
+            onPractice={(id) => openFromCards('kalender', id, 'practice')}
           />
         )}
 

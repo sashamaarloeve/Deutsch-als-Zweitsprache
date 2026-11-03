@@ -13,6 +13,8 @@ import { defaultPrefs, ZOOMS } from './prefs';
 import { todayInGerman } from './today';
 import { parseTrainingHash, trainingHash } from './links';
 import { summarize } from './session';
+import { dayKey, longDay, monthGrid, parseDayKey } from './calendar';
+import { isDayKey, parsePlan, planProblems } from '../content/kalender';
 import { parseAktuell } from '../content/aktuell';
 
 // Helpers that tell TypeScript which kind of training a file is.
@@ -613,6 +615,45 @@ describe('new trainings: Wortarten, Zeitformen, Rechtschreibung, Zusammengesetzt
       const texts = lessonOf(`${id}.yaml`).items.flatMap((i) => (i.type === 'copy' ? [i.text] : []));
       expect(new Set(texts).size).toBe(texts.length);
     }
+  });
+});
+
+describe('calendar', () => {
+  it('writes and reads days in the local time zone', () => {
+    expect(dayKey(new Date(2026, 10, 3))).toBe('2026-11-03');
+    expect(parseDayKey('2026-11-03').getDate()).toBe(3);
+    expect(longDay('2026-11-03')).toBe('Dienstag, 3. November 2026');
+  });
+  it('lays out a month, Monday first', () => {
+    const grid = monthGrid(2026, 10); // November 2026 starts on a Sunday
+    expect(grid.every((w) => w.length === 7)).toBe(true);
+    expect(grid[0].slice(0, 6)).toEqual([null, null, null, null, null, null]);
+    expect(grid[0][6]).toBe('2026-11-01');
+    expect(grid.flat().filter(Boolean)).toHaveLength(30);
+    expect(grid.flat().filter(Boolean).at(-1)).toBe('2026-11-30');
+    expect(monthGrid(2026, 1).flat().filter(Boolean)).toHaveLength(28); // February 2026
+  });
+  it('accepts only real days', () => {
+    expect(isDayKey('2026-02-28')).toBe(true);
+    expect(isDayKey('2026-02-31')).toBe(false);
+    expect(isDayKey('10.11.2026')).toBe(false);
+    expect(isDayKey(20261110)).toBe(false);
+  });
+  it('reads the plan, sorted, with a day written twice merged', () => {
+    const plan = parsePlan('- date: 2026-11-17\n  trainings: [b]\n- date: 2026-11-10\n  note: Test\n  trainings: [a]\n- date: 2026-11-10\n  trainings: [a, c]\n- date: kaputt\n  trainings: [x]\n');
+    expect(plan.map((e) => e.date)).toEqual(['2026-11-10', '2026-11-17']);
+    expect(plan[0]).toEqual({ date: '2026-11-10', note: 'Test', ids: ['a', 'c'] });
+  });
+  it('reports wrong dates, unknown trainings and days that appear twice', () => {
+    const known = new Set(['perfekt']);
+    expect(planProblems('- date: 2026-11-10\n  trainings: [perfekt]\n', known)).toEqual([]);
+    expect(planProblems('- date: 2026-13-10\n', known).join(' ')).toContain('no valid date');
+    expect(planProblems('- date: 2026-11-10\n  trainings: [nope]\n', known).join(' ')).toContain('"nope"');
+    expect(planProblems('- date: 2026-11-10\n- date: 2026-11-10\n', known).join(' ')).toContain('twice');
+  });
+  it('the real plan file is valid (an empty file is fine)', () => {
+    const known = new Set(readdirSync('content/trainings').map((f) => f.replace('.yaml', '')));
+    expect(planProblems(readFileSync('content/kalender.yaml', 'utf8'), known)).toEqual([]);
   });
 });
 

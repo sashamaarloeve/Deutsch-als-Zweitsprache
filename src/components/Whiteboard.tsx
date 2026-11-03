@@ -2,7 +2,7 @@ import { useLang } from '../i18n';
 import { todayInGerman } from '../logic/today';
 
 // Start page: a whiteboard with today's weekday and date and a short welcome.
-export function Whiteboard({ onFinish }: { onFinish: () => void }) {
+export function Whiteboard({ onFinish, planned }: { onFinish: () => void; planned: string[] }) {
   const { s } = useLang();
   const { weekday, date } = todayInGerman();
   return (
@@ -13,6 +13,7 @@ export function Whiteboard({ onFinish }: { onFinish: () => void }) {
         <hr className="wb-line" />
         <p className="wb-hello">{s.homeHello}</p>
         <p className="wb-text">{s.homeText}</p>
+        {planned.length > 0 && <p className="wb-text">{s.plannedToday}: <b>{planned.join(' · ')}</b></p>}
         <p className="wb-text">{s.homeHint}</p>
       </div>
       {/* the marker tray is decoration only */}
