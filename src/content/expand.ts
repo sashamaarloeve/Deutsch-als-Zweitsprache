@@ -18,6 +18,7 @@ import type {
   PerfektTraining,
   PickItem,
   ShortAnswerItem,
+  CopyItem,
   GapsItem,
   VocabWord,
   SentenceBuildItem,
@@ -420,6 +421,8 @@ export function expandLesson(raw: any): LessonTraining {
         }
       } else if (spec.type === 'short-answer') {
         add({ id: nextId(), type: 'short-answer', concepts, instruction, prompt: spec.prompt, accept: spec.accept, explanation: spec.explanation ?? '' } as ShortAnswerItem);
+      } else if (spec.type === 'copy') {
+        add({ id: nextId(), type: 'copy', concepts, instruction, text: spec.sentence, explanation: spec.explanation ?? set.explanation ?? '' } as CopyItem);
       } else if (spec.type === 'pairs') {
         add({ id: nextId(), type: 'pairs', concepts, instruction, pairs: spec.pairs, explanation: spec.explanation } as PairsItem);
       } else if (spec.type === 'boxes') {

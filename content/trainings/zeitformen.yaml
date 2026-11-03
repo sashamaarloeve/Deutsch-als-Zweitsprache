@@ -1,0 +1,149 @@
+# Training: Zeitformen (tenses) for 5th graders: Präsens, Perfekt, Präteritum of common verbs.
+# Original content, written in German.
+kind: lesson
+id: zeitformen
+title: "Zeitformen"
+level: A2
+skill: grammar
+minutes: 30
+status: draft
+description: "Präsens, Perfekt und Präteritum: Du erkennst die Zeitformen und bildest sie mit häufigen Verben wie spielen, gehen, kommen, sein und haben."
+canDo:
+  - "Ich erkenne, ob ein Satz im Präsens, im Perfekt oder im Präteritum steht."
+  - "Ich kann das Perfekt bilden: haben oder sein + Partizip II."
+  - "Ich kenne das Präteritum von häufigen Verben (spielte, ging, kam, war, hatte)."
+
+understand:
+  - type: dialogue
+    title: "Hör zu: heute, gestern, früher"
+    lines:
+      - { who: Mia, say: "Heute <v>spiele</v> ich Fußball. (Präsens)" }
+      - { who: Ben, say: "Gestern <v>habe</v> ich Fußball <s>gespielt</s>. (Perfekt)" }
+      - { who: Mia, say: "Früher <v>spielte</v> ich Tennis. (Präteritum)" }
+      - { who: Ben, say: "Und wir <v>sind</v> gestern ins Kino <s>gegangen</s>. (Perfekt)" }
+
+  - type: text
+    title: "Drei Zeitformen"
+    body:
+      - "Das Präsens sagt, was jetzt oder heute ist: Ich spiele Fußball."
+      - "Das Perfekt sagt, was schon passiert ist. Man benutzt es oft beim Sprechen und in Chats: Ich habe Fußball gespielt."
+      - "Das Präteritum sagt auch, was schon passiert ist. Man benutzt es oft in Geschichten und Texten: Ich spielte Fußball."
+      - "Es gibt Wörter, die helfen: heute, jetzt (Präsens) · gestern, letzte Woche, früher (Vergangenheit)."
+
+  - type: table
+    title: "Häufige Verben in drei Zeitformen"
+    head: [ Verb, Präsens, Perfekt, Präteritum ]
+    rows:
+      - [ spielen, "ich spiele", "ich habe gespielt", "ich spielte" ]
+      - [ machen, "ich mache", "ich habe gemacht", "ich machte" ]
+      - [ lernen, "ich lerne", "ich habe gelernt", "ich lernte" ]
+      - [ gehen, "ich gehe", "ich bin gegangen", "ich ging" ]
+      - [ kommen, "ich komme", "ich bin gekommen", "ich kam" ]
+      - [ sehen, "ich sehe", "ich habe gesehen", "ich sah" ]
+      - [ sein, "ich bin", "ich bin gewesen", "ich war" ]
+      - [ haben, "ich habe", "ich habe gehabt", "ich hatte" ]
+
+  - type: rule
+    title: "Das Perfekt"
+    body:
+      - "Das Perfekt hat zwei Teile: <v>haben</v> oder <v>sein</v> und das <s>Partizip II</s>. Die Klammer kennst du schon: Das Hilfsverb steht auf Position 2, das Partizip II steht am Ende."
+      - "Ich <v>habe</v> Fußball <s>gespielt</s>."
+      - "Wir <v>sind</v> nach Hause <s>gegangen</s>."
+      - "Mit „sein“ bildet man das Perfekt bei Bewegung und bei einer Veränderung (gehen, kommen, fahren) und bei „sein“ und „bleiben“. Bei den meisten anderen Verben nimmt man „haben“."
+      - "Das Partizip II: ge- + Stamm + -t (gespielt) oder ge- + Stamm + -en (gegangen). Bei manchen Verben ändert sich der Stamm: sehen → gesehen."
+
+  - type: rule
+    title: "Das Präteritum"
+    body:
+      - "Bei regelmäßigen Verben: Stamm + -te. ich spiel<en>te</en>, du spiel<en>test</en>, er spiel<en>te</en>, wir spiel<en>ten</en>."
+      - "Bei vielen häufigen Verben ändert sich der Stamm: gehen → ging, kommen → kam, sehen → sah. Diese Formen lernst du am besten auswendig."
+      - "sein und haben sind besonders wichtig: ich war, du warst, er war, wir waren · ich hatte, du hattest, er hatte, wir hatten."
+      - "Beim Sprechen sagt man bei „sein“ und „haben“ fast immer „war“ und „hatte“ statt „bin gewesen“ und „habe gehabt“: Ich war gestern im Kino."
+
+practice:
+  - id: which
+    title: "Welche Zeitform?"
+    count: 8
+    shuffle: true
+    concepts: [ tense.identify ]
+    instruction: "In welcher Zeitform steht der Satz?"
+    items:
+      - { type: pick, prompt: "Ich spiele Fußball.", options: [ Präsens, Perfekt, Präteritum ], answer: Präsens, explanation: "„spiele“ ist die Form von heute." }
+      - { type: pick, prompt: "Ich habe Fußball gespielt.", options: [ Präsens, Perfekt, Präteritum ], answer: Perfekt, explanation: "„habe“ + „gespielt“ ist das Perfekt." }
+      - { type: pick, prompt: "Ich spielte Fußball.", options: [ Präsens, Perfekt, Präteritum ], answer: Präteritum, explanation: "„spielte“ ist das Präteritum." }
+      - { type: pick, prompt: "Mia ist nach Hause gegangen.", options: [ Präsens, Perfekt, Präteritum ], answer: Perfekt, explanation: "„ist“ + „gegangen“ ist das Perfekt." }
+      - { type: pick, prompt: "Ben kam zu spät.", options: [ Präsens, Perfekt, Präteritum ], answer: Präteritum, explanation: "„kam“ ist das Präteritum von „kommen“." }
+      - { type: pick, prompt: "Wir lernen Deutsch.", options: [ Präsens, Perfekt, Präteritum ], answer: Präsens, explanation: "„lernen“ ist die Form von heute." }
+      - { type: pick, prompt: "Sie hatte Hunger.", options: [ Präsens, Perfekt, Präteritum ], answer: Präteritum, explanation: "„hatte“ ist das Präteritum von „haben“." }
+      - { type: pick, prompt: "Er hat ein Eis gegessen.", options: [ Präsens, Perfekt, Präteritum ], answer: Perfekt, explanation: "„hat“ + „gegessen“ ist das Perfekt." }
+      - { type: pick, prompt: "Ich bin müde.", options: [ Präsens, Perfekt, Präteritum ], answer: Präsens, explanation: "„bin“ ist die Form von heute." }
+      - { type: pick, prompt: "Wir waren im Zoo.", options: [ Präsens, Perfekt, Präteritum ], answer: Präteritum, explanation: "„waren“ ist das Präteritum von „sein“." }
+
+  - id: match
+    title: "Paare"
+    shuffle: false
+    items:
+      - type: pairs
+        concepts: [ tense.forms ]
+        instruction: "Tippe die Präsens-Form an, dann die Präteritum-Form."
+        pairs: [ [ ich gehe, ich ging ], [ ich komme, ich kam ], [ ich sehe, ich sah ], [ ich bin, ich war ], [ ich habe, ich hatte ] ]
+      - type: pairs
+        concepts: [ tense.forms ]
+        instruction: "Tippe die Präsens-Form an, dann die Perfekt-Form."
+        pairs: [ [ ich spiele, ich habe gespielt ], [ ich gehe, ich bin gegangen ], [ ich lerne, ich habe gelernt ], [ ich komme, ich bin gekommen ], [ ich sehe, ich habe gesehen ] ]
+
+  - id: build
+    title: "Baue den Satz"
+    count: 6
+    concepts: [ tense.forms ]
+    instruction: "Baue den Satz. Die Endungen und Vorsilben sind eigene Teile."
+    items:
+      - { type: sentence-build, accept: [ "ich habe Fußball ge|spiel|t" ], extras: [ en, te ], explanation: "Perfekt: haben + ge-spiel-t." }
+      - { type: sentence-build, accept: [ "Mia hat ein Buch ge|les|en" ], extras: [ t, te ], explanation: "Perfekt: hat + ge-les-en." }
+      - { type: sentence-build, accept: [ "wir sind nach Hause ge|gang|en" ], extras: [ t, te ], explanation: "Perfekt mit „sein“: sind + ge-gang-en." }
+      - { type: sentence-build, accept: [ "ich spiel|te Fußball" ], extras: [ t, en ], explanation: "Präteritum: Stamm + -te." }
+      - { type: sentence-build, accept: [ "er lern|te Deutsch" ], extras: [ t, e ], explanation: "Präteritum: Stamm + -te." }
+      - { type: sentence-build, accept: [ "wir mach|ten Hausaufgaben" ], extras: [ te, en ], explanation: "Präteritum bei „wir“: Stamm + -ten." }
+
+  - id: write-forms
+    title: "Formen schreiben"
+    count: 8
+    shuffle: true
+    concepts: [ tense.forms ]
+    instruction: "Schreibe die Form."
+    items:
+      - { type: short-answer, prompt: "gehen · Präteritum · ich", accept: [ ging, ich ging ], explanation: "ich ging" }
+      - { type: short-answer, prompt: "kommen · Präteritum · ich", accept: [ kam, ich kam ], explanation: "ich kam" }
+      - { type: short-answer, prompt: "sehen · Perfekt · ich", accept: [ habe gesehen, ich habe gesehen ], explanation: "ich habe gesehen" }
+      - { type: short-answer, prompt: "essen · Perfekt · er", accept: [ hat gegessen, er hat gegessen ], explanation: "er hat gegessen" }
+      - { type: short-answer, prompt: "sein · Präteritum · wir", accept: [ waren, wir waren ], explanation: "wir waren" }
+      - { type: short-answer, prompt: "haben · Präteritum · sie (Mia)", accept: [ hatte, sie hatte ], explanation: "sie hatte" }
+      - { type: short-answer, prompt: "fahren · Perfekt · ich", accept: [ bin gefahren, ich bin gefahren ], explanation: "ich bin gefahren" }
+      - { type: short-answer, prompt: "machen · Präteritum · wir", accept: [ machten, wir machten ], explanation: "wir machten" }
+
+  - id: copy
+    title: "Abschreiben"
+    count: 4
+    concepts: [ writing.copy, tense.forms ]
+    instruction: "Lies den Satz, merke ihn dir und schreibe ihn auf."
+    explanation: "Schau dir an, welche Wörter markiert sind."
+    items:
+      - { type: copy, sentence: "Gestern habe ich Fußball gespielt." }
+      - { type: copy, sentence: "Mia ging nach der Schule nach Hause." }
+      - { type: copy, sentence: "Heute lerne ich Deutsch." }
+      - { type: copy, sentence: "Wir sind gestern ins Kino gegangen." }
+
+  - id: write
+    title: "Schreiben"
+    concepts: [ tense.forms, writing.simple-sentences ]
+    instruction: "Schreibe 5 Sätze oder mehr. Benutze die Wörter."
+    items:
+      - type: free-writing
+        task: "Schreibe über deinen Tag: Was machst du heute? Was hast du gestern gemacht? Wo warst du?"
+        words: [ heute, gestern, ich habe, ich bin, ich war ]
+        minSentences: 5
+        checklist:
+          - "Ich habe mindestens einen Satz im Präsens geschrieben."
+          - "Ich habe mindestens einen Satz im Perfekt geschrieben."
+          - "Ich habe „war“ oder „hatte“ benutzt."
+        model: "Heute lerne ich Deutsch. Gestern habe ich Fußball gespielt. Am Nachmittag bin ich zu Hause geblieben. Ich war müde. Am Abend hatte ich Hunger."

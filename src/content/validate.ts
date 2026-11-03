@@ -43,6 +43,10 @@ function checkItems(items: Item[], concepts: Record<string, string>, texts: Map<
         }
         break;
       }
+      case 'copy':
+        if (!item.text?.trim()) problems.push(`${w}: needs a sentence (text).`);
+        if (/[<>]/.test(item.text ?? '')) problems.push(`${w}: the sentence must be plain text without markup.`);
+        break;
       case 'short-answer':
         if (!item.accept?.length) problems.push(`${w}: needs at least one accepted answer.`);
         if (!item.prompt?.trim()) problems.push(`${w}: needs a question.`);

@@ -12,6 +12,8 @@ interface Props {
   onBack: () => void;
   /** Text of the back button; default is the way back to the practice menu. */
   backLabel?: string;
+  /** Shown next to the back button (for example the link button). */
+  extra?: ReactNode;
   onResult: (item: Item, outcome: Outcome) => void;
   onFinish: (percent: number) => void;
   onPoints: (n: number) => void;
@@ -28,7 +30,7 @@ export function Session({ title, pool, count, p, shuffled = true, before }: { ti
 }
 
 // All exercises of one topic (the "Practice" side of a training).
-export function TopicPractice({ t, onBack, onResult, onFinish, onPoints }: Props) {
+export function TopicPractice({ t, onBack, extra, onResult, onFinish, onPoints }: Props) {
   const { s } = useLang();
   const [ex, setEx] = useState<ExId>('bau');
   const [cat, setCat] = useState<Cat>('all');
@@ -44,7 +46,7 @@ export function TopicPractice({ t, onBack, onResult, onFinish, onPoints }: Props
 
   return (
     <div>
-      <button className="btn ghost" onClick={onBack}>{s.backToPractice}</button>
+      <div className="row"><button className="btn ghost" onClick={onBack}>{s.backToPractice}</button>{extra}</div>
       <h2 className="tt">{t.title}</h2>
       <div className="subtabs" role="group" aria-label={s.exercises}>
         {EXERCISES.map((id) => (
@@ -85,7 +87,7 @@ function ReadingText({ t, id }: { t: LessonTraining; id?: string }) {
 }
 
 // Practice for lesson trainings: one tab per practice set written in the content file.
-export function LessonPractice({ t, onBack, backLabel, onResult, onFinish }: Omit<Props, 't' | 'onPoints'> & { t: LessonTraining }) {
+export function LessonPractice({ t, onBack, backLabel, extra, onResult, onFinish }: Omit<Props, 't' | 'onPoints'> & { t: LessonTraining }) {
   const { s } = useLang();
   const [setId, setSetId] = useState(t.sets[0]?.id);
   const set = t.sets.find((x) => x.id === setId) ?? t.sets[0];
@@ -94,7 +96,7 @@ export function LessonPractice({ t, onBack, backLabel, onResult, onFinish }: Omi
   if (!set) return null;
   return (
     <div>
-      <button className="btn ghost" onClick={onBack}>{backLabel ?? s.backToPractice}</button>
+      <div className="row"><button className="btn ghost" onClick={onBack}>{backLabel ?? s.backToPractice}</button>{extra}</div>
       <h2 className="tt">{t.title}</h2>
       <p className="tasklabel" id="tasklabel">{s.chooseTask}</p>
       <div className="subtabs tasks" role="group" aria-labelledby="tasklabel">

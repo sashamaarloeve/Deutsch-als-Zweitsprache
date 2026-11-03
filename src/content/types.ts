@@ -77,6 +77,13 @@ export interface ShortAnswerItem extends ItemBase {
   accept: string[]; // valid answers; an entry starting with ~ is a keyword: all keywords must appear in the answer
   explanation: string; // shows the model answer
 }
+/** Copy-writing: look at a sentence, hide it, write it from memory. Capital letters and punctuation count. */
+export interface CopyItem extends ItemBase {
+  type: 'copy';
+  instruction: string;
+  text: string; // the sentence, plain text
+  explanation: string;
+}
 /** Match each left word with its partner on the right. */
 export interface PairsItem extends ItemBase {
   type: 'pairs';
@@ -132,7 +139,7 @@ export interface GapsItem extends ItemBase {
   gaps: { options: string[]; answer: string }[];
   explanation: string;
 }
-export type Item = BuildItem | ChoiceItem | ConvertItem | OrderItem | PickItem | PairsItem | BoxesItem | SentenceBuildItem | WritingItem | ShortAnswerItem | GapsItem;
+export type Item = BuildItem | ChoiceItem | ConvertItem | OrderItem | PickItem | PairsItem | BoxesItem | SentenceBuildItem | WritingItem | ShortAnswerItem | GapsItem | CopyItem;
 
 /* ---- raw training file (YAML) ---- */
 export interface RawVerb {

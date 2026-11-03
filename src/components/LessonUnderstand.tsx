@@ -28,7 +28,7 @@ function ConjugationLab({ t, block }: { t: LessonTraining; block: Extract<Block,
   if (!verb) return null;
   const regular = !!verb.stem && !!verb.endings;
   return (
-    <div className="card">
+    <div className="card no-print">
       <h2>{block.title}</h2>
       {block.intro && <p><Rich text={block.intro} /></p>}
       <Chips label={s.tapVerb} items={verbs.map((v) => v.inf)} current={i} onPick={setI} />
@@ -97,7 +97,7 @@ function SentenceLab({ t, block }: { t: LessonTraining; block: Extract<Block, { 
   const usesTime = mode.boxes.flat().includes('T');
 
   return (
-    <div className="card">
+    <div className="card no-print">
       <h2>{block.title}</h2>
       <p><Rich text={block.intro} /></p>
       <Chips label={s.who} items={[...PERSONS]} current={p} onPick={setP} />
@@ -149,7 +149,7 @@ function BracketLab({ t, block }: { t: LessonTraining; block: Extract<Block, { t
   );
   const usesTime = mode.boxes.flat().includes('T');
   return (
-    <div className="card">
+    <div className="card no-print">
       <h2>{block.title}</h2>
       <p><Rich text={block.intro} /></p>
       <Chips label={s.who} items={[...PERSONS]} current={p} onPick={setP} />
@@ -246,7 +246,7 @@ function Detective({ block }: { block: Extract<Block, { type: 'detective' }> }) 
   const sent = block.sentences[si];
   const part = pi === null ? null : sent.parts[pi];
   return (
-    <div className="card">
+    <div className="card no-print">
       <h2>{block.title}</h2>
       {block.intro && <p><Rich text={block.intro} /></p>}
       {block.sentences.length > 1 && (
@@ -351,7 +351,7 @@ function CaseLab({ t, block }: { t: LessonTraining; block: Extract<Block, { type
   const [before, after] = frame.split('___');
   const atStart = before.trim() === '';
   return (
-    <div className="card">
+    <div className="card no-print">
       <h2>{block.title}</h2>
       <p><Rich text={block.intro} /></p>
       <Chips label={s.kindLabel} items={block.kinds.map((x) => arts[x].label)} current={k} onPick={setK} />
@@ -393,7 +393,7 @@ function AdjectiveLab({ t, block }: { t: LessonTraining; block: Extract<Block, {
   const nomArt = arts[kind].nom[g];
   const changed = cs.id !== 'nom' && art !== '' && art !== nomArt;
   return (
-    <div className="card">
+    <div className="card no-print">
       <h2>{block.title}</h2>
       <p><Rich text={block.intro} /></p>
       <Chips label={s.kindLabel} items={block.kinds.map((x) => arts[x].label)} current={k} onPick={setK} />
@@ -427,7 +427,7 @@ function PartsLab({ block }: { block: Extract<Block, { type: 'parts-lab' }> }) {
   const words = order.map((tx, i) => (i === 0 ? cap(tx) : tx));
   const text = words.map((w, i) => (roleOf(order[i]) === 'V' ? `<v>${w}</v>` : w)).join(' ') + '.';
   return (
-    <div className="card">
+    <div className="card no-print">
       <h2>{block.title}</h2>
       <p><Rich text={block.intro} /></p>
       <Chips label={s.what} items={block.sentences.map((x) => cap(x.parts.map((p) => p.t).join(' ')))} current={si} onPick={(i) => { setSi(i); setSt(0); }} />
@@ -470,7 +470,7 @@ function ClauseLab({ block }: { block: Extract<Block, { type: 'clause-lab' }> })
       : [{ key: 'sub', label: block.subLabel, text: capRich(`${conj} ${x.sub}`) }, { key: 'main', label: block.mainLabel, text: x.mainAfter! }];
   const sentence = parts.map((p) => p.text).join(', ') + '.';
   return (
-    <div className="card">
+    <div className="card no-print">
       <h2>{block.title}</h2>
       <p><Rich text={block.intro} /></p>
       <Chips label={s.what} items={sentenceLabels} current={si} onPick={setSi} />
@@ -551,8 +551,9 @@ export function LessonUnderstand({ t, onPractise }: { t: LessonTraining; onPract
             return <ClauseLab key={i} block={b} />;
         }
       })}
-      <p className="center" style={{ marginTop: 28 }}>
-        <button className="btn big" onClick={onPractise}>{s.practiseThisTopic}</button>
+      <p className="center no-print" style={{ marginTop: 28 }}>
+        <button className="btn big" onClick={onPractise}>{s.practiseThisTopic}</button>{' '}
+        <button className="btn ghost" onClick={() => window.print()}>{s.printSheet}</button>
       </p>
     </div>
   );

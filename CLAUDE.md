@@ -16,6 +16,12 @@ The owner is a German teacher (DaZ) and **not a programmer**. Explain in plain l
 - **Dyslexia-friendly** (see `docs/STYLE.md`): butter-yellow squared notebook page on a cream-white background, white cards with navy outlines, handwriting headings (Patrick Hand), clear sans-serif text (see the style guide), generous spacing, left-aligned text, short sentences, one task at a time, no italics, no time pressure, no error-hunting tasks (sentence ordering over finding mistakes), encouraging feedback only. Colour is never the only signal.
 - **Tablet and phone first**, large tap targets. Accessible (axe passes).
 - **Tabs:** Aktuell, Verstehen, Trainieren, Archiv. "Aktuell" shows the trainings listed in `content/aktuell.yaml` (what the pupils work on right now); the owner edits that list, the ids must exist (`npm run check-content` checks it). A training with `aktuellOnly: true` appears only there, not under Verstehen, Trainieren or Quick practice. New content that the owner wants "only under Aktuell" gets this flag. "Archiv" works the same way with `content/archiv.yaml` (trainings already worked on). The owner says what to move; moving means editing the two lists (an id is in only one of them). Nothing is moved or saved in the app itself.
+- **Direct links:** `#/<training-id>` opens a training's explanation, `#/<training-id>/trainieren` its exercises. The address follows what is open; the "Link kopieren" button copies it. Nothing is stored.
+- **Merkblatt drucken:** the explanation page prints as a plain handout (print CSS in `src/styles.css`); interactive labs carry the class `no-print`.
+- **Schnelltraining · Aktuell:** quick practice from the trainings listed in `aktuell.yaml`.
+- **Abschreiben:** exercise type `copy` (`- { type: copy, sentence: "…" }`): look at a sentence, hide it, write it from memory; capital letters and punctuation count; wrong words are marked in what the pupil typed, the model sentence is shown only after the second try.
+- **Reading and font aids** (all reset on every visit, nothing saved): "Lesehilfe" (dims everything except one line), "OpenDyslexic-Schrift" (self-hosted `@fontsource/opendyslexic`), "Weiter Abstand", A−/A+.
+- **Stunde beenden** (button on the start page): a whiteboard summary of what was done in this visit (counts only, encouraging, nothing saved).
 - Nothing is locked. Pupils can open any training. Levels are labels only.
 - Privacy: the pupils are minors. No third-party scripts, fonts or embeds; no personal data of any kind.
 

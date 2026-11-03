@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { aktuell, archiv, trainings } from './content/load';
 import type { Item, Training } from './content/types';
 import { LangProvider, useLang } from './i18n';
@@ -8,11 +8,15 @@ import { LessonUnderstand } from './components/LessonUnderstand';
 import { Whiteboard } from './components/Whiteboard';
 import { TrainingCards } from './components/Aktuell';
 import { Understand } from './components/Understand';
+import { LinkButton } from './components/LinkButton';
+import { ReadingRuler } from './components/ReadingRuler';
+import { WrapUp } from './components/WrapUp';
 import { addPoints, emptyProgress, recordResult, recordTraining, type Outcome } from './logic/progress';
 import { pickQuickPractice } from './logic/practice';
 import { applyPrefs, defaultPrefs, ZOOMS } from './logic/prefs';
+import { parseTrainingHash, trainingHash } from './logic/links';
 
-type Tab = 'home' | 'aktuell' | 'archiv' | 'understand' | 'practice';
+type Tab = 'home' | 'aktuell' | 'archiv' | 'understand' | 'practice' | 'wrapup';
 const READ_LEVELS = ['A1', 'A2', 'B1'] as const;
 const AREAS = ['reading', 'grammar', 'vocabulary'] as const; // the three areas of the Practice menu
 // What is open inside each tab. Ids (not objects) so a language switch shows the right texts.
@@ -35,12 +39,25 @@ function TopicCard({ t, done, onClick, extra }: { t: Training; done?: { best: nu
   );
 }
 
+// A direct link (#/training-id or #/training-id/trainieren) opens that training; unknown ids are ignored.
+function fromHash(hash: string): { tab: Tab; topicId: string | null; practice: PracticeView; cardsFrom: 'aktuell' | null } {
+  const link = parseTrainingHash(hash);
+  const t = link && trainings.find((x) => x.id === link.id);
+  if (!link || !t) return { tab: 'home', topicId: null, practice: { name: 'menu' }, cardsFrom: null };
+  const cardsFrom = t.aktuellOnly ? ('aktuell' as const) : null;
+  return link.mode === 'practice'
+    ? { tab: 'practice', topicId: null, practice: { name: 'topic', id: t.id }, cardsFrom }
+    : { tab: 'understand', topicId: t.id, practice: { name: 'menu' }, cardsFrom };
+}
+
 function Shell() {
   const { s } = useLang();
-  const [tab, setTab] = useState<Tab>('home');
-  const [topicId, setTopicId] = useState<string | null>(null); // open topic in "Understand"
-  const [cardsFrom, setCardsFrom] = useState<'aktuell' | 'archiv' | null>(null); // set when a training was opened from the Aktuell or Archiv tab
-  const [practice, setPractice] = useState<PracticeView>({ name: 'menu' });
+  const start = useMemo(() => fromHash(window.location.hash), []);
+  const [tab, setTab] = useState<Tab>(start.tab);
+  const [topicId, setTopicId] = useState<string | null>(start.topicId); // open topic in "Understand"
+  const [cardsFrom, setCardsFrom] = useState<'aktuell' | 'archiv' | null>(start.cardsFrom); // set when a training was opened from the Aktuell or Archiv tab
+  const [practice, setPractice] = useState<PracticeView>(start.practice);
+  const [quickFrom, setQuickFrom] = useState<'aktuell' | null>(null); // the quick practice was started in the Aktuell tab
   const [progress, setProgress] = useState(emptyProgress);
   const [prefs, setPrefs] = useState(defaultPrefs);
   const changePrefs = (next: typeof prefs) => {
@@ -48,6 +65,29 @@ function Shell() {
     applyPrefs(next);
   };
   const zoomIdx = ZOOMS.indexOf(prefs.zoom);
+  // the address shows the open training, so it can be copied; nothing is stored
+  useEffect(() => {
+    const open = tab === 'understand' && topicId ? trainingHash(topicId, 'understand') : tab === 'practice' && practice.name === 'topic' ? trainingHash(practice.id, 'practice') : '';
+    if (open !== window.location.hash) window.history.replaceState(null, '', window.location.pathname + window.location.search + open);
+  }, [tab, topicId, practice]);
+  useEffect(() => {
+    const follow = () => {
+      const next = fromHash(window.location.hash);
+      if (next.tab === 'home') return;
+      setTab(next.tab);
+      setTopicId(next.topicId);
+      setPractice(next.practice);
+      setCardsFrom(next.cardsFrom);
+    };
+    window.addEventListener('hashchange', follow);
+    return () => window.removeEventListener('hashchange', follow);
+  }, []);
+  const aktuellTrainings = aktuell.ids.map((id) => trainings.find((t) => t.id === id)).filter((t): t is Training => !!t);
+  const startQuickCurrent = () => {
+    setPractice({ name: 'quick', ids: pickQuickPractice(aktuellTrainings, progress).map((i) => i.id) });
+    setQuickFrom('aktuell');
+    goTab('practice');
+  };
   const [area, setArea] = useState<(typeof AREAS)[number]>('grammar');
   const [readLevel, setReadLevel] = useState<'A1' | 'A2' | 'B1'>('A1'); // sub-areas of Reading
 
@@ -89,6 +129,7 @@ function Shell() {
 
   return (
     <div className="sheet">
+      {prefs.ruler && <ReadingRuler />}
       <header className="top">
         <div>
           <h1><button type="button" className="homelink" aria-label={`DaZ-Alex – ${s.toStart}`} onClick={() => goTab('home')}>DaZ-<span className="u">Alex</span></button></h1>
@@ -99,6 +140,8 @@ function Shell() {
             <button type="button" aria-label={`A− ${s.textSmaller}`} disabled={zoomIdx <= 0} onClick={() => changePrefs({ ...prefs, zoom: ZOOMS[zoomIdx - 1] })}>A−</button>
             <button type="button" aria-label={`A+ ${s.textLarger}`} disabled={zoomIdx >= ZOOMS.length - 1} onClick={() => changePrefs({ ...prefs, zoom: ZOOMS[zoomIdx + 1] })}>A+</button>
             <button type="button" aria-pressed={prefs.wide} onClick={() => changePrefs({ ...prefs, wide: !prefs.wide })}>{s.wideSpacing}</button>
+            <button type="button" aria-pressed={prefs.dys} onClick={() => changePrefs({ ...prefs, dys: !prefs.dys })}>{s.dysFont}</button>
+            <button type="button" aria-pressed={prefs.ruler} onClick={() => changePrefs({ ...prefs, ruler: !prefs.ruler })}>{s.readingRuler}</button>
           </div>
         </div>
       </header>
@@ -119,7 +162,9 @@ function Shell() {
       </nav>
 
       <main>
-        {tab === 'home' && <Whiteboard />}
+        {tab === 'home' && <Whiteboard onFinish={() => goTab('wrapup')} />}
+
+        {tab === 'wrapup' && <WrapUp progress={progress} trainings={trainings} onBack={() => goTab('home')} />}
 
         {tab === 'aktuell' && (
           <TrainingCards
@@ -129,6 +174,7 @@ function Shell() {
             emptyText={s.currentEmpty}
             onUnderstand={(id) => openFromCards('aktuell', id, 'understand')}
             onPractice={(id) => openFromCards('aktuell', id, 'practice')}
+            onQuick={startQuickCurrent}
           />
         )}
 
@@ -155,7 +201,10 @@ function Shell() {
 
         {tab === 'understand' && topic && (
           <>
-            <button className="btn ghost" onClick={() => (cardsFrom ? backToCards() : setTopicId(null))}>{cardsFrom ? backLabelCards : s.backToTopics}</button>
+            <div className="row">
+              <button className="btn ghost" onClick={() => (cardsFrom ? backToCards() : setTopicId(null))}>{cardsFrom ? backLabelCards : s.backToTopics}</button>
+              <LinkButton id={topic.id} mode="understand" />
+            </div>
             <h2 className="tt">{topic.title}</h2>
             {topic.kind === 'perfekt' ? (
               <Understand t={topic} onTrain={() => goPractice(topic.id)} />
@@ -172,7 +221,7 @@ function Shell() {
             <div className="card merke">
               <h3>{s.quickTitle}</h3>
               <p>{s.quickText}</p>
-              <button className="btn big" onClick={() => setPractice({ name: 'quick', ids: pickQuickPractice(listed, progress).map((i) => i.id) })}>
+              <button className="btn big" onClick={() => { setQuickFrom(null); setPractice({ name: 'quick', ids: pickQuickPractice(listed, progress).map((i) => i.id) }); }}>
                 {s.quickButton}
               </button>
             </div>
@@ -216,7 +265,14 @@ function Shell() {
             items={quickItems}
             onResult={onResult}
             onFinish={onFinish()}
-            onExit={() => setPractice({ name: 'menu' })}
+            exitLabel={quickFrom ? s.backToCurrentLong : undefined}
+            onExit={() => {
+              setPractice({ name: 'menu' });
+              if (quickFrom) {
+                setQuickFrom(null);
+                goTab('aktuell');
+              }
+            }}
           />
         )}
 
@@ -224,13 +280,14 @@ function Shell() {
           <TopicPractice
             t={practiceTopic}
             onBack={() => setPractice({ name: 'menu' })}
+            extra={<LinkButton id={practiceTopic.id} mode="practice" />}
             onResult={onResult}
             onFinish={onFinish(practiceTopic.id)}
             onPoints={onPoints}
           />
         )}
         {tab === 'practice' && practiceTopic?.kind === 'lesson' && (
-          <LessonPractice t={practiceTopic} backLabel={cardsFrom ? backLabelCards : undefined} onBack={() => (cardsFrom ? backToCards() : setPractice({ name: 'menu' }))} onResult={onResult} onFinish={onFinish(practiceTopic.id)} />
+          <LessonPractice t={practiceTopic} extra={<LinkButton id={practiceTopic.id} mode="practice" />} backLabel={cardsFrom ? backLabelCards : undefined} onBack={() => (cardsFrom ? backToCards() : setPractice({ name: 'menu' }))} onResult={onResult} onFinish={onFinish(practiceTopic.id)} />
         )}
       </main>
     </div>

@@ -6,11 +6,13 @@ import { articleOptions, formOptions, parseParts, parseTraining, partsArrangemen
 import { parseRich, richProblems, stripRich } from '../content/rich';
 import { roleTokens, isParticiple } from './german';
 import { validateTraining } from '../content/validate';
-import { boxesSentence, buildSentenceText, checkBoxes, checkBuild, checkChoice, checkConvert, checkOrder, glued, matchSentenceBuild, sentenceText, checkShortAnswer } from './check';
+import { compareCopy, boxesSentence, buildSentenceText, checkBoxes, checkBuild, checkChoice, checkConvert, checkOrder, glued, matchSentenceBuild, sentenceText, checkShortAnswer } from './check';
 import { emptyProgress, recordResult } from './progress';
 import { pickQuickPractice, priority } from './practice';
 import { defaultPrefs, ZOOMS } from './prefs';
 import { todayInGerman } from './today';
+import { parseTrainingHash, trainingHash } from './links';
+import { summarize } from './session';
 import { parseAktuell } from '../content/aktuell';
 
 // Helpers that tell TypeScript which kind of training a file is.
@@ -432,7 +434,7 @@ describe('flashcards, memory and display settings', () => {
     }
   });
   it('display settings start with normal size and normal spacing', () => {
-    expect(defaultPrefs()).toEqual({ zoom: 1, wide: false });
+    expect(defaultPrefs()).toEqual({ zoom: 1, wide: false, dys: false, ruler: false });
     expect(ZOOMS).toContain(1);
   });
 });
@@ -535,6 +537,82 @@ describe('Adjektive deklinieren', () => {
     expect(none.answer).toBe('frischem');
     expect(none.explanation).toContain('ohne Artikel');
     for (const p of picks) expect(new Set(p.options).size).toBe(p.options.length);
+  });
+});
+
+describe('direct links', () => {
+  it('reads and writes links to a training', () => {
+    expect(parseTrainingHash('#/adjektiv-endungen')).toEqual({ id: 'adjektiv-endungen', mode: 'understand' });
+    expect(parseTrainingHash('#/adjektiv-endungen/trainieren')).toEqual({ id: 'adjektiv-endungen', mode: 'practice' });
+    expect(parseTrainingHash('#/perfekt/verstehen')).toEqual({ id: 'perfekt', mode: 'understand' });
+    expect(parseTrainingHash('')).toBeNull();
+    expect(parseTrainingHash('#/')).toBeNull();
+    expect(parseTrainingHash('#/a/b/c')).toBeNull();
+    expect(trainingHash('perfekt', 'practice')).toBe('#/perfekt/trainieren');
+    expect(trainingHash('perfekt', 'understand')).toBe('#/perfekt');
+  });
+  it('every training file name can be used in a link', () => {
+    for (const f of readdirSync('content/trainings').filter((x) => x.endsWith('.yaml'))) expect(parseTrainingHash('#/' + f.replace('.yaml', ''))).not.toBeNull();
+  });
+});
+
+describe('copy-writing', () => {
+  it('accepts the exact sentence, ignoring extra spaces only', () => {
+    expect(compareCopy('Die Sonne scheint.', '  Die   Sonne scheint. ').same).toBe(true);
+    expect(compareCopy('Die Sonne scheint.', 'die Sonne scheint.').same).toBe(false);
+    expect(compareCopy('Die Sonne scheint.', 'Die Sonne scheint').same).toBe(false);
+  });
+  it('marks the wrong and missing words, so the typed text can be shown with marks', () => {
+    const r = compareCopy('Die Sonne scheint hell.', 'Die Sone scheint');
+    expect(r.words.map((w) => w.ok)).toEqual([true, false, true, false]);
+    expect(r.words[1].word).toBe('Sone');
+    expect(r.words[3].word).toBe('');
+  });
+  it('marks extra words too', () => {
+    const r = compareCopy('Die Sonne scheint.', 'Die Sonne scheint hell.');
+    expect(r.same).toBe(false);
+    expect(r.words.map((w) => w.ok)).toEqual([true, true, false, false]);
+  });
+});
+
+describe('summary of the lesson', () => {
+  const tr = [lessonOf('haben-sein-present.yaml'), lessonOf('regular-verbs-present.yaml')];
+  it('counts what was done and names what to repeat', () => {
+    const [a, b] = [tr[0].items[0].id, tr[0].items[1].id];
+    let p = recordResult(emptyProgress(), a, 'first-try');
+    p = recordResult(p, b, 'wrong');
+    p = recordResult(p, b, 'wrong');
+    p = { ...p, trainings: { [tr[1].id]: { done: true, best: 80 } } };
+    const sum = summarize(p, tr);
+    expect(sum.practised).toBe(2);
+    expect(sum.cleanFirstTry).toBe(1);
+    expect(sum.toRepeat).toEqual([tr[0].title]);
+    expect(sum.trainingsDone).toEqual([tr[1].title]);
+  });
+  it('is empty before anything was practised', () => {
+    expect(summarize(emptyProgress(), tr)).toEqual({ practised: 0, cleanFirstTry: 0, trainingsDone: [], toRepeat: [] });
+  });
+});
+
+describe('new trainings: Wortarten, Zeitformen, Rechtschreibung, Zusammengesetzte Nomen, Adjektive steigern, Abschreiben', () => {
+  const ids = ['wortarten', 'zeitformen', 'rechtschreibung', 'zusammengesetzte-nomen', 'adjektiv-steigerung', 'abschreiben'];
+  it('are normal trainings (listed under Verstehen and Trainieren) and have copy-writing tasks', () => {
+    for (const id of ids) {
+      const t = lessonOf(`${id}.yaml`);
+      expect(t.aktuellOnly).toBeUndefined();
+      expect(t.items.some((i) => i.type === 'copy')).toBe(true);
+    }
+  });
+  it('copy sentences are plain text and end with a punctuation mark', () => {
+    for (const id of ids) {
+      for (const i of lessonOf(`${id}.yaml`).items) if (i.type === 'copy') expect(i.text).toMatch(/^[^<>]+[.!?]$/);
+    }
+  });
+  it('the sentences to copy never repeat inside one training', () => {
+    for (const id of ids) {
+      const texts = lessonOf(`${id}.yaml`).items.flatMap((i) => (i.type === 'copy' ? [i.text] : []));
+      expect(new Set(texts).size).toBe(texts.length);
+    }
   });
 });
 

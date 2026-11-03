@@ -1,0 +1,155 @@
+# Training: Rechtschreibung (spelling) for 5th graders: double consonants, long vowels, ß/ss, ä/äu, das/dass, capital nouns.
+# Original content, written in German. No wrong spellings are shown to be corrected.
+kind: lesson
+id: rechtschreibung
+title: "Rechtschreibung"
+level: A2
+skill: grammar
+minutes: 35
+status: draft
+description: "Die wichtigsten Regeln: doppelte Konsonanten, lange Vokale, ß oder ss, ä und äu, das oder dass. Du übst mit Abschreiben, Wörter bauen und Wortfamilien."
+canDo:
+  - "Ich weiß: Nach einem kurzen Vokal steht oft ein doppelter Konsonant."
+  - "Ich kenne die Schreibweisen für einen langen Vokal."
+  - "Ich weiß, wann ich ß oder ss schreibe."
+  - "Ich finde ä und äu mit einem verwandten Wort."
+  - "Ich weiß, wann ich „das“ und wann ich „dass“ schreibe."
+
+understand:
+  - type: dialogue
+    title: "Hör zu: Wörter mit Regeln"
+    lines:
+      - { who: Mia, say: "Die <c>Sonne</c> scheint auf die <c>Straße</c>." }
+      - { who: Ben, say: "Meine <c>Mutter</c> sagt, <c>dass</c> wir ein <c>Boot</c> mieten." }
+      - { who: Mia, say: "Die <c>Bäume</c> am <c>Meer</c> sind <c>groß</c>." }
+
+  - type: rule
+    title: "Regel 1: Kurzer Vokal – doppelter Konsonant"
+    body:
+      - "Nach einem kurzen Vokal steht oft ein doppelter Konsonant: So<c>nn</c>e, Mu<c>tt</c>er, ko<c>mm</c>en, Tre<c>pp</c>e."
+      - "Statt „kk“ schreibt man „ck“: ba<c>ck</c>en. Statt „zz“ schreibt man „tz“: Ka<c>tz</c>e."
+      - "Tipp: Sprich das Wort in Silben: Son-ne, Mut-ter, kom-men. Du hörst den kurzen Vokal."
+
+  - type: rule
+    title: "Regel 2: Langer Vokal"
+    body:
+      - "Ein langer Vokal wird oft ganz anders geschrieben: mit <c>h</c> (Zahl, fahren), doppelt (B<c>oo</c>t, M<c>ee</c>r) oder mit <c>ie</c> (B<c>ie</c>ne, Sp<c>ie</c>l)."
+      - "Es gibt keine feste Regel, welches davon ein Wort hat. Lerne die Wörter, indem du sie oft abschreibst."
+
+  - type: rule
+    title: "Regel 3: ß oder ss?"
+    body:
+      - "Nach einem langen Vokal oder einem Doppellaut (au, ei, eu) schreibt man „ß“: Stra<c>ß</c>e, gro<c>ß</c>, hei<c>ß</c>en."
+      - "Nach einem kurzen Vokal schreibt man „ss“: Wa<c>ss</c>er, mü<c>ss</c>en, e<c>ss</c>en."
+
+  - type: rule
+    title: "Regel 4: ä und äu"
+    body:
+      - "Wenn es ein verwandtes Wort mit a oder au gibt, schreibt man ä oder äu: B<c>ä</c>ume (der Baum), H<c>ä</c>nde (die Hand), H<c>äu</c>ser (das Haus)."
+      - "Es gibt Ausnahmen. Dann lernst du das Wort einzeln."
+
+  - type: rule
+    title: "Regel 5: das oder dass?"
+    body:
+      - "„das“ kann man durch „dieses“ oder „welches“ ersetzen: <c>Das</c> Buch liegt hier. – <c>Dieses</c> Buch liegt hier."
+      - "„dass“ kann man nicht ersetzen. Es beginnt einen Nebensatz: Ich glaube, <c>dass</c> du recht hast. Das Verb steht am Ende."
+
+  - type: rule
+    title: "Regel 6: Nomen schreibt man groß"
+    body:
+      - "Nomen schreibt man immer groß: die Schule, der Hund, die Freundin, das Spiel."
+      - "Auch Namen: Mia, Ben, Berlin."
+      - "Tipp: Wenn du „der, die, das“ oder „ein, eine“ davor setzen kannst, ist es ein Nomen."
+
+practice:
+  - id: copy-words
+    title: "Abschreiben: Wörter mit Regeln"
+    count: 7
+    concepts: [ writing.copy, spell.double-consonant, spell.long-vowel, spell.ss-sz ]
+    instruction: "Lies den Satz, merke ihn dir und schreibe ihn auf."
+    explanation: "Schau genau auf die markierten Wörter: Dort steckt eine Regel."
+    items:
+      - { type: copy, sentence: "Die Sonne scheint am Morgen." }
+      - { type: copy, sentence: "Meine Mutter kommt heute spät." }
+      - { type: copy, sentence: "Die Katze sitzt auf der Treppe." }
+      - { type: copy, sentence: "Wir fahren mit dem Boot über das Meer." }
+      - { type: copy, sentence: "Die Biene fliegt über die Wiese." }
+      - { type: copy, sentence: "Auf der Straße ist es heiß." }
+      - { type: copy, sentence: "Die Bäume im Garten sind groß." }
+
+  - id: double
+    title: "Silben bauen: doppelter Konsonant"
+    count: 5
+    concepts: [ spell.double-consonant ]
+    instruction: "Baue den Satz. Wähle die richtige Silbe."
+    items:
+      - { type: sentence-build, accept: [ "die So|nne scheint" ], extras: [ ne, n ], explanation: "Nach dem kurzen „o“ steht „nn“: Sonne." }
+      - { type: sentence-build, accept: [ "meine Mu|tter kommt" ], extras: [ ter, t ], explanation: "Nach dem kurzen „u“ steht „tt“: Mutter." }
+      - { type: sentence-build, accept: [ "die Ka|tze schläft" ], extras: [ ze, zze ], explanation: "Man schreibt „tz“, nicht „zz“: Katze." }
+      - { type: sentence-build, accept: [ "wir ba|cken Brot" ], extras: [ ken, kken ], explanation: "Man schreibt „ck“, nicht „kk“: backen." }
+      - { type: sentence-build, accept: [ "die Tre|ppe ist steil" ], extras: [ pe, p ], explanation: "Nach dem kurzen „e“ steht „pp“: Treppe." }
+
+  - id: sz
+    title: "ß oder ss?"
+    count: 5
+    concepts: [ spell.ss-sz ]
+    instruction: "Baue den Satz. Wähle die richtige Silbe."
+    items:
+      - { type: sentence-build, accept: [ "die Stra|ße ist breit" ], extras: [ sse, se ], explanation: "Nach dem langen „a“ steht „ß“: Straße." }
+      - { type: sentence-build, accept: [ "wir mü|ssen heute lernen" ], extras: [ ßen, sen ], explanation: "Nach dem kurzen „ü“ steht „ss“: müssen." }
+      - { type: sentence-build, accept: [ "der Hund ist gro|ß" ], extras: [ ss, s ], explanation: "Nach dem langen „o“ steht „ß“: groß." }
+      - { type: sentence-build, accept: [ "ich es|se einen Apfel" ], extras: [ ße, sse ], explanation: "Nach dem kurzen „e“ steht „ss“: essen." }
+      - { type: sentence-build, accept: [ "wir hei|ßen Mia und Ben" ], extras: [ ssen, sen ], explanation: "Nach dem Doppellaut „ei“ steht „ß“: heißen." }
+
+  - id: plural
+    title: "Mehrzahl mit ä und äu"
+    count: 7
+    shuffle: true
+    concepts: [ spell.umlaut ]
+    instruction: "Schreibe die Mehrzahl. Denke an das Wort, von dem es kommt."
+    items:
+      - { type: short-answer, prompt: "der Baum", accept: [ Bäume, die Bäume ], explanation: "die Bäume: Es kommt von „Baum“." }
+      - { type: short-answer, prompt: "die Hand", accept: [ Hände, die Hände ], explanation: "die Hände: Es kommt von „Hand“." }
+      - { type: short-answer, prompt: "die Stadt", accept: [ Städte, die Städte ], explanation: "die Städte: Es kommt von „Stadt“." }
+      - { type: short-answer, prompt: "der Apfel", accept: [ Äpfel, die Äpfel ], explanation: "die Äpfel: Es kommt von „Apfel“." }
+      - { type: short-answer, prompt: "das Haus", accept: [ Häuser, die Häuser ], explanation: "die Häuser: Es kommt von „Haus“." }
+      - { type: short-answer, prompt: "die Maus", accept: [ Mäuse, die Mäuse ], explanation: "die Mäuse: Es kommt von „Maus“." }
+      - { type: short-answer, prompt: "der Fuß", accept: [ Füße, die Füße ], explanation: "die Füße: Es kommt von „Fuß“." }
+
+  - id: family
+    title: "Paare: ein Wort, viele Wörter"
+    shuffle: false
+    items:
+      - type: pairs
+        concepts: [ spell.umlaut ]
+        instruction: "Tippe das Wort an, dann seine Mehrzahl."
+        pairs: [ [ Baum, Bäume ], [ Hand, Hände ], [ Haus, Häuser ], [ Maus, Mäuse ], [ Stadt, Städte ] ]
+
+  - id: das-dass
+    title: "das oder dass?"
+    count: 6
+    shuffle: true
+    concepts: [ spell.das-dass ]
+    instruction: "Welches Wort passt in die Lücke?"
+    items:
+      - { type: pick, sentence: "Ich glaube, ___ du recht hast.", options: [ das, dass ], answer: dass, explanation: "Nach „ich glaube“ beginnt ein Nebensatz mit „dass“." }
+      - { type: pick, sentence: "___ Buch liegt auf dem Tisch.", options: [ Das, Dass ], answer: Das, explanation: "Man kann „Dieses Buch“ sagen. Also: „Das“." }
+      - { type: pick, sentence: "Mia sagt, ___ sie müde ist.", options: [ das, dass ], answer: dass, explanation: "Nach „sagen“ beginnt ein Nebensatz mit „dass“." }
+      - { type: pick, sentence: "Ich sehe ___ Haus dort.", options: [ das, dass ], answer: das, explanation: "Man kann „dieses Haus“ sagen. Also: „das“." }
+      - { type: pick, sentence: "Er weiß, ___ wir kommen.", options: [ das, dass ], answer: dass, explanation: "Nach „weiß“ beginnt ein Nebensatz mit „dass“." }
+      - { type: pick, sentence: "Hast du ___ Heft gesehen?", options: [ das, dass ], answer: das, explanation: "Man kann „dieses Heft“ sagen. Also: „das“." }
+
+  - id: write
+    title: "Schreiben"
+    concepts: [ writing.simple-sentences, words.noun-capital ]
+    instruction: "Schreibe 4 Sätze oder mehr. Benutze die Wörter."
+    items:
+      - type: free-writing
+        task: "Schreibe über einen Ausflug: Wohin fahrt ihr? Was seht ihr? Was glaubst du?"
+        words: [ Straße, Sonne, groß, Boot, dass ]
+        minSentences: 4
+        checklist:
+          - "Alle Nomen sind großgeschrieben."
+          - "Ich habe „dass“ oder „das“ richtig geschrieben."
+          - "Ich habe mindestens ein Wort mit ß oder ss benutzt."
+        model: "Am Samstag fahren wir ans Meer. Die Sonne scheint, und die Straße ist leer. Ich glaube, dass wir ein Boot sehen. Das Wasser ist groß und blau."

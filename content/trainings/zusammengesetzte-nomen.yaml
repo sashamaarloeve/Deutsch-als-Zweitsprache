@@ -1,0 +1,146 @@
+# Training: zusammengesetzte Nomen (compound nouns) for 5th graders: the last word decides the article.
+# Original content, written in German.
+kind: lesson
+id: zusammengesetzte-nomen
+title: "Zusammengesetzte Nomen"
+level: A2
+skill: grammar
+minutes: 25
+status: draft
+description: "Aus zwei Nomen wird ein neues Nomen: die Haustür, der Apfelbaum, das Kinderzimmer. Du lernst, welchen Artikel das neue Wort hat, und baust eigene Wörter."
+canDo:
+  - "Ich kann aus zwei Nomen ein neues Nomen bilden."
+  - "Ich weiß: Das letzte Wort bestimmt den Artikel."
+  - "Ich kenne die kleinen Verbindungsteile (Fugen) wie -s-, -n- und -er-."
+
+understand:
+  - type: dialogue
+    title: "Hör zu: lange Wörter"
+    lines:
+      - { who: Mia, say: "Meine <c>Schultasche</c> liegt neben der <c>Haustür</c>." }
+      - { who: Ben, say: "Und mein <c>Fußball</c> liegt im <c>Kinderzimmer</c>." }
+      - { who: Mia, say: "Zum <c>Geburtstag</c> gibt es einen <c>Apfelkuchen</c>!" }
+
+  - type: text
+    title: "Aus zwei mach eins"
+    body:
+      - "Im Deutschen kann man Nomen zusammensetzen: das Haus + die Tür = die Haustür."
+      - "Das erste Wort sagt, was für eine Art es ist. Das zweite Wort ist das Hauptwort: Eine Haustür ist eine Tür."
+      - "Man schreibt das neue Wort zusammen und mit einem großen Anfangsbuchstaben."
+
+  - type: rule
+    title: "Das letzte Wort entscheidet den Artikel"
+    body:
+      - "Das neue Nomen hat den Artikel vom letzten Wort."
+      - "das Haus + <die>die</die> Tür = <die>die</die> Haustür"
+      - "der Apfel + <der>der</der> Baum = <der>der</der> Apfelbaum"
+      - "das Kind + <das>das</das> Zimmer = <das>das</das> Kinderzimmer"
+      - "Tipp: Schau zuerst auf das letzte Wort."
+
+  - type: table
+    title: "Zusammensetzen"
+    head: [ "Wort 1", "Wort 2", "Neues Wort" ]
+    rows:
+      - [ "der Apfel", "der Baum", "der Apfelbaum" ]
+      - [ "die Schule", "die Tasche", "die Schultasche" ]
+      - [ "das Haus", "die Tür", "die Haustür" ]
+      - [ "die Hand", "die Tasche", "die Handtasche" ]
+      - [ "der Fuß", "der Ball", "der Fußball" ]
+      - [ "das Wasser", "die Flasche", "die Wasserflasche" ]
+
+  - type: rule
+    title: "Kleine Verbindungsteile"
+    body:
+      - "Manchmal steht zwischen den Wörtern ein kleiner Buchstabe oder eine Silbe: ein -s-, -n-, -en- oder -er-."
+      - "der Geburtstag<c>s</c>kuchen · die Sonne<c>n</c>blume · das Katze<c>n</c>futter · das Kind<c>er</c>zimmer"
+      - "Dafür gibt es keine feste Regel. Du lernst die Wörter am besten zusammen, und oft hörst du den Verbindungsteil beim Sprechen."
+      - "Manchmal fehlt der Verbindungsteil ganz: der Apfelbaum, die Handtasche."
+
+  - type: text
+    title: "Lange Wörter zerlegen"
+    body:
+      - "Wenn du ein langes Wort liest, zerlege es in kleine Wörter: Fuß-ball-platz, Schul-hof, Ge-burts-tag."
+      - "Das hilft beim Lesen, beim Schreiben und beim Artikel."
+
+practice:
+  - id: article
+    title: "Welcher Artikel?"
+    count: 8
+    shuffle: true
+    concepts: [ compound.article ]
+    instruction: "Welcher Artikel passt zum neuen Wort?"
+    items:
+      - { type: pick, prompt: "(Haus + Tür)", sentence: "___ Haustür ist offen.", options: [ Die, Der, Das ], answer: Die, explanation: "Das letzte Wort ist „Tür“: die Tür → die Haustür." }
+      - { type: pick, prompt: "(Apfel + Baum)", sentence: "___ Apfelbaum blüht.", options: [ Der, Die, Das ], answer: Der, explanation: "Das letzte Wort ist „Baum“: der Baum → der Apfelbaum." }
+      - { type: pick, prompt: "(Kind + Zimmer)", sentence: "___ Kinderzimmer ist groß.", options: [ Das, Der, Die ], answer: Das, explanation: "Das letzte Wort ist „Zimmer“: das Zimmer → das Kinderzimmer." }
+      - { type: pick, prompt: "(Hand + Tasche)", sentence: "___ Handtasche ist neu.", options: [ Die, Der, Das ], answer: Die, explanation: "Das letzte Wort ist „Tasche“: die Tasche → die Handtasche." }
+      - { type: pick, prompt: "(Fußball + Platz)", sentence: "___ Fußballplatz ist nass.", options: [ Der, Die, Das ], answer: Der, explanation: "Das letzte Wort ist „Platz“: der Platz → der Fußballplatz." }
+      - { type: pick, prompt: "(Katze + Futter)", sentence: "___ Katzenfutter steht im Schrank.", options: [ Das, Der, Die ], answer: Das, explanation: "Das letzte Wort ist „Futter“: das Futter → das Katzenfutter." }
+      - { type: pick, prompt: "(Geburtstag + Kuchen)", sentence: "___ Geburtstagskuchen schmeckt gut.", options: [ Der, Die, Das ], answer: Der, explanation: "Das letzte Wort ist „Kuchen“: der Kuchen → der Geburtstagskuchen." }
+      - { type: pick, prompt: "(Wasser + Flasche)", sentence: "___ Wasserflasche ist leer.", options: [ Die, Der, Das ], answer: Die, explanation: "Das letzte Wort ist „Flasche“: die Flasche → die Wasserflasche." }
+
+  - id: build
+    title: "Wörter zusammensetzen"
+    count: 8
+    shuffle: true
+    concepts: [ compound.build ]
+    instruction: "Setze die Wörter zusammen. Schreibe das neue Wort mit Artikel oder ohne."
+    items:
+      - { type: short-answer, prompt: "der Apfel + der Baum", accept: [ der Apfelbaum, Apfelbaum ], explanation: "der Apfelbaum" }
+      - { type: short-answer, prompt: "die Schule + die Tasche", accept: [ die Schultasche, Schultasche ], explanation: "die Schultasche" }
+      - { type: short-answer, prompt: "die Sonne + die Blume", accept: [ die Sonnenblume, Sonnenblume ], explanation: "die Sonnenblume: Zwischen den Wörtern steht ein -n-." }
+      - { type: short-answer, prompt: "der Geburtstag + der Kuchen", accept: [ der Geburtstagskuchen, Geburtstagskuchen ], explanation: "der Geburtstagskuchen: Zwischen den Wörtern steht ein -s-." }
+      - { type: short-answer, prompt: "die Katze + das Futter", accept: [ das Katzenfutter, Katzenfutter ], explanation: "das Katzenfutter: Zwischen den Wörtern steht ein -n-." }
+      - { type: short-answer, prompt: "das Kind + das Zimmer", accept: [ das Kinderzimmer, Kinderzimmer ], explanation: "das Kinderzimmer: Zwischen den Wörtern steht ein -er-." }
+      - { type: short-answer, prompt: "der Fuß + der Ball", accept: [ der Fußball, Fußball ], explanation: "der Fußball" }
+      - { type: short-answer, prompt: "das Wasser + die Flasche", accept: [ die Wasserflasche, Wasserflasche ], explanation: "die Wasserflasche" }
+
+  - id: match
+    title: "Paare"
+    shuffle: false
+    items:
+      - type: pairs
+        concepts: [ compound.build ]
+        instruction: "Tippe die zwei Wörter an, dann das neue Wort."
+        pairs: [ [ Haus + Tür, Haustür ], [ Schule + Hof, Schulhof ], [ Hand + Tasche, Handtasche ], [ Apfel + Saft, Apfelsaft ], [ Wasser + Flasche, Wasserflasche ] ]
+      - type: pairs
+        concepts: [ compound.build ]
+        instruction: "Tippe die zwei Wörter an, dann das neue Wort."
+        pairs: [ [ Fuß + Ball, Fußball ], [ Kind + Buch, Kinderbuch ], [ Sonne + Brille, Sonnenbrille ], [ Schule + Bus, Schulbus ], [ Hund + Futter, Hundefutter ] ]
+
+  - id: pieces
+    title: "Baue das Wort"
+    count: 4
+    concepts: [ compound.build ]
+    instruction: "Baue den Satz. Das lange Wort besteht aus zwei Teilen."
+    items:
+      - { type: sentence-build, accept: [ "die Haus|tür ist offen" ], extras: [ tisch, bus ], explanation: "Haus + Tür = Haustür." }
+      - { type: sentence-build, accept: [ "der Apfel|baum blüht" ], extras: [ saft, haus ], explanation: "Apfel + Baum = Apfelbaum." }
+      - { type: sentence-build, accept: [ "wir spielen auf dem Schul|hof" ], extras: [ tasche, bus ], explanation: "Schule + Hof = Schulhof." }
+      - { type: sentence-build, accept: [ "ich trinke Apfel|saft" ], extras: [ baum, tür ], explanation: "Apfel + Saft = Apfelsaft." }
+
+  - id: copy
+    title: "Abschreiben"
+    count: 3
+    concepts: [ writing.copy, compound.build ]
+    instruction: "Lies den Satz, merke ihn dir und schreibe ihn auf."
+    explanation: "Zusammengesetzte Wörter schreibt man ohne Lücke."
+    items:
+      - { type: copy, sentence: "Die Schultasche liegt neben der Haustür." }
+      - { type: copy, sentence: "Zum Geburtstag gibt es Apfelkuchen." }
+      - { type: copy, sentence: "Der Fußballplatz ist hinter dem Schulhof." }
+
+  - id: write
+    title: "Schreiben"
+    concepts: [ compound.build, writing.simple-sentences ]
+    instruction: "Schreibe 3 Sätze oder mehr. Benutze zusammengesetzte Nomen."
+    items:
+      - type: free-writing
+        task: "Erfinde drei lustige zusammengesetzte Nomen, zum Beispiel „Eisbär-Mütze“ oder „Schokoladen-Regen“. Schreibe, was sie bedeuten."
+        words: [ Haus, Tür, Schule, Tasche, Ball ]
+        minSentences: 3
+        checklist:
+          - "Meine zusammengesetzten Nomen sind zusammengeschrieben."
+          - "Ich habe den richtigen Artikel benutzt (vom letzten Wort)."
+          - "Ich habe erklärt, was das Wort bedeutet."
+        model: "Der Schokoladenregen ist Regen aus Schokolade. Die Eisbärmütze wärmt im Winter den Kopf. Das Sofa-Flugzeug fliegt durchs Wohnzimmer."

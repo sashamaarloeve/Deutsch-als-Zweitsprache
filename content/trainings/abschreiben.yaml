@@ -1,0 +1,84 @@
+# Training: Abschreiben (copy-writing) for 5th graders: look at a sentence, remember it, write it from memory.
+# Original content, written in German.
+kind: lesson
+id: abschreiben
+title: "Abschreiben: schau, merk, schreib"
+level: A2
+skill: grammar
+minutes: 20
+status: draft
+description: "Du liest einen Satz, merkst ihn dir und schreibst ihn aus dem Gedächtnis auf. So lernst du die Rechtschreibung, ohne Fehler zu suchen."
+canDo:
+  - "Ich kann mir einen Satz merken und ihn richtig aufschreiben."
+  - "Ich achte auf Großbuchstaben, Satzzeichen und schwierige Wörter."
+  - "Ich schreibe Sätze zu Schule, Tieren, Essen und Freizeit ohne Fehler ab."
+
+understand:
+  - type: text
+    title: "So funktioniert das Abschreiben"
+    body:
+      - "1. Schau: Lies den Satz Wort für Wort. Sprich ihn leise mit."
+      - "2. Merk: Schau auf schwierige Stellen. Zum Beispiel doppelte Buchstaben, Großbuchstaben und das Satzzeichen am Ende."
+      - "3. Schreib: Klicke auf „Ich habe ihn mir gemerkt“. Der Satz verschwindet. Schreibe ihn aus dem Gedächtnis auf."
+      - "Wenn du etwas vergessen hast, darfst du den Satz noch einmal ansehen."
+
+  - type: rule
+    title: "Tipps"
+    body:
+      - "Lies den Satz in kleinen Stücken: ein Wort, dann das nächste."
+      - "Sprich lange Wörter in Silben: Pau-se, Schul-hof, Haus-auf-ga-ben."
+      - "Achte auf Nomen: Sie haben einen Großbuchstaben."
+      - "Wenn dein Satz nicht ganz stimmt, siehst du, welche Wörter du dir noch einmal anschauen kannst. Das ist kein Problem, so lernt man."
+
+practice:
+  - id: school
+    title: "Schule"
+    count: 5
+    concepts: [ writing.copy ]
+    instruction: "Lies den Satz, merke ihn dir und schreibe ihn auf."
+    explanation: "Schau dir die Wörter an, die markiert sind."
+    items:
+      - { type: copy, sentence: "In der Pause spielen wir auf dem Schulhof." }
+      - { type: copy, sentence: "Die Lehrerin schreibt ein neues Wort an die Tafel." }
+      - { type: copy, sentence: "Ich habe meine Hausaufgaben vergessen." }
+      - { type: copy, sentence: "Wir lesen heute ein spannendes Buch." }
+      - { type: copy, sentence: "Mein Mäppchen liegt in der Schultasche." }
+
+  - id: animals
+    title: "Tiere"
+    count: 5
+    concepts: [ writing.copy ]
+    instruction: "Lies den Satz, merke ihn dir und schreibe ihn auf."
+    explanation: "Schau dir die Wörter an, die markiert sind."
+    items:
+      - { type: copy, sentence: "Der Hund rennt schnell durch den Garten." }
+      - { type: copy, sentence: "Die Katze schleicht leise über die Wiese." }
+      - { type: copy, sentence: "Im Zoo haben wir einen großen Elefanten gesehen." }
+      - { type: copy, sentence: "Die Vögel fliegen im Herbst nach Süden." }
+      - { type: copy, sentence: "Das Pferd frisst gern Äpfel und Möhren." }
+
+  - id: food
+    title: "Essen"
+    count: 5
+    concepts: [ writing.copy ]
+    instruction: "Lies den Satz, merke ihn dir und schreibe ihn auf."
+    explanation: "Schau dir die Wörter an, die markiert sind."
+    items:
+      - { type: copy, sentence: "Zum Frühstück esse ich ein Brötchen mit Marmelade." }
+      - { type: copy, sentence: "Meine Oma kocht die beste Suppe der Welt." }
+      - { type: copy, sentence: "Wir trinken Wasser und Apfelsaft." }
+      - { type: copy, sentence: "Am Sonntag backen wir einen Kuchen." }
+      - { type: copy, sentence: "Der Käse schmeckt mir am besten." }
+
+  - id: free
+    title: "Freizeit"
+    count: 5
+    concepts: [ writing.copy ]
+    instruction: "Lies den Satz, merke ihn dir und schreibe ihn auf."
+    explanation: "Schau dir die Wörter an, die markiert sind."
+    items:
+      - { type: copy, sentence: "Am Nachmittag fahre ich mit dem Fahrrad zum Spielplatz." }
+      - { type: copy, sentence: "Meine Freundin und ich bauen eine Höhle im Wohnzimmer." }
+      - { type: copy, sentence: "Im Sommer schwimmen wir im See." }
+      - { type: copy, sentence: "Abends sehen wir manchmal einen Film." }
+      - { type: copy, sentence: "Ich lerne Gitarre und übe jeden Tag." }

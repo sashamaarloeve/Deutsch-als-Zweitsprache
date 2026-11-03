@@ -1,0 +1,127 @@
+# Training: Wortarten (word classes) for 5th graders: Nomen, Verb, Adjektiv, Artikel, Pronomen, Präposition.
+# Original content, written in German.
+kind: lesson
+id: wortarten
+title: "Wortarten"
+level: A2
+skill: grammar
+minutes: 25
+status: draft
+description: "Nomen, Verb, Adjektiv, Artikel, Pronomen und Präposition: Du erkennst, zu welcher Wortart ein Wort gehört, und übst mit leichten Aufgaben."
+canDo:
+  - "Ich kann Nomen, Verben und Adjektive in einem Satz finden."
+  - "Ich kenne Artikel, Pronomen und Präpositionen."
+  - "Ich weiß, dass man Nomen großschreibt."
+
+understand:
+  - type: dialogue
+    title: "Hör zu: lauter Wortarten"
+    lines:
+      - { who: Mia, say: "Die <c>kleine</c> Katze <c>schläft</c> auf dem <c>weichen</c> Sofa." }
+      - { who: Ben, say: "<c>Sie</c> <c>träumt</c> von einer <c>großen</c> Maus." }
+      - { who: Mia, say: "Und wir <c>gehen</c> <c>in</c> den Garten." }
+
+  - type: text
+    title: "Was ist eine Wortart?"
+    body:
+      - "Jedes Wort in einem Satz gehört zu einer Wortart. Die Wortart sagt, was das Wort im Satz macht."
+      - "Die Wortart hilft dir beim Schreiben und beim Sprechen: Nomen schreibt man groß, und Adjektive bekommen eine Endung."
+
+  - type: table
+    title: "Die sechs Wortarten"
+    head: [ Wortart, "Woran erkenne ich sie?", Beispiele ]
+    rows:
+      - [ Nomen, "Man kann „der, die, das“ davor setzen. Wer oder was?", "der Hund, die Schule, das Buch, Mia" ]
+      - [ Verb, "Es sagt, was jemand tut oder was passiert. Im Infinitiv endet es meist auf -en.", "spielen, lernen, gehen, sein" ]
+      - [ Adjektiv, "Es sagt, wie etwas ist. Wie?", "klein, schön, neu, lecker" ]
+      - [ Artikel, "Er begleitet das Nomen.", "der, die, das, ein, eine" ]
+      - [ Pronomen, "Es steht für ein Nomen.", "ich, du, er, sie, es, wir, ihr" ]
+      - [ Präposition, "Sie sagt, wo, wann oder womit.", "in, auf, mit, nach, vor, unter" ]
+
+  - type: rule
+    title: "Ein Satz, alle Wortarten"
+    body:
+      - "Die kleine Katze schläft auf dem weichen Sofa."
+      - "Nomen: Katze, Sofa. Verb: schläft. Adjektive: kleine, weichen."
+      - "Artikel: die, dem. Präposition: auf."
+      - "Mia ist auch ein Nomen: Namen schreibt man groß."
+
+  - type: rule
+    title: "Drei Tipps"
+    body:
+      - "Nomen schreibt man immer groß: die Schule, der Hund, die Freundin."
+      - "Ein Verb kann man verändern: ich spiele, du spielst, wir spielen."
+      - "Ein Adjektiv kann man vor ein Nomen setzen: der kleine Hund. Dann bekommt es eine Endung."
+
+practice:
+  - id: which
+    title: "Welche Wortart?"
+    count: 8
+    shuffle: true
+    concepts: [ words.classes ]
+    items:
+      - { type: pick, instruction: "Welche Wortart ist „Katze“?", prompt: "Die Katze schläft.", options: [ Nomen, Verb, Adjektiv ], answer: Nomen, explanation: "„die Katze“: Man kann „die“ davor setzen." }
+      - { type: pick, instruction: "Welche Wortart ist „schläft“?", prompt: "Die Katze schläft.", options: [ Nomen, Verb, Adjektiv ], answer: Verb, explanation: "„schläft“ sagt, was die Katze tut." }
+      - { type: pick, instruction: "Welche Wortart ist „kleinen“?", prompt: "Ich habe einen kleinen Hund.", options: [ Nomen, Adjektiv, Artikel ], answer: Adjektiv, explanation: "„kleinen“ sagt, wie der Hund ist." }
+      - { type: pick, instruction: "Welche Wortart ist „einen“?", prompt: "Ich habe einen kleinen Hund.", options: [ Artikel, Pronomen, Adjektiv ], answer: Artikel, explanation: "„einen“ begleitet das Nomen „Hund“." }
+      - { type: pick, instruction: "Welche Wortart ist „Sie“?", prompt: "Sie spielt in dem Park.", options: [ Pronomen, Nomen, Artikel ], answer: Pronomen, explanation: "„Sie“ steht für ein Nomen, zum Beispiel für „Mia“." }
+      - { type: pick, instruction: "Welche Wortart ist „in“?", prompt: "Sie spielt in dem Park.", options: [ Präposition, Verb, Pronomen ], answer: Präposition, explanation: "„in“ sagt, wo sie spielt." }
+      - { type: pick, instruction: "Welche Wortart ist „spannendes“?", prompt: "Mia liest ein spannendes Buch.", options: [ Adjektiv, Nomen, Verb ], answer: Adjektiv, explanation: "„spannendes“ sagt, wie das Buch ist." }
+      - { type: pick, instruction: "Welche Wortart ist „liest“?", prompt: "Mia liest ein spannendes Buch.", options: [ Verb, Nomen, Artikel ], answer: Verb, explanation: "„liest“ sagt, was Mia tut." }
+      - { type: pick, instruction: "Welche Wortart ist „mit“?", prompt: "Wir fahren mit dem Bus.", options: [ Präposition, Artikel, Adjektiv ], answer: Präposition, explanation: "„mit“ sagt, womit wir fahren." }
+      - { type: pick, instruction: "Welche Wortart ist „Wir“?", prompt: "Wir fahren mit dem Bus.", options: [ Pronomen, Verb, Nomen ], answer: Pronomen, explanation: "„Wir“ steht für Personen." }
+      - { type: pick, instruction: "Welche Wortart ist „Aufgabe“?", prompt: "Der Lehrer erklärt die Aufgabe.", options: [ Nomen, Verb, Pronomen ], answer: Nomen, explanation: "„die Aufgabe“: Man kann „die“ davor setzen." }
+      - { type: pick, instruction: "Welche Wortart ist „Der“?", prompt: "Der Lehrer erklärt die Aufgabe.", options: [ Artikel, Pronomen, Adjektiv ], answer: Artikel, explanation: "„Der“ begleitet das Nomen „Lehrer“." }
+
+  - id: fit
+    title: "Welches Wort passt?"
+    count: 6
+    shuffle: true
+    concepts: [ words.classes ]
+    items:
+      - { type: pick, instruction: "Welches Verb passt?", sentence: "Der Hund ___ im Garten.", options: [ läuft, schnell, Garten ], answer: läuft, explanation: "Ein Verb sagt, was der Hund tut: läuft." }
+      - { type: pick, instruction: "Welches Adjektiv passt?", sentence: "Die ___ Blume duftet gut.", options: [ schöne, blüht, Tisch ], answer: schöne, explanation: "Ein Adjektiv sagt, wie die Blume ist: schöne." }
+      - { type: pick, instruction: "Welches Adjektiv passt?", sentence: "Mia hat einen ___ Rucksack.", options: [ neuen, kauft, Schule ], answer: neuen, explanation: "„neuen“ sagt, wie der Rucksack ist." }
+      - { type: pick, instruction: "Welche Präposition passt?", sentence: "Wir gehen ___ die Schule.", options: [ in, schnell, laufen ], answer: in, explanation: "„in“ sagt, wohin wir gehen." }
+      - { type: pick, instruction: "Welcher Artikel passt?", sentence: "___ Katze schläft.", options: [ Die, Schnell, Laufen ], answer: Die, explanation: "Der Artikel begleitet das Nomen „Katze“." }
+      - { type: pick, instruction: "Welches Pronomen passt?", sentence: "Mia freut sich. ___ spielt gern Fußball.", options: [ Sie, Der, Spielen ], answer: Sie, explanation: "„Sie“ steht für „Mia“." }
+
+  - id: match
+    title: "Paare"
+    shuffle: false
+    items:
+      - type: pairs
+        concepts: [ words.classes ]
+        instruction: "Tippe ein Wort an, dann seine Wortart."
+        pairs: [ [ Hund, Nomen ], [ laufen, Verb ], [ bunt, Adjektiv ], [ dem, Artikel ], [ wir, Pronomen ], [ unter, Präposition ] ]
+      - type: pairs
+        concepts: [ words.classes ]
+        instruction: "Tippe ein Wort an, dann seine Wortart."
+        pairs: [ [ Katze, Nomen ], [ schlafen, Verb ], [ schnell, Adjektiv ], [ eine, Artikel ], [ sie, Pronomen ], [ auf, Präposition ] ]
+
+  - id: copy
+    title: "Abschreiben"
+    count: 4
+    concepts: [ writing.copy, words.noun-capital ]
+    instruction: "Lies den Satz, merke ihn dir und schreibe ihn auf."
+    explanation: "Achte auf die Großbuchstaben: Nomen schreibt man groß."
+    items:
+      - { type: copy, sentence: "Die kleine Katze schläft auf dem weichen Sofa." }
+      - { type: copy, sentence: "Mia liest ein spannendes Buch in der Schule." }
+      - { type: copy, sentence: "Wir fahren mit dem Bus in den Park." }
+      - { type: copy, sentence: "Der Lehrer erklärt den Kindern die Aufgabe." }
+
+  - id: write
+    title: "Schreiben"
+    concepts: [ words.classes, writing.simple-sentences ]
+    instruction: "Schreibe 4 Sätze oder mehr. Benutze die Wörter."
+    items:
+      - type: free-writing
+        task: "Schreibe über dein Haustier oder dein Wunschtier: Wie sieht es aus? Was macht es gern?"
+        words: [ der, die, das, klein, groß, spielt, schläft, in ]
+        minSentences: 4
+        checklist:
+          - "Alle Nomen sind großgeschrieben."
+          - "Ich habe mindestens ein Adjektiv benutzt."
+          - "Jeder Satz hat ein Verb."
+        model: "Mein Hund heißt Max. Er ist klein und braun. Er spielt gern im Garten. Abends schläft er auf dem weichen Sofa."

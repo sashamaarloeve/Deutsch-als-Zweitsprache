@@ -10,13 +10,14 @@ interface Props {
   onResult: (item: Item, outcome: Outcome) => void;
   onFinish: (percent: number) => void;
   onExit?: () => void; // shows a Stop button and a "Back" button at the end
+  exitLabel?: string; // text of that "Back" button
   onAgain?: () => void; // shows an "Again" button at the end
   embedded?: boolean; // inside a training page: no title row
   before?: (item: Item) => ReactNode; // shown above the exercise (for example the reading text)
 }
 
 // Plays a list of exercises one after another, then shows a friendly summary.
-export function Runner({ title, items, onResult, onFinish, onExit, onAgain, embedded, before }: Props) {
+export function Runner({ title, items, onResult, onFinish, onExit, exitLabel, onAgain, embedded, before }: Props) {
   const { s } = useLang();
   const [i, setI] = useState(0);
   const [firstTry, setFirstTry] = useState(0);
@@ -37,7 +38,7 @@ export function Runner({ title, items, onResult, onFinish, onExit, onAgain, embe
         <p>{s.everyTry}</p>
         <div className="row" style={{ justifyContent: 'center' }}>
           {onAgain && <button className="btn" onClick={onAgain}>{s.again}</button>}
-          {onExit && <button className={'btn' + (onAgain ? ' ghost' : '')} onClick={onExit}>{s.backHome}</button>}
+          {onExit && <button className={'btn' + (onAgain ? ' ghost' : '')} onClick={onExit}>{exitLabel ?? s.backHome}</button>}
         </div>
       </div>
     );

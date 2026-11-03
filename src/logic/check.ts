@@ -92,3 +92,18 @@ export function checkShortAnswer(accept: string[], answer: string): boolean {
   const keys = accept.filter((x) => x.startsWith('~')).map((x) => normalizeAnswer(x.slice(1)));
   return exact.includes(a) || (keys.length > 0 && keys.every((k) => a.includes(k)));
 }
+
+// Copy-writing ("Abschreiben"): compare what was typed with the model, word by word.
+// Only extra spaces are ignored; capital letters and punctuation count.
+export interface CopyWord {
+  word: string; // a word the learner typed ("" when a word is missing at this place)
+  ok: boolean;
+}
+export function compareCopy(model: string, typed: string): { same: boolean; words: CopyWord[] } {
+  const norm = (x: string) => x.trim().split(/\s+/).filter(Boolean);
+  const m = norm(model);
+  const t = norm(typed);
+  // one entry for every place of the longer text, so missing and extra words are marked too
+  const words = Array.from({ length: Math.max(m.length, t.length) }, (_v, i) => ({ word: t[i] ?? '', ok: t[i] !== undefined && t[i] === m[i] }));
+  return { same: m.length === t.length && words.every((w) => w.ok), words };
+}

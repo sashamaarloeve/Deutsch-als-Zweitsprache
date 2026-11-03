@@ -1,0 +1,166 @@
+# Training: Steigerung der Adjektive (comparison of adjectives) for 5th graders: Positiv, Komparativ, Superlativ.
+# Original content, written in German.
+kind: lesson
+id: adjektiv-steigerung
+title: "Adjektive steigern"
+level: A2
+skill: grammar
+minutes: 30
+status: draft
+description: "groß, größer, am größten: Du lernst, wie man Adjektive steigert und vergleicht, mit den wichtigsten Besonderheiten (Umlaut, gut, viel, gern)."
+canDo:
+  - "Ich kann Adjektive steigern: Positiv, Komparativ, Superlativ."
+  - "Ich kann Dinge vergleichen: so … wie, … er als, am …sten."
+  - "Ich kenne die wichtigsten Besonderheiten (Umlaut, gut – besser – am besten)."
+
+understand:
+  - type: dialogue
+    title: "Hör zu: Wer ist größer?"
+    lines:
+      - { who: Mia, say: "Ich bin <c>groß</c>. Ben ist <c>größer</c> als ich." }
+      - { who: Ben, say: "Aber Yusuf ist <c>am größten</c>. Er ist der <c>größte</c> Junge in der Klasse." }
+      - { who: Mia, say: "Ich bin <c>so alt wie</c> du, aber Yusuf ist <c>älter</c>." }
+
+  - type: text
+    title: "Drei Stufen"
+    body:
+      - "Mit Adjektiven kann man vergleichen. Dafür gibt es drei Stufen."
+      - "Positiv: Mia ist groß."
+      - "Komparativ: Ben ist größer als Mia."
+      - "Superlativ: Yusuf ist am größten."
+      - "Gleich groß? Dann sagt man „so groß wie“: Mia ist so groß wie Lena."
+
+  - type: table
+    title: "Regelmäßig steigern"
+    compact: true
+    head: [ Positiv, Komparativ, Superlativ ]
+    rows:
+      - [ klein, kleiner, "am kleinsten" ]
+      - [ schnell, schneller, "am schnellsten" ]
+      - [ schön, schöner, "am schönsten" ]
+      - [ lang, länger, "am längsten" ]
+      - [ alt, älter, "am ältesten" ]
+      - [ groß, größer, "am größten" ]
+
+  - type: rule
+    title: "So steigerst du"
+    body:
+      - "Komparativ: Adjektiv + <en>er</en>: klein → klein<en>er</en>, schnell → schnell<en>er</en>."
+      - "Superlativ: <st>am</st> + Adjektiv + <en>sten</en>: klein → am klein<en>sten</en>."
+      - "Viele kurze Adjektive bekommen im Komparativ und im Superlativ einen Umlaut: alt → älter → am ältesten, lang → länger, jung → jünger, stark → stärker, warm → wärmer."
+      - "Endet das Adjektiv auf -d, -t, -s oder -ß, kommt oft ein -e- dazu: am ältesten, am buntesten, am heißesten. Bei „groß“ gilt eine Ausnahme: am größten."
+
+  - type: table
+    title: "Besondere Formen"
+    compact: true
+    head: [ Positiv, Komparativ, Superlativ ]
+    rows:
+      - [ gut, besser, "am besten" ]
+      - [ viel, mehr, "am meisten" ]
+      - [ gern, lieber, "am liebsten" ]
+      - [ hoch, höher, "am höchsten" ]
+      - [ nah, näher, "am nächsten" ]
+
+  - type: rule
+    title: "Vergleichen"
+    body:
+      - "Gleich: so + Adjektiv + wie: Mia ist <c>so groß wie</c> Lena."
+      - "Ungleich: Komparativ + als: Ben ist <c>größer als</c> Mia."
+      - "Am meisten: am + …sten: Yusuf ist <c>am größten</c>."
+      - "Nicht: „größer wie“. Nach dem Komparativ steht „als“."
+
+  - type: rule
+    title: "Vor dem Nomen"
+    body:
+      - "Der Superlativ steht auch vor einem Nomen. Dann hat er eine Endung, wie du es von den Adjektiven kennst: der klein<en>ste</en> Hund, die klein<en>ste</en> Katze, das klein<en>ste</en> Pferd."
+      - "Yusuf ist der größ<en>te</en> Junge in der Klasse."
+
+practice:
+  - id: fit
+    title: "Welche Form passt?"
+    count: 8
+    shuffle: true
+    concepts: [ adj.comparative, adj.superlative, adj.compare-words ]
+    instruction: "Welche Form passt in die Lücke?"
+    items:
+      - { type: pick, sentence: "Ben ist ___ als Mia.", options: [ größer, am größten, groß ], answer: größer, explanation: "Nach „als“ steht der Komparativ: größer als." }
+      - { type: pick, sentence: "Yusuf ist ___ in der Klasse.", options: [ am größten, größer, so groß ], answer: am größten, explanation: "Der Größte von allen: der Superlativ „am größten“." }
+      - { type: pick, sentence: "Mia ist ___ wie Ben.", options: [ so alt, älter, am ältesten ], answer: so alt, explanation: "Gleich alt: „so alt wie“." }
+      - { type: pick, sentence: "Der Hund läuft ___ als die Katze.", options: [ schneller, am schnellsten, schnell ], answer: schneller, explanation: "Nach „als“ steht der Komparativ: schneller als." }
+      - { type: pick, sentence: "Im Sommer ist es ___ als im Winter.", options: [ wärmer, am wärmsten, warm ], answer: wärmer, explanation: "Nach „als“ steht der Komparativ: wärmer als." }
+      - { type: pick, sentence: "Dieses Buch ist ___ von allen.", options: [ am besten, besser, gut ], answer: am besten, explanation: "„gut“ wird zu „besser“ und „am besten“. Von allen: am besten." }
+      - { type: pick, sentence: "Ich esse Pizza ___ als Nudeln.", options: [ lieber, am liebsten, gern ], answer: lieber, explanation: "„gern“ wird zu „lieber“ und „am liebsten“. Nach „als“: lieber." }
+      - { type: pick, sentence: "Der Berg ist ___ als der Hügel.", options: [ höher, am höchsten, hoch ], answer: höher, explanation: "„hoch“ wird zu „höher“ und „am höchsten“. Nach „als“: höher." }
+      - { type: pick, sentence: "Der Mount Everest ist der ___ Berg der Welt.", options: [ höchste, höher, höchsten ], answer: höchste, explanation: "Vor dem Nomen: der höchste Berg." }
+      - { type: pick, sentence: "Meine Schwester ist ___ als ich.", options: [ jünger, am jüngsten, junger ], answer: jünger, explanation: "Nach „als“ steht der Komparativ: jünger als." }
+      - { type: pick, sentence: "Mia ist die ___ in unserer Klasse.", options: [ kleinste, kleiner, kleinen ], answer: kleinste, explanation: "Vor dem Nomen: die kleinste." }
+
+  - id: write-forms
+    title: "Formen schreiben"
+    count: 8
+    shuffle: true
+    concepts: [ adj.comparative, adj.superlative ]
+    instruction: "Schreibe die Form."
+    items:
+      - { type: short-answer, prompt: "schnell · Komparativ", accept: [ schneller ], explanation: "schneller" }
+      - { type: short-answer, prompt: "alt · Superlativ", accept: [ am ältesten, ältesten ], explanation: "am ältesten" }
+      - { type: short-answer, prompt: "jung · Komparativ", accept: [ jünger ], explanation: "jünger" }
+      - { type: short-answer, prompt: "gut · Komparativ", accept: [ besser ], explanation: "besser" }
+      - { type: short-answer, prompt: "groß · Superlativ", accept: [ am größten, größten ], explanation: "am größten" }
+      - { type: short-answer, prompt: "warm · Komparativ", accept: [ wärmer ], explanation: "wärmer" }
+      - { type: short-answer, prompt: "klein · Superlativ", accept: [ am kleinsten, kleinsten ], explanation: "am kleinsten" }
+      - { type: short-answer, prompt: "gut · Superlativ", accept: [ am besten, besten ], explanation: "am besten" }
+      - { type: short-answer, prompt: "stark · Superlativ", accept: [ am stärksten, stärksten ], explanation: "am stärksten" }
+      - { type: short-answer, prompt: "lang · Komparativ", accept: [ länger ], explanation: "länger" }
+
+  - id: match
+    title: "Paare"
+    shuffle: false
+    items:
+      - type: pairs
+        concepts: [ adj.comparative ]
+        instruction: "Tippe das Adjektiv an, dann den Komparativ."
+        pairs: [ [ alt, älter ], [ groß, größer ], [ gut, besser ], [ jung, jünger ], [ warm, wärmer ] ]
+      - type: pairs
+        concepts: [ adj.superlative ]
+        instruction: "Tippe den Komparativ an, dann den Superlativ."
+        pairs: [ [ schneller, am schnellsten ], [ kleiner, am kleinsten ], [ besser, am besten ], [ höher, am höchsten ], [ länger, am längsten ] ]
+
+  - id: build
+    title: "Baue den Satz"
+    count: 5
+    concepts: [ adj.comparative, adj.superlative ]
+    instruction: "Baue den Satz. Die Endung ist ein eigenes Teil."
+    items:
+      - { type: sentence-build, accept: [ "Ben ist größ|er als Mia" ], extras: [ e, en ], explanation: "Komparativ: größ + er, danach „als“." }
+      - { type: sentence-build, accept: [ "der Hund ist schnell|er als die Katze" ], extras: [ e, ste ], explanation: "Komparativ: schnell + er, danach „als“." }
+      - { type: sentence-build, accept: [ "Yusuf ist am klein|sten" ], extras: [ ste, er ], explanation: "Superlativ: am + klein + sten." }
+      - { type: sentence-build, accept: [ "heute ist es wärm|er als gestern" ], extras: [ e, sten ], explanation: "Komparativ: wärm + er, danach „als“." }
+      - { type: sentence-build, accept: [ "das Eis schmeckt am best|en" ], extras: [ gut, sten ], explanation: "„gut“ wird zu „am besten“." }
+
+  - id: copy
+    title: "Abschreiben"
+    count: 4
+    concepts: [ writing.copy, adj.comparative, adj.superlative ]
+    instruction: "Lies den Satz, merke ihn dir und schreibe ihn auf."
+    explanation: "Schau dir die Steigerungsformen noch einmal an."
+    items:
+      - { type: copy, sentence: "Ben ist größer als Mia." }
+      - { type: copy, sentence: "Yusuf ist am größten." }
+      - { type: copy, sentence: "Der Hund läuft schneller als die Katze." }
+      - { type: copy, sentence: "Das ist das schönste Bild." }
+
+  - id: write
+    title: "Schreiben"
+    concepts: [ adj.comparative, adj.superlative, writing.simple-sentences ]
+    instruction: "Schreibe 4 Sätze oder mehr. Benutze die Wörter."
+    items:
+      - type: free-writing
+        task: "Vergleiche drei Tiere oder drei Dinge: Was ist größer, schneller, schöner? Was ist am größten oder am schnellsten?"
+        words: [ größer, schneller, schöner, am größten, am schnellsten, so groß wie ]
+        minSentences: 4
+        checklist:
+          - "Ich habe mindestens einen Komparativ mit „als“ benutzt."
+          - "Ich habe mindestens einen Superlativ benutzt."
+          - "Ich habe einmal „so … wie“ geschrieben."
+        model: "Der Elefant ist größer als das Pferd. Der Gepard ist schneller als der Hund. Der Blauwal ist am größten. Mein Hund ist so groß wie meine Katze."

@@ -2,6 +2,8 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import '@fontsource/patrick-hand/latin-400.css';
 import '@fontsource/patrick-hand/latin-ext-400.css';
+import '@fontsource/opendyslexic/latin-400.css';
+import '@fontsource/opendyslexic/latin-700.css';
 import './styles.css';
 import { App } from './App';
 import { applyPrefs, defaultPrefs } from './logic/prefs';

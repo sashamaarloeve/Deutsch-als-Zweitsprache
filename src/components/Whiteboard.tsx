@@ -2,7 +2,7 @@ import { useLang } from '../i18n';
 import { todayInGerman } from '../logic/today';
 
 // Start page: a whiteboard with today's weekday and date and a short welcome.
-export function Whiteboard() {
+export function Whiteboard({ onFinish }: { onFinish: () => void }) {
   const { s } = useLang();
   const { weekday, date } = todayInGerman();
   return (
@@ -19,6 +19,9 @@ export function Whiteboard() {
       <div className="wb-tray" aria-hidden="true">
         <i className="mk blue" /><i className="mk green" /><i className="mk red" /><i className="eraser" />
       </div>
+      <p className="center" style={{ marginTop: 16 }}>
+        <button className="btn ghost" onClick={onFinish}>{s.finishLesson}</button>
+      </p>
     </section>
   );
 }

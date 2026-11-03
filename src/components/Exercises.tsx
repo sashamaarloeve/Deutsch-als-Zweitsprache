@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
-import type { BoxesItem, BuildItem, ChoiceItem, ConvertItem, Item, OrderItem, PairsItem, PickItem, SentenceBuildItem, ShortAnswerItem, GapsItem, WritingItem } from '../content/types';
-import { boxesSentence, buildSentenceText, checkBoxes, checkBuild, checkChoice, checkConvert, checkOrder, checkShortAnswer, glued, matchSentenceBuild, participleOf, sentenceText, shuffle } from '../logic/check';
+import type { BoxesItem, BuildItem, ChoiceItem, ConvertItem, CopyItem, Item, OrderItem, PairsItem, PickItem, SentenceBuildItem, ShortAnswerItem, GapsItem, WritingItem } from '../content/types';
+import { boxesSentence, buildSentenceText, checkBoxes, checkBuild, checkChoice, checkConvert, checkOrder, checkShortAnswer, compareCopy, glued, matchSentenceBuild, participleOf, sentenceText, shuffle } from '../logic/check';
 import type { Outcome } from '../logic/progress';
 import { Colored } from './Colored';
 import { Rich } from './Rich';
@@ -340,6 +340,73 @@ function ShortAnswerExercise({ item, onDone }: Props<ShortAnswerItem>) {
       </p>
       {!done && <button type="submit" className="btn">{s.check}</button>}
       <FeedbackBox fb={fb} />
+      {done && <NextButton onClick={() => onDone(done)} />}
+    </form>
+  );
+}
+
+/* ---- copy-writing: look, remember, write ---- */
+function CopyExercise({ item, onDone }: Props<CopyItem>) {
+  const { s } = useLang();
+  const [phase, setPhase] = useState<'look' | 'write'>('look');
+  const [text, setText] = useState('');
+  const [tries, setTries] = useState(0);
+  const [peeked, setPeeked] = useState(false);
+  const [done, setDone] = useState<Outcome | null>(null);
+  const [result, setResult] = useState<ReturnType<typeof compareCopy> | null>(null);
+  const check = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (done || !text.trim()) return;
+    const r = compareCopy(item.text, text);
+    setResult(r);
+    if (r.same) setDone(tries === 0 && !peeked ? 'first-try' : 'after-retry');
+    else if (tries === 0) setTries(1);
+    else setDone('wrong');
+  };
+  return (
+    <form onSubmit={check}>
+      <p className="prompt"><Rich text={item.instruction} /></p>
+      {phase === 'look' ? (
+        <>
+          <p className="tasklabel">{s.copyLook}</p>
+          <p className="big-word sentence" lang="de">{item.text}</p>
+          <button type="button" className="btn" onClick={() => setPhase('write')}>{s.copyReady}</button>
+        </>
+      ) : (
+        <>
+          {!done && <p className="tasklabel">{s.copyHidden}</p>}
+          {!done && (
+            <p>
+              <label htmlFor={'cp-' + item.id} className="sr-only">{s.copyYours}</label>
+              <textarea id={'cp-' + item.id} className="shortinput copyinput" rows={2} lang="de" value={text} spellCheck={false} autoCorrect="off" autoCapitalize="off" autoComplete="off" placeholder={s.copyYours} onChange={(e) => setText(e.target.value)} />
+            </p>
+          )}
+          {!done && (
+            <div className="row">
+              <button type="submit" className="btn">{s.check}</button>
+              <button type="button" className="btn ghost" onClick={() => { setPeeked(true); setPhase('look'); }}>{s.copyPeek}</button>
+            </div>
+          )}
+        </>
+      )}
+      <div className="fb" aria-live="polite" role="status">
+        {result?.same && s.copyRight}
+        {result && !result.same && (
+          <>
+            <p>{s.copyAlmost}</p>
+            <p className="copycmp" lang="de">
+              {s.copyYours}:{' '}
+              {result.words.map((w, i) => (
+                <span key={i}>
+                  {w.ok ? w.word : <span className="chg"><span className="sr-only">{s.copyWrong}: </span>{w.word || '___'}</span>}{' '}
+                </span>
+              ))}
+            </p>
+            {done === 'wrong' && <p>{s.copyModel}: <span lang="de">{item.text}</span></p>}
+          </>
+        )}
+        {done === 'wrong' && item.explanation && <p>{item.explanation}</p>}
+      </div>
       {done && <NextButton onClick={() => onDone(done)} />}
     </form>
   );
@@ -705,5 +772,7 @@ export function Exercise({ item, onDone }: Props<Item>) {
       return <ShortAnswerExercise item={item} onDone={onDone} />;
     case 'gaps':
       return <GapsExercise item={item} onDone={onDone} />;
+    case 'copy':
+      return <CopyExercise item={item} onDone={onDone} />;
   }
 }

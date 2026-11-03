@@ -10,3 +10,7 @@ Style guide: the owner's Perfekt page (screenshot, October 2026) in a butter-yel
 - **Colour teaches, but is never alone:** der = blue, die = red, das = green, Plural = orange; every coloured word also has an underline or label. All colours pass the axe contrast check (`npm run a11y`).
 - **Start page:** a whiteboard with weekday and date.
 - **Calm:** one task at a time, no italics, no justified text, small slide-ins and shakes only (off with `prefers-reduced-motion`). No read-aloud, no sounds.
+- **Reading aids (switchable, never saved):** "Weiter Abstand", "OpenDyslexic-Schrift", "Lesehilfe" (dimmed page with one bright line that follows the finger or mouse), A−/A+.
+- **Tables:** short tables (`compact: true`) stay tables; tables with long cells become one card per row on narrow screens, two cards side by side from 640 px, so no words are stacked in narrow columns.
+- **Print:** "Merkblatt drucken" prints the explanation on white paper without buttons and labs.
+
