@@ -13,6 +13,7 @@ import { defaultPrefs, ZOOMS } from './prefs';
 import { todayInGerman } from './today';
 import { parseTrainingHash, trainingHash } from './links';
 import { summarize } from './session';
+import { normalize, searchTrainings } from './search';
 import { dayKey, longDay, monthGrid, parseDayKey } from './calendar';
 import { isDayKey, parsePlan, planProblems } from '../content/kalender';
 import { parseAktuell } from '../content/aktuell';
@@ -654,6 +655,34 @@ describe('calendar', () => {
   it('the real plan file is valid (an empty file is fine)', () => {
     const known = new Set(readdirSync('content/trainings').map((f) => f.replace('.yaml', '')));
     expect(planProblems(readFileSync('content/kalender.yaml', 'utf8'), known)).toEqual([]);
+  });
+});
+
+describe('search', () => {
+  const all = readdirSync('content/trainings').filter((f) => f.endsWith('.yaml')).map((f) => parseTraining(readFileSync(`content/trainings/${f}`, 'utf8')));
+  const titles = (q: string) => searchTrainings(all, q).map((h) => h.training.title);
+  it('ignores capital letters, umlauts and ß', () => {
+    expect(normalize('Fälle Straße ÄPFEL')).toBe(normalize('faelle strasse aepfel'));
+    expect(normalize('Straße')).toBe('strasse');
+  });
+  it('finds a training by a word of its title, and puts title matches first', () => {
+    const hits = searchTrainings(all, 'dativ');
+    expect(hits.length).toBeGreaterThan(1);
+    expect(hits[0].training.title.toLowerCase()).toContain('dativ');
+    expect(hits[0].where).toContain('title');
+  });
+  it('finds words inside the explanation and in the task titles', () => {
+    expect(titles('Partizip')).toContain('Zeitformen');
+    expect(searchTrainings(all, 'Silben bauen').map((h) => h.training.id)).toContain('rechtschreibung');
+    expect(searchTrainings(all, 'Silben bauen')[0].where).toContain('practice');
+  });
+  it('needs every word of the query', () => {
+    expect(titles('Dativ Zeitformen xyzabc')).toEqual([]);
+    expect(titles('   ')).toEqual([]);
+  });
+  it('finds umlaut words typed without umlaut', () => {
+    expect(titles('faelle')).toContain('Fälle wiederholen');
+    expect(titles('fälle')).toContain('Fälle wiederholen');
   });
 });
 

@@ -59,6 +59,14 @@ async function main() {
       await page.getByRole('button', { name: 'Stunde beenden' }).click();
       await scan(page, `${theme} ${lang} · Stunde beenden`);
 
+      // search on Verstehen and Trainieren
+      for (const tab of [L.understand, L.practice]) {
+        await fresh();
+        await page.getByRole('button', { name: tab, exact: true }).first().click();
+        await page.getByRole('searchbox').fill('Dativ');
+        await scan(page, `${theme} ${lang} · Search · ${tab}`);
+      }
+
       // Aktuell
       await fresh();
       await page.getByRole('button', { name: 'Aktuell', exact: true }).first().click();

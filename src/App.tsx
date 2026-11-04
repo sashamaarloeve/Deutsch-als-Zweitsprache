@@ -10,6 +10,7 @@ import { TrainingCards } from './components/Aktuell';
 import { CalendarView } from './components/Calendar';
 import { Understand } from './components/Understand';
 import { LinkButton } from './components/LinkButton';
+import { SearchBox } from './components/SearchBox';
 import { ReadingRuler } from './components/ReadingRuler';
 import { WrapUp } from './components/WrapUp';
 import { addPoints, emptyProgress, recordResult, recordTraining, type Outcome } from './logic/progress';
@@ -17,6 +18,7 @@ import { pickQuickPractice } from './logic/practice';
 import { applyPrefs, defaultPrefs, ZOOMS } from './logic/prefs';
 import { parseTrainingHash, trainingHash } from './logic/links';
 import { dayKey } from './logic/calendar';
+import { searchTrainings } from './logic/search';
 
 type Tab = 'home' | 'aktuell' | 'archiv' | 'kalender' | 'understand' | 'practice' | 'wrapup';
 type CardsFrom = 'aktuell' | 'archiv' | 'kalender';
@@ -25,7 +27,7 @@ const AREAS = ['reading', 'grammar', 'vocabulary'] as const; // the three areas 
 // What is open inside each tab. Ids (not objects) so a language switch shows the right texts.
 type PracticeView = { name: 'menu' } | { name: 'quick'; ids: string[] } | { name: 'topic'; id: string };
 
-function TopicCard({ t, done, onClick, extra }: { t: Training; done?: { best: number }; onClick: () => void; extra?: string }) {
+function TopicCard({ t, done, onClick, extra, found }: { t: Training; done?: { best: number }; onClick: () => void; extra?: string; found?: string }) {
   const { s } = useLang();
   return (
     <button className="tcard" onClick={onClick}>
@@ -38,6 +40,7 @@ function TopicCard({ t, done, onClick, extra }: { t: Training; done?: { best: nu
         {done && <span className="badge">{s.best(done.best)}</span>}
       </div>
       <span>{extra ?? t.description}</span>
+      {found && <span className="foundin">{found}</span>}
     </button>
   );
 }
@@ -93,9 +96,14 @@ function Shell() {
     setQuickFrom('aktuell');
     goTab('practice');
   };
+  const [search, setSearch] = useState(''); // search text on Verstehen and Trainieren (kept while the page is open)
   const [area, setArea] = useState<(typeof AREAS)[number]>('grammar');
   const [readLevel, setReadLevel] = useState<'A1' | 'A2' | 'B1'>('A1'); // sub-areas of Reading
 
+  const practiceSummary = (t: Training) =>
+    t.kind === 'perfekt'
+      ? s.exercisesOf(7) + ': ' + [s.exBau, s.exHs, s.exConv, s.exPuz, s.exMem, s.exSprint, s.exWri].join(' · ')
+      : s.exercisesOf(t.sets.length) + ': ' + t.sets.map((x) => x.title).join(' · ');
   const itemById = useMemo(() => new Map(trainings.flatMap((t) => t.items).map((i) => [i.id, i] as const)), [trainings]);
   // functional updates: results live only in memory while the page is open
   const onResult = (item: Item, o: Outcome) => setProgress((p) => recordResult(p, item.id, o));
@@ -128,6 +136,8 @@ function Shell() {
   // trainings marked aktuellOnly are reached from the Aktuell or Archiv tab only
   const listed = trainings.filter((t) => !t.aktuellOnly);
   const shown = listed.filter((t) => t.skill === area && ((area !== 'reading' && area !== 'vocabulary') || t.level === readLevel));
+  const hits = search.trim() ? searchTrainings(listed, search) : null;
+  const foundIn = (where: string[]) => `${s.searchFoundIn}: ${where.map((w) => s.searchWhere[w]).join(', ')}`;
   const topic = trainings.find((t) => t.id === topicId);
   const practiceTopic = practice.name === 'topic' ? trainings.find((t) => t.id === practice.id) : undefined;
   const quickItems = practice.name === 'quick' ? practice.ids.map((id) => itemById.get(id)).filter((i): i is Item => !!i) : [];
@@ -210,8 +220,9 @@ function Shell() {
           <>
             <h2>{s.topicsTitle}</h2>
             <p className="how">{s.topicsHint}</p>
-            {listed.map((t) => (
-              <TopicCard key={t.id} t={t} onClick={() => { setCardsFrom(null); setTopicId(t.id); window.scrollTo({ top: 0 }); }} />
+            <SearchBox value={search} onChange={setSearch} count={hits ? hits.length : null} />
+            {(hits ?? listed.map((t) => ({ training: t, where: [] as string[] }))).map(({ training: t, where }) => (
+              <TopicCard key={t.id} t={t} found={hits ? foundIn(where) : undefined} onClick={() => { setCardsFrom(null); setTopicId(t.id); window.scrollTo({ top: 0 }); }} />
             ))}
           </>
         )}
@@ -243,36 +254,48 @@ function Shell() {
               </button>
             </div>
             <h2 style={{ marginTop: 28 }}>{s.byTopic}</h2>
-            <div className="areatabs" role="group" aria-label={s.areaLabel}>
-              {AREAS.map((a) => (
-                <button key={a} className={'btn' + (area === a ? ' on' : ' ghost')} aria-pressed={area === a} onClick={() => setArea(a)}>
-                  {s.skill[a]}
-                </button>
-              ))}
-            </div>
-            {(area === 'reading' || area === 'vocabulary') && (
-              <div className="areatabs sub" role="group" aria-label={s.levelLabel}>
-                {READ_LEVELS.map((l) => (
-                  <button key={l} className={'btn' + (readLevel === l ? ' on' : ' ghost')} aria-pressed={readLevel === l} onClick={() => setReadLevel(l)}>
-                    {l}
-                  </button>
+            <SearchBox value={search} onChange={setSearch} count={hits ? hits.length : null} />
+            {hits ? (
+              hits.map(({ training: t, where }) => (
+                <TopicCard
+                  key={t.id}
+                  t={t}
+                  done={progress.trainings[t.id]}
+                  found={foundIn(where)}
+                  extra={practiceSummary(t)}
+                  onClick={() => { setCardsFrom(null); setPractice({ name: 'topic', id: t.id }); }}
+                />
+              ))
+            ) : (
+              <>
+                <div className="areatabs" role="group" aria-label={s.areaLabel}>
+                  {AREAS.map((a) => (
+                    <button key={a} className={'btn' + (area === a ? ' on' : ' ghost')} aria-pressed={area === a} onClick={() => setArea(a)}>
+                      {s.skill[a]}
+                    </button>
+                  ))}
+                </div>
+                {(area === 'reading' || area === 'vocabulary') && (
+                  <div className="areatabs sub" role="group" aria-label={s.levelLabel}>
+                    {READ_LEVELS.map((l) => (
+                      <button key={l} className={'btn' + (readLevel === l ? ' on' : ' ghost')} aria-pressed={readLevel === l} onClick={() => setReadLevel(l)}>
+                        {l}
+                      </button>
+                    ))}
+                  </div>
+                )}
+                {shown.length === 0 && <p className="how">{s.areaEmpty}</p>}
+                {shown.map((t) => (
+                  <TopicCard
+                    key={t.id}
+                    t={t}
+                    done={progress.trainings[t.id]}
+                    extra={practiceSummary(t)}
+                    onClick={() => { setCardsFrom(null); setPractice({ name: 'topic', id: t.id }); }}
+                  />
                 ))}
-              </div>
+              </>
             )}
-            {shown.length === 0 && <p className="how">{s.areaEmpty}</p>}
-            {shown.map((t) => (
-              <TopicCard
-                key={t.id}
-                t={t}
-                done={progress.trainings[t.id]}
-                extra={
-                  t.kind === 'perfekt'
-                    ? s.exercisesOf(7) + ': ' + [s.exBau, s.exHs, s.exConv, s.exPuz, s.exMem, s.exSprint, s.exWri].join(' · ')
-                    : s.exercisesOf(t.sets.length) + ': ' + t.sets.map((x) => x.title).join(' · ')
-                }
-                onClick={() => { setCardsFrom(null); setPractice({ name: 'topic', id: t.id }); }}
-              />
-            ))}
           </>
         )}
 
