@@ -6,10 +6,14 @@ import { dayKey, longDay, monthGrid, monthTitle, parseDayKey, WEEKDAYS } from '.
 import { TrainingCards } from './Aktuell';
 
 // "Kalender": a loose lesson plan. Pick a day to see the trainings and the note planned for it.
-export function CalendarView({ plan, trainings, onUnderstand, onPractice }: { plan: PlanEntry[]; trainings: Training[]; onUnderstand: (id: string) => void; onPractice: (id: string) => void }) {
+// The repository file that holds the plan (link for the owner; adjust it if the branch changes)
+const PLAN_FILE_URL = 'https://github.com/sashamaarloeve/Deutsch-als-Zweitsprache/edit/claude/deutsch-tutoring-app-yijrj3/content/kalender.yaml';
+
+export function CalendarView({ plan, trainings, added, fileText, onRemove, onUnderstand, onPractice }: { plan: PlanEntry[]; trainings: Training[]; added: PlanEntry[]; fileText: string; onRemove: (date: string, id: string) => void; onUnderstand: (id: string) => void; onPractice: (id: string) => void }) {
   const { s } = useLang();
   const today = dayKey(new Date());
   const [selected, setSelected] = useState(today);
+  const [copied, setCopied] = useState(false);
   const [shown, setShown] = useState(() => {
     const t = new Date();
     return { year: t.getFullYear(), month: t.getMonth() };
@@ -76,6 +80,51 @@ export function CalendarView({ plan, trainings, onUnderstand, onPractice }: { pl
         onUnderstand={onUnderstand}
         onPractice={onPractice}
       />
+
+      {added.length > 0 && (
+        <div className="card">
+          <h3>{s.calendarNewTitle}</h3>
+          <p>{s.calendarNewText}</p>
+          <ul className="upcoming">
+            {added.map((e) => (
+              <li key={e.date}>
+                <b>{longDay(e.date)}</b>
+                {e.note && <> · {e.note}</>}
+                <ul>
+                  {e.ids.map((id) => {
+                    const title = trainings.find((t) => t.id === id)?.title ?? id;
+                    return (
+                      <li key={id}>
+                        {title} <button type="button" className="linklike" onClick={() => onRemove(e.date, id)} aria-label={s.calendarRemove(title)}>×</button>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </li>
+            ))}
+          </ul>
+          <label htmlFor="plantext" className="searchlabel">{s.calendarFileText}</label>
+          <textarea id="plantext" className="plantext" readOnly rows={8} value={fileText} onFocus={(e) => e.currentTarget.select()} />
+          <div className="row">
+            <button
+              type="button"
+              className="btn"
+              onClick={async () => {
+                try {
+                  await navigator.clipboard.writeText(fileText);
+                  setCopied(true);
+                } catch {
+                  /* clipboard blocked: the text can be selected and copied by hand */
+                }
+              }}
+            >
+              {s.calendarCopy}
+            </button>
+            <a className="btn ghost" href={PLAN_FILE_URL} target="_blank" rel="noopener noreferrer">{s.calendarOpenFile}</a>
+            <span role="status">{copied ? s.calendarCopied : ''}</span>
+          </div>
+        </div>
+      )}
 
       {upcoming.length > 0 && (
         <div className="card merke">

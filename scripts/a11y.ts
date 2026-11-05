@@ -67,6 +67,16 @@ async function main() {
         await scan(page, `${theme} ${lang} · Search · ${tab}`);
       }
 
+      // "Zum Kalender hinzufügen": the panel, and the calendar with a new entry
+      await fresh();
+      await page.getByRole('button', { name: L.understand, exact: true }).first().click();
+      await page.locator('.tcard').first().click();
+      await page.getByRole('button', { name: 'Zum Kalender hinzufügen' }).click();
+      await page.getByRole('button', { name: 'Hinzufügen', exact: true }).click();
+      await scan(page, `${theme} ${lang} · Add to calendar`);
+      await page.getByRole('button', { name: 'Kalender ansehen' }).click();
+      await scan(page, `${theme} ${lang} · Calendar with a new entry`);
+
       // Aktuell
       await fresh();
       await page.getByRole('button', { name: 'Aktuell', exact: true }).first().click();

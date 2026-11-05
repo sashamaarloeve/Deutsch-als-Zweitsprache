@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { aktuell, archiv, plan, trainings } from './content/load';
+import { aktuell, archiv, plan as filePlan, trainings } from './content/load';
 import type { Item, Training } from './content/types';
 import { LangProvider, useLang } from './i18n';
 import { Runner } from './components/Runner';
@@ -8,6 +8,7 @@ import { LessonUnderstand } from './components/LessonUnderstand';
 import { Whiteboard } from './components/Whiteboard';
 import { TrainingCards } from './components/Aktuell';
 import { CalendarView } from './components/Calendar';
+import { AddToCalendar } from './components/AddToCalendar';
 import { Understand } from './components/Understand';
 import { LinkButton } from './components/LinkButton';
 import { SearchBox } from './components/SearchBox';
@@ -18,6 +19,7 @@ import { pickQuickPractice } from './logic/practice';
 import { applyPrefs, defaultPrefs, ZOOMS } from './logic/prefs';
 import { parseTrainingHash, trainingHash } from './logic/links';
 import { dayKey } from './logic/calendar';
+import { mergePlans, planToYaml, type PlanEntry } from './content/kalender';
 import { searchTrainings } from './logic/search';
 
 type Tab = 'home' | 'aktuell' | 'archiv' | 'kalender' | 'understand' | 'practice' | 'wrapup';
@@ -64,6 +66,16 @@ function Shell() {
   const [cardsFrom, setCardsFrom] = useState<CardsFrom | null>(start.cardsFrom); // set when a training was opened from the Aktuell or Archiv tab
   const [practice, setPractice] = useState<PracticeView>(start.practice);
   const [quickFrom, setQuickFrom] = useState<'aktuell' | null>(null); // the quick practice was started in the Aktuell tab
+  // trainings connected with a day by the "Zum Kalender hinzufügen" button; only kept while the page is open
+  const [extraPlan, setExtraPlan] = useState<PlanEntry[]>([]);
+  const plan = useMemo(() => mergePlans(filePlan, extraPlan), [extraPlan]);
+  const addToPlan = (date: string, id: string, note: string) => {
+    if (plan.find((e) => e.date === date)?.ids.includes(id)) return false;
+    setExtraPlan((p) => mergePlans(p, [{ date, note, ids: [id] }]));
+    return true;
+  };
+  const removeFromPlan = (date: string, id: string) =>
+    setExtraPlan((p) => p.map((e) => (e.date === date ? { ...e, ids: e.ids.filter((x) => x !== id) } : e)).filter((e) => e.ids.length > 0));
   const [progress, setProgress] = useState(emptyProgress);
   const [prefs, setPrefs] = useState(defaultPrefs);
   const changePrefs = (next: typeof prefs) => {
@@ -200,6 +212,9 @@ function Shell() {
           <CalendarView
             plan={plan}
             trainings={trainings}
+            added={extraPlan}
+            fileText={planToYaml(plan)}
+            onRemove={removeFromPlan}
             onUnderstand={(id) => openFromCards('kalender', id, 'understand')}
             onPractice={(id) => openFromCards('kalender', id, 'practice')}
           />
@@ -232,6 +247,7 @@ function Shell() {
             <div className="row">
               <button className="btn ghost" onClick={() => (cardsFrom ? backToCards() : setTopicId(null))}>{cardsFrom ? backLabelCards : s.backToTopics}</button>
               <LinkButton id={topic.id} mode="understand" />
+              <AddToCalendar trainingId={topic.id} onAdd={addToPlan} onShowCalendar={() => goTab('kalender')} />
             </div>
             <h2 className="tt">{topic.title}</h2>
             {topic.kind === 'perfekt' ? (
@@ -320,14 +336,14 @@ function Shell() {
           <TopicPractice
             t={practiceTopic}
             onBack={() => setPractice({ name: 'menu' })}
-            extra={<LinkButton id={practiceTopic.id} mode="practice" />}
+            extra={<><LinkButton id={practiceTopic.id} mode="practice" /><AddToCalendar trainingId={practiceTopic.id} onAdd={addToPlan} onShowCalendar={() => goTab('kalender')} /></>}
             onResult={onResult}
             onFinish={onFinish(practiceTopic.id)}
             onPoints={onPoints}
           />
         )}
         {tab === 'practice' && practiceTopic?.kind === 'lesson' && (
-          <LessonPractice t={practiceTopic} extra={<LinkButton id={practiceTopic.id} mode="practice" />} backLabel={cardsFrom ? backLabelCards : undefined} onBack={() => (cardsFrom ? backToCards() : setPractice({ name: 'menu' }))} onResult={onResult} onFinish={onFinish(practiceTopic.id)} />
+          <LessonPractice t={practiceTopic} extra={<><LinkButton id={practiceTopic.id} mode="practice" /><AddToCalendar trainingId={practiceTopic.id} onAdd={addToPlan} onShowCalendar={() => goTab('kalender')} /></>} backLabel={cardsFrom ? backLabelCards : undefined} onBack={() => (cardsFrom ? backToCards() : setPractice({ name: 'menu' }))} onResult={onResult} onFinish={onFinish(practiceTopic.id)} />
         )}
       </main>
     </div>

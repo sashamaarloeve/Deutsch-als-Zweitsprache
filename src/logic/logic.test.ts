@@ -15,7 +15,7 @@ import { parseTrainingHash, trainingHash } from './links';
 import { summarize } from './session';
 import { normalize, searchTrainings } from './search';
 import { dayKey, longDay, monthGrid, parseDayKey } from './calendar';
-import { isDayKey, parsePlan, planProblems } from '../content/kalender';
+import { isDayKey, mergePlans, parsePlan, planProblems, planToYaml } from '../content/kalender';
 import { parseAktuell } from '../content/aktuell';
 
 // Helpers that tell TypeScript which kind of training a file is.
@@ -683,6 +683,30 @@ describe('search', () => {
   it('finds umlaut words typed without umlaut', () => {
     expect(titles('faelle')).toContain('Fälle wiederholen');
     expect(titles('fälle')).toContain('Fälle wiederholen');
+  });
+});
+
+describe('adding to the calendar', () => {
+  const base = [{ date: '2026-11-10', note: 'Test', ids: ['a'] }];
+  it('merges days and never lists a training twice', () => {
+    const merged = mergePlans(base, [{ date: '2026-11-10', note: '', ids: ['a', 'b'] }, { date: '2026-11-03', note: 'Start', ids: ['c'] }]);
+    expect(merged).toEqual([{ date: '2026-11-03', note: 'Start', ids: ['c'] }, { date: '2026-11-10', note: 'Test', ids: ['a', 'b'] }]);
+    expect(base[0].ids).toEqual(['a']); // the original is not changed
+  });
+  it('writes the whole file text so that reading it gives the same plan', () => {
+    const plan = mergePlans(base, [{ date: '2026-11-17', note: 'Mit: Doppelpunkt und "Anführungszeichen"', ids: ['b'] }]);
+    const text = planToYaml(plan);
+    expect(text).toContain('- date: 2026-11-10');
+    expect(parsePlan(text)).toEqual(plan);
+  });
+  it('an empty plan gives a file with only the explanation', () => {
+    expect(parsePlan(planToYaml([]))).toEqual([]);
+    expect(planToYaml([])).toContain('Kalender');
+  });
+  it('the text for the real plan file is valid', () => {
+    const known = new Set(readdirSync('content/trainings').map((f) => f.replace('.yaml', '')));
+    const real = parsePlan(readFileSync('content/kalender.yaml', 'utf8'));
+    expect(planProblems(planToYaml(mergePlans(real, [{ date: '2026-12-01', note: '', ids: ['perfekt'] }])), known)).toEqual([]);
   });
 });
 

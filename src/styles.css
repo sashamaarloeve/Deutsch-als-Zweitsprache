@@ -392,3 +392,11 @@ ul.upcoming { margin: 6px 0 0; padding-left: 1.2em; }
 .searchbox .how { margin: 6px 0 0; min-height: 1.5em; }
 .foundin { display: block; margin-top: 6px; color: var(--muted); font-size: .9rem; }
 .searchrow input[type="search"]::-webkit-search-cancel-button { display: none; } /* our own "Löschen" button is used */
+
+/* "Zum Kalender hinzufügen" */
+.addpanel { flex-basis: 100%; background: var(--card); border: 3px solid var(--ink); border-radius: 18px; padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; }
+.addpanel label { font-weight: 700; }
+.addpanel input { font: inherit; font-size: 1.05rem; border: 2px solid var(--ink); border-radius: 10px; padding: 8px 10px; background: var(--card); color: var(--ink); min-height: 44px; }
+.plantext { width: 100%; font: inherit; font-size: .85rem; border: 2px solid var(--ink); border-radius: 10px; padding: 8px; background: var(--card-soft); color: var(--ink); resize: vertical; margin-bottom: 8px; }
+a.btn { display: inline-block; text-decoration: none; }
+@media print { .addpanel { display: none; } }

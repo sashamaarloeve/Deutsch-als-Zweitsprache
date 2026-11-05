@@ -48,3 +48,27 @@ export function planProblems(raw: string, knownIds: Set<string>): string[] {
   }
   return problems;
 }
+
+// Adds entries (for example the ones made with the "Zum Kalender hinzufügen" button) to a plan: same days are merged, no training twice.
+export function mergePlans(base: PlanEntry[], extra: PlanEntry[]): PlanEntry[] {
+  const byDate = new Map<string, PlanEntry>(base.map((e): [string, PlanEntry] => [e.date, { ...e, ids: [...e.ids] }]));
+  for (const e of extra) {
+    const old = byDate.get(e.date);
+    if (!old) byDate.set(e.date, { ...e, ids: [...e.ids] });
+    else {
+      old.ids.push(...e.ids.filter((id) => !old.ids.includes(id)));
+      if (e.note && !old.note.includes(e.note)) old.note = [old.note, e.note].filter(Boolean).join(' ');
+    }
+  }
+  return [...byDate.values()].filter((e) => e.ids.length > 0 || e.note).sort((a, b) => a.date.localeCompare(b.date));
+}
+
+// The whole content of kalender.yaml for a plan, to be pasted into the file.
+export const PLAN_HEADER = `# The "Kalender" tab: a loose lesson plan. Connect a day with trainings and an optional note.
+# Write the date as year-month-day (2026-11-10). Use the id of a training (the file name without .yaml).
+# A day can appear only once.
+`;
+export function planToYaml(plan: PlanEntry[]): string {
+  const entries = plan.map((e) => [`- date: ${e.date}`, ...(e.note ? [`  note: ${JSON.stringify(e.note)}`] : []), ...(e.ids.length ? ['  trainings:', ...e.ids.map((id) => `    - ${id}`)] : [])].join('\n'));
+  return PLAN_HEADER + (entries.length ? '\n' + entries.join('\n\n') + '\n' : '');
+}
